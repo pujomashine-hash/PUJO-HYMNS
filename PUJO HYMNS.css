@@ -1,0 +1,54 @@
+body {
+  background-color: black;
+  text-align: center;
+}
+#song-list {
+  text-align: center;
+  width: 350px;
+  height: 1500px;
+  background-color: white;
+  box-shadow: 3px 2px 4px 2px pink;
+  margin-top:1px;
+  max-width: 1000px;
+  
+  
+}
+#song-details {
+  text-align: center;
+  height: 1000px;
+  display: none;
+}
+data-lyrics {
+  color: white;
+}
+input {
+  margin-bottom: 30px;
+  border: 5px solid white;
+  z-index: 1000;
+}
+button {
+  margin-bottom: 1px;
+  margin-top: 1px;
+}
+p {
+  color: white;
+}
+h1 {
+  color: yellow;
+  text-shadow: 2px 2px 2px green;
+  margin-top: 20px;
+}
+button:hover {
+  color: green;
+}
+.nyimbo{
+  width: 340px;
+  height: 60px;
+  background-color: pink;
+  font-size: 15px;
+  border-radius: 10px;
+}
+#top {
+  background-color:#C71585;
+  background-image: url(MAUA.jpg);
+}
