@@ -15,7 +15,7 @@ body {
 }
 #song-details {
   text-align: center;
-  height: 1000px;
+  height: auto;
   display: none;
 }
 data-lyrics {
