@@ -3,6 +3,7 @@
   "short_name": "PUJO Hymns",
   "start_url": "./",
   "display": "standalone",
+  "version":"1.9.7.1",
   "icons": [
     {
       "src": "logo.png",
