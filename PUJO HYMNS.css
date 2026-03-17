@@ -22,7 +22,7 @@ input#search {
 }
 
 #song-list {
-  display: block; /* default screen */
+  display: block; 
   max-width: 1000px;
   margin: 0 auto;
 }
