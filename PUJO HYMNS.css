@@ -15,6 +15,7 @@ input#search {
   width: 200px;
   background-color: #1f1f1f;
   color: white;
+}
 
 .screen {
   display: none;
