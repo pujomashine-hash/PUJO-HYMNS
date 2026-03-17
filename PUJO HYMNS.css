@@ -1,85 +1,144 @@
+/* ====== GLOBAL ====== */
 body {
   background-color: black;
   text-align: center;
-}
-#song-list {
-  text-align: center;
-  width: auto;
-  height: auto;
-  background-color: white;
-  box-shadow: 3px 2px 4px 2px pink;
-  margin-top:1px;
-  max-width: 1000px;
-  
-  
-}
-#song-details {
-  text-align: center;
-  height: auto;
-  display: none;
-}
-data-lyrics {
+  margin: 0;
+  padding: 0;
   color: white;
 }
-input {
-  margin-bottom: 30px;
-  border: 5px solid white;
-  z-index: 1000;
+
+input#search {
+  margin: 20px 0;
+  padding: 8px;
+  border: 3px solid white;
   border-radius: 5px;
   width: 200px;
-}
-button {
-  margin-bottom: 1px;
-  margin-top: 1px;
-}
-p {
+  background-color: #1f1f1f;
   color: white;
 }
-h1 {
-  color: yellow;
-  text-shadow: 4px 4px  4px green;
-  margin-top: 20px;
-}
-button:hover {
-  color: green;
-}
-.nyimbo{
-  width: 340px;
-  height: 60px;
-  background-color: pink;
-  font-size: 15px;
-  border-radius: 10px;
-}
-#top {
-  background-color:black;
-  background-image: url(MAUA.jpg);
-  box-shadow: 3px 3px 3px red;
-} 
-#playlist {
+
+/* ====== SCREENS ====== */
+.screen {
   display: none;
-  color:blue;
+  padding: 10px;
 }
-#favourite{
-  display:none;
-  color:red;
+
+#song-list {
+  display: block; /* default screen */
+  max-width: 1000px;
+  margin: 0 auto;
 }
+
+#song-details {
+  display: none;
+}
+
+/* ====== BUTTONS ====== */
+.nyimbo {
+  width: 90%;
+  max-width: 400px;
+  margin: 10px ;
+  padding: 12px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
+}
+
+.nyimbo:hover {
+  background-color: #2a2a2a;
+}
+
+.names {
+  flex: 1;
+  text-align: left;
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.artist {
+  font-size: 14px;
+  color: #aaa;
+  padding: 0;
+  margin: 0;
+}
+
+/* ====== THREE DOTS DROPDOWN ====== */
+.three-dots {
+  position: relative;
+  font-size: 20px;
+  cursor: pointer;
+  padding-left: 5px;
+}
+
+.dots-menu {
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 0;
+  background: #2a2a2a;
+  border-radius: 10px;
+  padding: 8px;
+  min-width: 120px;
+  z-index: 10;
+}
+
+.three-dots:hover .dots-menu {
+  display: block;
+}
+
+.dots-menu p {
+  margin: 5px 0;
+  padding: 4px 6px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+}
+
+.dots-menu p:hover {
+  background-color: #444;
+  border-radius: 5px;
+}
+
+/* ====== NAVIGATION BAR ====== */
 #navigation-bar {
-  bottom: 0;
-  width:100%;
   position: fixed;
-  background-color: #1f1f1f;
-  left: 0;
-}
-.change {
-  padding: 10px ;
-  margin:10px;
   bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1f1f1f;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+}
+
+.change {
   background-color: black;
   color: white;
+  padding: 8px 12px;
   border-radius: 8px;
-  box-shadow: 2px 2px 2px magenta;
+  border: none;
+  cursor: pointer;
+  box-shadow: 1px 1px 4px magenta;
+  transition: 0.2s;
 }
+
+.change:hover {
+  background-color: #333;
+}
+
 .change.active {
-  background-color: #888;
+  background-color: #555;
   color: white;
+  box-shadow: 0 0 8px magenta;
 }
