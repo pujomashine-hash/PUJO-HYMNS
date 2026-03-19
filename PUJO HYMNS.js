@@ -14,7 +14,7 @@ navButtons.forEach(btn => {
   });
 });
 
-// ====================
+
 // ====== SEARCH BAR ======
 const searchInput = document.getElementById("search");
 
@@ -100,3 +100,21 @@ fetch("PUJO HYMNS.json")
     play.addEventListener("click", () => audio.play());
     pause.addEventListener("click", () => audio.pause());
   });
+    // SIMPLE MENU 
+  const menubtn= document.getElementById("menu-btn")
+  const menucontent=document.getElementById("menu")
+  menubtn.addEventListener("click",function(){
+    if(menucontent.style.display==="block") {
+      menucontent.style.display="none";
+    }else {
+      menucontent.style.display="block";
+    }
+});
+ document.addEventListener("click",function(e) {
+   if(!menubtn.contains(e.target) && !menucontent.contains(e.target)){
+     menucontent.style.display="none";
+   }
+ });
+ 
+  
+  
