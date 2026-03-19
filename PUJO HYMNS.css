@@ -1,4 +1,4 @@
-
+/* ====== GLOBAL ====== */
 body {
   background-color: black;
   text-align: center;
@@ -6,7 +6,30 @@ body {
   padding: 0;
   color: white;
 }
-
+#left{
+  display: flex;
+}
+#menu {
+  justify-content: flex-start;
+  display: flex;
+  display: none;
+  background: #2a2a2a;
+  flex-direction: column;
+  position: absolute;
+  border-radius:7px;
+  height: 50px;
+  width: 150px;
+}
+#menu-btn {
+  color: white;
+  background: black;
+  height: 30px;
+  width: 40px;
+  border-radius: 10px;
+  font-size: 30px;
+  display: flex;
+  position:absolute;
+}
 input#search {
   margin: 20px 0;
   padding: 8px;
@@ -17,7 +40,7 @@ input#search {
   color: white;
 }
 
-
+/* SCREENS  */
 .screen {
   display: none;
   padding: 10px;
@@ -32,8 +55,12 @@ input#search {
 #song-details {
   display: none;
 }
+#audio {
+  background: black;
+  color: white;
+}
 
-
+/*  BUTTONS */
 .nyimbo {
   width: 90%;
   max-width: 400px;
@@ -73,7 +100,7 @@ input#search {
   margin: 0;
 }
 
-
+/* ====== THREE DOTS DROPDOWN ====== */
 .three-dots {
   position: relative;
   font-size: 20px;
@@ -109,8 +136,13 @@ input#search {
   background-color: #444;
   border-radius: 5px;
 }
+.controlbtn{
+  border-radius: 5px;
+  color: white;
+  background: black;
+}
 
-
+/* NAVIGATION BAR  */
 #navigation-bar {
   position: fixed;
   bottom: 0;
