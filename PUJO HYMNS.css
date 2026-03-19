@@ -79,6 +79,9 @@ input#search {
   border-radius:50px;
   margin: auto;
   background: gray;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .playlist-name {
   font-size:10px;
