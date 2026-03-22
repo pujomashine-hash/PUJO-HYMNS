@@ -1,4 +1,4 @@
-/* ====== GLOBAL ====== */
+/*  GLOBAL  */
 body {
   background-color: black;
   text-align: center;
@@ -50,7 +50,7 @@ input#search {
   display: block; /* default screen */
   max-width: 1000px;
   margin: 0 auto;
-  padding-bottom: 20;
+  padding-bottom: 50px;
 }
 
 #song-details {
@@ -73,6 +73,13 @@ input#search {
 .playlist {
   min-width: 90px;
   text-align: center;
+}
+.playlist.active {
+  background: gray;
+  color: gray;
+}
+#All{
+  display: none;
 }
 .circle {
   width:70px;
