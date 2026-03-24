@@ -7,6 +7,11 @@ const songList = document.getElementById("song-list");
 const playlistContainer = document.getElementById("playlist-container");
 const All = document.getElementById("All");
 
+// ⭐ NEW (FAVOURITES)
+const favBtn = document.getElementById("fav");
+let currentSong = null;
+let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+
 // ===== INIT: SHOW PLAYLISTS =====
 if (playlistContainer) {
   playlistContainer.style.visibility = "visible";
@@ -24,7 +29,7 @@ navButtons.forEach(btn => {
   });
 });
 
-// ===== SEARCH (HIDE / SHOW) =====
+// ===== SEARCH =====
 const searchInput = document.getElementById("search");
 
 if (searchInput) {
@@ -60,8 +65,8 @@ fetch("PUJO HYMNS.json")
           <div class="title">${song.title}</div>
           <div class="artist">${song.artist}</div>
         </div>
-           <span class="three-dots">⋮
-         <div class="dots-menu">
+        <span class="three-dots">⋮
+          <div class="dots-menu">
             <p>Share</p>
             <p>Like 👍</p>
           </div>
@@ -78,11 +83,9 @@ fetch("PUJO HYMNS.json")
 
         const artist = playlist.querySelector(".playlist-name").textContent.trim().toLowerCase();
 
-        // highlight
         document.querySelectorAll(".playlist").forEach(p => p.classList.remove("active"));
         playlist.classList.add("active");
 
-        // filter songs (HIDE / SHOW ONLY)
         document.querySelectorAll(".nyimbo").forEach(btn => {
           const songArtist = btn.querySelector(".artist").textContent.toLowerCase();
 
@@ -93,12 +96,10 @@ fetch("PUJO HYMNS.json")
           }
         });
 
-        // hide playlists (VISIBLE CONTROL)
         if (playlistContainer) {
           playlistContainer.style.visibility = "hidden";
         }
 
-        // show ALL button
         if (All) {
           All.style.display = "block";
         }
@@ -111,22 +112,18 @@ fetch("PUJO HYMNS.json")
     if (All) {
       All.addEventListener("click", () => {
 
-        // show all songs
         document.querySelectorAll(".nyimbo").forEach(btn => {
           btn.style.display = "";
         });
 
-        // remove highlight
         document.querySelectorAll(".playlist").forEach(p => {
           p.classList.remove("active");
         });
 
-        // show playlists again
         if (playlistContainer) {
           playlistContainer.style.visibility = "visible";
         }
 
-        // hide ALL button
         All.style.display = "none";
 
       });
@@ -144,6 +141,13 @@ fetch("PUJO HYMNS.json")
       const btn = e.target.closest(".nyimbo");
       if (!btn) return;
 
+      currentSong = {
+        title: btn.querySelector(".title").textContent,
+        artist: btn.querySelector(".artist").textContent,
+        file: btn.dataset.file,
+        lyrics: btn.dataset.lyrics
+      };
+
       fetch(btn.dataset.lyrics)
         .then(res => res.text())
         .then(text => {
@@ -154,9 +158,11 @@ fetch("PUJO HYMNS.json")
 
       songList.style.display = "none";
       songDetails.style.display = "block";
+
+      updateFavButton();
     });
 
-    // BACK 
+    // ===== BACK =====
     back.addEventListener("click", () => {
       songList.style.display = "block";
       songDetails.style.display = "none";
@@ -166,21 +172,102 @@ fetch("PUJO HYMNS.json")
     play.addEventListener("click", () => audio.play());
     pause.addEventListener("click", () => audio.pause());
 
+    // ===== ❤️ FAVOURITE TOGGLE =====
+    if (favBtn) {
+      favBtn.addEventListener("click", () => {
+        if (!currentSong) return;
+
+        const exists = favourites.some(song => song.title === currentSong.title);
+
+        if (exists) {
+          favourites = favourites.filter(s => s.title !== currentSong.title);
+        } else {
+          favourites.push(currentSong);
+        }
+
+        localStorage.setItem("favourites", JSON.stringify(favourites));
+
+        updateFavButton();
+        renderFavourites();
+      });
+    }
+
+    // ===== UPDATE BUTTON =====
+    function updateFavButton() {
+      if (!currentSong) return;
+
+      const exists = favourites.some(song => song.title === currentSong.title);
+
+      favBtn.textContent = exists ? "❤️" : "♡";
+    }
+
+    // ===== RENDER FAVOURITES =====
+    const favScreen = document.getElementById("favourite");
+
+    function renderFavourites() {
+      if (!favScreen) return;
+
+      favScreen.innerHTML = "";
+
+      if (favourites.length === 0) {
+        favScreen.innerHTML = "<p>No favourite songs yet</p>";
+        return;
+      }
+
+      favourites.forEach(song => {
+        const btn = document.createElement("button");
+        btn.className = "nyimbo";
+
+        btn.innerHTML = `
+          <div class="names">
+            <div class="title">${song.title}</div>
+            <div class="artist">${song.artist}</div>
+          </div>
+        `;
+
+        // click kutoka favourite
+        btn.addEventListener("click", () => {
+
+          const songDetails = document.getElementById("song-details");
+          const lyrics = document.getElementById("lyrics");
+          const audio = document.getElementById("audio");
+
+          currentSong = song;
+
+          fetch(song.lyrics)
+            .then(res => res.text())
+            .then(text => {
+              lyrics.innerHTML = text.replace(/\n/g, "<br>");
+            });
+
+          audio.src = song.file;
+
+          songList.style.display = "none";
+          songDetails.style.display = "block";
+          btn.style.display="none";
+
+          updateFavButton();
+        });
+
+        favScreen.appendChild(btn);
+      });
+    }
+
+    // ===== INIT =====
+    renderFavourites();
+
   });
 
 });
 
-//  MENU (UNCHANGED FROM YOUR OLD CODE)
+// ===== MENU =====
 const menubtn = document.getElementById("menu-btn");
 const menucontent = document.getElementById("menu");
 
 if (menubtn) {
   menubtn.addEventListener("click", function() {
-    if (menucontent.style.display === "block") {
-      menucontent.style.display = "none";
-    } else {
-      menucontent.style.display = "block";
-    }
+    menucontent.style.display =
+      menucontent.style.display === "block" ? "none" : "block";
   });
 
   document.addEventListener("click", function(e) {
