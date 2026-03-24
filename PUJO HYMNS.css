@@ -19,6 +19,7 @@ body {
   border-radius:7px;
   height: 100px;
   width: 150px;
+  box-shadow: 1px 1px 4px magenta;
 }
 #menu-btn {
   color: white;
