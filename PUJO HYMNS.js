@@ -134,7 +134,7 @@ fetch("PUJO HYMNS.json")
     const lyrics = document.getElementById("lyrics");
     const audio = document.getElementById("audio");
     const play = document.getElementById("play");
-    const pause = document.getElementById("pause");
+    const Playing = document.getElementById("playing");
     const back = document.getElementById("back");
 
     songList.addEventListener("click", e => {
@@ -147,6 +147,7 @@ fetch("PUJO HYMNS.json")
         file: btn.dataset.file,
         lyrics: btn.dataset.lyrics
       };
+      Playing.textContent = currentSong.title + " - " + currentSong.artist;
 
       fetch(btn.dataset.lyrics)
         .then(res => res.text())
@@ -164,13 +165,22 @@ fetch("PUJO HYMNS.json")
 
     // ===== BACK =====
     back.addEventListener("click", () => {
-      songList.style.display = "block";
-      songDetails.style.display = "none";
-      audio.pause();
-    });
+  songList.style.display = "block";
+  songDetails.style.display = "none";
 
-    play.addEventListener("click", () => audio.play());
-    pause.addEventListener("click", () => audio.pause());
+  audio.pause();
+  playBtn.textContent = "▶";
+});
+
+    play.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
+    play.textContent = "pause⏸";
+  } else {
+    audio.pause();
+    play.textContent = "play ▶";
+  }
+});
 
     // ===== ❤️ FAVOURITE TOGGLE =====
     if (favBtn) {
@@ -198,7 +208,7 @@ fetch("PUJO HYMNS.json")
 
       const exists = favourites.some(song => song.title === currentSong.title);
 
-      favBtn.textContent = exists ? "❤️" : "♡";
+      favBtn.textContent = exists ? "❤️" : "Add ♡";
     }
 
     // ===== RENDER FAVOURITES =====
@@ -274,5 +284,13 @@ if (menubtn) {
     if (!menubtn.contains(e.target) && !menucontent.contains(e.target)) {
       menucontent.style.display = "none";
     }
+    const progress = document.getElementById("progress");
+
+audio.addEventListener("timeupdate", () => {
+  if (audio.duration) {
+    const percent = (audio.currentTime / audio.duration) * 100;
+    progress.style.width = percent + "%";
+  }
+});
   });
 }
