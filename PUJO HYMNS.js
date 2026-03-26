@@ -293,7 +293,7 @@ audio.addEventListener("timeupdate", () => {
   }
 });
 
-// Seek when user clicks on progress bar
+//Seek when user clicks on progress bar
 const progressContainer=document.getElementById("progress-container")
 progressContainer.addEventListener("click", (e) => {
   const rect = progressContainer.getBoundingClientRect();
@@ -303,7 +303,7 @@ progressContainer.addEventListener("click", (e) => {
   audio.currentTime = percent * audio.duration;
 });
 audio.addEventListener("error", () => {
-  Playing.textContent = "❌ Audio not available";
+  playing.textContent = "❌ Audio not available";
 });
   });
 }
