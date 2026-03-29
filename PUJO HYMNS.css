@@ -16,10 +16,17 @@ body {
   background: #2a2a2a;
   flex-direction: column;
   position: absolute;
-  border-radius:7px;
-  height: 100px;
+  border-radius: 1px;
+  height: 500px;
+  z-index: 1000;
   width: 150px;
   box-shadow: 1px 1px 4px magenta;
+  align-items:center;
+}
+#theme {
+  border-radius: 10px;
+  background:gray;
+  color: white;
 }
 #menu-btn {
   color: white;
@@ -47,7 +54,7 @@ input#search {
   padding: 10px;
 }
 
-#song-list 
+#song-list {
   max-width: 1000px;
   margin: 0 auto;
   padding-bottom: 50px;
@@ -338,3 +345,32 @@ input#search {
   #favourite {
     display: none;
   }
+body.light-mode{
+  background:white;
+}
+body.light-mode #search{
+  box-shadow: 0 0 8px magenta;
+}
+body.light-mode #song-list {
+  background: white;
+}
+body.light-mode #navigation-bar {
+  background: gray;
+}
+body.light-mode #top{
+  background: FAF3E0;
+}
+body.light-mode .nyimbo {
+  background-color: #FFF8E7;
+  color: black;
+  box-shadow: 0 0 8px #00ffcc;
+}
+body.light-mode .playlist-name {
+  color:black;
+}
+body.light-mode #lyrics {
+  color: black;
+}
+body.light-mode #playlist-container {
+  box-shadow: 0 0 6px yellow;
+}
