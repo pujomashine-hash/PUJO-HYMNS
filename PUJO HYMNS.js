@@ -7,6 +7,23 @@ const playlistContainer = document.getElementById("playlist-container");
 const All = document.getElementById("All");
 if(songList)songList.style.display = "block";
 
+const Themechange=document.getElementById("theme")
+if(Themechange) {
+const Savedtheme=localStorage.getItem("theme")
+if(Savedtheme==="light"){
+  document.body.classList.add("light-mode")
+}
+Themechange.addEventListener("click",()=>{
+  document.body.classList.toggle("light-mode")
+
+if(document.body.classList.contains("light-mode")){
+  localStorage.setItem("theme","light")
+}else {
+  localStorage.setItem("theme","dark")
+}
+});
+}
+
 // NEW (FAVOURITES)
 const favBtn = document.getElementById("fav");
 let currentSong = null;
@@ -71,8 +88,7 @@ fetch("PUJO HYMNS.json")
         </div>
         <span class="three-dots">⋮
           <div class="dots-menu">
-            <p>Share</p>
-            <p>Like 👍</p>
+            <button id="share"> Share </button>
           </div>
         </span>
       `;
@@ -305,7 +321,7 @@ audio.addEventListener("timeupdate", () => {
     progress.style.width = percent + "%";
   }
 });
-
+//THEME CHANGING
 //Seek when user clicks on progress bar
 const progressContainer=document.getElementById("progress-container")
 progressContainer.addEventListener("click", (e) => {
@@ -318,6 +334,7 @@ progressContainer.addEventListener("click", (e) => {
 audio.addEventListener("error", () => {
   playing.textContent = "❌ Audio not available";
 });
+
 
   });
 }
