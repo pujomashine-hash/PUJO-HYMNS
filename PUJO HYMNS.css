@@ -47,8 +47,7 @@ input#search {
   padding: 10px;
 }
 
-#song-list {
-  display: block; /* default screen */
+#song-list 
   max-width: 1000px;
   margin: 0 auto;
   padding-bottom: 50px;
@@ -145,7 +144,7 @@ input#search {
   margin: 0;
 }
 
-/* ====== THREE DOTS DROPDOWN ====== */
+/*  THREE DOTS DROPDOWN  */
 .three-dots {
   position: relative;
   font-size: 20px;
@@ -271,3 +270,71 @@ input#search {
 .controlbtn:hover {
   background: #22c55e;
 }
+/* Playlist screen */
+#playlist-category {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:10px;
+}
+.category {
+  padding: 20px;
+  background: yellow;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 15px;
+  height: 50px;
+  align-items: center;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+  #Pasaka {
+    background:white;
+    color: black;
+    font-family: "Impact",sans-serif;
+    animation: bounce 2s infinite ease-in-out;
+  }
+  @keyframes bounce {
+    0%{
+      transform: translateY(0px);
+    }
+    25% {
+      transform: translateY(-5px);
+    }
+    50% {
+      transform: translateY(0px);
+    }
+    75% {
+      transform: translateY(-3px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  #Kwaresma{
+    background: black;
+    color: white;
+    box-shadow: 1px 0px 1px white;
+    font-family: "Courier New",serif;
+    
+  }
+  #Christmas {
+    color: violet;
+    background: red;
+    font-family: "Comic Sans MS",cursive;
+  }
+  #Kuabudu {
+    background: blue;
+    color:white;
+    font-family: "Lucida Blackbetter",Monospace;
+  }
+  #Kusifu {
+    color: blue;
+    font-family: "Times New Roman",serif;
+  }
+  #playlist-category,
+  #song-list,
+  #song-details,
+  #favourite {
+    display: none;
+  }
