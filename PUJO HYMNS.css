@@ -393,6 +393,6 @@ body.light-mode #menu{
 body.light-mode #Version {
   color:black;
 }
-body.light-mode.circle {
+body.light-mode .circle {
   box-shadow: 0 0 8px yellow;
 }
