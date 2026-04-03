@@ -84,7 +84,7 @@ data.forEach(song => {
   btn.className = "nyimbo";
   btn.dataset.file = song.file;
   btn.dataset.lyrics = song.lyrics;
-  btn.dataset.category = song.category;
+  btn.dataset.Category = song.Category;
 
   btn.innerHTML = `
     <div class="names">
@@ -100,14 +100,14 @@ data.forEach(song => {
 });
 
 // CATEGORY CLICK
-document.querySelectorAll(".category").forEach(cat => {
-  cat.addEventListener("click", () => {
+document.querySelectorAll(".Category").forEach(Cat => {
+  Cat.addEventListener("click", () => {
 
-    const category = cat.id;
+    const Category = Cat.id;
 
     // show filtered songs
     playlistButtons.forEach(btn => {
-      if (btn.dataset.category === category) {
+      if (btn.dataset.Category === Category) {
         btn.style.display = "block";
       } else {
         btn.style.display = "none";
@@ -376,7 +376,6 @@ playlistButtons.forEach(btn => {
 
   });
 
-});
 
 //  MENU 
 const menubtn = document.getElementById("menu-btn");
@@ -387,6 +386,7 @@ if (menubtn) {
     menucontent.style.display =
       menucontent.style.display === "block" ? "none" : "block";
   });
+}
 
   document.addEventListener("click", function(e) {
     if (!menubtn.contains(e.target) && !menucontent.contains(e.target)) {
@@ -394,12 +394,14 @@ if (menubtn) {
     }
     const progress = document.getElementById("progress");
 
+
 audio.addEventListener("timeupdate", () => {
   if (audio.duration) {
     const percent = (audio.currentTime / audio.duration) * 100;
     progress.style.width = percent + "%";
   }
 });
+
 //THEME CHANGING
 //Seek when user clicks on progress bar
 const progressContainer=document.getElementById("progress-container")
@@ -413,23 +415,36 @@ progressContainer.addEventListener("click", (e) => {
 audio.addEventListener("error", () => {
   playing.textContent = "❌ Audio not available";
 });
+  });
+  
 const Updatebtn= document.getElementById("Cupdate")
 const Version= document.getElementById("Version")
+if(Updatebtn){
 Updatebtn.addEventListener("click",()=>{
   Version.textContent="The latest version already insalled"
 });
+}
 const sharebtn= document.getElementById("share")
+ if(sharebtn) {
 sharebtn.addEventListener("click",(e)=>{
-   if(navigator.share) {
-     navigator.share({
+      if(navigator.share){
+       navigator.share({
        title:"PUJO HYMNS",
        text:"Install for free",
        url:"https://www.mediafire.com/folder/eyz4rcw94hr5l/Updates"
      });
-   } else {
+  } else {
     window.alert("Share not supported")
-   }
+  }
 });
-
-  });
 }
+
+
+setTimeout (()=> {
+ const Ad=document.getElementById("ad")
+ if(Ad){
+ Ad.style.display="none";
+ }
+},5000);
+
+});
