@@ -306,7 +306,7 @@
     "title":"Akifa Yesu nikafa naye","artist":"PUJO Hymns","lyrics":"Akifa Yesu nikafa naye.txt","file":""
   },
   {
-    "title":"Ndiyo dhamana Yesu wangu","lyrics":"Ndiyo dhamana Yesu wangu.txt","artist":"PUJO Hymns","file":""
+    "title":"Ndiyo dhamana Yesu wangu","lyrics":"Ndiyo dhamana Yesu wangu.txt","artist":"PUJO Hymns","file":"https://www.dropbox.com/scl/fi/tkecpaljl61dcfbgo6dhg/Blessed-assurance.mp3?rlkey=2wwp4ayqiyq4l7z9w9e4aiux7&st=og69p794&dl=1"
   },
   {
     "title":"Ninaye rafiki naye","artist":"PUJO Hymns","lyrics":"Ninaye rafiki naye.txt","file":""
@@ -702,29 +702,29 @@
      "title":"Higher ground","artist":"PUJO Hymns","lyrics":"Higher ground.txt","file":""
    },
    {
-     "title":"Ameyashinda mauti","artist":"Sylivester Soud","lyrics":"Ameyashinda mauti.txt","file":"https://www.dropbox.com/scl/fi/qrt7ozjw80o9k9bxiogki/kwaya_KKKT_sunuka_ameyashinda_mauti-256k.mp3?rlkey=z9wt92c3zi8ian3h98pthxb0w&st=6qugsar6&dl=1","category":"Pasaka"
+     "title":"Ameyashinda mauti","artist":"Sylivester Soud","lyrics":"Ameyashinda mauti.txt","file":"https://www.dropbox.com/scl/fi/qrt7ozjw80o9k9bxiogki/kwaya_KKKT_sunuka_ameyashinda_mauti-256k.mp3?rlkey=z9wt92c3zi8ian3h98pthxb0w&st=6qugsar6&dl=1","Category":"Pasaka"
    },
    {
-     "title":"Nijaposema kwa lugha","artist":"Sylivester Soud","lyrics":"Nijaposema kwa lugha.txt","category":"General","file":""
+     "title":"Nijaposema kwa lugha","artist":"Sylivester Soud","lyrics":"Nijaposema kwa lugha.txt","Category":"General","file":""
    },
    {
-     "title":"Mwimbieni Bwana","artist":"Sylivester Soud","lyrics":"Mwimbieni Bwana.txt","category":"General","file":""
+     "title":"Mwimbieni Bwana","artist":"Sylivester Soud","lyrics":"Mwimbieni Bwana.txt","Category":"General","file":""
    },
    {
-     "title":"Sitaki kuachwa","artist":"Paul Rehan","lyrics":"Sitaki kuachwa.txt","category":"General","file":""
+     "title":"Sitaki kuachwa","artist":"Paul Rehan","lyrics":"Sitaki kuachwa.txt","Category":"General","file":""
    },
    {
      "title":"Nakuapia yesu", "artist":"PUJO Hymns", "lyrics":"Nakuapia yesu.txt",
-     "category":"General","file":""
+     "Category":"General","file":""
    },
    {
-     "title":"Faith of our fathers","artist":"English Hymns","lyrics":"Faith of our fathers.txt","category":"General","file":"https://www.dropbox.com/scl/fi/g7i7mc98ux6y90npu4y3p/Neno-la-mungu-takata-faith-of-our-father.mp3?rlkey=4zk4e1efkgoidte5tkhbseei2&st=xgx9cl07&dl=1"
+     "title":"Faith of our fathers","artist":"English Hymns","lyrics":"Faith of our fathers.txt","Category":"General","file":"https://www.dropbox.com/scl/fi/g7i7mc98ux6y90npu4y3p/Neno-la-mungu-takata-faith-of-our-father.mp3?rlkey=4zk4e1efkgoidte5tkhbseei2&st=xgx9cl07&dl=1"
    },
    {
-     "title":"Great is Thy faithfulness","artist":"English Hymns","lyrics":"Great is Thy faithfulness.txt","category":"General","file":"https://www.dropbox.com/scl/fi/9m1nm9lftxwy8t2kx5dfl/Great-is-Thy-faithfulness.mp3?rlkey=wijo1n0gbl8esbjqgzcs8cvs5&st=1dvg53la&dl=1"
+     "title":"Great is Thy faithfulness","artist":"English Hymns","lyrics":"Great is Thy faithfulness.txt","Category":"General","file":"https://www.dropbox.com/scl/fi/9m1nm9lftxwy8t2kx5dfl/Great-is-Thy-faithfulness.mp3?rlkey=wijo1n0gbl8esbjqgzcs8cvs5&st=1dvg53la&dl=1"
    },
    {
-     "title":"Blessed assurance","artist":"English Hymns","lyrics":"Blessed assurance.txt","category":"Kuabudu","file":"https://www.dropbox.com/scl/fi/tkecpaljl61dcfbgo6dhg/Blessed-assurance.mp3?rlkey=2wwp4ayqiyq4l7z9w9e4aiux7&st=4dqavlwk&dl=1"
+     "title":"Blessed assurance","artist":"English Hymns","lyrics":"Blessed assurance.txt","Category":"Kuabudu","file":"https://www.dropbox.com/scl/fi/tkecpaljl61dcfbgo6dhg/Blessed-assurance.mp3?rlkey=2wwp4ayqiyq4l7z9w9e4aiux7&st=4dqavlwk&dl=1"
    },
    {
      "title":"Come Thou fount of every blessing","artist":"English Hymns","lyrics":"Come Thou fount of every blessing.txt","Category":"General","file":"https://www.dropbox.com/scl/fi/t9hc6xgeak1nbk6fqb9ox/Come-Thou-fount-of-every-blessing.mp3?rlkey=5ya76dt5or0voy1k438s94kdb&st=j14mhubj&dl=1"
@@ -773,5 +773,11 @@
    },
    {
      "title":"Jesus loves even me","artist":"English Hymns","lyrics":"Jesus loves even me.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/fjr76m8zbqloj80vr53f7/Baba-yetu-aliye-mbinguni.mp3?rlkey=jvhk7j40r4uma0ekzjf2yjfgg&st=lx1u53qe&dl=1"
+   },
+   {
+     "title":"Ahimidiwe Mungu Baba","artist":"Yohana magangali","lyrics":"Ahimidiwe Mungu Baba.txt","Category":"Kusifu","Church":"Rc choir","file":"https://www.dropbox.com/scl/fi/5q348qolllrxnngi55ays/Ahimidiwe-Mungu-Baba.mp3?rlkey=axfly5qyzi74mb56lwplec2np&st=mtiqhu5o&dl=1"
+   },
+   {
+     "title":"Bwana amejaa huruma na neema","artist":"Yohana magangali","lyrics":"Bwana amejaa huruma na neema.txt","Category":"General","Church":"Rc choir","file":"https://www.dropbox.com/scl/fi/yft2vultojl16mz3clths/Bwana-amejaa-huruma-na-neema.mp3?rlkey=tsdp3cgt74h1tojbctgln9cxc&st=18vc3y9o&dl=1"
    }
 ]
