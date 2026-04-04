@@ -384,7 +384,8 @@ body.light-mode #menu-btn{
 body.light-mode .nyimbo {
   background-color: #FFF8E7;
   color: black;
-  box-shadow: 0 0 8px #00ffcc;
+  
+  width: 95%;
 }
 body.light-mode .playlist-name {
   color:black;
@@ -425,4 +426,7 @@ body.light-mode .circle {
   width: 100%;
   height: 50px;
   border-radius: 5px;
+}
+body.light-mode .favmessage {
+  color: black;
 }
