@@ -329,7 +329,10 @@ playlistButtons.forEach(btn => {
       favScreen.innerHTML = "";
 
       if (favourites.length === 0) {
-        favScreen.innerHTML = "<p>No favourite songs yet</p>";
+        favScreen.innerHTML = `
+        <h1 class="favmessage"> Your faviurite Songs</h1>
+        <p class="favmessage">No favourite songs yet</p>
+          `;
         return;
       }
 
