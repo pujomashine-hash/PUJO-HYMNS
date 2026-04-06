@@ -69,7 +69,7 @@ input#search {
 .screen {
   display: none;
   padding: 10px;
-  padding-top: 80px;
+  padding-top: 90px;
 }
 
 #song-list {
@@ -77,10 +77,22 @@ input#search {
   margin: 0 auto;
   padding-bottom: 50px;
 }
+#jina-container {
+  display: none;
+  color: black;
+  font-weight: bold;
+  background: #f2f2;
+  box-shadow: 0 0 8px yellow;
+  font-size: 30px;
+}
+#jina {
+  
+}
 
 #song-details {
   display: none;
 }
+
 #audio {
   background: black;
   color: white;
@@ -348,7 +360,7 @@ input#search {
     color: white;
     box-shadow: 1px 0px 1px white;
     font-family: "Courier New",serif;
-    
+
   }
   #Christmas {
     color: violet;
@@ -379,7 +391,7 @@ body.light-mode {
   background:white;
 }
 body.light-mode #top {
-  background: #007bff;
+  background: white;
   border: 2px solid white;
 }
 body.light-mode #search{
@@ -401,7 +413,7 @@ body.light-mode #menu-btn{
 body.light-mode .nyimbo {
   background-color: #FFF8E7;
   color: black;
-  
+
   width: 95%;
 }
 body.light-mode .playlist-name {
