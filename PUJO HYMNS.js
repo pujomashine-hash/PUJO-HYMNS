@@ -4,6 +4,7 @@ const screens = document.querySelectorAll(".screen");
 
 const songList = document.getElementById("song-list");
 const playlistContainer = document.getElementById("playlist-container");
+let lastScreen= "song-list";
 const All = document.getElementById("All");
 if(songList)songList.style.display = "block";
 
@@ -42,6 +43,7 @@ navButtons.forEach(btn => {
 
     screens.forEach(screen => screen.style.display = "none");
     const targetId = btn.getAttribute("data-target");
+    lastScreen= targetId;
     if(targetId==="playlist-category"){
     document.getElementById(targetId).style.display="grid"
     }else {
@@ -120,7 +122,7 @@ document.querySelectorAll(".Category").forEach(Cat => {
 // PLAYLIST BUTTON CLICK (OPEN SONG)
 playlistButtons.forEach(btn => {
   btn.addEventListener("click", () => {
-
+  lastScreen="playlist-category";
     const songDetails = document.getElementById("song-details");
     const lyrics = document.getElementById("lyrics");
     const audio = document.getElementById("audio");
@@ -183,14 +185,16 @@ playlistButtons.forEach(btn => {
 
         document.querySelectorAll(".nyimbo").forEach(btn => {
           const songArtist = btn.querySelector(".artist").textContent.toLowerCase();
-
+       
+    document.getElementById("jina-container").style.display='block';
           if (songArtist === artist) {
             btn.style.display = "";
           } else {
             btn.style.display = "none";
           }
         });
-
+        
+ document.getElementById("jina").textContent=artist;
         if (playlistContainer) {
           playlistContainer.style.visibility = "hidden";
         }
@@ -206,7 +210,7 @@ playlistButtons.forEach(btn => {
     //  ALL BUTTON 
     if (All) {
       All.addEventListener("click", () => {
-
+   document.getElementById("jina-container").style.display="none";     
         document.querySelectorAll(".nyimbo").forEach(btn => {
           btn.style.display = "";
         });
@@ -268,14 +272,22 @@ playlistButtons.forEach(btn => {
 
     // BACK
     back.addEventListener("click", () => {
-  songList.style.display = "block";
-  songDetails.style.display ="none";
-  favourite.style.display="none";
-  
-  setTimeout(()=> {
-  songList.scrollTop= scrollPosition;
-  },50);
-  
+
+  screens.forEach(screen => screen.style.display = "none");
+
+  const last = document.getElementById(lastScreen);
+
+  if (lastScreen === "playlist-category") {
+    last.style.display = "grid";
+  } else {
+    last.style.display = "block";
+  }
+
+  songDetails.style.display = "none";
+
+  setTimeout(() => {
+    songList.scrollTop = scrollPosition;
+  }, 50);
 
   audio.pause();
   play.textContent = "▶";
@@ -349,11 +361,10 @@ playlistButtons.forEach(btn => {
 
         // click kutoka favourite
         btn.addEventListener("click", () => {
-
           const songDetails = document.getElementById("song-details");
           const lyrics = document.getElementById("lyrics");
           const audio = document.getElementById("audio");
-
+       
           currentSong = song;
 
           fetch(song.lyrics)
@@ -378,7 +389,6 @@ playlistButtons.forEach(btn => {
     renderFavourites();
 
   });
-
 
 //  MENU 
 const menubtn = document.getElementById("menu-btn");
