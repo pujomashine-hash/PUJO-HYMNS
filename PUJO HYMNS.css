@@ -86,7 +86,7 @@ input#search {
   font-size: 30px;
 }
 #jina {
-  
+  color: white;
 }
 
 #song-details {
@@ -457,5 +457,8 @@ body.light-mode .circle {
   border-radius: 5px;
 }
 body.light-mode .favmessage {
+  color: black;
+}
+body.light-mode #jina {
   color: black;
 }
