@@ -241,7 +241,7 @@ playlistButtons.forEach(btn => {
     songList.addEventListener("click", e => {
       const btn = e.target.closest(".nyimbo");
       if (!btn) return;
-      scrollPosition = songList.scrollTop
+      scrollPosition = window.scrollY
 
       currentSong = {
         title: btn.querySelector(".title").textContent,
@@ -284,11 +284,10 @@ playlistButtons.forEach(btn => {
   }
 
   songDetails.style.display = "none";
-
-  setTimeout(() => {
-    songList.scrollTop = scrollPosition;
-  }, 50);
-
+  
+requestAnimationFrame(()=> {
+    window.scrollTo(0, scrollPosition);
+});
   audio.pause();
   play.textContent = "▶";
 });
