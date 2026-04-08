@@ -77,17 +77,17 @@ fetch("PUJO HYMNS.json")
   .then(res => res.json())
   .then(data => {
     // ===== PLAYLIST SYSTEM =====
-const categoryContainer = document.getElementById("playlist-category");
+const categoryContainer = document.getElementById("Category-names");
+const Songcontainer=document.getElementById("Category-songs")
 let playlistButtons = [];
 
 // Tengeneza buttons za playlist (clone)
 data.forEach(song => {
   const btn = document.createElement("button");
-  btn.className = "nyimbo";
   btn.dataset.file = song.file;
   btn.dataset.lyrics = song.lyrics;
   btn.dataset.Category = song.Category;
-
+  btn.className="nyimbo"
   btn.innerHTML = `
     <div class="names">
       <div class="title">${song.title}</div>
@@ -98,10 +98,11 @@ data.forEach(song => {
   btn.style.display = "none"; // hide initially
 
   playlistButtons.push(btn);
-  categoryContainer.appendChild(btn);
+  Songcontainer.appendChild(btn);
 });
 
 // CATEGORY CLICK
+let categoryView= "names";
 document.querySelectorAll(".Category").forEach(Cat => {
   Cat.addEventListener("click", () => {
 
@@ -115,7 +116,11 @@ document.querySelectorAll(".Category").forEach(Cat => {
         btn.style.display = "none";
       }
     });
-
+  document.getElementById("Catjina").textContent=Cat.textContent;
+    Songcontainer.style.display = "block";
+    categoryView= "songs";
+document.getElementById("Category-names").style.display="none";
+  document.getElementById("Catjina-Container").style.display="block";
   });
 });
 
@@ -146,8 +151,9 @@ playlistButtons.forEach(btn => {
     audio.src = currentSong.file;
 
     // switch screen
-    categoryContainer.style.display = "none";
+    Songcontainer.style.display = "none";
     songDetails.style.display = "block";
+    categoryContainer.style.display="none";
 
   });
 });
@@ -276,30 +282,25 @@ playlistButtons.forEach(btn => {
   screens.forEach(screen => screen.style.display = "none");
 
   const last = document.getElementById(lastScreen);
-
-  if (lastScreen === "playlist-category") {
-    last.style.display = "grid";
-  } else {
-    last.style.display = "block";
-  }
+  last.style.display = "block";
 
   songDetails.style.display = "none";
-  
-requestAnimationFrame(()=> {
+
+  //  HAPA NDIO FIX
+  if (categoryView === "names") {
+    categoryContainer.style.display = "grid";   // categories
+    Songcontainer.style.display = "none";
+  } else {
+    categoryContainer.style.display = "none";
+    Songcontainer.style.display = "block";      // songs
+  }
+
+  requestAnimationFrame(()=> {
     window.scrollTo(0, scrollPosition);
-});
+  });
+
   audio.pause();
   play.textContent = "▶";
-});
-
-    play.addEventListener("click", () => {
-  if (audio.paused) {
-    audio.play();
-    play.textContent = "▶";
-  } else {
-    audio.pause();
-    play.textContent = "⏯";
-  }
 });
 
     //  ❤️ FAVOURITE TOGGLE
@@ -458,5 +459,16 @@ setTimeout (()=> {
  Ad.style.display="none";
  }
 },5000);
-
+// HIDE AND SHOW CATEGORIES
+const CategoryNames=document.getElementById("Category-names")
+const CategorySongs=document.getElementById("Category-songs")
+const Jina=document.getElementById("Catjina")
+const Exitbtn = document.getElementById("Exit")
+   if(Exitbtn){
+  Exitbtn.addEventListener("click",()=> {
+    categoryView="names";
+    CategoryNames.style.display="grid";
+    CategorySongs.style.display="none";
+  });
+   }
 });
