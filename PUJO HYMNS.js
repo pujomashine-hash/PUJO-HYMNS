@@ -270,6 +270,15 @@ playlistButtons.forEach(btn => {
       
       updateFavButton();
     });
+    play.addEventListener("click",()=>{
+      if(audio.paused) {
+      audio.play();
+      play.textContent="▶";
+      }else {
+        audio.pause();
+        play.textContent=" ⏯ ";
+      }
+    });
     document.querySelectorAll(".three-dots").forEach(dot => {
       dot.addEventListener("click",(e)=>{
         e.stopPropagation();
