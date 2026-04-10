@@ -149,7 +149,6 @@ playlistButtons.forEach(btn => {
       });
 
     audio.src = currentSong.file;
-
     // switch screen
     Songcontainer.style.display = "none";
     songDetails.style.display = "block";
@@ -439,13 +438,6 @@ audio.addEventListener("error", () => {
 });
   });
   
-const Updatebtn= document.getElementById("Cupdate")
-const Version= document.getElementById("Version")
-if(Updatebtn){
-Updatebtn.addEventListener("click",()=>{
-  Version.textContent="The latest version already insalled"
-});
-}
 const sharebtn= document.getElementById("share")
  if(sharebtn) {
 sharebtn.addEventListener("click",(e)=>{
@@ -480,4 +472,27 @@ const Exitbtn = document.getElementById("Exit")
     CategorySongs.style.display="none";
   });
    }
+   document.getElementById("Cupdate").addEventListener("click",()=>{
+     function checkUpdate() {
+  const currentVersion = "1.0.0";
+
+  fetch("https://raw.githubusercontent.com/pujomashine-hash/PUJO-HYMNS/main/Version.json")
+    .then(res => res.json())
+    .then(data => {
+
+      if (data.version !== currentVersion) {
+        if (confirm("Kuna update mpya. Unataka kupakua?")) {
+          window.location.href = data.url;
+        }
+      } else {
+        alert("App yako iko updated tayari ");
+      }
+
+    })
+    .catch(() => {
+      alert("Imeshindikana kuangalia update (check internet)");
+    });
+}
+checkUpdate();
+   });
 });
