@@ -7,7 +7,7 @@ const playlistContainer = document.getElementById("playlist-container");
 let lastScreen= "song-list";
 const All = document.getElementById("All");
 if(songList)songList.style.display = "block";
-
+//initial update check
 function checkUpdate() {
   const currentVersion = "1.0.0";
 
