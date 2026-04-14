@@ -1,0 +1,499 @@
+
+/*  GLOBAL  */
+body {
+  background-color: black;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+#top {
+  position: fixed;
+  width: 100%;
+  margin-bottom:20px;
+  justify-content: space-around;
+  z-index: 50;
+  background: black;
+  border: 2px solid black;
+}
+#left{
+  display: flex;
+}
+#menu {
+  justify-content: flex-start;
+  display: flex;
+  display: none;
+  background: #2a2a2a;
+  flex-direction: column;
+  position: absolute;
+  border-radius: 1px;
+  height: 500px;
+  z-index: 1000;
+  width: 150px;
+  box-shadow: 1px 1px 4px magenta;
+  align-items:center;
+}
+.settings {
+  background:gray;
+  color: white;
+  margin-bottom: 2px;
+  width: 100%;
+  height: 40px;
+  border: 2px dotted;
+  box-shadow: 0 0 8px magenta;
+  border-radius: 5px;
+}
+  a {
+    color: white;
+  }
+#menu-btn {
+  color: white;
+  background: black;
+  height: 30px;
+  width: 40px;
+  border-radius: 10px;
+  font-size: 30px;
+  display: flex;
+  position:absolute;
+}
+input#search {
+  margin: 20px 0;
+  padding: 8px;
+  border: 3px solid white;
+  border-radius: 10px;
+  width: 200px;
+  background-color: #1f1f1f;
+  color: white;
+}
+
+/* SCREENS  */
+.screen {
+  display: none;
+  padding: 10px;
+  padding-top: 90px;
+}
+
+#song-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+#jina-container {
+  display: none;
+  color: black;
+  font-weight: bold;
+  background: #f2f2;
+  box-shadow: 0 0 8px yellow;
+  font-size: 30px;
+}
+#jina {
+  color: white;
+}
+
+#song-details {
+  display: none;
+}
+
+#audio {
+  background: black;
+  color: white;
+}
+#playlist-container{
+  overflow: hidden;
+  width: 100%;
+  margin-top:15px;
+  z-index: 1;
+}
+#playlist-content {
+  display: flex;
+  gap: 20px;
+  animation: move 25s linear infinite;
+}
+.playlist {
+  min-width: 90px;
+  text-align: center;
+}
+#German-Hymns{
+  background-image: url(https://ik.imagekit.io/pry8rixl0/German.jpg);
+}
+.playlist.active {
+  background: gray;
+  color: gray;
+}
+#All{
+  display: none;
+}
+.circle {
+  width:70px;
+  height: 70px;
+  border-radius:50px;
+  margin: auto;
+  background: gray;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.playlist-name {
+  font-size:10px;
+  margin-top: 5px;
+  color: white;
+}
+@keyframes move {
+  from{
+   transform: translateX(0);
+  }
+  to{
+    transform:translateX(-50%)
+  }
+}
+/*  BUTTONS */
+.nyimbo {
+  width: 90%;
+  max-width: 400px;
+  margin: 10px ;
+  padding: 12px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
+}
+
+.nyimbo:hover {
+  background-color: #2a2a2a;
+}
+
+.names {
+  flex: 1;
+  text-align: left;
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.artist {
+  font-size: 14px;
+  color: #aaa;
+  padding: 0;
+  margin: 0;
+}
+
+/*  THREE DOTS DROPDOWN  */
+.three-dots {
+  position: relative;
+  font-size: 20px;
+  cursor: pointer;
+  padding-left: 5px;
+}
+
+.dots-menu {
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 0;
+  background: #2a2a2a;
+  border-radius: 10px;
+  padding: 8px;
+  min-width: 120px;
+  z-index: 10;
+}
+
+.three-dots:hover .dots-menu {
+  display: block;
+}
+
+.dots-menu p {
+  margin: 5px 0;
+  padding: 4px 6px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+}
+
+.dots-menu p:hover {
+  background-color: #444;
+  border-radius: 5px;
+}
+.controlbtn{
+  border-radius: 5px;
+  color: white;
+  background: black;
+  margin-top: 20px;
+  font-size: 20px;
+  border: none;
+  margin-left: 10px;
+  box-shadow: 0 0 8px magenta;
+}
+
+/* NAVIGATION BAR  */
+#navigation-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1f1f1f;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+}
+
+.change {
+  background-color: black;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 1px 1px 4px magenta;
+  transition: 0.2s;
+}
+
+.change:hover {
+  background-color: #333;
+}
+
+.change.active {
+  background-color: #555;
+  color: white;
+  box-shadow: 0 0 8px magenta;
+}
+
+/* CUSTOM AUDIO PLAYER */
+.player {
+  background:#007bff;
+  color: black;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 8px magenta;
+}
+#playing {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#play{
+  background: #222;
+  color: white;
+  cursor: pointer;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+#progress-container {
+  width: 100%;
+  height: 5px;
+  background: #444;
+  margin-top: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#progress {
+  height: 100%;
+  width: 0%;
+  background: #00ffcc;
+}
+#back,#fav {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.controlbtn:hover {
+  background: #22c55e;
+}
+/* Playlist screen */
+#Category-names {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding-bottom: 50px;
+}
+#Exit {
+  display: flex;
+}
+#Catjina {
+  font-size: 30px;
+}
+#Catjina-Container{
+  background-color: green;
+  display: none;
+  border-radius: 5px;
+  box-shadow: 0 0 8px magenta;
+}
+.Category {
+  padding: 20px;
+  background: yellow;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 15px;
+  height: 50px;
+  align-items: center;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+.category.active {
+  background-color: gray;
+}
+  #Pasaka {
+    background:white;
+    color: black;
+    font-family: "Impact",sans-serif;
+    animation: bounce 2s infinite ease-in-out;
+  }
+  @keyframes bounce {
+    0%{
+      transform: translateY(0px);
+    }
+    25% {
+      transform: translateY(-5px);
+    }
+    50% {
+      transform: translateY(0px);
+    }
+    75% {
+      transform: translateY(-3px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  #Kwaresma{
+    background: black;
+    color: white;
+    box-shadow: 1px 0px 1px white;
+    font-family: "Courier New",serif;
+
+  }
+  #Christmas {
+    color: violet;
+    background: red;
+    font-family: "Comic Sans MS",cursive;
+  }
+  #Kuabudu {
+    background: blue;
+    color:white;
+    font-family: "Lucida Blackbetter",Monospace;
+  }
+  #Kusifu {
+    color: blue;
+    font-family: "Times New Roman",serif;
+  }
+  #playlist-category,
+  #song-list,
+  #song-details,
+  #favourite {
+    display: none;
+  }
+  #General {
+    color: black;
+    background: pink;
+  }
+ #Sadaka {
+    background-color: Magenta;
+ }
+ #Ndoa {
+   background: palegreen;
+   color: black;
+ }
+ #Mazishi {
+   background: black;
+ }
+#Ekaristi {
+  background: gray;
+}
+#Nyimbo-za-asili {
+  background: #1DB9;
+  font-family: 'Roboto',sans-Serif;
+}
+#Watoto {
+background: #4FC3F7;
+font-family: 'Poppins',sans-Serif;
+}
+  /* CANGING THEME */
+body.light-mode {
+  background:white;
+}
+body.light-mode #top {
+  background: white;
+  border: 2px solid white;
+}
+body.light-mode #search{
+  box-shadow: 0 0 8px palegreen;
+  background: white;
+  color: black;
+}
+body.light-mode #song-list {
+  background: white;
+}
+body.light-mode #navigation-bar {
+  background: #FAF3E0;
+}
+body.light-mode #menu-btn{
+  background: #FAF3E0;
+  color: black;
+  border-radius: 1px;
+}
+body.light-mode .nyimbo {
+  background-color: #FFF8E7;
+  color: black;
+
+  width: 95%;
+}
+body.light-mode .playlist-name {
+  color:black;
+}
+body.light-mode #lyrics {
+  color: black;
+}
+body.light-mode #playlist-container {
+  box-shadow: 0 0 6px yellow;
+}
+body.light-mode .player {
+  background-color: pink;
+}
+body.light-mode #Pasaka {
+  background-color: #FAF3E0;
+}
+body.light-mode #menu{
+  background: white;
+  text-decoration-line: overline;
+}
+body.light-mode #Version {
+  color:black;
+}
+body.light-mode .circle {
+  box-shadow: 0 0 8px yellow;
+}
+#ad {
+  background:gray;
+  height: 50px;
+  max-width: 400px;
+  width: 95%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#ad img {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+}
+body.light-mode .favmessage {
+  color: black;
+}
+body.light-mode #jina {
+  color: black;
+}

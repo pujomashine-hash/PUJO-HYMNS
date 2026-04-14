@@ -1,0 +1,26 @@
+{
+  "name": "pujo-hymns",
+  "version": "1.0.0",
+  "description": "",
+  "main": "PUJO HYMNS.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pujomashine-hash/PUJO-HYMNS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/pujomashine-hash/PUJO-HYMNS/issues"
+  },
+  "homepage": "https://github.com/pujomashine-hash/PUJO-HYMNS#readme",
+  "dependencies": {
+    "@capacitor/android": "^8.3.0",
+    "@capacitor/cli": "^8.3.0",
+    "@capacitor/core": "^8.3.0"
+  }
+}

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">PUJO HYMNS</string>
+    <string name="title_activity_main">PUJO HYMNS</string>
+    <string name="package_name">com.pujo.hymns</string>
+    <string name="custom_url_scheme">com.pujo.hymns</string>
+</resources>

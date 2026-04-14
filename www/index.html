@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title> PUJO HYMNS </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="PUJO HYMNS.css">
+  <link rel="manifest" href="manifest.json">
+ </head>
+ <body>
+   <!-- MENU NA TOP -->
+   <div id="top">
+     <aside id="left">
+       <button id="menu-btn"> ≡ </button>
+        <div id="menu">
+         <button class="settings" id="theme"> Change theme 🌓</button> <br>
+         <button class="settings" id="Cupdate">Check for update</button><br>
+         <button id="share" class="settings">Share our app</button>
+         <button class="settings"> <a  href="About.html"> About</a></button><br>
+         <p id="Version"> PUJO HYMNS<br> Version 1.0.0 </p>
+        </div>
+      </aside>
+     <input type="text" placeholder="Tafuta wimbo  hapa" id="search">
+   </div>
+     
+    <div id="song-list" class="screen">
+      <div id="jina-container">
+         <button id="All"> All </button>
+         <p id="jina"> PUJO Hymns</p>
+      </div>
+    <!-- PLAYLIST -->
+     <div id="playlist-container">
+      <div id="playlist-content">
+       <div class="playlist">
+         <div class="circle" style="background-image:url(https://ik.imagekit.io/pry8rixl0/logo.png)"></div>
+         <div class="playlist-name">PUJO hymns</div>
+       </div>
+       <div class="playlist">
+         <div class="circle" style="background-image:url(https://ik.imagekit.io/pry8rixl0/I.jpeg)"></div>
+         <div class="playlist-name">Kijitonyama youth choir</div>
+       </div>
+       <div class="playlist">
+         <div class="circle" style="background-image:url(https://ik.imagekit.io/pry8rixl0/SS.png)"></div>
+         <div class="playlist-name">Sylivester Soud</div>
+       </div>
+       <div class="playlist">
+         <div class="circle" style="background-image:url(https://ik.imagekit.io/pry8rixl0/EH.png)"></div>
+         <div class="playlist-name">English Hymns</div>
+       </div>
+       <div class="playlist">
+         <div class="circle" id="German-Hymns"></div>
+        <div class="playlist-name">German Hymns</div>
+       </div>
+     </div>
+   </div>
+     <div id="ad">
+      <a href="https://youtube.com/@pujotv496?si=wCMmeRJu4cM1Prrn" target="_blank">
+        <img src="https://ik.imagekit.io/pry8rixl0/Sample%20ad.jpg">
+      </a>
+     </div>
+   <!-- js inaunda button hapa -->
+    
+  </div>
+  <div id="song-details" class="screen">
+     <div class="player">
+         <p id="playing"> Nothing here </p>
+         <audio id="audio"> </audio>
+         <button id="back" class="controlbtn"> ⌫</button>
+       <button id="play" class="controlbtn"> ⏯ </button>
+         <button id="fav" class="controlbtn"> ♥️</button>
+         <div id="progress-container">
+          <div id="progress"></div>
+        </div>
+     </div>
+            <p id="lyrics"> </p>
+  </div>
+  <!-- Playlist Screen-->
+  <div id="playlist-category" class="screen">
+    <div id="Category-names">
+       <div id="Pasaka" class="Category">Pasaka</div>
+       <div id="Kwaresma" class="Category">Kwaresma</div>
+       <div id="Christmas" class="Category"> Christmas</div>
+       <div id="Kuabudu" class="Category">Kuabudu</div>
+       <div id="Kusifu" class="Category">Kusifu</div>
+       <div id="General" class="Category">General</div>
+       <div id="Sadaka" class="Category"> Sadaka</div>
+       <div id="Ndoa" class="Category"> Ndoa</div>
+       <div id="Ekaristi" class="Category"> Ekaristi</div>
+       <div id="Mazishi" class="Category"> Mazishi</div>
+       <div id="Nyimbo-za-asili" class="Category">Nyimbo za asili</div>
+       <div id="Watoto" class="Category"> Watoto</div>
+    </div>
+    <div id="Category-songs">
+      <div id="Catjina-Container"> <button id="Exit">⌫</button><p id="Catjina">Category name</p> </div>
+      <!--filtered button will appear here -->
+    </div>
+  </div>
+   <!--Hii ni Favourite screen -->
+  <div id="favourite" class="screen">
+         <p id="fav"> </p>
+  </div>
+  <!-- navigation-bar-->
+  <div id="navigation-bar">
+    <button class="change"
+    data-target="song-list">🏠 Home </button> 
+    <button class="change"
+    data-target="playlist-category">🎬 Playlist</button>
+    <button class="change"
+    data-target="favourite">♥️ Favourite</button>
+  </div>
+  <script src="PUJO HYMNS.js"> </script>
+ </body>
+</html>
