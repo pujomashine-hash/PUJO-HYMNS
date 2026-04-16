@@ -9,27 +9,49 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - uses: actions/setup-java@v4
+      - name: Setup Java
+        uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '21'
 
-      - run: npm install
-      - run: npm install -g @capacitor/cli
-      - run: npx cap sync android
+      - name: Install dependencies
+        run: npm install
 
-      - run: |
+      - name: Install Capacitor
+        run: npm install -g @capacitor/cli
+
+      - name: Build web (optional)
+        run: npm run build || echo "no build script"
+
+      - name: Sync Capacitor
+        run: npx cap sync android
+
+      - name: Decode Keystore
+        run: |
+          echo "${{ secrets.KEYSTORE_BASE64 }}" > keystore.base64
+          base64 -d keystore.base64 > my-release-key.keystore
+
+      - name: Build Signed APK
+        run: |
           cd android
           chmod +x gradlew
-          ./gradlew assembleDebug
+          ./gradlew assembleRelease \
+          -Pandroid.injected.signing.store.file=../my-release-key.keystore \
+          -Pandroid.injected.signing.store.password=${{ secrets.KEYSTORE_PASSWORD }} \
+          -Pandroid.injected.signing.key.alias=${{ secrets.KEY_ALIAS }} \
+          -Pandroid.injected.signing.key.password=${{ secrets.KEY_PASSWORD }}
 
-      - uses: actions/upload-artifact@v4
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
         with:
-          name: app-debug
-          path: android/app/build/outputs/apk/debug/app-debug.apk
+          name: app-release
+          path: android/app/build/outputs/apk/release/app-release.apk
