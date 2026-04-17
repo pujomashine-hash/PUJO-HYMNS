@@ -1,4 +1,4 @@
-name: Build APK
+name: Build Signed APK
 
 on:
   push:
@@ -30,26 +30,33 @@ jobs:
         run: npm install -g @capacitor/cli
 
       - name: Build web (optional)
-        run: npm run build || echo "no build script"
+        run: npm run build || echo "No build script"
 
       - name: Sync Capacitor
         run: npx cap sync android
 
+      # ✅ Decode keystore from GitHub Secrets
       - name: Decode Keystore
         run: |
           echo "${{ secrets.KEYSTORE_BASE64 }}" > keystore.base64
           base64 -d keystore.base64 > my-release-key.keystore
 
+      # ✅ Move keystore inside android folder (IMPORTANT FIX)
+      - name: Move keystore
+        run: mv my-release-key.keystore android/my-release-key.keystore
+
+      # ✅ Build signed APK
       - name: Build Signed APK
         run: |
           cd android
           chmod +x gradlew
           ./gradlew assembleRelease \
-          -Pandroid.injected.signing.store.file=../my-release-key.keystore \
+          -Pandroid.injected.signing.store.file=my-release-key.keystore \
           -Pandroid.injected.signing.store.password=${{ secrets.KEYSTORE_PASSWORD }} \
           -Pandroid.injected.signing.key.alias=${{ secrets.KEY_ALIAS }} \
           -Pandroid.injected.signing.key.password=${{ secrets.KEY_PASSWORD }}
 
+      # ✅ Upload APK
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
