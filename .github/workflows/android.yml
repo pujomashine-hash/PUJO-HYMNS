@@ -17,11 +17,12 @@ jobs:
         with:
           node-version: 18
 
+      # 🔥 TUMIA JAVA 17 (SIYO 21)
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '17'   # 🔥 tumeshusha kutoka 21 → 17 (stable kwa Android)
+          java-version: '17'
 
       - name: Install dependencies
         run: npm install
@@ -29,20 +30,22 @@ jobs:
       - name: Install Capacitor CLI
         run: npm install -g @capacitor/cli
 
-      - name: Build web (optional)
+      - name: Build web (skip if none)
         run: npm run build || echo "No build script"
 
       - name: Sync Capacitor
         run: npx cap sync android
 
+      # 🔥 BUILD DEBUG APK
       - name: Build Debug APK
         run: |
           cd android
           chmod +x gradlew
           ./gradlew assembleDebug
 
+      # 🔥 PATH SAHIHI YA DEBUG APK
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: app-debug
-          path: android/app/build/outputs/apk/debug/*.apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
