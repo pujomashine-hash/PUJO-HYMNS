@@ -21,7 +21,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '21'
+          java-version: '17'   # 🔥 tumeshusha kutoka 21 → 17 (stable kwa Android)
 
       - name: Install dependencies
         run: npm install
@@ -35,14 +35,14 @@ jobs:
       - name: Sync Capacitor
         run: npx cap sync android
 
-      - name: Build Release APK (UNSIGNED)
+      - name: Build Debug APK
         run: |
           cd android
           chmod +x gradlew
-          ./gradlew assembleDebug 
+          ./gradlew assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: app-release
-          path: android/app/build/outputs/apk/release/*.apk
+          name: app-debug
+          path: android/app/build/outputs/apk/debug/*.apk
