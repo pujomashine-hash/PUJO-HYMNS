@@ -3,10 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 if (sharebtn) {
   sharebtn.addEventListener("click", async () => {
-    const { Share } = await import('@capacitor/share');
-
     try {
-      await Share.share({
+      await Capacitor.Plugins.Share.share({
         title: 'PUJO HYMNS',
         text: 'Install for free',
         url: 'https://www.mediafire.com/folder/eyz4rcw94hr5l/Updates'
