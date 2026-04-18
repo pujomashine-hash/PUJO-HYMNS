@@ -9,52 +9,38 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      # ✅ Java 17 (IMPORTANT kwa Capacitor 5)
-      - name: Setup Java
-        uses: actions/setup-java@v4
+      - uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Install dependencies
-        run: npm install
+      - run: npm install
 
-      # ✅ Hakikisha capacitor iko sawa
-      - name: Sync Capacitor
-        run: npx cap sync android
+      - run: npx cap sync android
 
-      # ✅ Decode keystore kutoka secrets
+      # 🔥 CREATE KEYSTORE FILE
       - name: Decode Keystore
         run: |
-          echo "${{ secrets.KEYSTORE_BASE64 }}" > keystore.base64
-          base64 -d keystore.base64 > my-release-key.keystore
+          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > android/app/release.keystore
 
-      # ✅ Move keystore ndani ya android
-      - name: Move keystore
-        run: mv my-release-key.keystore android/my-release-key.keystore
-
-      # ✅ Build SIGNED RELEASE APK
+      # 🔥 BUILD SIGNED APK
       - name: Build Release APK
         run: |
           cd android
           chmod +x gradlew
           ./gradlew assembleRelease \
-          -Pandroid.injected.signing.store.file=my-release-key.keystore \
+          -Pandroid.injected.signing.store.file=app/release.keystore \
           -Pandroid.injected.signing.store.password=${{ secrets.KEYSTORE_PASSWORD }} \
           -Pandroid.injected.signing.key.alias=${{ secrets.KEY_ALIAS }} \
           -Pandroid.injected.signing.key.password=${{ secrets.KEY_PASSWORD }}
 
-      # ✅ Upload APK
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
           name: app-release
-          path: android/app/build/outputs/apk/release/app-release.apk
+          path: android/app/build/outputs/apk/release/*.apk
