@@ -1,4 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const sharebtn = document.getElementById("share-app");
+
+if (sharebtn) {
+  sharebtn.addEventListener("click", async () => {
+    const { Share } = await import('@capacitor/share');
+
+    try {
+      await Share.share({
+        title: 'PUJO HYMNS',
+        text: 'Install for free',
+        url: 'https://www.mediafire.com/folder/eyz4rcw94hr5l/Updates'
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  });
+}
 const navButtons = document.querySelectorAll(".change");
 const screens = document.querySelectorAll(".screen");
 
@@ -459,23 +476,7 @@ audio.addEventListener("error", () => {
 });
   });
   
-const sharebtn = document.getElementById("share-app");
 
-if (sharebtn) {
-  sharebtn.addEventListener("click", async () => {
-    const { Share } = await import('@capacitor/share');
-
-    try {
-      await Share.share({
-        title: 'PUJO HYMNS',
-        text: 'Install for free',
-        url: 'https://www.mediafire.com/folder/eyz4rcw94hr5l/Updates'
-      });
-    } catch (e) {
-      console.log(e);
-    }
-  });
-}
 
 
 setTimeout (()=> {
