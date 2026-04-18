@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: 18
 
-      # 🔥 TUMIA JAVA 17 (SIYO 21)
+      # ✅ Tumia Java 17 (IMPORTANT)
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
@@ -27,23 +27,21 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install Capacitor CLI
-        run: npm install -g @capacitor/cli
-
-      - name: Build web (skip if none)
-        run: npm run build || echo "No build script"
+      # ✅ Hakikisha android ipo
+      - name: Add Android platform (safe)
+        run: npx cap add android || echo "Already exists"
 
       - name: Sync Capacitor
         run: npx cap sync android
 
-      # 🔥 BUILD DEBUG APK
+      # ✅ Build DEBUG APK (hakuna signing)
       - name: Build Debug APK
         run: |
           cd android
           chmod +x gradlew
           ./gradlew assembleDebug
 
-      # 🔥 PATH SAHIHI YA DEBUG APK
+      # ✅ Upload APK sahihi
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
