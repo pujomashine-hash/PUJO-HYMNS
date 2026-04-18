@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: 18
 
-      # ✅ Java 17 (sahihi kabisa)
+      # ✅ Tumia Java 17 (fix ya error ya "invalid source release: 21")
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
@@ -27,25 +27,26 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # 🔥 FIX permission ya cap (HII NDIO ILIKUA INAKOSEKANA)
-      - name: Fix cap permission
-        run: chmod +x node_modules/.bin/cap
+      # ✅ Install Capacitor properly (fix ya permission denied)
+      - name: Install Capacitor CLI
+        run: npm install @capacitor/cli
 
       # ✅ Hakikisha android ipo
       - name: Add Android platform
-        run: npx cap add android || echo "Already exists"
+        run: npx @capacitor/cli add android || echo "Already exists"
 
+      # ✅ Sync bila error ya cap permission
       - name: Sync Capacitor
-        run: npx cap sync android
+        run: npx @capacitor/cli sync android
 
-      # ✅ Build DEBUG APK
+      # ✅ Build DEBUG APK (hakuna signing)
       - name: Build Debug APK
         run: |
           cd android
           chmod +x gradlew
           ./gradlew assembleDebug
 
-      # ✅ Upload APK
+      # ✅ Upload APK sahihi
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
