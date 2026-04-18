@@ -44,6 +44,10 @@ body {
   box-shadow: 0 0 8px magenta;
   border-radius: 5px;
 }
+.settings:hover {
+  background: magenta;
+  cursor: pointer;
+}
   a {
     color: white;
   }
@@ -135,7 +139,7 @@ input#search {
   background-repeat: no-repeat;
 }
 .playlist-name {
-  font-size:10px;
+  font-size:12px;
   margin-top: 5px;
   color: white;
 }
