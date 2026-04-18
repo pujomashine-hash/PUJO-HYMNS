@@ -9,38 +9,51 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      # 🔹 Checkout repo
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v3
+      # 🔹 Node setup
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - uses: actions/setup-java@v4
+      # 🔹 Java 17 (important kwa Capacitor 5)
+      - name: Setup Java
+        uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
 
-      - run: npm install
+      # 🔹 Install dependencies
+      - name: Install dependencies
+        run: npm install
 
-      - run: npx cap sync android
+      # 🔹 Sync capacitor
+      - name: Sync Capacitor
+        run: npx cap sync android
 
-      # 🔥 CREATE KEYSTORE FILE
+      # 🔥 Create keystore file inside android/app
       - name: Decode Keystore
         run: |
+          mkdir -p android/app
           echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > android/app/release.keystore
 
-      # 🔥 BUILD SIGNED APK
+      # 🔥 Build signed APK (NO PATH ERROR)
       - name: Build Release APK
         run: |
-          cd android
-          chmod +x gradlew
-          ./gradlew assembleRelease \
-          -Pandroid.injected.signing.store.file=app/release.keystore \
+          cd android/app
+          chmod +x ../gradlew
+          ../gradlew assembleRelease \
+          -Pandroid.injected.signing.store.file=release.keystore \
           -Pandroid.injected.signing.store.password=${{ secrets.KEYSTORE_PASSWORD }} \
           -Pandroid.injected.signing.key.alias=${{ secrets.KEY_ALIAS }} \
           -Pandroid.injected.signing.key.password=${{ secrets.KEY_PASSWORD }}
 
-      - uses: actions/upload-artifact@v4
+      # 🔹 Upload APK
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
         with:
           name: app-release
           path: android/app/build/outputs/apk/release/*.apk
