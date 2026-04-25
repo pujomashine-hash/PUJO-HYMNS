@@ -19,12 +19,13 @@ const screens = document.querySelectorAll(".screen");
 
 const songList = document.getElementById("song-list");
 const playlistContainer = document.getElementById("playlist-container");
+let activeCategory = null;
 let lastScreen= "song-list";
 const All = document.getElementById("All");
 if(songList)songList.style.display = "block";
 //initial update check
 function checkUpdate() {
-  const currentVersion = "1.0.0";
+  const currentVersion = "1.0.1";
 
   fetch("https://raw.githubusercontent.com/pujomashine-hash/PUJO-HYMNS/main/Version.json")
     .then(res => res.json())
@@ -82,9 +83,26 @@ navButtons.forEach(btn => {
     lastScreen= targetId;
     if(targetId==="playlist-category"){
     document.getElementById(targetId).style.display="grid"
+    searchInput.style.visibility="hidden";
     }else {
     document.getElementById(targetId).style.display = "block";
+    searchInput.style.visibility="visible";
     }
+    if (targetId === "playlist-category" && activeCategory) {
+
+  const Songcontainer = document.getElementById("Category-songs");
+
+  Songcontainer.style.display = "block";
+
+  document.querySelectorAll("#Category-songs .nyimbo").forEach(btn => {
+    if (btn.dataset.Category === activeCategory) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  });
+
+}
   });
 });
 
@@ -112,7 +130,7 @@ if (searchInput) {
 fetch("PUJO HYMNS.json")
   .then(res => res.json())
   .then(data => {
-    // ===== PLAYLIST SYSTEM =====
+    // PLAYLIST SYSTEM 
 const categoryContainer = document.getElementById("Category-names");
 const Songcontainer=document.getElementById("Category-songs")
 let playlistButtons = [];
@@ -125,11 +143,27 @@ data.forEach(song => {
   btn.dataset.Category = song.Category;
   btn.className="nyimbo"
   btn.innerHTML = `
-    <div class="names">
+  <div class="left-img">
+    <div class="btn-image">
+    
+  <img 
+  src="${song.image ? song.image : 'defaul.jpg'}"
+  onerror="this.src='logo.png'">
+    </div>
+
+    <div class="text-btn">
       <div class="title">${song.title}</div>
       <div class="artist">${song.artist}</div>
     </div>
-  `;
+  </div>
+
+  <span class="three-dots">⋮
+    <div class="dots-menu">
+      <button class="share"> Share </button>
+    </div>
+  </span>
+`;
+
 
   btn.style.display = "none"; // hide initially
 
@@ -143,6 +177,7 @@ document.querySelectorAll(".Category").forEach(Cat => {
   Cat.addEventListener("click", () => {
 
     const Category = Cat.id;
+    activeCategory= Category;
 
     // show filtered songs
     playlistButtons.forEach(btn => {
@@ -189,7 +224,6 @@ playlistButtons.forEach(btn => {
     Songcontainer.style.display = "none";
     songDetails.style.display = "block";
     categoryContainer.style.display="none";
-
   });
 });
 
@@ -198,18 +232,29 @@ playlistButtons.forEach(btn => {
       btn.className = "nyimbo";
       btn.dataset.file = song.file;
       btn.dataset.lyrics = song.lyrics;
+      btn.dataset.image = song.image;
 
       btn.innerHTML = `
-        <div class="names">
-          <div class="title">${song.title}</div>
-          <div class="artist">${song.artist}</div>
-        </div>
-        <span class="three-dots">⋮
-          <div class="dots-menu">
-            <button class="share"> Share </button>
-          </div>
-        </span>
-      `;
+  <div class="left-img">
+    <div class="btn-image">
+    
+  <img 
+  src="${song.image ? song.image : 'defaul.jpg'}"
+  onerror="this.src='logo.png'">
+    </div>
+
+    <div class="text-btn">
+      <div class="title">${song.title}</div>
+      <div class="artist">${song.artist}</div>
+    </div>
+  </div>
+
+  <span class="three-dots">⋮
+    <div class="dots-menu">
+      <button class="share"> Share </button>
+    </div>
+  </span>
+`;
 
       songList.appendChild(btn);
     });
@@ -330,7 +375,6 @@ playlistButtons.forEach(btn => {
 
   songDetails.style.display = "none";
 
-  //  HAPA NDIO FIX
   if (categoryView === "names") {
     categoryContainer.style.display = "grid";   // categories
     Songcontainer.style.display = "none";
@@ -397,11 +441,27 @@ playlistButtons.forEach(btn => {
         btn.className = "nyimbo";
 
         btn.innerHTML = `
-          <div class="names">
-            <div class="title">${song.title}</div>
-            <div class="artist">${song.artist}</div>
-          </div>
-        `;
+  <div class="left-img">
+    <div class="btn-image">
+    
+  <img 
+  src="${song.image ? song.image : 'defaul.jpg'}"
+  onerror="this.src='logo.png'">
+    </div>
+
+    <div class="text-btn">
+      <div class="title">${song.title}</div>
+      <div class="artist">${song.artist}</div>
+    </div>
+  </div>
+
+  <span class="three-dots">⋮
+    <div class="dots-menu">
+      <button class="share"> Share </button>
+    </div>
+  </span>
+`;
+
 
         // click kutoka favourite
         btn.addEventListener("click", () => {
@@ -410,6 +470,7 @@ playlistButtons.forEach(btn => {
           const audio = document.getElementById("audio");
        
           currentSong = song;
+          Playing.textContent = currentSong.title + " - " + currentSong.artist;
 
           fetch(song.lyrics)
             .then(res => res.text())
@@ -490,6 +551,7 @@ const Jina=document.getElementById("Catjina")
 const Exitbtn = document.getElementById("Exit")
    if(Exitbtn){
   Exitbtn.addEventListener("click",()=> {
+    activeCategory = null; 
     categoryView="names";
     CategoryNames.style.display="grid";
     CategorySongs.style.display="none";
@@ -505,6 +567,5 @@ const Exitbtn = document.getElementById("Exit")
      }
 });
 } 
-
 
 });
