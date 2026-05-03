@@ -1,6 +1,6 @@
-COME, HOLY GHOST, GOD AND LORD
-Composer: Martin Luther (1524)
-Translation: Catherine Winkworth (1855)
+𝑪𝑶𝑴𝑬, 𝑯𝑶𝑳𝒀 𝑮𝑯𝑶𝑺𝑻, 𝑮𝑶𝑫 𝑨𝑵𝑫 𝑳𝑶𝑹𝑫
+𝑪𝒐𝒎𝒑𝒐𝒔𝒆𝒓: 𝑴𝒂𝒓𝒕𝒊𝒏 𝑳𝒖𝒕𝒉𝒆𝒓 (1524)
+𝑻𝒓𝒂𝒏𝒔𝒍𝒂𝒕𝒊𝒐𝒏: 𝑪𝒂𝒕𝒉𝒆𝒓𝒊𝒏𝒆 𝑾𝒊𝒏𝒌𝒘𝒐𝒓𝒕𝒉 (1855)
 
 1. Come, Holy Ghost, God and Lord,
    Be all Thy graces now out-poured
@@ -31,6 +31,8 @@ Translation: Catherine Winkworth (1855)
    Through life and death to be before Thee,
    And for eternal life adore Thee.
    Alleluia! Alleluia!
+
+
 
 
 
