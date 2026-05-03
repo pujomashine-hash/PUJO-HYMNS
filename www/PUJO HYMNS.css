@@ -28,11 +28,12 @@ body {
   flex-direction: column;
   position: absolute;
   border-radius: 1px;
-  height: 500px;
+  height: auto;
   z-index: 1000;
-  width: 150px;
+  width: 200px;
   box-shadow: 1px 1px 4px magenta;
   align-items:center;
+  
 }
 .settings {
   background:gray;
@@ -43,6 +44,12 @@ body {
   border: 2px dotted;
   box-shadow: 0 0 8px magenta;
   border-radius: 5px;
+}
+#Copyright {
+  padding-top: 350px;
+}
+#Version {
+  font-size: 5px;
 }
 .settings:hover {
   background: magenta;
@@ -105,22 +112,43 @@ input#search {
   color: white;
 }
 #playlist-container{
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   width: 100%;
-  margin-top:15px;
-  z-index: 1;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
-#playlist-content {
+
+#playlist-container::-webkit-scrollbar{
+  display: none;
+}
+#playlist-content{
   display: flex;
   gap: 20px;
-  animation: move 25s linear infinite;
+  width: max-content;
+  animation: tick 40s steps(5) infinite;
 }
+
+@keyframes tick{
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(calc(-100% + 100vw));
+  }
+}
+
 .playlist {
   min-width: 90px;
   text-align: center;
+  
 }
 #German-Hymns{
   background-image: url(https://ik.imagekit.io/pry8rixl0/German.jpg);
+}
+#Mt-Yohane-Paulo-II {
+  background-image: url(https://ik.imagekit.io/pry8rixl0/Mt.Yohane%20paulo%20II%20kibao%20Mafinga.jpg);
 }
 .playlist.active {
   background: gray;
@@ -138,20 +166,15 @@ input#search {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  box-shadow: 0 0 8px blue;
 }
 .playlist-name {
   font-size:12px;
   margin-top: 5px;
   color: white;
+  font-weight: bold;
 }
-@keyframes move {
-  from{
-   transform: translateX(0);
-  }
-  to{
-    transform:translateX(-50%)
-  }
-}
+
 /*  BUTTONS */
 .nyimbo {
   width: 90%;
@@ -501,6 +524,9 @@ body.light-mode #Pasaka {
 body.light-mode #menu{
   background: white;
   text-decoration-line: overline;
+}
+body.light-mode #Copyright {
+  color: black;
 }
 body.light-mode #Version {
   color:black;
