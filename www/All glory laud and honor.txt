@@ -1,6 +1,6 @@
-ALL GLORY, LAUD, AND HONOR
-Text: St. Theodulph of Orleans (c. 820)
-Translation: John Mason Neale (1851)
+𝑨𝑳𝑳 𝑮𝑳𝑶𝑹𝒀, 𝑳𝑨𝑼𝑫, 𝑨𝑵𝑫 𝑯𝑶𝑵𝑶𝑹
+𝑻𝒆𝒙𝒕: 𝑺𝒕. 𝑻𝒉𝒆𝒐𝒅𝒖𝒍𝒑𝒉 𝒐𝒇 𝑶𝒓𝒍𝒆𝒂𝒏𝒔 (𝒄. 820)
+𝑻𝒓𝒂𝒏𝒔𝒍𝒂𝒕𝒊𝒐𝒏: 𝑱𝒐𝒉𝒏 𝑴𝒂𝒔𝒐𝒏 𝑵𝒆𝒂𝒍𝒆 (1851)
 
 Refrain:
 All glory, laud, and honor
@@ -37,5 +37,7 @@ Made sweet hosannas ring.
    Who in all good delightest,
    Thou good and gracious King.
    (Refrain)
+
+
 
 
