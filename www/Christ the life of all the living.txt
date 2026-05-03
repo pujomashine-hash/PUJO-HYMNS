@@ -1,6 +1,6 @@
-CHRIST, THE LIFE OF ALL THE LIVING
-Composer: Ernst Christoph Homburg (1659)
-Translation: Catherine Winkworth (1863)
+𝑪𝑯𝑹𝑰𝑺𝑻, 𝑻𝑯𝑬 𝑳𝑰𝑭𝑬 𝑶𝑭 𝑨𝑳𝑳 𝑻𝑯𝑬 𝑳𝑰𝑽𝑰𝑵𝑮
+𝑪𝒐𝒎𝒑𝒐𝒔𝒆𝒓: 𝑬𝒓𝒏𝒔𝒕 𝑪𝒉𝒓𝒊𝒔𝒕𝒐𝒑𝒉 𝑯𝒐𝒎𝒃𝒖𝒓𝒈 (1659)
+𝑻𝒓𝒂𝒏𝒔𝒍𝒂𝒕𝒊𝒐𝒏: 𝑪𝒂𝒕𝒉𝒆𝒓𝒊𝒏𝒆 𝑾𝒊𝒏𝒌𝒘𝒐𝒓𝒕𝒉 (1863)
 
 1. Christ, the Life of all the living,
    Christ, the Death of death, our foe,
@@ -46,6 +46,7 @@ Translation: Catherine Winkworth (1863)
    For Thy bleeding and Thy dying,
    For that last triumphant cry,
    And shall praise Thee, Lord, on high.
+
 
 
 
