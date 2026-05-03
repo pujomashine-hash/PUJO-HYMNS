@@ -1,6 +1,6 @@
-FROM HEAVEN ABOVE TO EARTH I COME
-Composer: Martin Luther (1534)
-Translation: Catherine Winkworth (1855)
+𝑭𝑹𝑶𝑴 𝑯𝑬𝑨𝑽𝑬𝑵 𝑨𝑩𝑶𝑽𝑬 𝑻𝑶 𝑬𝑨𝑹𝑻𝑯 𝑰 𝑪𝑶𝑴𝑬
+𝑪𝒐𝒎𝒑𝒐𝒔𝒆𝒓: 𝑴𝒂𝒓𝒕𝒊𝒏 𝑳𝒖𝒕𝒉𝒆𝒓 (1534)
+𝑻𝒓𝒂𝒏𝒔𝒍𝒂𝒕𝒊𝒐𝒏: 𝑪𝒂𝒕𝒉𝒆𝒓𝒊𝒏𝒆 𝑾𝒊𝒏𝒌𝒘𝒐𝒓𝒕𝒉 (1855)
 
 1. From heaven above to earth I come
    To bear good news to every home;
@@ -41,6 +41,8 @@ Translation: Catherine Winkworth (1855)
    Who unto us His Son hath given!
    While angels sing with pious mirth
    A glad new year to all the earth.
+
+
 
 
 
