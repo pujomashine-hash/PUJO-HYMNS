@@ -1,6 +1,6 @@
-IN THE MIDST OF LIFE
-Composer: Martin Luther (1524)
-Translation: Catherine Winkworth (1862)
+𝑰𝑵 𝑻𝑯𝑬 𝑴𝑰𝑫𝑺𝑻 𝑶𝑭 𝑳𝑰𝑭𝑬
+𝑪𝒐𝒎𝒑𝒐𝒔𝒆𝒓: 𝑴𝒂𝒓𝒕𝒊𝒏 𝑳𝒖𝒕𝒉𝒆𝒓 (1524)
+𝑻𝒓𝒂𝒏𝒔𝒍𝒂𝒕𝒊𝒐𝒏: 𝑪𝒂𝒕𝒉𝒆𝒓𝒊𝒏𝒆 𝑾𝒊𝒏𝒌𝒘𝒐𝒓𝒕𝒉 (1862)
 
 1. In the midst of life, behold,
    Death has girt us round.
@@ -43,6 +43,7 @@ Translation: Catherine Winkworth (1862)
    Eternal God,
    In the hour of death, sustain us, Lord.
    Kyrie eleison.
+
 
 
 
