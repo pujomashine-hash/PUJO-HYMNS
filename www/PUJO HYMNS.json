@@ -4,12 +4,21 @@
   "lyrics":"Aitwa wa simanzi.txt",
   "file":"https://www.dropbox.com/scl/fi/e86mzq5iqdyum17dqg4i6/Aitwa-wa-simanzi.mp3?rlkey=ipi9pmmfs99w8wv4mnzvmlkf5&st=awfsjjzg&dl=1"
  },
+    {
+     "title":"Yesu ni rafiki","artist":"Kwaya kuu KKKT-Mabibo external","lyrics":"Yesu ni rafiki.txt","Category":"General","Church":"Lutheran choir","image":"https://ik.imagekit.io/pry8rixl0/Yesu%20ni%20rafiki.png","file":"https://www.dropbox.com/scl/fi/a56b1ne9h2k9n9s40r80g/YESU_NI_RAFIKI__Official_video__KKKT_Mabibo_External_kwaya_kuu-256k.mp3?rlkey=ew5dj8h5ikqoociw53lkxbb4r&st=ak6sya1c&dl=1"
+    },
+    {
+      "title":"No not one","artist":"English Hymns","lyrics":"Not not one.txt","Category":"General","Church":"Methodist","image":"https://ik.imagekit.io/pry8rixl0/Johnson%20Otman%20jr..jpg?updatedAt=1777208033821","file":"https://www.dropbox.com/scl/fi/6km4ky6549q7d3s6og61j/Not-not-one.mp3?rlkey=iq1urp8e0rwkjvjdbhtofgibw&st=l4vsqte9&dl=1"
+    },
+    {
+      "title":"Tuzo ya milele","artist":"Kwaya ya mt. Yohane Paulo II Kibao-Mafinga","lyrics":"Tuzo ya milele.txt","Category":"General","Church":"Rc choir","image":"https://ik.imagekit.io/pry8rixl0/Tuzo%20ya%20milele.png","file":"https://www.dropbox.com/scl/fi/av613574mj3l4o9yhwu9m/TUZO_YA_MILELE____Kwaya_ya_Mt._Yohane_Paulo_II_Kibao_-_Mafinga____Official_Music_Video_4K-256k.mp3?rlkey=h6jed54nfpiu2vnk8vcagzrpc&st=hcvrhc01&dl=1"
+    },
  {
    "title":"Bwana u sehemu yangu",
    "artist":"Pujo hymns",
    "Church":"Methodist",
    "Category":"General",
-   "image":"https://ik.imagekit.io/pry8rixl0/fanny-crosby.jpg",
+   "image":"https://ik.imagekit.io/pry8rixl0/Fanny%20Crosby%20HD.webp",
    "lyrics":"Bwana u sehemu yangu.txt",
    "file":"https://www.dropbox.com/scl/fi/yt7jkhj2ox2ipemthmz2o/Close-to-Thee.mp3?rlkey=a534l0s22l9340yyo58hlggsf&st=5cr677rm&dl=1"
  },
@@ -21,10 +30,10 @@
  "title":"Salamu yesu Bwanangu","artist":"PUJO hymns","lyrics":"Salamu yesu Bwanangu.txt","file":"https://rebrand.ly/3ac165"
  },
  {
-   "title":"Mwokozi umeokoa","artist":"PUJO hymns","lyrics":"Mwokozi umeokoa.txt","file":"https://www.dropbox.com/scl/fi/083i7oy5cr0n2b25xr1ir/Mwokozi-umeokoa-_precious-saviour-1.mp3?rlkey=wihdnph6fdlw3aam0f60g5jz1&st=jzllr2gz&dl=1","Category":"General","Church":"General","image":"https://ik.imagekit.io/pry8rixl0/francis-ridley-havergal.jpg"
+   "title":"Mwokozi umeokoa","artist":"PUJO hymns","lyrics":"Mwokozi umeokoa.txt","file":"https://www.dropbox.com/scl/fi/083i7oy5cr0n2b25xr1ir/Mwokozi-umeokoa-_precious-saviour-1.mp3?rlkey=wihdnph6fdlw3aam0f60g5jz1&st=jzllr2gz&dl=1","Category":"General","Church":"General","image":""
  },
  {
-   "title":"Mteteeni yesu","artist":"PUJO hymns","lyrics":"Mteteeni yesu.txt","file":"https://www.dropbox.com/scl/fi/z34rlowtxvqqyqfhmgw8v/Mteteeni-Yesu.mp3?rlkey=t8lf1k806ttk6t952vjxucquk&st=3l1d196a&dl=1","Category":"Kwaresma","Church":"General","image":"https://ik.imagekit.io/pry8rixl0/Duffiled%20jr.jpg"
+   "title":"Mteteeni yesu","artist":"PUJO hymns","lyrics":"Mteteeni yesu.txt","file":"https://www.dropbox.com/scl/fi/z34rlowtxvqqyqfhmgw8v/Mteteeni-Yesu.mp3?rlkey=t8lf1k806ttk6t952vjxucquk&st=3l1d196a&dl=1","Category":"Kwaresma","Church":"General","image":"https://ik.imagekit.io/pry8rixl0/George%20duffiled%20HD.webp"
  },
  {
    "title":"Haya ee moyo wangu","artist":"Organist:Zawadi Mbilinyi","lyrics":"Haya ee moyo wangu.txt","file":"https://www.dropbox.com/scl/fi/f8uk7dkb2x4jz5xj1ng24/Haya_Ee_Moyo_wangu_imba_kwa_furaha__TMW_257_-256k.mp3?rlkey=y05g7m0g0ygxo2jxazieku702&st=bwsim63e&dl=1","Category":"General","Church":"Lutheran choir","image":"https://ik.imagekit.io/pry8rixl0/Haya%20ee%20moyo%20wangu.jpg?updatedAt=1777118029886"
@@ -42,10 +51,10 @@
    "title":"Tis so sweet to trust in Jesus","artist":"English Hymns","lyrics":"Tis so sweet.txt","file":"https://www.dropbox.com/scl/fi/o7y7lv7aukuyuv9f8m9r8/kumtegemea-mwokozi-tis_so_sweet_to_trust_in_Jesus-1.mp3?rlkey=3f9x8iimcf5643e4hhnzvcwvt&st=34fzkbp7&dl=1"
  },
  {
-   "title":"Jesus lover of my soul","artist":"English Hymns","lyrics":"Jesus lover of my soul.txt","file":"https://www.dropbox.com/scl/fi/hejx0eql9ccqpi055nh31/Jesus-lover-of-my-soul.mp3?rlkey=211033cofiucn7kqpj45096dy&st=8o1qxjjm&dl=1"
+   "title":"Jesus lover of my soul","artist":"English Hymns","lyrics":"Jesus lover of my soul.txt","file":"https://www.dropbox.com/scl/fi/hejx0eql9ccqpi055nh31/Jesus-lover-of-my-soul.mp3?rlkey=211033cofiucn7kqpj45096dy&st=8o1qxjjm&dl=1","Church":"Church of England","Category":"General","image":"https://ik.imagekit.io/pry8rixl0/Charles%20Wesley.webp?updatedAt=1777662039770"
  },
  {
-   "title":"A mighty fortress is our God","artist":"English Hymns","lyrics":"A mighty fortress is our God.txt","Category":"Pasaka","file":"https://www.dropbox.com/scl/fi/9gr0dacgwxhcygduv0a3f/A-Mighty-Fortress.mp3?rlkey=9xemr7260fd48a9elrlmtvhtv&st=vvm7cx7e&dl=1"
+   "title":"A mighty fortress is our God","artist":"English Hymns","lyrics":"A mighty fortress is our God.txt","Category":"Pasaka","file":"https://www.dropbox.com/scl/fi/9gr0dacgwxhcygduv0a3f/A-Mighty-Fortress.mp3?rlkey=9xemr7260fd48a9elrlmtvhtv&st=vvm7cx7e&dl=1","image":"https://ik.imagekit.io/pry8rixl0/Martin%20Luther.jpg"
  },
  {
    "title":"All creature of our God and king","artist":"English Hymns","lyrics":"All creature of our God and king.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/arb5a8ri3pwjyt6vuup1k/All-creature-of-our-god-and-King.mp3?rlkey=ffmw0fnmx561id3v06hu6ouvp&st=4etum3va&dl=1"
@@ -54,13 +63,13 @@
    "title":"Now thank we all our God","artist":"English Hymns","lyrics":"Now thank we all our God.txt","file":"https://www.dropbox.com/scl/fi/dnamtzekunablo7efzx7a/Now-Thank-We-All-Our-God.mp3?rlkey=gb6kljih2vgvclbtxxsk705z5&st=1gr8h24a&dl=1"
  },
  {
-   "title":"From heaven above the earth i come","artist":"English Hymns","lyrics":"From heaven above the earth i come.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/7ut0kmyft2xn3mrsf3u6u/From-heaven-above-the-earth-i-come.mp3?rlkey=cxgy5xuufolpsdq1k1d4b7fk2&st=801af1ao&dl=1"
+   "title":"From heaven above the earth i come","artist":"English Hymns","lyrics":"From heaven above the earth i come.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/7ut0kmyft2xn3mrsf3u6u/From-heaven-above-the-earth-i-come.mp3?rlkey=cxgy5xuufolpsdq1k1d4b7fk2&st=801af1ao&dl=1","image":"https://ik.imagekit.io/pry8rixl0/Martin%20Luther.jpg"
  },
  {
    "title":"O scared head now wounded","artist":"English Hymns","lyrics":"O scared head now wounded.txt","Category":"Kwaresma","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/dzgdc0xygz5i2kl23ivvc/O-scared-head-now-wounded.mp3?rlkey=7m0t15v0c3ptggtu8tisag8ky&st=5n3zfl7s&dl=1"
  },
  {
-   "title":"Come holy ghost,God and Lord","artist":"English Hymns","lyrics":"Come holy ghost,God and Lord.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/apq4y0usg7bun43195ia3/Come-holy-ghost-God-and-lord.mp3?rlkey=uhp9zjdkxaruigfhds1piqflo&st=otw22glx&dl=1"
+   "title":"Come holy ghost,God and Lord","artist":"English Hymns","lyrics":"Come holy ghost,God and Lord.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/apq4y0usg7bun43195ia3/Come-holy-ghost-God-and-lord.mp3?rlkey=uhp9zjdkxaruigfhds1piqflo&st=otw22glx&dl=1","image":"https://ik.imagekit.io/pry8rixl0/Martin%20Luther.jpg"
  },
  {
    "title":"Christ the Lord is risen today","artist":"English Hymns","lyrics":"Christ the Lord is risen today.txt","file":"https://www.dropbox.com/scl/fi/4w9r9ep7iviw8fcz1mav9/Christ-the-Lord-is-risen-today.mp3?rlkey=4f4o5997llnpvz7ctnh5bin5y&st=7sxo4vzs&dl=1"
@@ -72,25 +81,25 @@
    "title":"Ah holy Jesus how hast Thou offended","artist":"English Hymns","lyrics":"Ah holy Jesus how hast Thou offended.txt","file":"https://www.dropbox.com/scl/fi/f673matnx6y9dmaemtfd7/Ah-holy-Jesus-how-hast-Jesus-offended.mp3?rlkey=xlnnwevqqgcia841v51vcup94&st=ns6e46hj&dl=1"
  },
  {
-   "title":"O Lord we praise Thee","artist":"English Hymns","lyrics":"O Lord we praise Thee.txt","Category":"General","Church":"Lutheran choir","file":""
+   "title":"O Lord we praise Thee","artist":"English Hymns","lyrics":"O Lord we praise Thee.txt","Category":"General","Church":"Lutheran choir","file":"","image":"https://ik.imagekit.io/pry8rixl0/Martin%20Luther.jpg"
  },
  {
-   "title":"Lord keep us steadfast in Thy word","artist":"English Hymns","lyrics":"Lord keep us steadfast in Thy word.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/v9rgn924dtxzzh71l2t34/Lord-keep-us-steadfast-in-Thy-word.mp3?rlkey=2xacrud4bxdln0wnr1l7sgseb&st=yqzfyyun&dl=1"
+   "title":"Lord keep us steadfast in Thy word","artist":"English Hymns","lyrics":"Lord keep us steadfast in Thy word.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/v9rgn924dtxzzh71l2t34/Lord-keep-us-steadfast-in-Thy-word.mp3?rlkey=2xacrud4bxdln0wnr1l7sgseb&st=yqzfyyun&dl=1","image":"https://ik.imagekit.io/pry8rixl0/Martin%20Luther.jpg"
  },
  {
    "title":"Christ the life of all the living","artist":"English Hymns","lyrics":"Christ the life of all the living.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/mpd3hdc8bjqouz2t5pvml/Christ-the-life-of-all-the-living.mp3?rlkey=h1t6wnmmkhz3wit07b8oceo5v&st=mmx8dbf7&dl=1"
  },
  {
-   "title":"In the midst of life","artist":"English Hymns","lyrics":"In the midst of life.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/382a1ocg6qxdeo4bwn4wj/In-the-midst-of-life.mp3?rlkey=t9g2uv4f2wchp487sz325lta3&st=4gz2ztt8&dl=1"
+   "title":"In the midst of life","artist":"English Hymns","lyrics":"In the midst of life.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/382a1ocg6qxdeo4bwn4wj/In-the-midst-of-life.mp3?rlkey=t9g2uv4f2wchp487sz325lta3&st=4gz2ztt8&dl=1","image":"https://ik.imagekit.io/pry8rixl0/Martin%20Luther.jpg"
  },
  {
-   "title":"Out of the depth i cry to Thee","artist":"English Hymns","lyrics":"Out of the depth i cry to Thee.txt","Category":"Kuabudu","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/b52jmbcwnzti83qdyzyiq/Out-of-the-depth-i-cry.mp3?rlkey=rc7rme6g52pf17j2dtygl62pr&st=zu0swr0y&dl=1"
+   "title":"Out of the depth i cry to Thee","artist":"English Hymns","lyrics":"Out of the depth i cry to Thee.txt","Category":"Kuabudu","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/b52jmbcwnzti83qdyzyiq/Out-of-the-depth-i-cry.mp3?rlkey=rc7rme6g52pf17j2dtygl62pr&st=zu0swr0y&dl=1","image":"https://ik.imagekit.io/pry8rixl0/Martin%20Luther.jpg"
  },
  {
    "title":"Jesus Thy blood and righteousness","artist":"English Hymns","lyrics":"Jesus Thy blood and righteousness.txt","Category":"Kwaresma","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/876pha4o23k9d34yoga6g/Jesus-Thy-blood-and-righteousness.mp3?rlkey=wyo3vvvcjd66g5qkmfhbz6pqu&st=qj5zr1cq&dl=1"
  },
  {
-   "title":"Christ is arisen","artist":"English Hymns","lyrics":"Christ is arisen.txt","file":""
+   "title":"Christ is arisen","artist":"English Hymns","lyrics":"Christ is arisen.txt","Category":"Pasaka","Church":"Lutheran choir","image":"https://ik.imagekit.io/pry8rixl0/Martin%20Luther.jpg","file":""
  },
  {
    "title":"Wake awake for night is flying","artist":"English Hymns","lyrics":"Wake awake for night is flying.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/h4i9alwwashz6tmo3re6t/Wake-awake-the-night-is-flying.mp3?rlkey=6k4v6wm17lz76deds13r2cnsa&st=ut0o70k3&dl=1"
@@ -105,22 +114,22 @@
    "title":"All praise to Thee eternal Lord","artist":"English Hymns","lyrics":"All praise to Thee eternal Lord.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/1f8ci5t209gv3phlvxf12/All-praise-to-Thee-the-eternal-Lord.mp3?rlkey=6802plbx4ouk1qdzrkstijexu&st=v8zor2g9&dl=1"
  },
  {
-   "title":"O God our help in ages past","artist":"English Hymns","lyrics":"O God our help in ages past.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/ouaxb34nmvtu0xr6r1bk5/O-God-our-help-in-ages-past.mp3?rlkey=p8k7je6cgj5w8ll0h0412k0ol&st=ermqfo0y&dl=1"
+   "title":"O God our help in ages past","artist":"English Hymns","lyrics":"O God our help in ages past.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/ouaxb34nmvtu0xr6r1bk5/O-God-our-help-in-ages-past.mp3?rlkey=p8k7je6cgj5w8ll0h0412k0ol&st=ermqfo0y&dl=1","image":"https://ik.imagekit.io/pry8rixl0/Isaac%20watts.webp"
  },
  {
-   "title":"My hope is built on nothingless[The solid rock]","artist":"English Hymns","lyrics":"The solid rock.txt","file":"https://www.dropbox.com/scl/fi/uilmjhit8kewbz28cbvlr/The-solid-rock.mp3?rlkey=6xytp2icp6lo983yh6v7my9iv&st=mmbkf8zs&dl=1","image":"https://ik.imagekit.io/pry8rixl0/William-Bradbury.webp"
+   "title":"My hope is built on nothingless[The solid rock]","artist":"English Hymns","lyrics":"The solid rock.txt","file":"https://www.dropbox.com/scl/fi/uilmjhit8kewbz28cbvlr/The-solid-rock.mp3?rlkey=6xytp2icp6lo983yh6v7my9iv&st=mmbkf8zs&dl=1","image":"https://ik.imagekit.io/pry8rixl0/William%20Bradbury.jpg"
  },
  {
    "title":"Kazi ya mikono yetu","lyrics":"kazi ya mikono yetu.txt","Church":"Rc choir","Category":"Sadaka","artist":"PUJO Hymns","file":"https://www.dropbox.com/scl/fi/91xxlpkf1g52sw5gxrt0d/kazi-ya-mikono-yetu.mp3?rlkey=582ckrxrg6c272hvsxrhaseux&st=1hcbzk3k&dl=1"
  },
  {
-   "title":"Stand up for Jesus","artist":"English Hymns","lyrics":"Stand up for Jesus.txt","file":"https://www.dropbox.com/scl/fi/z34rlowtxvqqyqfhmgw8v/Mteteeni-Yesu.mp3?rlkey=t8lf1k806ttk6t952vjxucquk&st=3l1d196a&dl=1","Category":"Kwaresma","Church":"General","image":"https://ik.imagekit.io/pry8rixl0/Duffiled%20jr.jpg"
+   "title":"Stand up for Jesus","artist":"English Hymns","lyrics":"Stand up for Jesus.txt","file":"https://www.dropbox.com/scl/fi/z34rlowtxvqqyqfhmgw8v/Mteteeni-Yesu.mp3?rlkey=t8lf1k806ttk6t952vjxucquk&st=3l1d196a&dl=1","Category":"Kwaresma","Church":"General","image":"https://ik.imagekit.io/pry8rixl0/George%20duffiled%20HD.webp"
  },
  {
    "title":"Rock of the ages cleft for me","artist":"English Hymns","lyrics":"Rock of the ages cleft for me.txt","file":"https://www.dropbox.com/scl/fi/5uaxtw5xu511kr6wrp81d/Rock-of-the-ages.mp3?rlkey=qtazpd7ricziodu0yojekzmhu&st=vb0e5otl&dl=1"
  },
  {
-   "title":"All hail the power of Jesus name","artist":"Organist:Zawadi Mbilinyi","lyrics":"All hail the power of Jesus name.txt","file":"https://www.dropbox.com/scl/fi/4nopbzwjc6vvtkfkt01zo/Jina_la_Yesu_Salamu-256k.mp3?rlkey=zzuzkte7bjdx5z3dux6stzo7d&st=jrmvgwf6&dl=1"
+   "title":"All hail the power of Jesus name","artist":"Organist:Zawadi Mbilinyi","lyrics":"All hail the power of Jesus name.txt","file":"https://www.dropbox.com/scl/fi/4nopbzwjc6vvtkfkt01zo/Jina_la_Yesu_Salamu-256k.mp3?rlkey=zzuzkte7bjdx5z3dux6stzo7d&st=jrmvgwf6&dl=1","Church":"Anglican","image":"https://ik.imagekit.io/pry8rixl0/Perronet.jpg"
  },
  {
    "title":"Look and live","artist":"English Hymns","lyrics":"Look and live.txt","file":"https://www.dropbox.com/scl/fi/w18bgh0eqf3whjz1ac9oy/Look-and-live.mp3?rlkey=r0c6pfawbhpbv24z94dsijemd&st=rbghb9y5&dl=1","Category":"General","Church":"Baptist"
@@ -132,7 +141,7 @@
     "title":"What a friend we have in Jesus","artist":"English Hymns","lyrics":"What a friend we have in Jesus.txt","file":"https://www.dropbox.com/scl/fi/e4ue4lo35jxarnmn9ugen/What-a-friend-we-have-in-Jesus.mp3?rlkey=12ufh25jirpw45ormqbuh91tf&st=86vaqfi1&dl=1"
   },
   {
-    "title":"To God be the glory","artist":"English Hymns","lyrics":"To God be the glory.txt","file":"https://www.dropbox.com/scl/fi/ruwj6hycz63v7y6y08vx1/To-god-be-the-glory.mp3?rlkey=1moye0iz3ekdinr64yecfdi1t&st=7ksfjrck&dl=1"
+    "title":"To God be the glory","artist":"English Hymns","lyrics":"To God be the glory.txt","file":"https://www.dropbox.com/scl/fi/ruwj6hycz63v7y6y08vx1/To-god-be-the-glory.mp3?rlkey=1moye0iz3ekdinr64yecfdi1t&st=7ksfjrck&dl=1","Church":"Methodist","image":"https://ik.imagekit.io/pry8rixl0/Fanny%20Crosby%20HD.webp"
   },
   {
     "title":"How great Thou art","artist":"English Hymns","file":"https://www.dropbox.com/scl/fi/lt2j5ew84uxlvfkzy2l0k/How-great-Thou-art.mp3?rlkey=wk98u1qjinilas37l5f2mnyv4&st=dmca5aeq&dl=1","lyrics":"How great Thou art.txt"
@@ -144,16 +153,16 @@
     "title":"Gracious spirit heed our pleading","artist":"English Hymns","lyrics":"Gracious spirit heed our pleading.txt","file":"https://www.dropbox.com/scl/fi/0d2qbbqdavp3yujnq6wlp/gracious-spirit-heed.mp3?rlkey=ya6r6lfzdeu12802qqfrivmt4&st=12qey96k&dl=1"
   },
   {
-    "title":"The great physician","artist":"English Hymns","lyrics":"The great physician.txt","Category":"General","Church":"General","file":"https://www.dropbox.com/scl/fi/z6g48z6vsp0ohh2nsuegy/The-great-physician.mp3?rlkey=u22gs2ap2rgbkunwb98yw4wra&st=4bb3winp&dl=1"
+    "title":"The great physician","artist":"English Hymns","lyrics":"The great physician.txt","Category":"General","Church":"General","file":"https://www.dropbox.com/scl/fi/z6g48z6vsp0ohh2nsuegy/The-great-physician.mp3?rlkey=u22gs2ap2rgbkunwb98yw4wra&st=4bb3winp&dl=1","image":"https://ik.imagekit.io/pry8rixl0/William%20Hunter.webp"
   },
   {
-    "title":"Jina la Yesu","artist":"Kijitonyama youth choir","lyrics":"Jina la Yesu.txt","file":"https://www.dropbox.com/scl/fi/bdobejtfwipilp1jr0jw5/jina-la-yesu-live-kijitonyama-youth-choir-worship-in-spirit-128-ytshorts.savetube.me.mp3?rlkey=qxs5rsvr52pxzeocry6d2r5na&st=o2kswkj4&dl=1"
+    "title":"Jina la Yesu","artist":"Kijitonyama youth choir","lyrics":"Jina la Yesu.txt","file":"https://www.dropbox.com/scl/fi/bdobejtfwipilp1jr0jw5/jina-la-yesu-live-kijitonyama-youth-choir-worship-in-spirit-128-ytshorts.savetube.me.mp3?rlkey=qxs5rsvr52pxzeocry6d2r5na&st=o2kswkj4&dl=1","Church":"Lutheran choir","image":"https://ik.imagekit.io/pry8rixl0/I.jpeg?updatedAt=1773910625377"
   },
   {
-    "title":"Watumishi wa Mungu","artist":"Kijitonyama youth choir","lyrics":"Watumishi wa Mungu.txt","file":"https://www.dropbox.com/scl/fi/a5fhuaw9xld1rilsxu8oh/watumishi-wa-mungu-live-kijitonyama-youth-choir.mp3?rlkey=hpbk87porb1mevfulqjmfyqc2&st=6p37oi4k&dl=1"
+    "title":"Watumishi wa Mungu","artist":"Kijitonyama youth choir","lyrics":"Watumishi wa Mungu.txt","file":"https://www.dropbox.com/scl/fi/a5fhuaw9xld1rilsxu8oh/watumishi-wa-mungu-live-kijitonyama-youth-choir.mp3?rlkey=hpbk87porb1mevfulqjmfyqc2&st=6p37oi4k&dl=1","Church":"Lutheran choir","Category":"General","image":"https://ik.imagekit.io/pry8rixl0/I.jpeg?updatedAt=1773910625377"
   },
   {
-    "title":"Umenipa nafasi Bwana","artist":"Kijitonyama youth choir","lyrics":"Umenipa nafasi Bwana.txt","file":"https://www.dropbox.com/scl/fi/hh4ydfzomybknslbvi2ns/umenipa-nafasi-bwana-kijitonyama-youth-choir.mp3?rlkey=aqtxdjkwd5g751b7afw2gziag&st=roek7qiq&dl=1"
+    "title":"Umenipa nafasi Bwana","artist":"Kijitonyama youth choir","lyrics":"Umenipa nafasi Bwana.txt","file":"https://www.dropbox.com/scl/fi/hh4ydfzomybknslbvi2ns/umenipa-nafasi-bwana-kijitonyama-youth-choir.mp3?rlkey=aqtxdjkwd5g751b7afw2gziag&st=roek7qiq&dl=1","Category":"General","Church":"Lutheran choir","image":"https://ik.imagekit.io/pry8rixl0/I.jpeg?updatedAt=1773910625377"
   },
   {
     "title":"Kumtegemea Mwokozi","artist":"PUJO Hymns","lyrics":"Kumtegemea Mwokozi.txt","file":"https://www.dropbox.com/scl/fi/o7y7lv7aukuyuv9f8m9r8/kumtegemea-mwokozi-tis_so_sweet_to_trust_in_Jesus-1.mp3?rlkey=3f9x8iimcf5643e4hhnzvcwvt&st=33jqu6rx&dl=1"
@@ -165,10 +174,10 @@
     "title":"Baba wajua mapito yetu","artist":"PUJO Hymns","lyrics":"Baba wajua mapito yetu.txt","file":""
   },
   {
-    "title":"Mungu amenihurumia","artist":"PUJO Hymns","lyrics":"Mungu amenihurumia.txt","file":"https://www.dropbox.com/scl/fi/0bh5imony3v15u0u0k5vu/Mungu_amenihurumia__TMW_295__Organist_Zawadi_Noel_Mbilinyi__0768352353_0719500669-256k.mp3?rlkey=87qj65r561puzue0c89i8heii&st=m3kr54ug&dl=1"
+    "title":"Mungu amenihurumia","artist":"PUJO Hymns","lyrics":"Mungu amenihurumia.txt","file":"https://www.dropbox.com/scl/fi/0bh5imony3v15u0u0k5vu/Mungu_amenihurumia__TMW_295__Organist_Zawadi_Noel_Mbilinyi__0768352353_0719500669-256k.mp3?rlkey=87qj65r561puzue0c89i8heii&st=m3kr54ug&dl=1","Church":"Lutheran choir","Category":"General","image":"https://ik.imagekit.io/pry8rixl0/Mungu%20amenihurumia.jpg?updatedAt=1777118028258"
   },
   {
-    "title":"Ninataka kuingia","artist":"PUJO Hymns","lyrics":"Ninataka kuingia.txt","file":"https://www.dropbox.com/scl/fi/1elazt72r4236kmug532f/Ninatakakuingia.mp3?rlkey=h42d63j8o15sajt0igabamuc3&st=cph0yxit&dl=1"
+    "title":"Ninataka kuingia","artist":"PUJO Hymns","lyrics":"Ninataka kuingia.txt","file":"https://www.dropbox.com/scl/fi/1elazt72r4236kmug532f/Ninatakakuingia.mp3?rlkey=h42d63j8o15sajt0igabamuc3&st=cph0yxit&dl=1","Category":"General","Church":"Lutheran choir","image":"https://ik.imagekit.io/pry8rixl0/Philip%20Hiller.webp"
   },
   {
     "title":"Zaeni matunda mema","artist":"PUJO Hymns","lyrics":"Zaeni matunda mema.txt","file":"https://rebrand.ly/nq0q9x3"
@@ -189,10 +198,10 @@
     "title":"Nataka nimjue Yesu","artist":"PUJO Hymns","lyrics":"Nataka nimjue yesu.txt","file":""
   },
   {
-    "title":"Ni ujumbe wa Bwana","artist":"Organist:Keffa Muhanga","lyrics":"Ni ujumbe wa Bwana.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/8bzewcxzr5ifxmgo8ujl9/Ni_ujumbe_wa_Bwana_TMW_73_Organist__Keffa_Muhanga-256k.mp3?rlkey=3wun32jqz5fbdl2qp8wi4ey5d&st=z9cxj79r&dl=1"
+    "title":"Ni ujumbe wa Bwana","artist":"Organist:Keffa Muhanga","lyrics":"Ni ujumbe wa Bwana.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/8bzewcxzr5ifxmgo8ujl9/Ni_ujumbe_wa_Bwana_TMW_73_Organist__Keffa_Muhanga-256k.mp3?rlkey=3wun32jqz5fbdl2qp8wi4ey5d&st=z9cxj79r&dl=1","image":"https://ik.imagekit.io/pry8rixl0/Ni%20ujumbe%20wa%20Bwana.jpg?updatedAt=1777118037550"
   },
   {
-    "title":"Mungu atukuzwe","artist":"PUJO Hymns","lyrics":"Mungu atukuzwe.txt","file":"https://www.dropbox.com/scl/fi/ruwj6hycz63v7y6y08vx1/To-god-be-the-glory.mp3?rlkey=1moye0iz3ekdinr64yecfdi1t&st=8uy5axa6&dl=1"
+    "title":"Mungu atukuzwe","artist":"PUJO Hymns","lyrics":"Mungu atukuzwe.txt","file":"https://www.dropbox.com/scl/fi/ruwj6hycz63v7y6y08vx1/To-god-be-the-glory.mp3?rlkey=1moye0iz3ekdinr64yecfdi1t&st=8uy5axa6&dl=1","Category":"Kusifu","image":"https://ik.imagekit.io/pry8rixl0/Fanny%20Crosby%20HD.webp"
   },
   {
     "title":"Bwana Mungu nashangaa kabisa","artist":"PUJO Hymns","lyrics":"Bwana Mungu nashangaa kabisa.txt","file":""
@@ -204,16 +213,16 @@
     "title":"Njooni tuimbe wimbo huu","artist":"PUJO Hymns","lyrics":"Njooni tuimbe wimbo huu.txt","file":"https://rebrand.ly/47d667"
   },
   {
-    "title":"Cha kutumaini sina","artist":"PUJO Hymns","lyrics":"Cha kutumaini sina.txt","file":"https://www.dropbox.com/scl/fi/tj48b0uqskzens28jogx6/KWAKE-YESU.mp3?rlkey=31zc64b7uem3ifcpg4khegj3q&st=206exat9&dl=1"
+    "title":"Cha kutumaini sina","artist":"PUJO Hymns","lyrics":"Cha kutumaini sina.txt","file":"https://www.dropbox.com/scl/fi/tj48b0uqskzens28jogx6/KWAKE-YESU.mp3?rlkey=31zc64b7uem3ifcpg4khegj3q&st=206exat9&dl=1","Church":"General","Category":"General","image":"https://ik.imagekit.io/pry8rixl0/William%20Bradbury.jpg?updatedAt=1777228496804"
   },
   {
     "title":"Nasikia kuitwa","artist":"Martha j.Mushi","lyrics":"Nasikia kuitwa.txt","file":"https://www.dropbox.com/scl/fi/uzw46y8q2uqibm67a7416/Nasikia.mp3?rlkey=ku7u9fswsudnm2c3gcu3x1c0c&st=30xa864k&dl=1"
   },
   {
-    "title":"Usinipite mwokozi","artist":"PUJO Hymns","lyrics":"Usinipite mwokozi.txt","file":"https://rebrand.ly/5028e1"
+    "title":"Usinipite mwokozi","artist":"PUJO Hymns","lyrics":"Usinipite mwokozi.txt","file":"https://rebrand.ly/5028e1","Category":"Kwaresma","Church":"Methodist","image":"https://ik.imagekit.io/pry8rixl0/Fanny%20Crosby%20HD.webp"
   },
   {
-    "title":"Sioshwi dhambi zangu","artist":"PUJO Hymns","lyrics":"Sioshwi dhambi zangu.txt","Category":"Ekaristi","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/7nluvtw57je4i7raf0ls5/Sioshwi_dhambi_zangu-256k.mp3?rlkey=wpjtngdx20drgwcd95iq0mql8&st=ncqyc0cr&dl=1"
+    "title":"Sioshwi dhambi zangu","artist":"Organist:Zawadi Mbilinyi","lyrics":"Sioshwi dhambi zangu.txt","Category":"Ekaristi","Church":"Baptist","file":"https://www.dropbox.com/scl/fi/7nluvtw57je4i7raf0ls5/Sioshwi_dhambi_zangu-256k.mp3?rlkey=wpjtngdx20drgwcd95iq0mql8&st=ncqyc0cr&dl=1","image":"https://ik.imagekit.io/pry8rixl0/Maskini%20Bartimayo.png?updatedAt=1777110663839"
   },
   {
     "title":"Kijito cha utakaso","artist":"PUJO Hymns","lyrics":"Kijito cha utakaso.txt","file":""
@@ -225,10 +234,10 @@
     "title":"Wamwendea Yesu kwa kusafishwa","artist":"PUJO Hymns","lyrics":"Wamwendea Yesu kwa kusafishwa.txt","file":"https://www.dropbox.com/scl/fi/cys6xgqfqq86j6w6m8f3s/Are-you-washed-in-the-blood.mp3?rlkey=dd6i87glz1yhe3662bq49ssdm&st=zt9t0gf2&dl=1"
   },
   {
-    "title":"Pass me not","artist":"English Hymns","lyrics":"Pass me not.txt","Category":"Kwaresma","Church":"General","file":"https://rebrand.ly/5028e1"
+    "title":"Pass me not","artist":"English Hymns","lyrics":"Pass me not.txt","Category":"Kwaresma","Church":"General","file":"https://rebrand.ly/5028e1","image":"https://ik.imagekit.io/pry8rixl0/Fanny%20Crosby%20HD.webp"
   },
   {
-    "title":"Close to Thee","artist":"English Hymns","lyrics":"Close to Thee.txt","file":"https://www.dropbox.com/scl/fi/yt7jkhj2ox2ipemthmz2o/Close-to-Thee.mp3?rlkey=a534l0s22l9340yyo58hlggsf&st=m1pjkekp&dl=1"
+    "title":"Close to Thee","artist":"English Hymns","lyrics":"Close to Thee.txt","file":"https://www.dropbox.com/scl/fi/yt7jkhj2ox2ipemthmz2o/Close-to-Thee.mp3?rlkey=a534l0s22l9340yyo58hlggsf&st=m1pjkekp&dl=1","image":"https://ik.imagekit.io/pry8rixl0/Fanny%20Crosby%20HD.webp"
   },
   {
     "title":"Amazing grace","artist":"English Hymns","lyrics":"Amazing grace.txt","Category":"General","Church":"General","file":"https://www.dropbox.com/scl/fi/9p76k4r9w492q2qmi2zif/Amazing-grace.mp3?rlkey=u1usotx5mp8en2aq8iq7l5vnd&st=53yqpxmm&dl=1"
@@ -243,10 +252,10 @@
     "title":"Man of sorrows,what a name","artist":"English Hymns","lyrics":"Man of sorrows,what a name.txt","file":"https://www.dropbox.com/scl/fi/e86mzq5iqdyum17dqg4i6/Aitwa-wa-simanzi.mp3?rlkey=ipi9pmmfs99w8wv4mnzvmlkf5&st=awfsjjzg&dl=1"
   },
   {
-    "title":"At the cross","lyrics":"At the cross.txt","artist":"English Hymns","file":""
+    "title":"At the cross","lyrics":"At the cross.txt","artist":"English Hymns","file":"https://www.dropbox.com/scl/fi/f9pydln162kdtctkpio3z/Sioni-haya-kwa-bwana_At-the-Cross-AudioTrimmer.com.mp3?rlkey=cr88q89g99uauek4fc5y53rsz&st=7vtz36so&dl=1","image":"https://ik.imagekit.io/pry8rixl0/Russell%20Kelso%20Carter.jpg","Church":"General","Category":"Kwaresma"
   },
   {
-    "title":"Joy to the world","artist":"English Hymns","lyrics":"Joy to the world.txt","file":"https://bit.ly/4vapEVN"
+    "title":"Joy to the world","artist":"English Hymns","lyrics":"Joy to the world.txt","file":"https://bit.ly/4vapEVN","Category":"Christmas","Church":"General","image":"https://ik.imagekit.io/pry8rixl0/Isaac%20watts.webp"
   },
   {
     "title":"Happy birthday to you","artist":"English Hymns","lyrics":"Happy birthday to you.txt","file":""
@@ -267,7 +276,7 @@
     "title":"All to Jesus i surrender","artist":"English Hymns","lyrics":"All to Jesus i surrender.txt","file":""
   },
   {
-    "title":"In the sweet by and by","artist":"English Hymns","lyrics":"In the sweet by and by.txt","Category":"Mazishi","Church":"General","file":"https://www.dropbox.com/scl/fi/2zsx3egnv10f2esqdu8zs/In-the-sweet-by-and-by.mp3?rlkey=h4ysl2fx3qq0oq6jdnpab4egn&st=gvgcvdhj&dl=1"
+    "title":"In the sweet by and by","artist":"English Hymns","lyrics":"In the sweet by and by.txt","Category":"Mazishi","Church":"General","file":"https://www.dropbox.com/scl/fi/2zsx3egnv10f2esqdu8zs/In-the-sweet-by-and-by.mp3?rlkey=h4ysl2fx3qq0oq6jdnpab4egn&st=gvgcvdhj&dl=1","image":"https://ik.imagekit.io/pry8rixl0/_______%20________%20_______.jpg"
   },
   {
     "title":"There is a better World","artist":"English Hymns","lyrics":"There is a better World.txt","file":""
@@ -276,19 +285,19 @@
     "title":"Du meine seele singe","artist":"German Hymns","lyrics":"Du meine seele singe.txt","file":"https://www.dropbox.com/scl/fi/l5hut8x34cigzppl92q04/Haya-ee-moyo-wangu.mp3?rlkey=7up1cs4c9a7dkm2ieqqzqlutk&st=5uu2lw2h&dl=1"
   },
   {
-    "title":"When the trumpet of the Lord","artist":"English Hymns","lyrics":"When the trumpet of the Lord.txt","file":"https://rebrand.ly/cf8d03"
+    "title":"When the trumpet of the Lord","artist":"English Hymns","lyrics":"When the trumpet of the Lord.txt","file":"https://rebrand.ly/cf8d03","Church":"General","image":"https://ik.imagekit.io/pry8rixl0/James%20M.%20Black.jpg","Category":"General"
   },
   {
     "title":"Redeemed, how i love to proclaim it","artist":"English Hymns","lyrics":"Redeemed, how i love to proclaim it.txt","file":""
   },
   {
-    "title":"Down at the cross","lyrics":"Down at the cross.txt","artist":"English Hymns","file":""
+    "title":"Down at the cross","lyrics":"Down at the cross.txt","artist":"English Hymns","file":"","Church":"Presbyterian","Category":"General","image":"https://ik.imagekit.io/pry8rixl0/E.%20A.%20Hoffman%20(1878).webp"
   },
   {
     "title":"Nimekombolewa na Yesu","artist":"PUJO Hymns","lyrics":"Nimekombolewa na Yesu.txt","file":""
   },
   {
-    "title":"Taji mvikeni","artist":"PUJO Hymns","lyrics":"Taji mvikeni.txt","file":""
+    "title":"Taji mvikeni","artist":"PUJO Hymns","lyrics":"Taji mvikeni.txt","file":"https://www.dropbox.com/scl/fi/hpkg24hg7uwlx7t47jou7/Crown-him-with-many-crowns-Taji-mvikeni.mp3?rlkey=xdut0vce22cuyecqybgliqpql&st=7dc7hy6m&dl=1","Category":"General","Church":"Rc choir","image":"https://ik.imagekit.io/pry8rixl0/Matthew%20Bridges.webp"
   },
   {
     "title":"Nina haja nawe","artist":"PUJO Hymns","lyrics":"Nina haja nawe.txt","file":""
@@ -303,13 +312,13 @@
     "title":"Yesu kwa imani","artist":"PUJO Hymns","lyrics":"Yesu kwa imani.txt","file":""
   },
   {
-    "title":"Namwandama Bwana","artist":"PUJO Hymns","lyrics":"Namwandama Bwana.txt","file":""
+    "title":"Namwandama Bwana","artist":"PUJO Hymns","lyrics":"Namwandama Bwana.txt","file":"https://www.dropbox.com/scl/fi/dn1zz0giswqjb3b1t6bp7/Trust-and-Obey.mp3?rlkey=mzqynuv8eewudi6bouhjkv2fw&st=eycknnu9&dl=1","Category":"General","Church":"Presbyterian","image":"https://ik.imagekit.io/pry8rixl0/John%20H.Sammis.jpg"
   },
   {
     "title":"Akifa Yesu nikafa naye","artist":"PUJO Hymns","lyrics":"Akifa Yesu nikafa naye.txt","file":""
   },
   {
-    "title":"Ndiyo dhamana Yesu wangu","lyrics":"Ndiyo dhamana Yesu wangu.txt","artist":"PUJO Hymns","file":"https://www.dropbox.com/scl/fi/tkecpaljl61dcfbgo6dhg/Blessed-assurance.mp3?rlkey=2wwp4ayqiyq4l7z9w9e4aiux7&st=og69p794&dl=1","image":"https://ik.imagekit.io/pry8rixl0/fanny-crosby.jpg"
+    "title":"Ndiyo dhamana Yesu wangu","lyrics":"Ndiyo dhamana Yesu wangu.txt","artist":"PUJO Hymns","file":"https://www.dropbox.com/scl/fi/tkecpaljl61dcfbgo6dhg/Blessed-assurance.mp3?rlkey=2wwp4ayqiyq4l7z9w9e4aiux7&st=og69p794&dl=1","image":"https://ik.imagekit.io/pry8rixl0/Fanny%20Crosby%20HD.webp","Church":"Methodist"
   },
   {
     "title":"Ninaye rafiki naye","artist":"PUJO Hymns","lyrics":"Ninaye rafiki naye.txt","file":""
@@ -330,7 +339,7 @@
     "title":"Anipenda ni kweli","artist":"PUJO Hymns","lyrics":"Anipenda ni kweli.txt","file":""
   },
    {
-     "title":"Baba yetu aliye mbinguni","artist":"PUJO Hymns","lyrics":"Baba yetu aliye mbinguni.txt","file":"https://www.dropbox.com/scl/fi/fjr76m8zbqloj80vr53f7/Baba-yetu-aliye-mbinguni.mp3?rlkey=jvhk7j40r4uma0ekzjf2yjfgg&st=lx1u53qe&dl=1","Church":"Lutheran choir"
+     "title":"Baba yetu aliye mbinguni","artist":"PUJO Hymns","lyrics":"Baba yetu aliye mbinguni.txt","file":"https://www.dropbox.com/scl/fi/fjr76m8zbqloj80vr53f7/Baba-yetu-aliye-mbinguni.mp3?rlkey=jvhk7j40r4uma0ekzjf2yjfgg&st=lx1u53qe&dl=1","Church":"Congregational church","Category":"General","image":"https://ik.imagekit.io/pry8rixl0/P.%20P.%20Bliss%20(1871).webp?updatedAt=1777619068499"
    },
    {
      "title":"Nilikuwa kondoo aliyepotea","artist":"PUJO Hymns","lyrics":"Nilikuwa kondoo aliyepotea.txt","file":""
@@ -354,7 +363,7 @@
      "title":"Mchungaji mpenzi","artist":"PUJO Hymns","lyrics":"Mchungaji mpenzi.txt","file":""
    },
    {
-     "title":"Waitwa mwovu na Bwana","artist":"PUJO Hymns","lyrics":"Waitwa mwovu na Bwana.txt","file":""
+     "title":"Waitwa mwovu na Bwana","artist":"PUJO Hymns","lyrics":"Waitwa mwovu na Bwana.txt","file":"https://www.dropbox.com/scl/fi/pdv4wnqry87mny4r67kw0/Beulah-land.mp3?rlkey=cedbv26xgdwhldxio0b3zmn1j&st=pdyglqi1&dl=1","Church":"Methodist","Category":"General","image":"https://ik.imagekit.io/pry8rixl0/Edgar%20Page%20(1876).webp"
    },
    {
      "title":"Twende kwa Yesu","artist":"PUJO Hymns","lyrics":"Twende kwa Yesu.txt","file":""
@@ -363,7 +372,7 @@
      "title":"Mwenye dhambi huna raha","artist":"PUJO Hymns","lyrics":"Mwenye dhambi huna raha.txt","file":""
    },
    {
-     "title":"Yesu aliniita njoo","artist":"PUJO Hymns","lyrics":"Yesu aliniita njoo.txt","file":""
+     "title":"Yesu aliniita njoo","artist":"PUJO Hymns","lyrics":"Yesu aliniita njoo.txt","file":"","Category":"General","Church":"Church of Scotland","image":"https://ik.imagekit.io/pry8rixl0/Horatius%20Bonar.webp?updatedAt=1777620739406","file":""
    },
    {
      "title":"Kivulini mwa Yesu","artist":"PUJO Hymns","lyrics":"kivulini mwa Yesu.txt","file":""
@@ -387,7 +396,7 @@
      "title":"Baba,mwana roho","artist":"PUJO Hymns","lyrics":"Baba,mwana roho.txt","file":""
    },
    {
-     "title":"Ni tabibu wa karibu","artist":"PUJO Hymns","lyrics":"Ni tabibu wa karibu.txt","Category":"General","Church":"General","file":"https://www.dropbox.com/scl/fi/z6g48z6vsp0ohh2nsuegy/The-great-physician.mp3?rlkey=u22gs2ap2rgbkunwb98yw4wra&st=gooe9p35&dl=1"
+     "title":"Ni tabibu wa karibu","artist":"PUJO Hymns","lyrics":"Ni tabibu wa karibu.txt","Category":"General","Church":"General","file":"https://www.dropbox.com/scl/fi/z6g48z6vsp0ohh2nsuegy/The-great-physician.mp3?rlkey=u22gs2ap2rgbkunwb98yw4wra&st=gooe9p35&dl=1","image":"https://ik.imagekit.io/pry8rixl0/William%20Hunter.webp?updatedAt=1777287933311"
    },
    {
      "title":"Mtazame huyo aliyeangikwa juu","artist":"PUJO Hymns","lyrics":"Mtazame huyo aliyeangikwa juu.txt","file":""
@@ -414,7 +423,7 @@
      "title":"Yote namtolea Yesu","artist":"Organist:Zawadi Mbilinyi","lyrics":"Yote namtolea Yesu.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/fjmtfu8uvxgg1q6pox7ae/Yote_Namtolea_Yesu__Played_by_Zawadi_Noel_Mbilinyi-256k.mp3?rlkey=53voa2jm7l72j2w5ih3kvoeqr&st=pl6ytdbu&dl=1"
    },
    {
-     "title":"Nearer my Lord to Thee","artist":"English Hymns","lyrics":"Nearer my Lord to Thee.txt","file":"https://rebrand.ly/a8a1bf"
+     "title":"Nearer my Lord to Thee","artist":"English Hymns","lyrics":"Nearer my Lord to Thee.txt","file":"https://rebrand.ly/a8a1bf","Church":"Unitarian","Category":"Kwaresma","image":"https://ik.imagekit.io/pry8rixl0/Sarah%20Flower%20Adams%20(1840).jpg"
    },
    {
      "title":"Wewe umechoka sana","artist":"PUJO Hymns","lyrics":"Wewe umechoka sana.txt","file":""
@@ -426,10 +435,10 @@
      "title":"Nipe moyo wenye sifa","artist":"PUJO Hymns","lyrics":"Nipe moyo wenye sifa.txt","file":""
    },
    {
-     "title":"Ni sikukuu ile","artist":"PUJO Hymns","lyrics":"Ni sikukuu ile.txt","file":""
+     "title":"Ni sikukuu ile","artist":"PUJO Hymns","lyrics":"Ni sikukuu ile.txt","Category":"General","Church":"Church of England","image":"https://ik.imagekit.io/pry8rixl0/Philip%20Doddridge.jpg","file":"https://www.dropbox.com/scl/fi/52f0h556zqhqctc05eilo/Ni-sikukuu-happy-song.mp3?rlkey=lox7bwluzihu47hoj4db8xthv&st=qcszu0nz&dl=1"
    },
    {
-     "title":"Naendea msalaba","artist":"PUJO Hymns","lyrics":"Naendea msalaba.txt","file":""
+     "title":"Naendea msalaba","artist":"PUJO Hymns","lyrics":"Naendea msalaba.txt","file":"https://www.dropbox.com/scl/fi/vwdficir36ksisjbsquah/I-am-coming-to-the-cross.mp3?rlkey=hqbns6kkeay1kshq9ix12tzdu&st=p07epdzi&dl=1","Category":"General","Church":"Methodist","image":"https://ik.imagekit.io/pry8rixl0/W.%20McDonald%20(1870).webp"
    },
    {
      "title":"Mwamba wenye imara","artist":"Kijitonyama youth choir","lyrics":"Mwamba wenye imara.txt","file":"https://www.dropbox.com/scl/fi/nhrhh2bfvnr7j9nevm90l/MWAMBA_WENYE_IMARA_-_Kijitonyama_Youth_Choir-256k.mp3?rlkey=90oebyiuxxqpivl8vla0uns8p&st=hjizeczg&dl=1"
@@ -453,13 +462,13 @@
      "title":"Ujaribiwapo sifanye dhambi","artist":"PUJO Hymns","lyrics":"Ujaribiwapo sifanye dhambi.txt","file":""
    },
    {
-     "title":"Safari","artist":"PUJO Hymns","lyrics":"Safari.txt","file":""
+     "title":"Safari","artist":"PUJO Hymns","lyrics":"Safari.txt","file":"https://www.dropbox.com/scl/fi/yfjw6233mjel1fo8tw6nu/Hold-the-fort-safari.mp3?rlkey=nk556ebzf9fmcz2unvg09w4zn&st=u692tidn&dl=1","Category":"General","Church":"Presbyterian","image":"https://ik.imagekit.io/pry8rixl0/P.%20P.%20Bliss%20(1871).webp?updatedAt=1777619068499"
    },
    {
-     "title":"Popote mashamba yajaa","artist":"PUJO Hymns","lyrics":"Popote mashamba yajaa.txt","file":""
+     "title":"Popote mashamba yajaa","artist":"PUJO Hymns","lyrics":"Popote mashamba yajaa.txt","file":"https://www.dropbox.com/scl/fi/9adoxj70fxxeubgu174i6/Far-and-near-the-Fields.mp3?rlkey=uonwqzauu9rumlnrpyfk2385w&st=znzr5dd6&dl=1","Category":"Sadaka","Church":"","image":"https://ik.imagekit.io/pry8rixl0/James%20Oren%20Thompson%20(1885).webp"
    },
    {
-     "title":"Bwana uliyewaita","artist":"PUJO Hymns","lyrics":"Bwana uliyewaita.txt","file":""
+     "title":"Bwana uliyewaita","artist":"PUJO Hymns","lyrics":"Bwana uliyewaita.txt","file":"https://www.dropbox.com/scl/fi/9vsn8w4wv3ulm1u2epoks/Thou-who-didst-call-the-old-of-saints.mp3?rlkey=o5s8q1oe0t4szg3t7ykykeh4v&st=0p76575t&dl=1","Church":"Baptist","Category":"General","image":"https://ik.imagekit.io/pry8rixl0/Edward%20Ashurst%20Welch.webp"
    },
    {
      "title":"Mungu msaada wetu","artist":"PUJO Hymns","lyrics":"Mungu msaada wetu.txt","file":""
@@ -486,7 +495,7 @@
      "title":"Njoni enyi wa imani","artist":"PUJO Hymns","lyrics":"Njoni enyi wa imani.txt","file":""
    },
    {
-     "title":"Msalabani pa mwokozi","artist":"PUJO Hymns","lyrics":"Msalabani pa mwokozi.txt","file":""
+     "title":"Msalabani pa mwokozi","artist":"PUJO Hymns","lyrics":"Msalabani pa mwokozi.txt","file":"","Church":"Presbyterian","Category":"General","image":"https://ik.imagekit.io/pry8rixl0/E.%20A.%20Hoffman%20(1878).webp"
    },
    {
      "title":"Msalaba wa aibu","artist":"PUJO Hymns","lyrics":"Msalaba wa aibu.txt","file":""
@@ -495,7 +504,7 @@
      "title":"Chini ya msalaba","artist":"PUJO Hymns","lyrics":"Chini ya msalaba.txt","file":""
    },
    {
-     "title":"Sioni haya kwa Bwana","artist":"PUJO Hymns","lyrics":"Sioni haya kwa Bwana.txt","file":"https://www.dropbox.com/scl/fi/m6dqzd53fuxaqg050c2xf/SIONI-HAYA-KWA-BWANA.mp3?rlkey=7w9007n8ri2vl88eu0k08j1lj&st=e8kwt5z7&dl=1"
+     "title":"Sioni haya kwa Bwana","artist":"PUJO Hymns","lyrics":"Sioni haya kwa Bwana.txt","file":"https://www.dropbox.com/scl/fi/m6dqzd53fuxaqg050c2xf/SIONI-HAYA-KWA-BWANA.mp3?rlkey=7w9007n8ri2vl88eu0k08j1lj&st=e8kwt5z7&dl=1","Church":"General","Category":"Kwaresma","image":"https://ik.imagekit.io/pry8rixl0/Russell%20Kelso%20Carter.jpg"
    },
    {
      "title":"Kwa wingi wa nyama","artist":"PUJO Hymns","lyrics":"Kwa wingi wa nyama.txt","file":""
@@ -549,7 +558,7 @@
      "title":"Tumrudie Bwana","artist":"PUJO Hymns","lyrics":"Tumrudie Bwana.txt","file":""
    },
    {
-     "title":"Twonane milele","artist":"PUJO Hymns","lyrics":"Twonane milele.txt","Category":"Mazishi","Church":"General","file":"https://www.dropbox.com/scl/fi/2zsx3egnv10f2esqdu8zs/In-the-sweet-by-and-by.mp3?rlkey=h4ysl2fx3qq0oq6jdnpab4egn&st=gvgcvdhj&dl=1"
+     "title":"Twonane milele","artist":"PUJO Hymns","lyrics":"Twonane milele.txt","Category":"Mazishi","Church":"General","file":"https://www.dropbox.com/scl/fi/2zsx3egnv10f2esqdu8zs/In-the-sweet-by-and-by.mp3?rlkey=h4ysl2fx3qq0oq6jdnpab4egn&st=gvgcvdhj&dl=1","image":"https://ik.imagekit.io/pry8rixl0/_______%20________%20_______.jpg"
    },
    {
      "title":"Kazi yangu ikiisha","artist":"PUJO Hymns","lyrics":"Kazi yangu ikiisha.txt","Category":"Mazishi","Church":"General","file":"https://www.dropbox.com/scl/fi/ksama5fn42utvs9v8q0xz/Kazi-yangu-ikiisha.mp3?rlkey=sddjco02vgomqojwpr8s0yzjm&st=rb9m37r5&dl=1"
@@ -609,7 +618,7 @@
      "title":"Ati twonane mtoni","artist":"PUJO Hymns","lyrics":"Ati twonane mtoni.txt","file":""
    },
    {
-     "title":"Ni mji mzuri","artist":"PUJO Hymns","lyrics":"Ni mji mzuri.txt","file":""
+     "title":"Ni mji mzuri","artist":"PUJO Hymns","lyrics":"Ni mji mzuri.txt","file":"","image":"https://ik.imagekit.io/pry8rixl0/Andrew%20Young.jpg","Category":"Mazishi","Church":"Church of Scotland","file":""
    },
    {
      "title":"Bwana Yesu atakuja","artist":"PUJO Hymns","lyrics":"Bwana Yesu atakuja.txt","file":""
@@ -618,10 +627,10 @@
      "title":"Mmoja apita wote","artist":"PUJO Hymns","lyrics":"Mmoja apita wote.txt","file":""
    },
    {
-     "title":"Karibu na wewe","artist":"PUJO Hymns","lyrics":"Karibu na wewe.txt","file":""
+     "title":"Karibu na wewe","artist":"PUJO Hymns","lyrics":"Karibu na wewe.txt","file":"https://www.dropbox.com/scl/fi/df4gfqa1yfgtezsuizq00/Karibu-na-wewe_nearer-my-god-to-thee.mp3?rlkey=17lva22jy3wj8wgy4tfjy6x9g&st=7ks2u7hu&dl=1","Church":"Unitarian","Category":"Kwaresma","image":"https://ik.imagekit.io/pry8rixl0/Sarah%20Flower%20Adams%20(1840).jpg"
    },
    {
-     "title":"Niongoze Bwana Mungu","artist":"PUJO Hymns","lyrics":"Niongoze Bwana Mungu.txt","file":"https://www.dropbox.com/scl/fi/0lao5iccsooszzlyaeggl/Niongoze-Bwana-Mungu.mp3?rlkey=qjoomacsjsdnf7jg9zxqr8vm4&st=pwiqx9bc&dl=1"
+     "title":"Niongoze Bwana Mungu","artist":"PUJO Hymns","lyrics":"Niongoze Bwana Mungu.txt","file":"https://www.dropbox.com/scl/fi/0lao5iccsooszzlyaeggl/Niongoze-Bwana-Mungu.mp3?rlkey=qjoomacsjsdnf7jg9zxqr8vm4&st=pwiqx9bc&dl=1","Category":"General","Church":"Methodist","image":"https://ik.imagekit.io/pry8rixl0/William%20Williams.jpg"
    },
    {
      "title":"Piga sana vita vyema","artist":"PUJO Hymns","lyrics":"Piga sana vita vyema.txt","file":""
@@ -663,7 +672,7 @@
      "title":"Ndoa yetu nzima","artist":"PUJO Hymns","lyrics":"Ndoa yetu nzima.txt","file":""
    },
    {
-     "title":"Neno la Mungu takata","artist":"PUJO Hymns","lyrics":"Neno la Mungu takata.txt","file":"https://www.dropbox.com/scl/fi/g7i7mc98ux6y90npu4y3p/Neno-la-mungu-takata-faith-of-our-father.mp3?rlkey=4zk4e1efkgoidte5tkhbseei2&st=01hr2if1&dl=1"
+     "title":"Neno la Mungu takata","artist":"PUJO Hymns","lyrics":"Neno la Mungu takata.txt","file":"https://www.dropbox.com/scl/fi/g7i7mc98ux6y90npu4y3p/Neno-la-mungu-takata-faith-of-our-father.mp3?rlkey=4zk4e1efkgoidte5tkhbseei2&st=01hr2if1&dl=1","Church":"Lutheran choir","Category":"General","image":"https://ik.imagekit.io/pry8rixl0/Frederick%20William%20Faber.jpg"
    },
    {
      "title":"Tegemea mpaka kufa","artist":"PUJO Hymns","lyrics":"Tegemea mpaka kufa.txt","file":""
@@ -702,7 +711,7 @@
      "title":"Usiku uingiapo","artist":"PUJO Hymns","lyrics":"Usiku uingiapo.txt","file":""
    },
    {
-     "title":"Higher ground","artist":"PUJO Hymns","lyrics":"Higher ground.txt","file":""
+     "title":"Higher ground","artist":"PUJO Hymns","lyrics":"Higher ground.txt","Category":"General","Church":"Methodist","image":"https://ik.imagekit.io/pry8rixl0/Johnson%20Otman%20jr..jpg","file":"https://www.dropbox.com/scl/fi/p8s6u4igjydy53jctdw3s/Higher-ground.mp3?rlkey=in22x9jseuc1akvpqi5ujbndz&st=0dfxsfks&dl=1"
    },
    {
      "title":"Ameyashinda mauti","artist":"Sylivester Soud","lyrics":"Ameyashinda mauti.txt","file":"https://www.dropbox.com/scl/fi/qrt7ozjw80o9k9bxiogki/kwaya_KKKT_sunuka_ameyashinda_mauti-256k.mp3?rlkey=z9wt92c3zi8ian3h98pthxb0w&st=6qugsar6&dl=1","Category":"Pasaka","image":"https://ik.imagekit.io/pry8rixl0/1000031650.png?updatedAt=1775049438031"
@@ -720,31 +729,31 @@
      "title":"Nakuapia yesu","artist":"Kwaya kuu mwimbieni Bwana-KKKT Dodoma","lyrics":"Nakuapia yesu.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/s24te7jtg1904uenmsw82/Nakuapia-Yesu-Kwaya-kuu-mwimbieni-Bwana.mp3?rlkey=3is2q9ezl8u2u7qxlswe2b539&st=1jmfi65s&dl=1","image":"https://ik.imagekit.io/pry8rixl0/Nijaposema%20kwa%20lugha.jpg"
    },
    {
-     "title":"Faith of our fathers","artist":"English Hymns","lyrics":"Faith of our fathers.txt","Category":"General","file":"https://www.dropbox.com/scl/fi/g7i7mc98ux6y90npu4y3p/Neno-la-mungu-takata-faith-of-our-father.mp3?rlkey=4zk4e1efkgoidte5tkhbseei2&st=xgx9cl07&dl=1"
+     "title":"Faith of our fathers","artist":"English Hymns","lyrics":"Faith of our fathers.txt","Category":"General","file":"https://www.dropbox.com/scl/fi/g7i7mc98ux6y90npu4y3p/Neno-la-mungu-takata-faith-of-our-father.mp3?rlkey=4zk4e1efkgoidte5tkhbseei2&st=xgx9cl07&dl=1","Category":"General","Church":"Rc choir","image":"https://ik.imagekit.io/pry8rixl0/Frederick%20William%20Faber.jpg"
    },
    {
      "title":"Great is Thy faithfulness","artist":"English Hymns","lyrics":"Great is Thy faithfulness.txt","Category":"General","file":"https://www.dropbox.com/scl/fi/9m1nm9lftxwy8t2kx5dfl/Great-is-Thy-faithfulness.mp3?rlkey=wijo1n0gbl8esbjqgzcs8cvs5&st=1dvg53la&dl=1"
    },
    {
-     "title":"Blessed assurance","artist":"English Hymns","lyrics":"Blessed assurance.txt","Category":"Kuabudu","file":"https://www.dropbox.com/scl/fi/tkecpaljl61dcfbgo6dhg/Blessed-assurance.mp3?rlkey=2wwp4ayqiyq4l7z9w9e4aiux7&st=4dqavlwk&dl=1","image":"https://ik.imagekit.io/pry8rixl0/fanny-crosby.jpg"
+     "title":"Blessed assurance","artist":"English Hymns","lyrics":"Blessed assurance.txt","Category":"Kuabudu","file":"https://www.dropbox.com/scl/fi/tkecpaljl61dcfbgo6dhg/Blessed-assurance.mp3?rlkey=2wwp4ayqiyq4l7z9w9e4aiux7&st=4dqavlwk&dl=1","image":"https://ik.imagekit.io/pry8rixl0/Fanny%20Crosby%20HD.webp"
    },
    {
-     "title":"Come Thou fount of every blessing","artist":"English Hymns","lyrics":"Come Thou fount of every blessing.txt","Category":"General","file":"https://www.dropbox.com/scl/fi/t9hc6xgeak1nbk6fqb9ox/Come-Thou-fount-of-every-blessing.mp3?rlkey=5ya76dt5or0voy1k438s94kdb&st=j14mhubj&dl=1"
+     "title":"Come Thou fount of every blessing","artist":"English Hymns","lyrics":"Come Thou fount of every blessing.txt","Category":"General","file":"https://www.dropbox.com/scl/fi/t9hc6xgeak1nbk6fqb9ox/Come-Thou-fount-of-every-blessing.mp3?rlkey=5ya76dt5or0voy1k438s94kdb&st=j14mhubj&dl=1","Church":"Baptist","image":"https://ik.imagekit.io/pry8rixl0/Robert.jpg"
    },
    {
      "title":"Be Thou my vision","artist":"English Hymns","lyrics":"Be Thou my vision.txt","Category":"Kuabudu","file":"https://www.dropbox.com/scl/fi/4bbr8h2rlamf4gdxfyitq/Be_Thou_My_Vision.mp3?rlkey=7ivrzuwr19io0810f1m4rztob&st=2s7yh8si&dl=1"
    },
    {
-     "title":"When i survey the wondrous cross","artist":"English Hymns","lyrics":"When i survey the wondrous cross.txt","category":"General","file":""
+     "title":"When i survey the wondrous cross","artist":"English Hymns","lyrics":"When i survey the wondrous cross.txt","category":"General","file":"","image":"https://ik.imagekit.io/pry8rixl0/Isaac%20watts.webp"
    },
    {
-     "title":"O Thou joyful day","artist":"English Hymns","lyrics":"O Thou joyful day.txt","Category":"Pasaka","file":"https://www.dropbox.com/scl/fi/04q7r6g2r2qdvfo0p4aif/O-Thou-joyful-day.mp3?rlkey=dh04xze15kliba5z1gzz6rm8s&st=4mja2f8u&dl=1"
+     "title":"O Thou joyful day","artist":"English Hymns","lyrics":"O Thou joyful day.txt","Category":"Pasaka","file":"https://www.dropbox.com/scl/fi/04q7r6g2r2qdvfo0p4aif/O-Thou-joyful-day.mp3?rlkey=dh04xze15kliba5z1gzz6rm8s&st=4mja2f8u&dl=1","Church":"Lutheran choir","image":"https://ik.imagekit.io/pry8rixl0/Johann%20Daniel%20Falk.webp"
    },
    {
-     "title":"O du fröhliche","artist":"German Hymns","lyrics":"O du fröhliche.txt","Category":"Christmas","file":"https://www.dropbox.com/scl/fi/04q7r6g2r2qdvfo0p4aif/O-Thou-joyful-day.mp3?rlkey=dh04xze15kliba5z1gzz6rm8s&st=4mja2f8u&dl=1"
+     "title":"O du fröhliche","artist":"German Hymns","lyrics":"O du fröhliche.txt","Category":"Christmas","file":"https://www.dropbox.com/scl/fi/04q7r6g2r2qdvfo0p4aif/O-Thou-joyful-day.mp3?rlkey=dh04xze15kliba5z1gzz6rm8s&st=4mja2f8u&dl=1","Church":"Lutheran choir","image":"https://ik.imagekit.io/pry8rixl0/Johann%20Daniel%20Falk.webp"
    },
    {
-     "title":"Striving onward","artist":"English Hymns","lyrics":"Striving onward.txt","Category":"General","file":"https://www.dropbox.com/scl/fi/1elazt72r4236kmug532f/Ninatakakuingia.mp3?rlkey=h42d63j8o15sajt0igabamuc3&st=xr9d7fab&dl=1"
+     "title":"Striving onward","artist":"English Hymns","lyrics":"Striving onward.txt","Category":"General","file":"https://www.dropbox.com/scl/fi/1elazt72r4236kmug532f/Ninatakakuingia.mp3?rlkey=h42d63j8o15sajt0igabamuc3&st=xr9d7fab&dl=1","Church":"Lutheran choir","image":"https://ik.imagekit.io/pry8rixl0/Philip%20Hiller.webp"
    },
    {
      "title":"Agano letu limetimia","artist":"Yohana magangali","lyrics":"Agano letu limetimia.txt","Category":"Ndoa","file":"https://www.dropbox.com/scl/fi/23qy6nd497ha4bb973lvx/Agano-letu-limetimia.mp3?rlkey=ztat2hd6vbl3rv5z8ges0vgdi&st=ht85no4m&dl=1"
@@ -771,10 +780,10 @@
      "title":"Bwana ni nuru","artist":"Yohana magangali","lyrics":"Bwana ni nuru.txt","Categories":"General","Church":"Rc choir","file":"https://www.dropbox.com/scl/fi/94qv7aq4ah2bv2e0xtd29/Bwana-ni-nuru.mp3?rlkey=3swmnq3ewyh1ixv6oq7pdtv4y&st=dl26loy8&dl=1"
    },
    {
-     "title":"Guide me o Thou great Jehovah","artist":"English Hymns","lyrics":"Guide me o Thou great Jehovah.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/0lao5iccsooszzlyaeggl/Niongoze-Bwana-Mungu.mp3?rlkey=qjoomacsjsdnf7jg9zxqr8vm4&st=pwiqx9bc&dl=1"
+     "title":"Guide me o Thou great Jehovah","artist":"English Hymns","lyrics":"Guide me o Thou great Jehovah.txt","Category":"General","Church":"Methodist","file":"https://www.dropbox.com/scl/fi/0lao5iccsooszzlyaeggl/Niongoze-Bwana-Mungu.mp3?rlkey=qjoomacsjsdnf7jg9zxqr8vm4&st=pwiqx9bc&dl=1","image":"https://ik.imagekit.io/pry8rixl0/William%20Williams.jpg"
    },
    {
-     "title":"Jesus loves even me","artist":"English Hymns","lyrics":"Jesus loves even me.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/fjr76m8zbqloj80vr53f7/Baba-yetu-aliye-mbinguni.mp3?rlkey=jvhk7j40r4uma0ekzjf2yjfgg&st=lx1u53qe&dl=1"
+     "title":"Jesus loves even me","artist":"English Hymns","lyrics":"Jesus loves even me.txt","Category":"General","Church":"Congregational church","file":"https://www.dropbox.com/scl/fi/fjr76m8zbqloj80vr53f7/Baba-yetu-aliye-mbinguni.mp3?rlkey=jvhk7j40r4uma0ekzjf2yjfgg&st=lx1u53qe&dl=1","image":"https://ik.imagekit.io/pry8rixl0/P.%20P.%20Bliss%20(1871).webp?updatedAt=1777619068499"
    },
    {
      "title":"Ahimidiwe Mungu Baba","artist":"Yohana magangali","lyrics":"Ahimidiwe Mungu Baba.txt","Category":"Kusifu","Church":"Rc choir","file":"https://www.dropbox.com/scl/fi/5q348qolllrxnngi55ays/Ahimidiwe-Mungu-Baba.mp3?rlkey=axfly5qyzi74mb56lwplec2np&st=mtiqhu5o&dl=1"
@@ -1026,16 +1035,16 @@
      "title":"Maskini Bartimayo","artist":"Organist:Zawadi Mbilinyi","lyrics":"Maskini Bartimayo.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/z603yc3nfu3yzystqy5hl/Masikini_Bartimayo-TMW_288_A-256k.mp3?rlkey=0s6czbpee700px5ww24x1qbbk&st=8t7t6nqn&dl=1","image":"https://ik.imagekit.io/pry8rixl0/Maskini%20Bartimayo.png"
    },
    {
-     "title":"Peace be still","artist":"English Hymns","lyrics":"Peace be still.txt","Category":"General","Church":"Baptist","file":"https://www.dropbox.com/scl/fi/c7wv4ht9cldarz3h9nj33/Peace-be-still.mp3?rlkey=uagbdyz9dq1tdzovqsq4i7hhk&st=9evoc38u&dl=1"
+     "title":"Peace be still","artist":"English Hymns","lyrics":"Peace be still.txt","Category":"General","Church":"Baptist","file":"https://www.dropbox.com/scl/fi/c7wv4ht9cldarz3h9nj33/Peace-be-still.mp3?rlkey=uagbdyz9dq1tdzovqsq4i7hhk&st=9evoc38u&dl=1","image":"https://ik.imagekit.io/pry8rixl0/Fanny%20Crosby%20HD.webp"
    },
    {
-     "title":"Far and near the fields","artist":"English Hymns","lyrics":"Far and near the fields.txt","Category":"Sadaka","Church":"Methodist","file":"https://www.dropbox.com/scl/fi/9adoxj70fxxeubgu174i6/Far-and-near-the-Fields.mp3?rlkey=uonwqzauu9rumlnrpyfk2385w&st=t176v7ih&dl=1"
+     "title":"Far and near the fields","artist":"English Hymns","lyrics":"Far and near the fields.txt","Category":"Sadaka","Church":"Methodist","file":"https://www.dropbox.com/scl/fi/9adoxj70fxxeubgu174i6/Far-and-near-the-Fields.mp3?rlkey=uonwqzauu9rumlnrpyfk2385w&st=t176v7ih&dl=1","image":"https://ik.imagekit.io/pry8rixl0/James%20Oren%20Thompson%20(1885).webp"
    },
    {
-     "title":"Alas and did my Saviour bleed","artist":"English Hymns","lyrics":"Alas and did my Saviour bleed.txt","Category":"Kwaresma","Church":"Methodist","file":"https://www.dropbox.com/scl/fi/bk2n6bccmntr2vlb87yth/Alas-did-my-Saviour-bleed.mp3?rlkey=q1emxtbdnizr7mqi0kzzgedtc&st=l2q7dh3a&dl=1"
+     "title":"Alas and did my Saviour bleed","artist":"English Hymns","lyrics":"Alas and did my Saviour bleed.txt","Category":"Kwaresma","Church":"Methodist","file":"https://www.dropbox.com/scl/fi/bk2n6bccmntr2vlb87yth/Alas-did-my-Saviour-bleed.mp3?rlkey=q1emxtbdnizr7mqi0kzzgedtc&st=l2q7dh3a&dl=1","image":"https://ik.imagekit.io/pry8rixl0/Isaac%20watts.webp?updatedAt=1777194342534"
    },
    {
-     "title":"Were you there","artist":"English Hymns","lyrics":"Were you there.txt","Category":"General","Church":"General","file":"https://www.dropbox.com/scl/fi/nkx7avnv8dex867bm5hce/Were-you-there.mp3?rlkey=uknye7vpvrhkhg5dpkh30qy6w&st=quq54oij&dl=1"
+     "title":"Were you there","artist":"English Hymns","lyrics":"Were you there.txt","Category":"General","Church":"General","file":"https://www.dropbox.com/scl/fi/nkx7avnv8dex867bm5hce/Were-you-there.mp3?rlkey=uknye7vpvrhkhg5dpkh30qy6w&st=quq54oij&dl=1","image":"https://en.wikipedia.org/wiki/File:ElizabethClephane.png"
    },
    {
      "title":"Beneath the cross of Jesus","artist":"English Hymns","lyrics":"Beneath the cross of Jesus.txt","Category":"Kwaresma","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/vnrddbs2wg9qf3jpjovj4/Beneath-the-cross-of-Jesus.mp3?rlkey=b4rio6eacglqfjj73f4ir9qg4&st=gdilawnm&dl=1"
@@ -1050,7 +1059,7 @@
      "title":"Jesus loves me this i know","artist":"English Hymns","lyrics":"Jesus loves me this i know.txt","Category":"General","Church":"General","file":"https://www.dropbox.com/scl/fi/e7fddnddb5n48kbe9tgbm/Jesus-loves-me-this-i-know.mp3?rlkey=20so2h3873snegk6noezk2phi&st=m2hkwd1d&dl=1"
    },
    {
-     "title":"The bright forever","artist":"English Hymns","Category":"Mazishi","lyrics":"The bright forever.txt","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/a6fb95vap7jc9p17p4q01/The-bright-forever.mp3?rlkey=q0cim1wpoeoqbkp5danvj9w22&st=0z7n14r6&dl=1"
+     "title":"The bright forever","artist":"English Hymns","Category":"Mazishi","lyrics":"The bright forever.txt","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/a6fb95vap7jc9p17p4q01/The-bright-forever.mp3?rlkey=q0cim1wpoeoqbkp5danvj9w22&st=0z7n14r6&dl=1","image":"https://ik.imagekit.io/pry8rixl0/__.%20_.%20________.webp"
    },
    {
      "title":"Father along","artist":"English Hymns","lyrics":"Father along.txt","Category":"Mazishi","Church":"Methodist","file":"https://www.dropbox.com/scl/fi/izm8qvmoakg71dwl4aao4/Father-along.mp3?rlkey=drklr5qqapm3x5d8cbizy8qkc&st=venljoa1&dl=1"
@@ -1074,7 +1083,7 @@
      "title":"Come let us all unite to sing","artist":"English Hymns","lyrics":"Come let us all unite to sing.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/mdhfxrype16p8gsbfxchi/Come-let-us-all-unite-to-sing.mp3?rlkey=5a2s1bo3zsoxet3jrisaxz698&st=9hymk0cy&dl=1"
    },
    {
-     "title":"God is love his word proclaims it","artist":"English Hymns","lyrics":"God is love his word proclaims it.txt","Category":"General","Church":"Methodist","file":"https://www.dropbox.com/scl/fi/x8i9mr32cq5y6pmebtbhh/God-is-love-his-word-proclaims-it.mp3?rlkey=t3m4dn8qrjx5ctxlmbwxnt0ed&st=aeyhxs3r&dl=1"
+     "title":"God is love his word proclaims it","artist":"English Hymns","lyrics":"God is love his word proclaims it.txt","Category":"General","Church":"Methodist","file":"https://www.dropbox.com/scl/fi/x8i9mr32cq5y6pmebtbhh/God-is-love-his-word-proclaims-it.mp3?rlkey=t3m4dn8qrjx5ctxlmbwxnt0ed&st=aeyhxs3r&dl=1","image":"https://ik.imagekit.io/pry8rixl0/Fanny%20Crosby%20HD.webp"
    },
    {
      "title":"Gott ist die Liebe","artist":"German Hymns","lyrics":"Gott ist die Liebe.txt","Category":"General","Church":"General","file":"https://www.dropbox.com/scl/fi/z3odmv7qxnoyo450r7jbh/Mungu-ni-pendo-God-is-love.mp3?rlkey=0iht3xbcr5bzn81kgk4qx0ecl&st=j7fsvm48&dl=1"
@@ -1093,5 +1102,80 @@
    },
    {
      "title":"Kanuni za hesabu","artist":"Students","lyrics":"Kanuni za hesabu.txt","Category":"Watoto","Church":"General","image":"https://ik.imagekit.io/pry8rixl0/Kanuni%20za%20hesabu.jpg?updatedAt=1777118039393","file":"https://www.dropbox.com/scl/fi/ngaiqabifa6swuj12exeg/Kanuni-za-hesabu.mp3?rlkey=ut72bvbcufkfir8iozhnvji1p&st=652hizk2&dl=1"
+   },
+   {
+     "title":"Count your blessings","artist":"English Hymns","lyrics":"Count your blessings.txt","Category":"General","Church":"Methodist","image":"https://ik.imagekit.io/pry8rixl0/Johnson%20Otman%20jr..jpg?updatedAt=1777208033821","file":"https://www.dropbox.com/scl/fi/ngmfhf48ckv4wi5aic93c/Count-your-blessings.mp3?rlkey=2htnoh2cflgz6g1o3jv0vkqkx&st=o254wkjb&dl=1"
+   },
+   {
+     "title":"Shangwe amefufuka","artist":"Kwaya ya mt. Yohane Paulo II Kibao-Mafinga","Category":"Pasaka","Church":"Rc choir","image":"https://ik.imagekit.io/pry8rixl0/Shangwe%20amefufuka.jpg","file":"https://www.dropbox.com/scl/fi/ninylv1t6m3jycvmuta2j/JOY-_HE_IS_RISEN____SHANGWE_AMEFUFUKA____BY_EMIL_SHAYO____Christian_Worship_Song-256k.mp3?rlkey=hby17z17mjz6ck1l0znhhmu3h&st=jfa6bitw&dl=1","lyrics":"Shangwe amefufuka.txt"
+   },
+   {
+     "title":"Kwaheri ndugu yetu","artist":"Kwaya ya mt. Yohane Paulo II Kibao-Mafinga","lyrics":"Kwaheri ndugu yetu.txt","Category":"Mazishi","image":"https://ik.imagekit.io/pry8rixl0/Kwaheri%20ndugu%20yetu.jpg","file":"https://www.dropbox.com/scl/fi/y76ytebp0juvjzgqln7s6/KWA_HERI_NDUGU_YETU_BY_Padre_Polycarp_Kindole___Kwaya_ya_Mt._Yohane_Paulo_II_-_Kibao___Official_MV-256k.mp3?rlkey=l6uya1m97vvh65hnldpq5vtav&st=hj0wuf38&dl=1"
+   },
+   {
+     "title":"Nyumbani mwa Bwana","artist":"Kwaya ya mt. Yohane Paulo II Kibao-Mafinga","lyrics":"Nyumbani mwa Bwana.txt","Category":"General","Church":"Rc choir","image":"https://ik.imagekit.io/pry8rixl0/Nyumbani%20mwa%20Bwana.jpg","file":"https://www.dropbox.com/scl/fi/9yqjsf5utphwd96fd43oe/NYUMBANI_MWA_BWANA_-_BY_N._CHILEMBA_-_KWAYA_YA_MT._YOHANE_PAULO_II_KIBAO-256k.mp3?rlkey=5b3k6d70s8y406bxs75tdplbl&st=dphorzj5&dl=1"
+   },
+   {
+     "title":"Happy day","artist":"English Hymns","lyrics":"Happy day.txt","Category":"General","Church":"Church of England","image":"https://ik.imagekit.io/pry8rixl0/Philip%20Doddridge.jpg?updatedAt=1777573414985","file":"https://www.dropbox.com/scl/fi/52f0h556zqhqctc05eilo/Ni-sikukuu-happy-song.mp3?rlkey=lox7bwluzihu47hoj4db8xthv&st=jwu5o995&dl=1"
+   },
+   {
+     "title":"Habari njema","artist":"Kwaya kuu KKKT-Mabibo external","Category":"General","Church":"Lutheran choir","lyrics":"Habari njema.txt","image":"https://ik.imagekit.io/pry8rixl0/Habari%20njema.jpg","file":"https://www.dropbox.com/scl/fi/gkteitbclapki2ml52zo9/HABARI_NJEMA___Official_video__KKKT_Mabibo_External_kwaya_kuu-256k.mp3?rlkey=p0aksn9pacdnt659pyemhcpqq&st=np6p5e6o&dl=1"
+   },
+   {
+     "title":"Muda wapita","artist":"Kwaya kuu KKKT-Mabibo external","Category":"General","Church":"Lutheran choir","image":"https://ik.imagekit.io/pry8rixl0/Muda%20wapita.webp","lyrics":"Muda wapita.txt","file":"https://www.dropbox.com/scl/fi/p9lempisl0qd99n0zssv5/MUDA_WAPITA-__Official_video__KKKT_Mabibo_External_kwaya_kuu-256k.mp3?rlkey=kkqqd4yb035v9jdl76xnsxrbl&st=q7sro2zv&dl=1"
+   },
+   {
+     "title":"Baba nainua mikono","artist":"Kwaya kuu KKKT-Mabibo external","Category":"General","Church":"Lutheran choir","image":"https://ik.imagekit.io/pry8rixl0/Baba%20nainua%20mikono.webp","lyrics":"Baba nainua mikono.txt","file":"https://www.dropbox.com/scl/fi/locsl7wfryvoib9qoil2k/BABA_NAINUA_MIKONO_official___-_Kwaya_Kuu_KKKT_Mabibo_External.-256k.mp3?rlkey=4iw1xj6afd5phskewl494gnse&st=oi9uzuzh&dl=1"
+   },
+   {
+     "title":"Tanzania","artist":"Kwaya kuu KKKT-Mabibo external","Category":"General","Church":"Lutheran choir","lyrics":"Tanzania.txt","image":"https://ik.imagekit.io/pry8rixl0/Tanzania.svg.png?updatedAt=1777614363926","file":"https://www.dropbox.com/scl/fi/thvyjc1dzt3vikzpi41w7/TANZANIA__KWAYA_KUU_MABIBO_EXTERNAL-256k.mp3?rlkey=sccx75ed35spq54wv36hwgck3&st=msvi3z7d&dl=1"
+   },
+   {
+     "title":"I heard the voice of Jesus say","artist":"English Hymns","Category":"General","Church":"Church of Scotland","lyrics":"I heard the voice of Jesus say.txt","image":"https://ik.imagekit.io/pry8rixl0/Horatius%20Bonar.webp","file":"https://www.dropbox.com/scl/fi/eidpbnjhjfed0haoak6uo/I-heard-the-voice-of-Jesus-say.mp3?rlkey=1t6f3s65sgknwioo166aznj4x&st=v2682bu5&dl=1"
+   },
+   {
+     "title":"The happy land","artist":"English Hymns","lyrics":"The happy land.txt","Church":"Church of Scotland","Category":"Mazishi","image":"https://ik.imagekit.io/pry8rixl0/Andrew%20Young.jpg","file":"https://www.dropbox.com/scl/fi/oi38okm270zf8mt2j0c27/Happy-land.mp3?rlkey=ielg6q2pahqxqc97cizumwv7p&st=vvfedc08&dl=1"
+   },
+   {
+     "title":"Holy,holy,holy Lord God almighty","artist":"English Hymns","lyrics":"Holy, holy, holy Lord God almighty.txt","Category":"General","Church":"Church of England","image":"https://ik.imagekit.io/pry8rixl0/Reginald%20Heber.webp","file":"https://www.dropbox.com/scl/fi/o0nu60c5emd5s454nl2nb/Holy-holy-holy-Lord-God-almighty.mp3?rlkey=a03tbmpul7dclrcpcn572m2oj&st=0v8k8ce7&dl=1"
+   },
+   {
+     "title":"Let there be light","artist":"English Hymns","lyrics":"Let there be light.txt","Category":"General","Church":"Church of England","image":"","file":"https://www.dropbox.com/scl/fi/bxx34v31pcp93sfdep8cy/Let-there-be-light.mp3?rlkey=szkxjdlca28g3o6udrdk78dzo&st=56ytr2jv&dl=1"
+   },
+   {
+     "title":"I bind unto myself today","artist":"English Hymns","lyrics":"I bind unto myself today.txt","Church":"Rc choir","Category":"General","image":"https://ik.imagekit.io/pry8rixl0/Saint%20Patrick.webp","file":"https://www.dropbox.com/scl/fi/a60hs7k4wxy88qcd1l8uh/I-bind-unto-myself-today.mp3?rlkey=u0ma52cbq0i436jprscuxkw4n&st=strdt3yl&dl=1"
+   },
+   {
+     "title":"I'm not ashamed to own my Lord","artist":"English Hymns","lyrics":"I'm not ashamed to own my Lord.txt","Category":"General","Church":"Congregational","image":"https://ik.imagekit.io/pry8rixl0/Issac%20watts%20HD..jpg","file":"https://www.dropbox.com/scl/fi/608g837em1fo164lyogmm/I-m-not-ashamed-to-own-my-Lord.mp3?rlkey=7o1ydgj99epoymhsdtcepgreb&st=tvvsbfpc&dl=1"
+   },
+   {
+     "title":"Yesu unipendaye","artist":"PUJO Hymns","lyrics":"Yesu unipendaye.txt","Church":"Church of England","Category":"General","image":"https://ik.imagekit.io/pry8rixl0/Charles%20Wesley.webp","file":"https://www.dropbox.com/scl/fi/hejx0eql9ccqpi055nh31/Jesus-lover-of-my-soul.mp3?rlkey=211033cofiucn7kqpj45096dy&st=gf1wxqd1&dl=1"
+   },
+   {
+     "title":"Love is come again","artist":"English Hymns","lyrics":"Love is come again.txt","Church":"Church of England","Category":"General","image":"https://ik.imagekit.io/pry8rixl0/John%20Macleod%20Campbell%20Crum.webp","file":"https://www.dropbox.com/scl/fi/5xsi7c9as04obwm6mnd4y/Love-is-come-again.mp3?rlkey=dewjsxa6cedhhphxit75g3dqi&st=p2xzt09k&dl=1"
+   },
+   {
+     "title":"Trust and obey","artist":"English Hymns","lyrics":"Trust and obey.txt","Church":"Presbyterian","Category":"General","image":"https://ik.imagekit.io/pry8rixl0/John%20H.Sammis.jpg","file":"https://www.dropbox.com/scl/fi/dn1zz0giswqjb3b1t6bp7/Trust-and-Obey.mp3?rlkey=mzqynuv8eewudi6bouhjkv2fw&st=eycknnu9&dl=1"
+   },
+   {
+     "title":"I hear Thy welcome voice","artist":"English Hymns","lyrics":"I hear Thy welcome voice.txt","Church":"Methodist","Category":"General","image":"https://ik.imagekit.io/pry8rixl0/Lewis%20Hartsough%20(1872).webp?updatedAt=1777703758594","file":"https://www.dropbox.com/scl/fi/1wmasgnw2h0u0exf6tcwi/I-hear-Thy-welcome-voice.mp3?rlkey=33gu8mr0ido8ctpwu26zytp5e&st=e0szq3yp&dl=1"
+   },
+   {
+     "title":"I am coming to the cross","artist":"English Hymns","Category":"General","Church":"Methodist","lyrics":"I am coming to the cross.txt","file":"https://www.dropbox.com/scl/fi/vwdficir36ksisjbsquah/I-am-coming-to-the-cross.mp3?rlkey=hqbns6kkeay1kshq9ix12tzdu&st=p07epdzi&dl=1","image":"https://ik.imagekit.io/pry8rixl0/W.%20McDonald%20(1870).webp"
+   },
+   {
+     "title":"What can wash away my sins","artist":"English Hymns","Category":"Ekaristi","Church":"Baptist","image":"https://ik.imagekit.io/pry8rixl0/Robert%20Lowry%20(1876).webp","file":"https://www.dropbox.com/scl/fi/ipnysbzrmuvz9gjc1pvlk/Sioshwi-dhambi-zangu-1.mp3?rlkey=lu99fo5ljei4wnnij4l22fadm&st=qid0kw17&dl=1"
+   },
+   {
+     "title":"Hold the fort","artist":"English Hymns","lyrics":"Hold the fort.txt","Category":"General","Church":"Presbyterian","image":"https://ik.imagekit.io/pry8rixl0/P.%20P.%20Bliss%20(1871).webp?updatedAt=1777619068499","file":"https://www.dropbox.com/scl/fi/yfjw6233mjel1fo8tw6nu/Hold-the-fort-safari.mp3?rlkey=nk556ebzf9fmcz2unvg09w4zn&st=u692tidn&dl=1"
+   },
+   {
+     "title":"Thou who didst call Thy saints of old","artist":"English Hymns","Category":"General","Church":"Baptist","image":"https://ik.imagekit.io/pry8rixl0/Edward%20Ashurst%20Welch.webp","file":"https://www.dropbox.com/scl/fi/9vsn8w4wv3ulm1u2epoks/Thou-who-didst-call-the-old-of-saints.mp3?rlkey=o5s8q1oe0t4szg3t7ykykeh4v&st=0p76575t&dl=1","lyrics":"Thou who didst call Thy old of saints.txt"
+   },
+   {
+     "title":"Crown him with many crowns","artist":"English Hymns","lyrics":"Crown him with many crowns.txt","Church":"Rc choir","Category":"General","image":"https://ik.imagekit.io/pry8rixl0/Matthew%20Bridges.webp","file":"https://www.dropbox.com/scl/fi/hpkg24hg7uwlx7t47jou7/Crown-him-with-many-crowns-Taji-mvikeni.mp3?rlkey=xdut0vce22cuyecqybgliqpql&st=7dc7hy6m&dl=1"
+   },
+   {
+     "title":"Beulah land","artist":"English Hymns","Category":"General","lyrics":"Beulah land.txt","Church":"Methodist","image":"https://ik.imagekit.io/pry8rixl0/Edgar%20Page%20(1876).webp","file":"https://www.dropbox.com/scl/fi/pdv4wnqry87mny4r67kw0/Beulah-land.mp3?rlkey=cedbv26xgdwhldxio0b3zmn1j&st=pdyglqi1&dl=1"
    }
 ]
