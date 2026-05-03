@@ -32,12 +32,10 @@ function checkUpdate() {
     .then(data => {
 
       if (data.version !== currentVersion) {
-        if (confirm("Kuna update mpya. Unataka kupakua?")) {
+        if (confirm("The new version is available do yo want to install it?(Kuna update mpya Unataka kupakua?)")) {
           window.location.href = data.url;
         }
-      } else {
-        alert("Nyimbo zimepakiwa kikamilifu ✅");
-      }
+      } 
 
     })
     .catch(() => {
@@ -80,6 +78,35 @@ navButtons.forEach(btn => {
 
     screens.forEach(screen => screen.style.display = "none");
     const targetId = btn.getAttribute("data-target");
+    if (targetId === "favourite") {
+  // onyesha favourite screen fresh
+  document.querySelectorAll(".nyimbo").forEach(btn => {
+    btn.style.display = "";
+  });
+}
+    // kama ni HOME, reset filter
+if (targetId === "song-list") {
+  // onyesha search bar
+  searchInput.style.visibility = "visible";
+
+  // rudisha nyimbo zote
+  document.querySelectorAll(".nyimbo").forEach(btn => {
+    btn.style.display = "";
+  });
+
+  // onyesha playlist container
+  if (playlistContainer) {
+    playlistContainer.style.display = "block";
+  }
+
+  // ondoa active playlist
+  document.querySelectorAll(".playlist").forEach(p => {
+    p.classList.remove("active");
+  });
+
+  // ficha jina la filter
+  document.getElementById("jina-container").style.display = "none";
+}
     lastScreen= targetId;
     if(targetId==="playlist-category"){
     document.getElementById(targetId).style.display="grid"
@@ -88,12 +115,12 @@ navButtons.forEach(btn => {
     document.getElementById(targetId).style.display = "block";
     searchInput.style.visibility="visible";
     }
-    if (targetId === "playlist-category" && activeCategory) {
+    if (targetId === "playlist-category" ) {
 
   const Songcontainer = document.getElementById("Category-songs");
 
   Songcontainer.style.display = "block";
-
+  
   document.querySelectorAll("#Category-songs .nyimbo").forEach(btn => {
     if (btn.dataset.Category === activeCategory) {
       btn.style.display = "block";
@@ -263,7 +290,7 @@ playlistButtons.forEach(btn => {
     document.querySelectorAll(".playlist").forEach(playlist => {
 
       playlist.addEventListener("click", () => {
-
+        searchInput.style.visibility="hidden";
         const artist = playlist.querySelector(".playlist-name").textContent.trim().toLowerCase();
 
         document.querySelectorAll(".playlist").forEach(p => p.classList.remove("active"));
@@ -282,8 +309,9 @@ playlistButtons.forEach(btn => {
         
  document.getElementById("jina").textContent=artist;
         if (playlistContainer) {
-          playlistContainer.style.visibility = "hidden";
+          playlistContainer.style.display = "none";
         }
+          
 
         if (All) {
           All.style.display = "block";
@@ -300,7 +328,10 @@ playlistButtons.forEach(btn => {
         document.querySelectorAll(".nyimbo").forEach(btn => {
           btn.style.display = "";
         });
-
+        
+     searchInput.style.visibility="visible";
+     playlistContainer.style.display = "block";
+     
         document.querySelectorAll(".playlist").forEach(p => {
           p.classList.remove("active");
         });
@@ -348,6 +379,9 @@ playlistButtons.forEach(btn => {
       songList.style.display = "none";
       songDetails.style.display = "block";
       
+      document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+
       updateFavButton();
     });
     play.addEventListener("click",()=>{
@@ -439,7 +473,7 @@ playlistButtons.forEach(btn => {
       favourites.forEach(song => {
         const btn = document.createElement("button");
         btn.className = "nyimbo";
-
+        btn.dataset.image=song.image;
         btn.innerHTML = `
   <div class="left-img">
     <div class="btn-image">
@@ -566,6 +600,44 @@ const Exitbtn = document.getElementById("Exit")
   document.body.style.fontSize = "20px";
      }
 });
-} 
+}
+
+if (window.Capacitor) {
+  const { App } = Capacitor.Plugins;
+
+  App.addListener('backButton', () => {
+
+    if (lastScreen !== "song-list" || 
+        document.getElementById("song-details").style.display === "block" || 
+        activeCategory) {
+
+      document.getElementById("back").click();
+      return;
+    }
+
+    const exit = confirm("Unataka kufunga app?");
+    if (exit) {
+      App.exitApp();
+    }
+
+  });
+}
+
+const container = document.getElementById("playlist-container");
+
+let timer;
+  if(container){
+container.addEventListener("scroll", () => {
+  clearTimeout(timer);
+
+  timer = setTimeout(() => {
+    const maxScroll = container.scrollWidth - container.clientWidth;
+
+    if (container.scrollLeft >= maxScroll - 2) {
+      container.scrollLeft = 0;
+    }
+  }, 120);
+});
+}
 
 });
