@@ -1,5 +1,5 @@
-CHRIST, THE LORD, IS RISEN TODAY
-Composer: Charles Wesley (1739)
+𝑪𝑯𝑹𝑰𝑺𝑻, 𝑻𝑯𝑬 𝑳𝑶𝑹𝑫, 𝑰𝑺 𝑹𝑰𝑺𝑬𝑵 𝑻𝑶𝑫𝑨𝒀
+𝑪𝒐𝒎𝒑𝒐𝒔𝒆𝒓: 𝑪𝒉𝒂𝒓𝒍𝒆𝒔 𝑾𝒆𝒔𝒍𝒆𝒚 (1739)
 
 1. Christ, the Lord, is risen today, Alleluia!
    Sons of men and angels say, Alleluia!
@@ -25,6 +25,8 @@ Composer: Charles Wesley (1739)
    Praise to Thee by both be given, Alleluia!
    Thee we greet triumphant now, Alleluia!
    Hail the Resurrection, thou! Alleluia!
+
+
 
 
 
