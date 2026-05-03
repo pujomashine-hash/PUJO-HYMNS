@@ -1,8 +1,6 @@
   𝙉𝙄𝙏𝘼𝙁𝙐𝙉𝙂𝙐𝘼 𝙆𝙄𝙉𝙔𝙒𝘼 𝘾𝙃𝘼𝙉𝙂𝙐 
-Composer: Zawadi Noel Mbilinyi 
-Asili: Kinyaturu/kinyiramba
-
-
+𝐶𝑜𝑚𝑝𝑜𝑠𝑒𝑟: 𝑍𝑎𝑤𝑎𝑑𝑖 𝑁𝑜𝑒𝑙 𝑀𝑏𝑖𝑙𝑖𝑛𝑦𝑖 
+𝐴𝑠𝑖𝑙𝑖: 𝐾𝑖𝑛𝑦𝑎𝑡𝑢𝑟𝑢/𝑘𝑖𝑛𝑦𝑖𝑟𝑎𝑚𝑏𝑎
 
 1.Nitafungua kinywa changu leo ili,
   nikusifu wewe Mungu wangu,
