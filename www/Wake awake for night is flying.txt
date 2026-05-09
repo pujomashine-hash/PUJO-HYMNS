@@ -1,6 +1,6 @@
-WAKE, AWAKE, FOR NIGHT IS FLYING
-Composer: Philipp Nicolai (1599)
-Translation: Catherine Winkworth (1858)
+𝑾𝑨𝑲𝑬, 𝑨𝑾𝑨𝑲𝑬, 𝑭𝑶𝑹 𝑵𝑰𝑮𝑯𝑻 𝑰𝑺 𝑭𝑳𝒀𝑰𝑵𝑮
+𝑪𝒐𝒎𝒑𝒐𝒔𝒆𝒓: 𝑷𝒉𝒊𝒍𝒊𝒑𝒑 𝑵𝒊𝒄𝒐𝒍𝒂𝒊 (1599)
+𝑻𝒓𝒂𝒏𝒔𝒍𝒂𝒕𝒊𝒐𝒏: 𝑪𝒂𝒕𝒉𝒆𝒓𝒊𝒏𝒆 𝑾𝒊𝒏𝒌𝒘𝒐𝒓𝒕𝒉 (1858)
 
 1. Wake, awake, for night is flying;
    The watchmen on the heights are crying:
@@ -37,6 +37,8 @@ Translation: Catherine Winkworth (1858)
    Of Thy glory;
    Therefore we will eternally
    Sing hymns of joy and praise to Thee.
+
+
 
 
 
