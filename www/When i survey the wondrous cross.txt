@@ -1,5 +1,5 @@
- WHEN I SURVEY THE WONDROUS CROSS 
-  Author:	Isaac Watts (1707)
+ 𝑾𝑯𝑬𝑵 𝑰 𝑺𝑼𝑹𝑽𝑬𝒀 𝑻𝑯𝑬 𝑾𝑶𝑵𝑫𝑹𝑶𝑼𝑺 𝑪𝑹𝑶𝑺𝑺 
+  𝑨𝒖𝒕𝒉𝒐𝒓:	𝑰𝒔𝒂𝒂𝒄 𝑾𝒂𝒕𝒕𝒔 (1707)
 
 1.When I survey the wondrous cross
   on which the Prince of glory died,
