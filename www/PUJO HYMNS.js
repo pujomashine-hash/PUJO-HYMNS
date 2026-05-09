@@ -42,7 +42,7 @@ function checkUpdate() {
     });
 }
 checkUpdate();
-   
+
 const Themechange=document.getElementById("theme")
 if(Themechange) {
 const Savedtheme=localStorage.getItem("theme")
@@ -120,7 +120,7 @@ if (targetId === "song-list") {
   const Songcontainer = document.getElementById("Category-songs");
 
   Songcontainer.style.display = "block";
-  
+
   document.querySelectorAll("#Category-songs .nyimbo").forEach(btn => {
     if (btn.dataset.Category === activeCategory) {
       btn.style.display = "block";
@@ -298,7 +298,7 @@ playlistButtons.forEach(btn => {
 
         document.querySelectorAll(".nyimbo").forEach(btn => {
           const songArtist = btn.querySelector(".artist").textContent.toLowerCase();
-       
+
     document.getElementById("jina-container").style.display='block';
           if (songArtist === artist) {
             btn.style.display = "";
@@ -306,12 +306,12 @@ playlistButtons.forEach(btn => {
             btn.style.display = "none";
           }
         });
-        
+
  document.getElementById("jina").textContent=artist;
         if (playlistContainer) {
           playlistContainer.style.display = "none";
         }
-          
+
 
         if (All) {
           All.style.display = "block";
@@ -328,10 +328,10 @@ playlistButtons.forEach(btn => {
         document.querySelectorAll(".nyimbo").forEach(btn => {
           btn.style.display = "";
         });
-        
+
      searchInput.style.visibility="visible";
      playlistContainer.style.display = "block";
-     
+
         document.querySelectorAll(".playlist").forEach(p => {
           p.classList.remove("active");
         });
@@ -375,10 +375,10 @@ playlistButtons.forEach(btn => {
         });
 
       audio.src = btn.dataset.file;
-    
+
       songList.style.display = "none";
       songDetails.style.display = "block";
-      
+
       document.body.scrollTop = 0;
 document.documentElement.scrollTop = 0;
 
@@ -502,7 +502,7 @@ document.documentElement.scrollTop = 0;
           const songDetails = document.getElementById("song-details");
           const lyrics = document.getElementById("lyrics");
           const audio = document.getElementById("audio");
-       
+
           currentSong = song;
           Playing.textContent = currentSong.title + " - " + currentSong.artist;
 
@@ -541,22 +541,31 @@ if (menubtn) {
 }
 
   document.addEventListener("click", function(e) {
-    if (!menubtn.contains(e.target) && !menucontent.contains(e.target)) {
-      menucontent.style.display = "none";
-    }
+
+  if (!menubtn || !menucontent) return;
+
+  if (!menubtn.contains(e.target) && !menucontent.contains(e.target)) {
+    menucontent.style.display = "none";
+  }
+
+});
+  
+  
     const progress = document.getElementById("progress");
-
-
+const audio = document.getElementById("audio");
+if(audio){
 audio.addEventListener("timeupdate", () => {
   if (audio.duration) {
     const percent = (audio.currentTime / audio.duration) * 100;
     progress.style.width = percent + "%";
   }
 });
+}
 
 //THEME CHANGING
 //Seek when user clicks on progress bar
 const progressContainer=document.getElementById("progress-container")
+if(progressContainer){
 progressContainer.addEventListener("click", (e) => {
   const rect = progressContainer.getBoundingClientRect();
   const clickX = e.clientX - rect.left;
@@ -564,11 +573,14 @@ progressContainer.addEventListener("click", (e) => {
   const percent = clickX / width;
   audio.currentTime = percent * audio.duration;
 });
+}
+if(audio){
 audio.addEventListener("error", () => {
   playing.textContent = "❌ Audio not available";
 });
-  });
+}
   
+
 
 
 
