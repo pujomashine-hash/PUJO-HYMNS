@@ -19,31 +19,30 @@ const screens = document.querySelectorAll(".screen");
 
 const songList = document.getElementById("song-list");
 const playlistContainer = document.getElementById("playlist-container");
+let activeCategory = null;
 let lastScreen= "song-list";
 const All = document.getElementById("All");
 if(songList)songList.style.display = "block";
 //initial update check
 function checkUpdate() {
-  const currentVersion = "1.0.0";
+  const currentVersion = "1.0.2";
 
   fetch("https://raw.githubusercontent.com/pujomashine-hash/PUJO-HYMNS/main/Version.json")
     .then(res => res.json())
     .then(data => {
 
       if (data.version !== currentVersion) {
-        if (confirm("Kuna update mpya. Unataka kupakua?")) {
+        if (confirm("The new version is available do yo want to install it?(Kuna update mpya Unataka kupakua?)")) {
           window.location.href = data.url;
         }
-      } else {
-        alert("Nyimbo zimepakiwa kikamilifu ✅");
-      }
+      } 
 
     })
     .catch(() => {
     });
 }
 checkUpdate();
-   
+
 const Themechange=document.getElementById("theme")
 if(Themechange) {
 const Savedtheme=localStorage.getItem("theme")
@@ -79,12 +78,58 @@ navButtons.forEach(btn => {
 
     screens.forEach(screen => screen.style.display = "none");
     const targetId = btn.getAttribute("data-target");
+    if (targetId === "favourite") {
+  // onyesha favourite screen fresh
+  document.querySelectorAll(".nyimbo").forEach(btn => {
+    btn.style.display = "";
+  });
+}
+    // kama ni HOME, reset filter
+if (targetId === "song-list") {
+  // onyesha search bar
+  searchInput.style.visibility = "visible";
+
+  // rudisha nyimbo zote
+  document.querySelectorAll(".nyimbo").forEach(btn => {
+    btn.style.display = "";
+  });
+
+  // onyesha playlist container
+  if (playlistContainer) {
+    playlistContainer.style.display = "block";
+  }
+
+  // ondoa active playlist
+  document.querySelectorAll(".playlist").forEach(p => {
+    p.classList.remove("active");
+  });
+
+  // ficha jina la filter
+  document.getElementById("jina-container").style.display = "none";
+}
     lastScreen= targetId;
     if(targetId==="playlist-category"){
     document.getElementById(targetId).style.display="grid"
+    searchInput.style.visibility="hidden";
     }else {
     document.getElementById(targetId).style.display = "block";
+    searchInput.style.visibility="visible";
     }
+    if (targetId === "playlist-category" ) {
+
+  const Songcontainer = document.getElementById("Category-songs");
+
+  Songcontainer.style.display = "block";
+
+  document.querySelectorAll("#Category-songs .nyimbo").forEach(btn => {
+    if (btn.dataset.Category === activeCategory) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  });
+
+}
   });
 });
 
@@ -112,7 +157,7 @@ if (searchInput) {
 fetch("PUJO HYMNS.json")
   .then(res => res.json())
   .then(data => {
-    // ===== PLAYLIST SYSTEM =====
+    // PLAYLIST SYSTEM 
 const categoryContainer = document.getElementById("Category-names");
 const Songcontainer=document.getElementById("Category-songs")
 let playlistButtons = [];
@@ -125,11 +170,27 @@ data.forEach(song => {
   btn.dataset.Category = song.Category;
   btn.className="nyimbo"
   btn.innerHTML = `
-    <div class="names">
+  <div class="left-img">
+    <div class="btn-image">
+    
+  <img 
+  src="${song.image ? song.image : 'defaul.jpg'}"
+  onerror="this.src='logo.png'">
+    </div>
+
+    <div class="text-btn">
       <div class="title">${song.title}</div>
       <div class="artist">${song.artist}</div>
     </div>
-  `;
+  </div>
+
+  <span class="three-dots">⋮
+    <div class="dots-menu">
+      <button class="share"> Share </button>
+    </div>
+  </span>
+`;
+
 
   btn.style.display = "none"; // hide initially
 
@@ -143,6 +204,7 @@ document.querySelectorAll(".Category").forEach(Cat => {
   Cat.addEventListener("click", () => {
 
     const Category = Cat.id;
+    activeCategory= Category;
 
     // show filtered songs
     playlistButtons.forEach(btn => {
@@ -189,7 +251,6 @@ playlistButtons.forEach(btn => {
     Songcontainer.style.display = "none";
     songDetails.style.display = "block";
     categoryContainer.style.display="none";
-
   });
 });
 
@@ -198,18 +259,29 @@ playlistButtons.forEach(btn => {
       btn.className = "nyimbo";
       btn.dataset.file = song.file;
       btn.dataset.lyrics = song.lyrics;
+      btn.dataset.image = song.image;
 
       btn.innerHTML = `
-        <div class="names">
-          <div class="title">${song.title}</div>
-          <div class="artist">${song.artist}</div>
-        </div>
-        <span class="three-dots">⋮
-          <div class="dots-menu">
-            <button class="share"> Share </button>
-          </div>
-        </span>
-      `;
+  <div class="left-img">
+    <div class="btn-image">
+    
+  <img 
+  src="${song.image ? song.image : 'defaul.jpg'}"
+  onerror="this.src='logo.png'">
+    </div>
+
+    <div class="text-btn">
+      <div class="title">${song.title}</div>
+      <div class="artist">${song.artist}</div>
+    </div>
+  </div>
+
+  <span class="three-dots">⋮
+    <div class="dots-menu">
+      <button class="share"> Share </button>
+    </div>
+  </span>
+`;
 
       songList.appendChild(btn);
     });
@@ -218,7 +290,7 @@ playlistButtons.forEach(btn => {
     document.querySelectorAll(".playlist").forEach(playlist => {
 
       playlist.addEventListener("click", () => {
-
+        searchInput.style.visibility="hidden";
         const artist = playlist.querySelector(".playlist-name").textContent.trim().toLowerCase();
 
         document.querySelectorAll(".playlist").forEach(p => p.classList.remove("active"));
@@ -226,7 +298,7 @@ playlistButtons.forEach(btn => {
 
         document.querySelectorAll(".nyimbo").forEach(btn => {
           const songArtist = btn.querySelector(".artist").textContent.toLowerCase();
-       
+
     document.getElementById("jina-container").style.display='block';
           if (songArtist === artist) {
             btn.style.display = "";
@@ -234,11 +306,12 @@ playlistButtons.forEach(btn => {
             btn.style.display = "none";
           }
         });
-        
+
  document.getElementById("jina").textContent=artist;
         if (playlistContainer) {
-          playlistContainer.style.visibility = "hidden";
+          playlistContainer.style.display = "none";
         }
+
 
         if (All) {
           All.style.display = "block";
@@ -255,6 +328,9 @@ playlistButtons.forEach(btn => {
         document.querySelectorAll(".nyimbo").forEach(btn => {
           btn.style.display = "";
         });
+
+     searchInput.style.visibility="visible";
+     playlistContainer.style.display = "block";
 
         document.querySelectorAll(".playlist").forEach(p => {
           p.classList.remove("active");
@@ -299,10 +375,13 @@ playlistButtons.forEach(btn => {
         });
 
       audio.src = btn.dataset.file;
-    
+
       songList.style.display = "none";
       songDetails.style.display = "block";
-      
+
+      document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+
       updateFavButton();
     });
     play.addEventListener("click",()=>{
@@ -330,7 +409,6 @@ playlistButtons.forEach(btn => {
 
   songDetails.style.display = "none";
 
-  //  HAPA NDIO FIX
   if (categoryView === "names") {
     categoryContainer.style.display = "grid";   // categories
     Songcontainer.style.display = "none";
@@ -395,21 +473,38 @@ playlistButtons.forEach(btn => {
       favourites.forEach(song => {
         const btn = document.createElement("button");
         btn.className = "nyimbo";
-
+        btn.dataset.image=song.image;
         btn.innerHTML = `
-          <div class="names">
-            <div class="title">${song.title}</div>
-            <div class="artist">${song.artist}</div>
-          </div>
-        `;
+  <div class="left-img">
+    <div class="btn-image">
+    
+  <img 
+  src="${song.image ? song.image : 'defaul.jpg'}"
+  onerror="this.src='logo.png'">
+    </div>
+
+    <div class="text-btn">
+      <div class="title">${song.title}</div>
+      <div class="artist">${song.artist}</div>
+    </div>
+  </div>
+
+  <span class="three-dots">⋮
+    <div class="dots-menu">
+      <button class="share"> Share </button>
+    </div>
+  </span>
+`;
+
 
         // click kutoka favourite
         btn.addEventListener("click", () => {
           const songDetails = document.getElementById("song-details");
           const lyrics = document.getElementById("lyrics");
           const audio = document.getElementById("audio");
-       
+
           currentSong = song;
+          Playing.textContent = currentSong.title + " - " + currentSong.artist;
 
           fetch(song.lyrics)
             .then(res => res.text())
@@ -446,22 +541,31 @@ if (menubtn) {
 }
 
   document.addEventListener("click", function(e) {
-    if (!menubtn.contains(e.target) && !menucontent.contains(e.target)) {
-      menucontent.style.display = "none";
-    }
+
+  if (!menubtn || !menucontent) return;
+
+  if (!menubtn.contains(e.target) && !menucontent.contains(e.target)) {
+    menucontent.style.display = "none";
+  }
+
+});
+  
+  
     const progress = document.getElementById("progress");
-
-
+const audio = document.getElementById("audio");
+if(audio){
 audio.addEventListener("timeupdate", () => {
   if (audio.duration) {
     const percent = (audio.currentTime / audio.duration) * 100;
     progress.style.width = percent + "%";
   }
 });
+}
 
 //THEME CHANGING
 //Seek when user clicks on progress bar
 const progressContainer=document.getElementById("progress-container")
+if(progressContainer){
 progressContainer.addEventListener("click", (e) => {
   const rect = progressContainer.getBoundingClientRect();
   const clickX = e.clientX - rect.left;
@@ -469,11 +573,14 @@ progressContainer.addEventListener("click", (e) => {
   const percent = clickX / width;
   audio.currentTime = percent * audio.duration;
 });
+}
+if(audio){
 audio.addEventListener("error", () => {
   playing.textContent = "❌ Audio not available";
 });
-  });
+}
   
+
 
 
 
@@ -490,6 +597,7 @@ const Jina=document.getElementById("Catjina")
 const Exitbtn = document.getElementById("Exit")
    if(Exitbtn){
   Exitbtn.addEventListener("click",()=> {
+    activeCategory = null; 
     categoryView="names";
     CategoryNames.style.display="grid";
     CategorySongs.style.display="none";
@@ -504,7 +612,91 @@ const Exitbtn = document.getElementById("Exit")
   document.body.style.fontSize = "20px";
      }
 });
-} 
+}
 
+if (window.Capacitor) {
+  const { App } = Capacitor.Plugins;
 
+  App.addListener('backButton', () => {
+
+    if (lastScreen !== "song-list" || 
+        document.getElementById("song-details").style.display === "block" || 
+        activeCategory) {
+
+      document.getElementById("back").click();
+      return;
+    }
+
+    const exit = confirm("Unataka kufunga app?");
+    if (exit) {
+      App.exitApp();
+    }
+
+  });
+}
+
+const container = document.getElementById("playlist-container");
+
+let timer;
+  if(container){
+container.addEventListener("scroll", () => {
+  clearTimeout(timer);
+
+  timer = setTimeout(() => {
+    const maxScroll = container.scrollWidth - container.clientWidth;
+
+    if (container.scrollLeft >= maxScroll - 2) {
+      container.scrollLeft = 0;
+    }
+  }, 120);
+});
+}
+const Languages=document.getElementById("Languages")
+const Language=document.querySelectorAll(".Language")
+const Languagebtn=document.getElementById("Language")
+if(Languagebtn) {
+  Languagebtn.addEventListener("click",()=>{
+    Languages.style.display="block";
+  });
+}
+
+async function downloadfile(url, fileName) {
+  try {
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error("Download failed");
+    }
+
+    const blob = await response.blob();
+    const base64 = await convertToBase64(blob);
+
+    await Filesystem.writeFile({
+      path: fileName,
+      data: base64,
+      directory: Directory.Data
+    });
+
+    console.log("✅ Downloaded:", fileName);
+
+  } catch (error) {
+    console.error("❌ Error:", error);
+  }
+}
+
+function convertToBase64(blob) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onloadend = () => resolve(reader.result);
+    reader.onerror = reject;
+    reader.readAsDataURL(blob);
+  });
+}
+
+const Downloadbtn=document.getElementById("Download")
+if(Downloadbtn){
+  Downloadbtn.addEventListener("click",()=>{
+    downloadfile();
+  })
+}
 });
