@@ -651,5 +651,65 @@ container.addEventListener("scroll", () => {
   }, 120);
 });
 }
+const Languages=document.getElementById("Languages")
+const Language=document.querySelectorAll(".Language")
+const Languagebtn=document.getElementById("Language")
+if(Languagebtn) {
+  Languagebtn.addEventListener("click",()=>{
+    Languages.style.display="block";
+  });
+}
 
+async function downloadfile(url, fileName) {
+  try {
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error("Download failed");
+    }
+
+    const blob = await response.blob();
+    const base64 = await convertToBase64(blob);
+
+    await Filesystem.writeFile({
+      path: fileName,
+      data: base64,
+      directory: Directory.Data
+    });
+
+    console.log("✅ Downloaded:", fileName);
+
+  } catch (error) {
+    console.error("❌ Error:", error);
+  }
+}
+
+function convertToBase64(blob) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onloadend = () => resolve(reader.result);
+    reader.onerror = reject;
+    reader.readAsDataURL(blob);
+  });
+}
+
+const Downloadbtn = document.getElementById("Download");
+
+if (Downloadbtn) {
+  Downloadbtn.addEventListener("click", () => {
+
+    const audio = document.getElementById("audio");
+    const fileUrl = audio.src;
+
+    if (!fileUrl) {
+      console.log("❌ No audio source");
+      return;
+    }
+
+    // jina (optional)
+    const fileName = "song_" + Date.now() + ".mp3";
+
+    downloadfile(fileUrl, fileName);
+  });
+}
 });
