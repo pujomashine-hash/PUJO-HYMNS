@@ -14,9 +14,14 @@
        <button id="menu-btn"> ≡ </button>
         <div id="menu">
          <button class="settings" id="theme"> Change theme 🌓</button> <br>
-         <button class="settings" id="Font-changer">Font size</button><br>
          <button id="share-app" class="settings">Share our app</button>
          <button class="settings"> <a  href="https://pujomashine-hash.github.io/PUJO-HYMNS/About.html"> About</a></button><br>
+         <button id="Language" class="settings">
+           Language🌐 </button>
+           <div id="Languages">
+           <button class="Language">english</button><br>
+            <button class="Language">Kiswahili</button>
+            </div>
          <p id="Version"> PUJO HYMNS<br> Version 1.0.2 </p>
          <p id="Copyright"> ©️ All rights reserved.</p>
         </div>
@@ -70,9 +75,11 @@
      <div class="player">
          <p id="playing"> Nothing here </p>
          <audio id="audio"> </audio>
+         <button class="controlbtn" id="Font-changer">A</button>
          <button id="back" class="controlbtn"> ⌫</button>
-       <button id="play" class="controlbtn"> ⏯ </button>
+       <button id="play" class="controlbtn"> ⏮ </button>
          <button id="fav" class="controlbtn"> ♥️</button>
+         <button id="Download" class="controlbtn">📥</button>
          <div id="progress-container">
           <div id="progress"></div>
         </div>
@@ -114,5 +121,6 @@
     data-target="favourite">♥️ Favourite</button>
   </div>
   <script src="PUJO HYMNS.js"> </script>
+  <script type="module" src="main.js"></script>
  </body>
 </html>
