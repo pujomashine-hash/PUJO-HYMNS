@@ -48,6 +48,10 @@ body {
   box-shadow: 0 0 8px magenta;
   border-radius: 5px;
 }
+#Languages {
+display: none;
+z-index: 50;
+}
 #Copyright {
   padding-top: 350px;
 }

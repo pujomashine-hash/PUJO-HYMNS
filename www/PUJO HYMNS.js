@@ -375,6 +375,7 @@ playlistButtons.forEach(btn => {
         });
 
       audio.src = btn.dataset.file;
+      updateDownloadBtn();
 
       songList.style.display = "none";
       songDetails.style.display = "block";
@@ -660,7 +661,28 @@ if(Languagebtn) {
   });
 }
 
+const Downloadbtn = document.getElementById("Download");
+
 let Filesystem, Directory;
+
+async function updateDownloadBtn() {
+  if (!currentSong) return;
+
+  const fileName = currentSong.file.split("/").pop();
+
+  try {
+    await Filesystem.stat({
+      path: fileName,
+      directory: Directory.Data
+    });
+
+    // file ipo
+    Downloadbtn.textContent = "✔";
+
+  } catch (e) {
+    // file haipo
+  }
+}
 
 async function loadFS() {
   try {
@@ -677,22 +699,19 @@ loadFS();
 
 async function downloadfile(url, fileName) {
   try {
-    alert("🚀 Starting download");
+    const fileName = currentSong.file.split("/").pop();
+     Downloadbtn.textContent="➜]"
 
     const response = await fetch(url);
 
-    alert("📡 Response imefika");
 
     if (!response.ok) {
       throw new Error("Download failed");
     }
 
     const blob = await response.blob();
-    alert("📦 Blob ready");
 
     const base64 = await convertToBase64(blob);
-    alert("🔄 Converted");
-
     if (!Filesystem) {
       alert("❌ Filesystem haipo");
       return;
@@ -703,8 +722,6 @@ async function downloadfile(url, fileName) {
       data: base64,
       directory: "DATA"
     });
-
-    alert("✅ Download done");
 
   } catch (error) {
     alert("❌ Error: " + error.message);
@@ -720,7 +737,6 @@ function convertToBase64(blob) {
   });
 }
 
-const Downloadbtn = document.getElementById("Download");
 
 if (Downloadbtn) {
   Downloadbtn.addEventListener("click", () => {

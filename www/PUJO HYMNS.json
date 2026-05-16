@@ -111,7 +111,7 @@
    "title":"All glory laud and honor","artist":"English Hymns","lyrics":"All glory laud and honor.txt","file":"https://www.dropbox.com/scl/fi/cix6z284l8x8b306ofd1m/All-glory-laud-and-honor.mp3?rlkey=ryboj7bjtu5hvngexxqxjcnr0&st=hhcjlprj&dl=1"
  },
  {
-   "title":"All praise to Thee eternal Lord","artist":"English Hymns","lyrics":"All praise to Thee eternal Lord.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/1f8ci5t209gv3phlvxf12/All-praise-to-Thee-the-eternal-Lord.mp3?rlkey=6802plbx4ouk1qdzrkstijexu&st=v8zor2g9&dl=1"
+   "title":"All praise to Thee eternal Lord","artist":"English Hymns","lyrics":"All praise to Thee eternal Lord.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/1f8ci5t209gv3phlvxf12/All-praise-to-Thee-the-eternal-Lord.mp3?rlkey=6802plbx4ouk1qdzrkstijexu&st=v8zor2g9&dl=1","image":"https://ik.imagekit.io/pry8rixl0/Martin%20Luther%20HD.jpg"
  },
  {
    "title":"O God our help in ages past","artist":"English Hymns","lyrics":"O God our help in ages past.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/ouaxb34nmvtu0xr6r1bk5/O-God-our-help-in-ages-past.mp3?rlkey=p8k7je6cgj5w8ll0h0412k0ol&st=ermqfo0y&dl=1","image":"https://ik.imagekit.io/pry8rixl0/Issac%20watts%20HD..jpg?updatedAt=1777657671153"
@@ -345,7 +345,7 @@
      "title":"Nilikuwa kondoo aliyepotea","artist":"PUJO Hymns","lyrics":"Nilikuwa kondoo aliyepotea.txt","file":""
    },
    {
-     "title":"Msingi imara","artist":"PUJO Hymns","lyrics":"Msingi imara.txt","file":""
+     "title":"Msingi imara","artist":"PUJO Hymns","lyrics":"Msingi imara.txt","file":"https://www.dropbox.com/scl/fi/gl3a86y3yc81qm5apz232/How-firm-a-foundation.mp3?rlkey=kpivky71cs1r0m8ib3qsg28ro&st=prkne3k5&dl=1","Category":"General","Church":"","image":""
    },
    {
      "title":"Yesu awakubali wakosa","artist":"PUJO Hymns","lyrics":"Yesu awakubali wakosa.txt","file":""
@@ -375,7 +375,7 @@
      "title":"Yesu aliniita njoo","artist":"PUJO Hymns","lyrics":"Yesu aliniita njoo.txt","file":"","Category":"General","Church":"Church of Scotland","image":"https://ik.imagekit.io/pry8rixl0/Horatius%20Bonar.webp?updatedAt=1777620739406","file":""
    },
    {
-     "title":"Kivulini mwa Yesu","artist":"PUJO Hymns","lyrics":"kivulini mwa Yesu.txt","file":""
+     "title":"Kivulini mwa Yesu","artist":"PUJO Hymns","lyrics":"Kivulini mwa Yesu.txt","file":""
    },
    {
      "title":"Yesu akwita","artist":"PUJO Hymns","lyrics":"Yesu akwita.txt","file":""
@@ -1176,6 +1176,6 @@
      "title":"Crown him with many crowns","artist":"English Hymns","lyrics":"Crown him with many crowns.txt","Church":"Rc choir","Category":"General","image":"https://ik.imagekit.io/pry8rixl0/Matthew%20Bridges.webp","file":"https://www.dropbox.com/scl/fi/hpkg24hg7uwlx7t47jou7/Crown-him-with-many-crowns-Taji-mvikeni.mp3?rlkey=xdut0vce22cuyecqybgliqpql&st=7dc7hy6m&dl=1"
    },
    {
-     "title":"Beulah land","artist":"English Hymns","Category":"General","lyrics":"Beulah land.txt","Church":"Methodist","image":"https://ik.imagekit.io/pry8rixl0/Edgar%20Page%20(1876).webp","file":"https://www.dropbox.com/scl/fi/pdv4wnqry87mny4r67kw0/Beulah-land.mp3?rlkey=cedbv26xgdwhldxio0b3zmn1j&st=pdyglqi1&dl=1"
+     "title":"Beulah land","artist":"English Hymns","Category":"General","lyrics":"Beulah land.txt","Church":"Methodist","image":"https://ik.imagekit.io/pry8rixl0/Edgar%20Page%20(1876).webp","file":"https://raw.githubusercontent.com/pujomashine-hash/PUJO-HYMNS/main/Audio/Beulah%20land%20.mp3"
    }
 ]
