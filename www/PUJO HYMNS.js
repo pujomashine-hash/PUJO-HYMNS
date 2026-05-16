@@ -677,25 +677,37 @@ loadFS();
 
 async function downloadfile(url, fileName) {
   try {
+    alert("🚀 Starting download");
+
     const response = await fetch(url);
+
+    alert("📡 Response imefika");
 
     if (!response.ok) {
       throw new Error("Download failed");
     }
 
     const blob = await response.blob();
+    alert("📦 Blob ready");
+
     const base64 = await convertToBase64(blob);
+    alert("🔄 Converted");
+
+    if (!Filesystem) {
+      alert("❌ Filesystem haipo");
+      return;
+    }
 
     await Filesystem.writeFile({
       path: fileName,
       data: base64,
-      directory: Directory.Data
+      directory: "DATA"
     });
 
-    console.log("✅ Downloaded:", fileName);
+    alert("✅ Download done");
 
   } catch (error) {
-    console.error("❌ Error:", error);
+    alert("❌ Error: " + error.message);
   }
 }
 
@@ -717,7 +729,7 @@ if (Downloadbtn) {
     const fileUrl = audio.src;
 
     if (!fileUrl) {
-      console.log("❌ No audio source");
+      alert("❌ No audio source");
       return;
     }
 
