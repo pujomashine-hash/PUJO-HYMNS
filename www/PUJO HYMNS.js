@@ -661,9 +661,10 @@ if(Languagebtn) {
   });
 }
 
+
 const Downloadbtn = document.getElementById("Download");
 
-let Filesystem, Directory;
+const { Filesystem, Directory } = Capacitor.Plugins;
 
 async function updateDownloadBtn() {
   if (!currentSong) return;
@@ -684,49 +685,31 @@ async function updateDownloadBtn() {
   }
 }
 
-async function loadFS() {
-  try {
-    const mod = await import('@capacitor/filesystem');
-    Filesystem = mod.Filesystem;
-    Directory = mod.Directory;
-    console.log("✅ Filesystem loaded");
-  } catch (e) {
-    console.log("⚠️ Capacitor not available");
-  }
-}
 
-loadFS();
-
-async function downloadfile(url, fileName) {
+async function downloadfile(url) {
   try {
     const fileName = currentSong.file.split("/").pop();
-     Downloadbtn.textContent="➜]"
+    Downloadbtn.textContent = "⏳";
 
     const response = await fetch(url);
-
-
-    if (!response.ok) {
-      throw new Error("Download failed");
-    }
+    if (!response.ok) throw new Error("Download failed");
 
     const blob = await response.blob();
-
     const base64 = await convertToBase64(blob);
-    if (!Filesystem) {
-      alert("❌ Filesystem haipo");
-      return;
-    }
 
     await Filesystem.writeFile({
       path: fileName,
       data: base64,
-      directory: "DATA"
+      directory: Directory.Data
     });
+
+    Downloadbtn.textContent = "✔";
 
   } catch (error) {
     alert("❌ Error: " + error.message);
   }
 }
+
 
 function convertToBase64(blob) {
   return new Promise((resolve, reject) => {
@@ -738,21 +721,16 @@ function convertToBase64(blob) {
 }
 
 
-if (Downloadbtn) {
-  Downloadbtn.addEventListener("click", () => {
+Downloadbtn.addEventListener("click", () => {
+  const audio = document.getElementById("audio");
+  const fileUrl = audio.src;
 
-    const audio = document.getElementById("audio");
-    const fileUrl = audio.src;
+  if (!fileUrl) {
+    alert("❌ No audio source");
+    return;
+  }
 
-    if (!fileUrl) {
-      alert("❌ No audio source");
-      return;
-    }
+  downloadfile(fileUrl);
+});
 
-    // jina (optional)
-    const fileName = "song_" + Date.now() + ".mp3";
-
-    downloadfile(fileUrl, fileName);
-  });
-}
 });
