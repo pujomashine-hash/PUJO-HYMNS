@@ -549,8 +549,8 @@ if (menubtn) {
   }
 
 });
-  
-  
+
+
     const progress = document.getElementById("progress");
 const audio = document.getElementById("audio");
 if(audio){
@@ -579,7 +579,7 @@ audio.addEventListener("error", () => {
   playing.textContent = "❌ Audio not available";
 });
 }
-  
+
 
 
 
@@ -659,6 +659,21 @@ if(Languagebtn) {
     Languages.style.display="block";
   });
 }
+
+let Filesystem, Directory;
+
+async function loadFS() {
+  try {
+    const mod = await import('@capacitor/filesystem');
+    Filesystem = mod.Filesystem;
+    Directory = mod.Directory;
+    console.log("✅ Filesystem loaded");
+  } catch (e) {
+    console.log("⚠️ Capacitor not available");
+  }
+}
+
+loadFS();
 
 async function downloadfile(url, fileName) {
   try {
