@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const sharebtn = document.getElementById("share-app");
 
+const Filesystem = window.Capacitor?.Plugins?.Filesystem;
+
 if (sharebtn) {
   sharebtn.addEventListener("click", async () => {
     try {
@@ -21,6 +23,7 @@ const songList = document.getElementById("song-list");
 const playlistContainer = document.getElementById("playlist-container");
 let activeCategory = null;
 let lastScreen= "song-list";
+let categoryView= "names";
 const All = document.getElementById("All");
 if(songList)songList.style.display = "block";
 //initial update check
@@ -115,20 +118,26 @@ if (targetId === "song-list") {
     document.getElementById(targetId).style.display = "block";
     searchInput.style.visibility="visible";
     }
-    if (targetId === "playlist-category" ) {
+    if (targetId === "playlist-category") {
 
   const Songcontainer = document.getElementById("Category-songs");
+  const CategoryNames = document.getElementById("Category-names");
 
-  Songcontainer.style.display = "block";
+  if (!activeCategory) {
+    // rudi kwenye categories
+    CategoryNames.style.display = "grid";
+    Songcontainer.style.display = "none";
+    document.getElementById("Catjina-Container").style.display = "none";
+  } else {
+    // show songs za category
+    CategoryNames.style.display = "none";
+    Songcontainer.style.display = "block";
 
-  document.querySelectorAll("#Category-songs .nyimbo").forEach(btn => {
-    if (btn.dataset.Category === activeCategory) {
-      btn.style.display = "block";
-    } else {
-      btn.style.display = "none";
-    }
-  });
-
+    document.querySelectorAll("#Category-songs .nyimbo").forEach(btn => {
+      btn.style.display =
+        btn.dataset.Category === activeCategory ? "block" : "none";
+    });
+  }
 }
   });
 });
@@ -199,7 +208,7 @@ data.forEach(song => {
 });
 
 // CATEGORY CLICK
-let categoryView= "names";
+
 document.querySelectorAll(".Category").forEach(Cat => {
   Cat.addEventListener("click", () => {
 
@@ -583,8 +592,6 @@ audio.addEventListener("error", () => {
 
 
 
-
-
 setTimeout (()=> {
  const Ad=document.getElementById("ad")
  if(Ad){
@@ -596,14 +603,21 @@ const CategoryNames=document.getElementById("Category-names")
 const CategorySongs=document.getElementById("Category-songs")
 const Jina=document.getElementById("Catjina")
 const Exitbtn = document.getElementById("Exit")
-   if(Exitbtn){
-  Exitbtn.addEventListener("click",()=> {
-    activeCategory = null; 
+
+   if (Exitbtn){
+  Exitbtn.addEventListener("click",(e)=> {
+    e.stopPropagation();
+    e.preventDefault();
+
+    activeCategory = null;
     categoryView="names";
+
     CategoryNames.style.display="grid";
     CategorySongs.style.display="none";
+    document.getElementById("Catjina-Container").style.display="none";
   });
-   }
+}
+   
    const Fontchanger=document.getElementById("Font-changer")
    if(Fontchanger){
    Fontchanger.addEventListener("click", () => {
@@ -664,7 +678,6 @@ if(Languagebtn) {
 
 const Downloadbtn = document.getElementById("Download");
 
-const { Filesystem, Directory } = Capacitor.Plugins;
 
 async function updateDownloadBtn() {
   if (!currentSong) return;
@@ -720,7 +733,7 @@ function convertToBase64(blob) {
   });
 }
 
-
+if(Downloadbtn){
 Downloadbtn.addEventListener("click", () => {
   const audio = document.getElementById("audio");
   const fileUrl = audio.src;
@@ -732,5 +745,7 @@ Downloadbtn.addEventListener("click", () => {
 
   downloadfile(fileUrl);
 });
+}
+
 
 });
