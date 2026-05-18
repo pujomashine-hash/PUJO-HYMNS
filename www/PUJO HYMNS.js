@@ -711,10 +711,10 @@ async function downloadfile(url) {
     const base64 = await convertToBase64(blob);
 
     await Filesystem.writeFile({
-      path: fileName,
-      data: base64,
-      directory: Directory.Data
-    });
+  path: fileName,
+  data: base64,
+  directory: "DATA"
+});
 
     Downloadbtn.textContent = "✔";
 
