@@ -364,11 +364,23 @@ playlistButtons.forEach(btn => {
     const categories=document.querySelectorAll(".category")
     const favourite=document.getElementById("favourite")
   let scrollPosition = 0;
-    songList.addEventListener("click", e => {
+    songList.addEventListener("click", async(e) => {
       const btn = e.target.closest(".nyimbo");
       if (!btn) return;
       scrollPosition = window.scrollY
 
+  const fileName = btn.dataset.file.split("/").pop();
+
+try {
+  const result = await Filesystem.getUri({
+    path: fileName,
+    directory: "DATA"
+  });
+
+  audio.src = result.uri; // 🔥 local file
+} catch (e) {
+  audio.src = btn.dataset.file; // 🌐 fallback online
+}
       currentSong = {
         title: btn.querySelector(".title").textContent,
         artist: btn.querySelector(".artist").textContent,
