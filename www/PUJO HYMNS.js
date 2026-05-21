@@ -377,9 +377,9 @@ try {
     directory: "DATA"
   });
 
-  audio.src = result.uri; // 🔥 local file
+  audio.src = result.uri; // local file
 } catch (e) {
-  audio.src = btn.dataset.file; // 🌐 fallback online
+  audio.src = btn.dataset.file; // fallback online
 }
       currentSong = {
         title: btn.querySelector(".title").textContent,
@@ -395,7 +395,7 @@ try {
           lyrics.innerHTML = text.replace(/\n/g, "<br>");
         });
 
-      audio.src = btn.dataset.file;
+      // IMEONDOLEWA: audio.src = btn.dataset.file; (ilifuta local file)
       updateDownloadBtn();
 
       songList.style.display = "none";
@@ -447,7 +447,7 @@ document.documentElement.scrollTop = 0;
   play.textContent = "▶";
 });
 
-    //  ❤️ FAVOURITE TOGGLE
+    //  FAVOURITE TOGGLE
     if (favBtn) {
       favBtn.addEventListener("click", () => {
         if (!currentSong) return;
@@ -584,7 +584,6 @@ audio.addEventListener("timeupdate", () => {
 });
 }
 
-//THEME CHANGING
 //Seek when user clicks on progress bar
 const progressContainer=document.getElementById("progress-container")
 if(progressContainer){
@@ -691,26 +690,25 @@ if(Languagebtn) {
 const Downloadbtn = document.getElementById("Download");
 
 
+// ✅ FIX 1: Angalia kama file ipo — directory "DATA" string tu
 async function updateDownloadBtn() {
-  if (!currentSong) return;
+  if (!currentSong || !Filesystem) return;
 
   const fileName = currentSong.file.split("/").pop();
 
   try {
     await Filesystem.stat({
       path: fileName,
-      directory: Directory.Data
+      directory: "DATA"
     });
-
-    // file ipo
     Downloadbtn.textContent = "✔";
-
   } catch (e) {
-    // file haipo
+    Downloadbtn.textContent = "⬇";
   }
 }
 
 
+// ✅ FIX 2: Download — base64 prefix imetolewa
 async function downloadfile(url) {
   try {
     const fileName = currentSong.file.split("/").pop();
@@ -723,32 +721,40 @@ async function downloadfile(url) {
     const base64 = await convertToBase64(blob);
 
     await Filesystem.writeFile({
-  path: fileName,
-  data: base64,
-  directory: "DATA"
-});
+      path: fileName,
+      data: base64,
+      directory: "DATA",
+      recursive: true
+    });
 
     Downloadbtn.textContent = "✔";
 
   } catch (error) {
+    Downloadbtn.textContent = "⬇";
     alert("❌ Error: " + error.message);
   }
 }
 
 
+// ✅ FIX 3: Toa prefix "data:audio/...;base64,"
 function convertToBase64(blob) {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
-    reader.onloadend = () => resolve(reader.result);
+    reader.onloadend = () => resolve(reader.result.split(",")[1]);
     reader.onerror = reject;
     reader.readAsDataURL(blob);
   });
 }
 
+// ✅ FIX 4: Tumia currentSong.file badala ya audio.src
 if(Downloadbtn){
 Downloadbtn.addEventListener("click", () => {
-  const audio = document.getElementById("audio");
-  const fileUrl = audio.src;
+  if (!currentSong) {
+    alert("❌ Chagua wimbo kwanza");
+    return;
+  }
+
+  const fileUrl = currentSong.file;
 
   if (!fileUrl) {
     alert("❌ No audio source");
@@ -761,3 +767,4 @@ Downloadbtn.addEventListener("click", () => {
 
 
 });
+
