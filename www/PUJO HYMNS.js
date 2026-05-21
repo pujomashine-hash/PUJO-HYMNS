@@ -715,17 +715,10 @@ async function downloadfile(url) {
     const fileName = currentSong.file.split("/").pop();
     Downloadbtn.textContent = "⏳";
 
-    const response = await fetch(url);
-    if (!response.ok) throw new Error("Download failed");
-
-    const blob = await response.blob();
-    const base64 = await convertToBase64(blob);
-
-    await Filesystem.writeFile({
+    await Filesystem.downloadFile({
       path: fileName,
-      data: base64,
-      directory: "DATA",
-      recursive: true
+      url: url,
+      directory: "DATA"
     });
 
     Downloadbtn.textContent = "✔";
