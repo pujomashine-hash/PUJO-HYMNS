@@ -699,14 +699,13 @@ async function updateDownloadBtn() {
   try {
     await Filesystem.stat({
       path: fileName,
-      directory: Directory.Data
+      directory: "DATA"
     });
 
-    // file ipo
     Downloadbtn.textContent = "✔";
 
   } catch (e) {
-    // file haipo
+    Downloadbtn.textContent = "⬇";
   }
 }
 
@@ -723,14 +722,16 @@ async function downloadfile(url) {
     const base64 = await convertToBase64(blob);
 
     await Filesystem.writeFile({
-  path: fileName,
-  data: base64,
-  directory: "DATA"
-});
+      path: fileName,
+      data: base64,
+      directory: "DATA",
+      recursive: true
+    });
 
     Downloadbtn.textContent = "✔";
 
   } catch (error) {
+    Downloadbtn.textContent = "⬇";
     alert("❌ Error: " + error.message);
   }
 }
@@ -739,7 +740,7 @@ async function downloadfile(url) {
 function convertToBase64(blob) {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
-    reader.onloadend = () => resolve(reader.result);
+    reader.onloadend = () => resolve(reader.result.split(",")[1]);
     reader.onerror = reject;
     reader.readAsDataURL(blob);
   });
@@ -747,8 +748,12 @@ function convertToBase64(blob) {
 
 if(Downloadbtn){
 Downloadbtn.addEventListener("click", () => {
-  const audio = document.getElementById("audio");
-  const fileUrl = audio.src;
+  if (!currentSong) {
+    alert("❌ Chagua wimbo kwanza");
+    return;
+  }
+
+  const fileUrl = currentSong.file;
 
   if (!fileUrl) {
     alert("❌ No audio source");
@@ -761,5 +766,4 @@ Downloadbtn.addEventListener("click", () => {
 
 
 });
-
 
