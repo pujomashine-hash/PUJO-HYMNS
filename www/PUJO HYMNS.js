@@ -715,10 +715,37 @@ async function downloadfile(url) {
     const fileName = currentSong.file.split("/").pop();
     Downloadbtn.textContent = "⏳";
 
-    await Filesystem.downloadFile({
+    // Chunked download - haisimami hata data ikiwa polepole
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("Download failed");
+
+    const chunks = [];
+    const reader = response.body.getReader();
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      chunks.push(value);
+    }
+
+    // Unganisha chunks zote
+    const totalLength = chunks.reduce((sum, chunk) => sum + chunk.length, 0);
+    const fullArray = new Uint8Array(totalLength);
+    let offset = 0;
+    for (const chunk of chunks) {
+      fullArray.set(chunk, offset);
+      offset += chunk.length;
+    }
+
+    // Badilisha kuwa base64
+    const binary = String.fromCharCode(...fullArray);
+    const base64 = btoa(binary);
+
+    await Filesystem.writeFile({
       path: fileName,
-      url: url,
-      directory: "DATA"
+      data: base64,
+      directory: "DATA",
+      recursive: true
     });
 
     Downloadbtn.textContent = "✔";
