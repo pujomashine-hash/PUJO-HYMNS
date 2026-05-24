@@ -395,7 +395,6 @@ try {
           lyrics.innerHTML = text.replace(/\n/g, "<br>");
         });
 
-      audio.src = btn.dataset.file;
       updateDownloadBtn();
 
       songList.style.display = "none";
