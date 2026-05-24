@@ -364,47 +364,52 @@ playlistButtons.forEach(btn => {
     const categories=document.querySelectorAll(".category")
     const favourite=document.getElementById("favourite")
   let scrollPosition = 0;
-    songList.addEventListener("click", async(e) => {
-      const btn = e.target.closest(".nyimbo");
-      if (!btn) return;
-      scrollPosition = window.scrollY
+   songList.addEventListener("click", async(e) => {
+  const btn = e.target.closest(".nyimbo");
+  if (!btn) return;
+  scrollPosition = window.scrollY
 
   const fileName = btn.dataset.file.split("/").pop();
 
-try {
-  const result = await Filesystem.getUri({
-    path: fileName,
-    directory: "DATA"
-  });
-
-  audio.src = result.uri; // 🔥 local file
-} catch (e) {
-  audio.src = btn.dataset.file; // 🌐 fallback online
-}
-      currentSong = {
-        title: btn.querySelector(".title").textContent,
-        artist: btn.querySelector(".artist").textContent,
-        file: btn.dataset.file,
-        lyrics: btn.dataset.lyrics
-      };
-      Playing.textContent = currentSong.title + " - " + currentSong.artist;
-
-      fetch(btn.dataset.lyrics)
-        .then(res => res.text())
-        .then(text => {
-          lyrics.innerHTML = text.replace(/\n/g, "<br>");
-        });
-
-      updateDownloadBtn();
-
-      songList.style.display = "none";
-      songDetails.style.display = "block";
-
-      document.body.scrollTop = 0;
-document.documentElement.scrollTop = 0;
-
-      updateFavButton();
+  // Angalia kama file ipo kwanza
+  try {
+    await Filesystem.stat({
+      path: fileName,
+      directory: "DATA"
     });
+    // File ipo — soma kama base64 kisha cheza
+    const result = await Filesystem.readFile({
+      path: fileName,
+      directory: "DATA"
+    });
+    audio.src = "data:audio/mpeg;base64," + result.data;
+  } catch (e) {
+    // File haipo — cheza online
+    audio.src = btn.dataset.file;
+  }
+
+  currentSong = {
+    title: btn.querySelector(".title").textContent,
+    artist: btn.querySelector(".artist").textContent,
+    file: btn.dataset.file,
+    lyrics: btn.dataset.lyrics
+  };
+
+  Playing.textContent = currentSong.title + " - " + currentSong.artist;
+
+  fetch(btn.dataset.lyrics)
+    .then(res => res.text())
+    .then(text => {
+      lyrics.innerHTML = text.replace(/\n/g, "<br>");
+    });
+
+  updateDownloadBtn();
+  songList.style.display = "none";
+  songDetails.style.display = "block";
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+  updateFavButton();
+});
     play.addEventListener("click",()=>{
       if(audio.paused) {
       audio.play();
