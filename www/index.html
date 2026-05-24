@@ -13,14 +13,14 @@
      <aside id="left">
        <button id="menu-btn"> ≡ </button>
         <div id="menu">
-         <button class="settings" id="theme"> Change theme 🌓</button> <br>
-         <button id="share-app" class="settings">Share our app</button>
-         <button class="settings"> <a  href="https://pujomashine-hash.github.io/PUJO-HYMNS/About.html"> About</a></button><br>
+         <button class="settings" id="theme" data-key="settings_theme"> Change theme 🌓 </button> <br>
+         <button id="share-app" class="settings" data-key="settings-share">Share our app </button>
+         <button id="About" class="settings" data-key="settings-about"> About</button><br>
          <button id="Language" class="settings">
            Language🌐 </button>
            <div id="Languages">
-           <button class="Language">english</button><br>
-            <button class="Language">Kiswahili</button>
+           <button class="Language-name">English</button><br>
+            <button class="Language-name">Kiswahili</button>
             </div>
          <p id="Version"> PUJO HYMNS<br> Version 1.0.2 </p>
          <p id="Copyright"> ©️ All rights reserved.</p>
@@ -78,7 +78,7 @@
          <button class="controlbtn" id="Font-changer">A</button>
          <button id="back" class="controlbtn"> ⌫</button>
        <button id="play" class="controlbtn"> ⏮ </button>
-         <button id="fav" class="controlbtn"> ♥️</button>
+         <button id="fav" class="controlbtn" > ♥️</button>
          <button id="Download" class="controlbtn">📥</button>
          <div id="progress-container">
           <div id="progress"></div>
@@ -103,7 +103,8 @@
        <div id="Watoto" class="Category"> Watoto</div>
     </div>
     <div id="Category-songs">
-      <div id="Catjina-Container"> <button id="Exit">⌫</button><p id="Catjina">Category name</p> </div>
+      <div id="Catjina-Container"> 
+      <button id="Exit">⌫</button><p id="Catjina">Category name</p> </div>
       <!--filtered button will appear here -->
     </div>
   </div>
@@ -114,11 +115,11 @@
   <!-- navigation-bar-->
   <div id="navigation-bar">
     <button class="change"
-    data-target="song-list">🏠 Home </button> 
+    data-target="song-list" data-key="nav_home">🏠 Home </button> 
     <button class="change"
-    data-target="playlist-category">🎬 Playlist</button>
+    data-target="playlist-category" data-key="nav_playlist">🎬 Playlist</button>
     <button class="change"
-    data-target="favourite">♥️ Favourite</button>
+    data-target="favourite" data-key="nav_favourite">♥️ Favourite</button>
   </div>
   <script type="module" src="PUJO HYMNS.js"> </script>
  </body>

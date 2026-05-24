@@ -558,6 +558,9 @@ playlistButtons.forEach(btn => {
 //  MENU 
 const menubtn = document.getElementById("menu-btn");
 const menucontent = document.getElementById("menu");
+document.getElementById("About").addEventListener("click",()=>{
+  window.location.href="https://pujomashine-hash.github.io/PUJO-HYMNS/About.html"
+});
 
 if (menubtn) {
   menubtn.addEventListener("click", function() {
@@ -682,14 +685,6 @@ container.addEventListener("scroll", () => {
   }, 120);
 });
 }
-const Languages=document.getElementById("Languages")
-const Language=document.querySelectorAll(".Language")
-const Languagebtn=document.getElementById("Language")
-if(Languagebtn) {
-  Languagebtn.addEventListener("click",()=>{
-    Languages.style.display="block";
-  });
-}
 
 
 const Downloadbtn = document.getElementById("Download");
@@ -709,7 +704,7 @@ async function updateDownloadBtn() {
     Downloadbtn.textContent = "✔";
 
   } catch (e) {
-    Downloadbtn.textContent = "⬇";
+    Downloadbtn.textContent = "📥";
   }
 }
 
@@ -785,6 +780,43 @@ Downloadbtn.addEventListener("click", () => {
   }
 
   downloadfile(fileUrl);
+});
+}
+
+//LANGUAGE
+const Languages=document.getElementById("Languages")
+const Language=document.querySelectorAll(".Language-name")
+const Languagebtn=document.getElementById("Language")
+let translations = {};
+let currentLang = localStorage.getItem("lang") || "en";
+
+fetch("Language.json")
+  .then(res => res.json())
+  .then(data => {
+    translations = data;
+    applyLanguage(currentLang); // tekeleza lugha iliyohifadhiwa
+  });
+
+function applyLanguage(lang) {
+  currentLang = lang;
+  localStorage.setItem("lang", lang);
+  document.querySelectorAll("[data-key]").forEach(el => {
+    if (translations[lang] && translations[lang][el.dataset.key]) {
+      el.textContent = translations[lang][el.dataset.key];
+    }
+  });
+}
+
+Language.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const lang = btn.textContent.trim().toLowerCase() === "kiswahili" ? "sw" : "en";
+    applyLanguage(lang);
+    Languages.style.display = "none";
+  });
+});
+if(Languagebtn){
+Languagebtn.addEventListener("click",() => {
+  Languages.style.display="block";
 });
 }
 
