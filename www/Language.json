@@ -1,0 +1,19 @@
+{
+  "en": {
+    "nav_home": "🏠 Home",
+    "nav_playlist": "🎬 Playlist",
+    "nav_favourite": "♥️ Favourite",
+    "settings_theme":"Change theme 🌓",
+    "settings-share": "Share our app",
+    "settings-about":"About"
+  },
+  "sw": {
+    "nav_home": "🏠 Nyumbani",
+    "nav_playlist": "🎬 Orodha",
+    "nav_favourite": "♥️ Pendwa",
+    "settings_theme": " 🌓 Mandhari",
+    "settings-share":"Shiriki programu",
+    "settings-about":"Kuhusu"
+    
+  }
+}
