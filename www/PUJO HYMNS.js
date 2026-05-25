@@ -558,10 +558,12 @@ playlistButtons.forEach(btn => {
 //  MENU 
 const menubtn = document.getElementById("menu-btn");
 const menucontent = document.getElementById("menu");
-document.getElementById("About").addEventListener("click",()=>{
+const Aboutbtn=document.getElementById("About")
+if(Aboutbtn){
+Aboutbtn.addEventListener("click",()=>{
   window.location.href="https://pujomashine-hash.github.io/PUJO-HYMNS/About.html"
 });
-
+}
 if (menubtn) {
   menubtn.addEventListener("click", function() {
     menucontent.style.display =
@@ -737,8 +739,12 @@ async function downloadfile(url) {
     }
 
     // Badilisha kuwa base64
-    const binary = String.fromCharCode(...fullArray);
-    const base64 = btoa(binary);
+    let binary = "";
+const chunkSize = 8192;
+for (let i = 0; i < fullArray.length; i += chunkSize) {
+  binary += String.fromCharCode(...fullArray.subarray(i, i + chunkSize));
+}
+const base64 = btoa(binary);
 
     await Filesystem.writeFile({
       path: fileName,
