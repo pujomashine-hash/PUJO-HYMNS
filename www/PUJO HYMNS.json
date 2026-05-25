@@ -5,7 +5,7 @@
   "file":"https://www.dropbox.com/scl/fi/e86mzq5iqdyum17dqg4i6/Aitwa-wa-simanzi.mp3?rlkey=ipi9pmmfs99w8wv4mnzvmlkf5&st=awfsjjzg&dl=1"
  },
     {
-     "title":"Yesu ni rafiki","artist":"Kwaya kuu KKKT-Mabibo external","lyrics":"Yesu ni rafiki.txt","Category":"General","Church":"Lutheran choir","image":"https://ik.imagekit.io/pry8rixl0/Yesu%20ni%20rafiki.png","file":"https://www.dropbox.com/scl/fi/a56b1ne9h2k9n9s40r80g/YESU_NI_RAFIKI__Official_video__KKKT_Mabibo_External_kwaya_kuu-256k.mp3?rlkey=ew5dj8h5ikqoociw53lkxbb4r&st=ak6sya1c&dl=1"
+     "title":"Yesu ni rafiki","artist":"Kwaya kuu KKKT-Mabibo external","lyrics":"Yesu ni rafiki.txt","Category":"General","Church":"Lutheran choir","image":"https://ik.imagekit.io/pry8rixl0/Yesu%20ni%20rafiki.png","file":"https://raw.githubusercontent.com/pujomashine-hash/PUJO-HYMNS/main/Audio/YESU_NI_RAFIKI__Official_video__KKKT_Mabibo_External_kwaya_kuu(256k).mp3"
     },
     {
       "title":"No not one","artist":"English Hymns","lyrics":"Not not one.txt","Category":"General","Church":"Methodist","image":"https://ik.imagekit.io/pry8rixl0/Johnson%20oatman%20jr%20.HD.jpg","file":"https://www.dropbox.com/scl/fi/6km4ky6549q7d3s6og61j/Not-not-one.mp3?rlkey=iq1urp8e0rwkjvjdbhtofgibw&st=l4vsqte9&dl=1"
@@ -1176,6 +1176,6 @@
      "title":"Crown him with many crowns","artist":"English Hymns","lyrics":"Crown him with many crowns.txt","Church":"Rc choir","Category":"General","image":"https://ik.imagekit.io/pry8rixl0/Matthew%20Bridges.webp","file":"https://www.dropbox.com/scl/fi/hpkg24hg7uwlx7t47jou7/Crown-him-with-many-crowns-Taji-mvikeni.mp3?rlkey=xdut0vce22cuyecqybgliqpql&st=7dc7hy6m&dl=1"
    },
    {
-     "title":"Beulah land","artist":"English Hymns","Category":"General","lyrics":"Beulah land.txt","Church":"Methodist","image":"https://ik.imagekit.io/pry8rixl0/Edgar%20Page%20(1876).webp","file":"https://raw.githubusercontent.com/pujomashine-hash/PUJO-HYMNS/main/Audio/Beulah%20land%20.mp3"
+     "title":"Beulah land","artist":"English Hymns","Category":"General","lyrics":"Beulah land.txt","Church":"Methodist","image":"https://ik.imagekit.io/pry8rixl0/Edgar%20Page%20(1876).webp","file":"https://raw.githubusercontent.com/pujomashine-hash/PUJO-HYMNS/main/Audio/Beulah%20land.mp3"
    }
 ]
