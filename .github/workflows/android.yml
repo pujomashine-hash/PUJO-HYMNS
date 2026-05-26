@@ -1,8 +1,7 @@
 name: Build Signed APK
 
 on:
-  push:
-    branches: [ main ]
+  workflow_dispatch:   # 👈 manual only (button)
 
 jobs:
   build:
