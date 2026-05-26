@@ -3,6 +3,7 @@ name: Build Signed APK
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:   # 👈 Run button (safe kuongeza)
 
 jobs:
   build:
@@ -18,7 +19,7 @@ jobs:
           node-version: 18
 
       - name: Setup Java
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v3   # 🔥 FIX HAPA (ilikuwa v4)
         with:
           distribution: 'temurin'
           java-version: '17'
@@ -26,21 +27,17 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # 🔥 FIX PERMISSION
       - name: Fix permissions
         run: chmod -R 755 node_modules/.bin
 
-      # 🔥 SYNC (FIXED)
       - name: Sync Capacitor
         run: npx --yes cap sync android
 
-      # 🔥 KEYSTORE
       - name: Decode Keystore
         run: |
           mkdir -p android/app
           echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > android/app/release.keystore
 
-      # 🔥 BUILD
       - name: Build Release APK
         run: |
           cd android/app
