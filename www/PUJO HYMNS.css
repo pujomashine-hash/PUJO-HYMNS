@@ -46,6 +46,7 @@ body {
   border: 2px dotted;
   box-shadow: 0 0 8px magenta;
   border-radius: 5px;
+  font-weight: bold;
 }
 #Languages {
 display: none;
@@ -56,6 +57,10 @@ background: gray;
   cursor: pointer;
   margin-bottom: 10px;
   box-shadow: 0 0 8px pink;
+}
+#Lang-selected{
+  color:blue;
+  text-decoration-line: underline;
 }
 #Copyright {
   padding-top: 350px;
@@ -161,6 +166,9 @@ input#search {
 }
 #Mt-Yohane-Paulo-II {
   background-image: url(https://ik.imagekit.io/pry8rixl0/Mt.Yohane%20paulo%20II%20kibao%20Mafinga.jpg);
+}
+#Kwaya-ya-mt-romano-mtunzi {
+  background-image: url(https://ik.imagekit.io/pry8rixl0/Kwaya%20ya%20mt.Romano%20mtunzi.jpg);
 }
 .playlist.active {
   background: gray;
