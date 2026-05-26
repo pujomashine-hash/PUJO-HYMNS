@@ -1,8 +1,9 @@
-name: Build Signed APK
+name: Build Signed APK v2
 
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:   # 👈 HII INAONGEZA RUN BUTTON
 
 jobs:
   build:
@@ -26,21 +27,17 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # 🔥 FIX PERMISSION
       - name: Fix permissions
         run: chmod -R 755 node_modules/.bin
 
-      # 🔥 SYNC (FIXED)
       - name: Sync Capacitor
         run: npx --yes cap sync android
 
-      # 🔥 KEYSTORE
       - name: Decode Keystore
         run: |
           mkdir -p android/app
           echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > android/app/release.keystore
 
-      # 🔥 BUILD
       - name: Build Release APK
         run: |
           cd android/app
