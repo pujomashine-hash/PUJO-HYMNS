@@ -756,7 +756,7 @@ const base64 = btoa(binary);
     Downloadbtn.textContent = "✔";
 
   } catch (error) {
-    Downloadbtn.textContent = "⬇";
+    Downloadbtn.textContent = "📥";
     alert("❌ Error: " + error.message);
   }
 }
@@ -795,6 +795,7 @@ const Language=document.querySelectorAll(".Language-name")
 const Languagebtn=document.getElementById("Language")
 let translations = {};
 let currentLang = localStorage.getItem("lang") || "en";
+const SelectedLang=document.getElementById("Lang-selected")
 
 fetch("Language.json")
   .then(res => res.json())
@@ -802,6 +803,7 @@ fetch("Language.json")
     translations = data;
     applyLanguage(currentLang); // tekeleza lugha iliyohifadhiwa
   });
+
 
 function applyLanguage(lang) {
   currentLang = lang;
@@ -811,6 +813,10 @@ function applyLanguage(lang) {
       el.textContent = translations[lang][el.dataset.key];
     }
   });
+  if(SelectedLang){
+SelectedLang.textContent=currentLang;
+}
+
 }
 
 Language.forEach(btn => {
@@ -828,4 +834,3 @@ Languagebtn.addEventListener("click",() => {
 
 
 });
-
