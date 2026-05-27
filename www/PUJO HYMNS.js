@@ -255,7 +255,21 @@ playlistButtons.forEach(btn => {
         lyrics.innerHTML = text.replace(/\n/g, "<br>");
       });
 
-    audio.src = currentSong.file;
+    try {
+     Filesystem.stat({
+      path: fileName,
+      directory: "DATA"
+    });
+    // File ipo — soma kama base64 kisha cheza
+    const result =  Filesystem.readFile({
+      path: fileName,
+      directory: "DATA"
+    });
+    audio.src = "data:audio/mpeg;base64," + result.data;
+  } catch (e) {
+    // File haipo — cheza online
+    audio.src = btn.dataset.file;
+  }
     // switch screen
     Songcontainer.style.display = "none";
     songDetails.style.display = "block";
@@ -499,7 +513,7 @@ playlistButtons.forEach(btn => {
       favourites.forEach(song => {
         const btn = document.createElement("button");
         btn.className = "nyimbo";
-        btn.dataset.image=song.image;
+        btn.dataset.image= song.image;
         btn.innerHTML = `
   <div class="left-img">
     <div class="btn-image">
@@ -538,7 +552,21 @@ playlistButtons.forEach(btn => {
               lyrics.innerHTML = text.replace(/\n/g, "<br>");
             });
 
-          audio.src = song.file;
+          try {
+     Filesystem.stat({
+      path: fileName,
+      directory: "DATA"
+    });
+    // File ipo — soma kama base64 kisha cheza
+    const result = Filesystem.readFile({
+      path: fileName,
+      directory: "DATA"
+    });
+    audio.src = "data:audio/mpeg;base64," + result.data;
+  } catch (e) {
+    // File haipo — cheza online
+    audio.src = btn.dataset.file;
+  }
 
           songList.style.display = "none";
           songDetails.style.display = "block";
