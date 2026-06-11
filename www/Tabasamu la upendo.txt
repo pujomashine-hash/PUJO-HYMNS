@@ -13,10 +13,10 @@ Yesu afe kwa ajili yangu.
 
 
 //1.Bwana unipe upendo unijaze
-upendo,nami nihubiri upendo
-kwa walimwengu nasi Bwana,
-utubariki na tuweze kupendana
-daima tutabasamu tabasamu la upendo.
+  upendo,nami nihubiri upendo
+  kwa walimwengu nasi Bwana,
+  utubariki na tuweze kupendana
+  daima tutabasamu tabasamu la upendo.
 
 //2.we Bwana unijaze upendo,
     nihubiri kwao walimwengu nasi,
@@ -35,6 +35,16 @@ daima tutabasamu tabasamu la upendo.
     kwa walimwengu nasi Bwana 
     tubariki tuweze kupendana na
     tutabasamu tabasamu la upendo wako.
+
+
+2.Nijinyime anasa kukutumikia
+ wewe huo ni upendo,neema rehema
+ furaha faraja vyote nijaze
+ kwa upendo, Kila nikikutafakari
+ nikiwaza nikumbuke upendo,
+ mawazo yangu (ya) daima yawe
+yamezingirwa na upendo.
+
 
 
 
