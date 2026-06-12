@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+alert(JSON.stringify(Object.keys(window.Capacitor.Plugins)));
+
   const sharebtn = document.getElementById("share-app");
 
 const Filesystem = window.Capacitor?.Plugins?.Filesystem;
