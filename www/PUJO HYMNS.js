@@ -53,15 +53,14 @@ function showMusicControls() {
   initMusicControlsListener();
 
   MusicControls.create({
-    track: currentSong.title,
-    artist: currentSong.artist,
-    cover: currentSong.image || 'logo.png',
-    isPlaying: true,
-    hasPrev: false,
-    hasNext: false,
-    hasClose: true,
-    dismissable: true
-  });
+  track: currentSong.title,
+  artist: currentSong.artist,
+  isPlaying: true,
+  hasPrev: false,
+  hasNext: false,
+  hasClose: true,
+  dismissable: true
+});
 }
 
 const navButtons = document.querySelectorAll(".change");
