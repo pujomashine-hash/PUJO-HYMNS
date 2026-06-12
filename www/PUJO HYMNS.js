@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-alert(JSON.stringify(Object.keys(window.Capacitor.Plugins)));
-
   const sharebtn = document.getElementById("share-app");
+
 
 const Filesystem = window.Capacitor?.Plugins?.Filesystem;
 
@@ -20,51 +18,8 @@ if (sharebtn) {
   });
 }
 
-
-const MusicControls = window.Capacitor?.Plugins?.CapacitorMusicControls;
 let controlsInitialized = false;
 
-function initMusicControlsListener() {
-  if (!MusicControls || controlsInitialized) return;
-  controlsInitialized = true;
-
-  MusicControls.addListener('controlsNotification', (info) => {
-    const message = info.message;
-    const audioEl = document.getElementById("audio");
-    const playBtn = document.getElementById("play");
-
-    switch (message) {
-      case 'music-controls-pause':
-        audioEl.pause();
-        if (playBtn) playBtn.textContent = " ⏯ ";
-        MusicControls.updateIsPlaying({ isPlaying: false });
-        break;
-      case 'music-controls-play':
-        audioEl.play();
-        if (playBtn) playBtn.textContent = "▶";
-        MusicControls.updateIsPlaying({ isPlaying: true });
-        break;
-      case 'music-controls-destroy':
-        audioEl.pause();
-        break;
-    }
-  });
-}
-
-function showMusicControls() {
-  if (!MusicControls) return;
-  initMusicControlsListener();
-
-  MusicControls.create({
-  track: currentSong.title,
-  artist: currentSong.artist,
-  isPlaying: true,
-  hasPrev: false,
-  hasNext: false,
-  hasClose: true,
-  dismissable: true
-});
-}
 
 const navButtons = document.querySelectorAll(".change");
 const screens = document.querySelectorAll(".screen");
@@ -422,6 +377,7 @@ playlistButtons.forEach(btn => {
     const songDetails = document.getElementById("song-details");
     const lyrics = document.getElementById("lyrics");
     const audio = document.getElementById("audio");
+const MediaSession = window.Capacitor?.Plugins?.MediaSession;
     const play = document.getElementById("play");
     const Playing = document.getElementById("playing");
     const back = document.getElementById("back");
@@ -460,6 +416,38 @@ playlistButtons.forEach(btn => {
   };
 
   Playing.textContent = currentSong.title + " - " + currentSong.artist;
+  
+  if (MediaSession && currentSong) {
+  MediaSession.setMetadata({
+    title: currentSong.title,
+    artist: currentSong.artist
+  });
+
+  MediaSession.setPlaybackState({
+    playbackState: "playing"
+  });
+}
+
+
+if (MediaSession) {
+
+  MediaSession.setActionHandler(
+    { action: "play" },
+    () => {
+      audio.play();
+      play.textContent = "▶";
+    }
+  );
+
+  MediaSession.setActionHandler(
+    { action: "pause" },
+    () => {
+      audio.pause();
+      play.textContent = "⏯";
+    }
+  );
+
+}
 
   fetch(btn.dataset.lyrics)
     .then(res => res.text())
@@ -474,16 +462,31 @@ playlistButtons.forEach(btn => {
   document.documentElement.scrollTop = 0;
   updateFavButton();
 });
-    play.addEventListener("click",()=>{
-      if(audio.paused) {
-      audio.play();
-      play.textContent="▶";
-      }else {
-        audio.pause();
-        play.textContent=" ⏯ ";
-      }
-      showMusicControls();
+    play.addEventListener("click", async () => {
+
+  if (audio.paused) {
+
+    await audio.play();
+
+    MediaSession?.setPlaybackState({
+      playbackState: "playing"
     });
+
+    play.textContent = "▶";
+
+  } else {
+
+    audio.pause();
+
+    MediaSession?.setPlaybackState({
+      playbackState: "paused"
+    });
+
+    play.textContent = "⏯";
+
+  }
+
+});
     document.querySelectorAll(".three-dots").forEach(dot => {
       dot.addEventListener("click",(e)=>{
         e.stopPropagation();
