@@ -16,6 +16,47 @@ if (sharebtn) {
     }
   });
 }
+
+const MusicControls = window.Capacitor?.Plugins?.CapacitorMusicControls;
+
+function showMusicControls() {
+  if (!MusicControls) return;
+
+  MusicControls.create({
+    track: currentSong.title,
+    artist: currentSong.artist,
+    cover: currentSong.image || 'logo.png',
+    isPlaying: true,
+    hasPrev: false,
+    hasNext: false,
+    hasClose: true,
+    dismissable: true
+  });
+
+  MusicControls.addListener('controlsNotification', (info) => {
+  const message = info.message;
+  const audioEl = document.getElementById("audio");
+  const playBtn = document.getElementById("play");
+
+  switch (message) {
+    case 'music-controls-pause':
+      audioEl.pause();
+      if (playBtn) playBtn.textContent = " ⏯ ";
+      MusicControls.updateIsPlaying({ isPlaying: false });
+      break;
+    case 'music-controls-play':
+      audioEl.play();
+      if (playBtn) playBtn.textContent = "▶";
+      MusicControls.updateIsPlaying({ isPlaying: true });
+      break;
+    case 'music-controls-destroy':
+      audioEl.pause();
+      break;
+  }
+});
+
+  MusicControls.listen();
+}
 const navButtons = document.querySelectorAll(".change");
 const screens = document.querySelectorAll(".screen");
 
@@ -432,6 +473,7 @@ playlistButtons.forEach(btn => {
         audio.pause();
         play.textContent=" ⏯ ";
       }
+      showMusicControls();
     });
     document.querySelectorAll(".three-dots").forEach(dot => {
       dot.addEventListener("click",(e)=>{
