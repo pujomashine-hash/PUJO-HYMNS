@@ -538,36 +538,47 @@ playlistButtons.forEach(btn => {
 
 
         // click kutoka favourite
-        btn.addEventListener("click", () => {
-          const songDetails = document.getElementById("song-details");
-          const lyrics = document.getElementById("lyrics");
-          const audio = document.getElementById("audio");
+        btn.addEventListener("click", async () => {
+  const songDetails = document.getElementById("song-details");
+  const lyrics = document.getElementById("lyrics");
+  const audio = document.getElementById("audio");
 
-          currentSong = song;
-          Playing.textContent = currentSong.title + " - " + currentSong.artist;
+  currentSong = song;
+  Playing.textContent = currentSong.title + " - " + currentSong.artist;
 
-          fetch(song.lyrics)
-            .then(res => res.text())
-            .then(text => {
-              lyrics.innerHTML = text.replace(/\n/g, "<br>");
-            })
-  
-updateDownloadBtn();
-          songList.style.display = "none";
-          songDetails.style.display = "block";
-          favScreen.style.display="none"
+  const fileName = song.file.split("/").pop();
 
-          updateFavButton();
-        });
+  try {
+    await Filesystem.stat({ path: fileName, directory: "DATA" });
+    const result = await Filesystem.readFile({ path: fileName, directory: "DATA" });
+    audio.src = "data:audio/mpeg;base64," + result.data;
+  } catch (e) {
+    audio.src = song.file;
+  }
+
+  fetch(song.lyrics)
+    .then(res => res.text())
+    .then(text => {
+      lyrics.innerHTML = text.replace(/\n/g, "<br>");
+    });
+
+  updateDownloadBtn();
+  songList.style.display = "none";
+  songDetails.style.display = "block";
+  favScreen.style.display = "none";
+
+  updateFavButton();
+});
 
         favScreen.appendChild(btn);
       });
     }
     //  INIT 
     renderFavourites();
-    audio.src = btn.dataset.file;
 
   });
+
+//  MENU
 
 //  MENU 
 const menubtn = document.getElementById("menu-btn");
@@ -653,7 +664,7 @@ const Exitbtn = document.getElementById("Exit")
     document.getElementById("Catjina-Container").style.display="none";
   });
 }
-   
+
    const Fontchanger=document.getElementById("Font-changer")
    if(Fontchanger){
    Fontchanger.addEventListener("click", () => {
