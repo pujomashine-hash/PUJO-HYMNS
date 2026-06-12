@@ -11,5 +11,5 @@ project(':capacitor-filesystem').projectDir = new File('../node_modules/@capacit
 include ':capacitor-share'
 project(':capacitor-share').projectDir = new File('../node_modules/@capacitor/share/android')
 
-include ':capacitor-music-controls-plugin-v3'
-project(':capacitor-music-controls-plugin-v3').projectDir = new File('../node_modules/capacitor-music-controls-plugin-v3/android')
+include ':erafx-tech-capacitor-media-session-capacitor6'
+project(':erafx-tech-capacitor-media-session-capacitor6').projectDir = new File('../node_modules/@erafx-tech/capacitor-media-session-capacitor6/android')
