@@ -95,6 +95,7 @@ class CapLiveReload {
             .filter(Boolean);
         return !all.length ? loopback(family) : all[0];
     }
+    // TODO remove on next major as it's unused
     async editExtConfigForLiveReload(config, platformName, options, rootConfigChange = false) {
         const platformAbsPath = platformName == config.ios.name
             ? config.ios.nativeTargetDirAbs
@@ -115,6 +116,7 @@ class CapLiveReload {
         };
         return configJson;
     }
+    // TODO remove rootConfigChange param on next major as it's unused
     async editCapConfigForLiveReload(config, platformName, options, rootConfigChange = false) {
         const platformAbsPath = platformName == config.ios.name
             ? config.ios.nativeTargetDirAbs

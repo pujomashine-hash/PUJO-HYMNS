@@ -498,6 +498,7 @@ function needsStaticPod(plugin, config) {
         'onesignal-cordova-plugin',
     ];
     if ((_b = (_a = config.app.extConfig) === null || _a === void 0 ? void 0 : _a.cordova) === null || _b === void 0 ? void 0 : _b.staticPlugins) {
+        log_1.logger.warn('cordova.staticPlugins is deprecated, make sure you are using latest version of the plugin');
         pluginList = pluginList.concat((_d = (_c = config.app.extConfig) === null || _c === void 0 ? void 0 : _c.cordova) === null || _d === void 0 ? void 0 : _d.staticPlugins);
     }
     return pluginList.includes(plugin.id) || useFrameworks(plugin);
@@ -556,7 +557,7 @@ async function getCordovaPreferences(config) {
     return cordova;
 }
 exports.getCordovaPreferences = getCordovaPreferences;
-async function writeCordovaAndroidManifest(cordovaPlugins, config, platform) {
+async function writeCordovaAndroidManifest(cordovaPlugins, config, platform, cleartext) {
     var _a;
     const manifestPath = (0, path_1.join)(config.android.cordovaPluginsDirAbs, 'src', 'main', 'AndroidManifest.xml');
     const rootXMLEntries = [];
@@ -781,14 +782,14 @@ async function writeCordovaAndroidManifest(cordovaPlugins, config, platform) {
         });
     });
     const cleartextString = 'android:usesCleartextTraffic="true"';
-    const cleartext = ((_a = config.app.extConfig.server) === null || _a === void 0 ? void 0 : _a.cleartext) &&
+    const cleartextValue = (cleartext || ((_a = config.app.extConfig.server) === null || _a === void 0 ? void 0 : _a.cleartext)) &&
         !applicationXMLAttributes.includes(cleartextString)
         ? cleartextString
         : '';
     let content = `<?xml version='1.0' encoding='utf-8'?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:amazon="http://schemas.amazon.com/apk/res/android">
-<application ${applicationXMLAttributes.join('\n')} ${cleartext}>
+<application ${applicationXMLAttributes.join('\n')} ${cleartextValue}>
 ${applicationXMLEntries.join('\n')}
 </application>
 ${rootXMLEntries.join('\n')}
