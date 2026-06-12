@@ -17,10 +17,40 @@ if (sharebtn) {
   });
 }
 
+
 const MusicControls = window.Capacitor?.Plugins?.CapacitorMusicControls;
+let controlsInitialized = false;
+
+function initMusicControlsListener() {
+  if (!MusicControls || controlsInitialized) return;
+  controlsInitialized = true;
+
+  MusicControls.addListener('controlsNotification', (info) => {
+    const message = info.message;
+    const audioEl = document.getElementById("audio");
+    const playBtn = document.getElementById("play");
+
+    switch (message) {
+      case 'music-controls-pause':
+        audioEl.pause();
+        if (playBtn) playBtn.textContent = " ⏯ ";
+        MusicControls.updateIsPlaying({ isPlaying: false });
+        break;
+      case 'music-controls-play':
+        audioEl.play();
+        if (playBtn) playBtn.textContent = "▶";
+        MusicControls.updateIsPlaying({ isPlaying: true });
+        break;
+      case 'music-controls-destroy':
+        audioEl.pause();
+        break;
+    }
+  });
+}
 
 function showMusicControls() {
   if (!MusicControls) return;
+  initMusicControlsListener();
 
   MusicControls.create({
     track: currentSong.title,
@@ -32,31 +62,8 @@ function showMusicControls() {
     hasClose: true,
     dismissable: true
   });
-
-  MusicControls.addListener('controlsNotification', (info) => {
-  const message = info.message;
-  const audioEl = document.getElementById("audio");
-  const playBtn = document.getElementById("play");
-
-  switch (message) {
-    case 'music-controls-pause':
-      audioEl.pause();
-      if (playBtn) playBtn.textContent = " ⏯ ";
-      MusicControls.updateIsPlaying({ isPlaying: false });
-      break;
-    case 'music-controls-play':
-      audioEl.play();
-      if (playBtn) playBtn.textContent = "▶";
-      MusicControls.updateIsPlaying({ isPlaying: true });
-      break;
-    case 'music-controls-destroy':
-      audioEl.pause();
-      break;
-  }
-});
-
-  MusicControls.listen();
 }
+
 const navButtons = document.querySelectorAll(".change");
 const screens = document.querySelectorAll(".screen");
 
