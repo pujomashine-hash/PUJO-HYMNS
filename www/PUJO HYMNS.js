@@ -622,6 +622,7 @@ progressContainer.addEventListener("click", (e) => {
 if(audio){
 audio.addEventListener("error", () => {
   playing.textContent = "❌ Audio not available";
+  Downloadbtn.textContent="❔"
 });
 }
 
@@ -848,4 +849,3 @@ Languagebtn.addEventListener("click",() => {
 
 
 });
-
