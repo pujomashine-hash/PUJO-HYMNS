@@ -24,21 +24,7 @@
 
         </activity>
 
-        <service android:name="info.protonet.imageresizer.MusicControlsNotification"
-            android:exported="false" />
-
-        <receiver android:name="info.protonet.imageresizer.MusicControlsBroadcastReceiver"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="music-controls-next" />
-                <action android:name="music-controls-previous" />
-                <action android:name="music-controls-pause" />
-                <action android:name="music-controls-play" />
-                <action android:name="music-controls-destroy" />
-                <action android:name="music-controls-toggle-play-pause" />
-                <action android:name="music-controls-media-button" />
-            </intent-filter>
-        </receiver>
+       
 
         <provider
             android:name="androidx.core.content.FileProvider"
