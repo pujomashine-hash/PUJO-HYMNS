@@ -550,24 +550,9 @@ playlistButtons.forEach(btn => {
             .then(res => res.text())
             .then(text => {
               lyrics.innerHTML = text.replace(/\n/g, "<br>");
-            });
-
-          try {
-     Filesystem.stat({
-      path: fileName,
-      directory: "DATA"
-    });
-    // File ipo — soma kama base64 kisha cheza
-    const result = Filesystem.readFile({
-      path: fileName,
-      directory: "DATA"
-    });
-    audio.src = "data:audio/mpeg;base64," + result.data;
-  } catch (e) {
-    // File haipo — cheza online
-    audio.src = btn.dataset.file;
-  }
-
+            })
+  
+updateDownloadBtn();
           songList.style.display = "none";
           songDetails.style.display = "block";
           favScreen.style.display="none"
@@ -580,6 +565,7 @@ playlistButtons.forEach(btn => {
     }
     //  INIT 
     renderFavourites();
+    audio.src = btn.dataset.file;
 
   });
 
@@ -862,3 +848,4 @@ Languagebtn.addEventListener("click",() => {
 
 
 });
+
