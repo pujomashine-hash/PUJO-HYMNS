@@ -417,37 +417,7 @@ const MediaSession = window.Capacitor?.Plugins?.MediaSession;
 
   Playing.textContent = currentSong.title + " - " + currentSong.artist;
   
-  if (MediaSession && currentSong) {
-  MediaSession.setMetadata({
-    title: currentSong.title,
-    artist: currentSong.artist
-  });
 
-  MediaSession.setPlaybackState({
-    playbackState: "playing"
-  });
-}
-
-
-if (MediaSession) {
-
-  MediaSession.setActionHandler(
-    { action: "play" },
-    () => {
-      audio.play();
-      play.textContent = "▶";
-    }
-  );
-
-  MediaSession.setActionHandler(
-    { action: "pause" },
-    () => {
-      audio.pause();
-      play.textContent = "⏯";
-    }
-  );
-
-}
 
   fetch(btn.dataset.lyrics)
     .then(res => res.text())
