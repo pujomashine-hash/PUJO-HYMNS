@@ -33,7 +33,7 @@ const All = document.getElementById("All");
 if(songList)songList.style.display = "block";
 //initial update check
 function checkUpdate() {
-  const currentVersion = "1.0.2";
+  const currentVersion = "1.0.3";
 
   fetch("https://raw.githubusercontent.com/pujomashine-hash/PUJO-HYMNS/main/Version.json")
     .then(res => res.json())
