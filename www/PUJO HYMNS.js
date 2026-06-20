@@ -1,8 +1,13 @@
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const sharebtn = document.getElementById("share-app");
 
 
 const Filesystem = window.Capacitor?.Plugins?.Filesystem;
+const searchInput = document.getElementById("search");
+
+  window.currentSong = null;
 
 if (sharebtn) {
   sharebtn.addEventListener("click", async () => {
@@ -26,9 +31,9 @@ const screens = document.querySelectorAll(".screen");
 
 const songList = document.getElementById("song-list");
 const playlistContainer = document.getElementById("playlist-container");
-let activeCategory = null;
-let lastScreen= "song-list";
-let categoryView= "names";
+window.activeCategory = null;
+window.lastScreen= "song-list";
+window.categoryView= "names";
 const All = document.getElementById("All");
 if(songList)songList.style.display = "block";
 //initial update check
@@ -51,27 +56,8 @@ function checkUpdate() {
 }
 checkUpdate();
 
-const Themechange=document.getElementById("theme")
-if(Themechange) {
-const Savedtheme=localStorage.getItem("theme")
-if(Savedtheme==="light"){
-  document.body.classList.add("light-mode")
-}
-Themechange.addEventListener("click",()=>{
-  document.body.classList.toggle("light-mode")
 
-if(document.body.classList.contains("light-mode")){
-  localStorage.setItem("theme","light")
-}else {
-  localStorage.setItem("theme","dark")
-}
-});
-}
 
-// NEW (FAVOURITES)
-const favBtn = document.getElementById("fav");
-let currentSong = null;
-let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
 
 // ===== INIT: SHOW PLAYLISTS =====
 if (playlistContainer) {
@@ -86,110 +72,78 @@ navButtons.forEach(btn => {
 
     screens.forEach(screen => screen.style.display = "none");
     const targetId = btn.getAttribute("data-target");
+    
     if (targetId === "favourite") {
-  // onyesha favourite screen fresh
-  document.querySelectorAll(".nyimbo").forEach(btn => {
-    btn.style.display = "";
-  });
-}
-    // kama ni HOME, reset filter
-if (targetId === "song-list") {
-  // onyesha search bar
-  searchInput.style.visibility = "visible";
-
-  // rudisha nyimbo zote
-  document.querySelectorAll(".nyimbo").forEach(btn => {
-    btn.style.display = "";
-  });
-
-  // onyesha playlist container
-  if (playlistContainer) {
-    playlistContainer.style.display = "block";
-  }
-
-  // ondoa active playlist
-  document.querySelectorAll(".playlist").forEach(p => {
-    p.classList.remove("active");
-  });
-
-  // ficha jina la filter
-  document.getElementById("jina-container").style.display = "none";
-}
-    lastScreen= targetId;
-    if(targetId==="playlist-category"){
-    document.getElementById(targetId).style.display="grid"
-    searchInput.style.visibility="hidden";
-    }else {
-    document.getElementById(targetId).style.display = "block";
-    searchInput.style.visibility="visible";
+      document.querySelectorAll(".nyimbo").forEach(btn => {
+        btn.style.display = "";
+      });
     }
+    
+    if (targetId === "song-list") {
+      searchInput.style.visibility = "visible";
+      document.querySelectorAll(".nyimbo").forEach(btn => {
+        btn.style.display = "";
+      });
+      if (playlistContainer) {
+        playlistContainer.style.display = "block";
+      }
+      document.querySelectorAll(".playlist").forEach(p => {
+        p.classList.remove("active");
+      });
+      document.getElementById("jina-container").style.display = "none";
+    }
+    
+    lastScreen = targetId;
+    
     if (targetId === "playlist-category") {
+      document.getElementById(targetId).style.display = "grid";
+      searchInput.style.visibility = "hidden";
+      
+      if (window.initPlaylistScreen) {
+        window.initPlaylistScreen();   // ✅ Sasa ipo NDANI, inaitwa kila click
+      }
 
-  const Songcontainer = document.getElementById("Category-songs");
-  const CategoryNames = document.getElementById("Category-names");
+      const Songcontainer = document.getElementById("Category-songs");
+      const CategoryNames = document.getElementById("Category-names");
 
-  if (!activeCategory) {
-    // rudi kwenye categories
-    CategoryNames.style.display = "grid";
-    Songcontainer.style.display = "none";
-    document.getElementById("Catjina-Container").style.display = "none";
-  } else {
-    // show songs za category
-    CategoryNames.style.display = "none";
-    Songcontainer.style.display = "block";
-
-    document.querySelectorAll("#Category-songs .nyimbo").forEach(btn => {
-      btn.style.display =
-        btn.dataset.Category === activeCategory ? "block" : "none";
-    });
-  }
-}
+      if (!activeCategory) {
+        CategoryNames.style.display = "grid";
+        Songcontainer.style.display = "none";
+        document.getElementById("Catjina-Container").style.display = "none";
+      } else {
+        CategoryNames.style.display = "none";
+        Songcontainer.style.display = "block";
+        document.querySelectorAll("#Category-songs .nyimbo").forEach(btn => {
+          btn.style.display = btn.dataset.Category === activeCategory ? "block" : "none";
+        });
+      }
+    } else {
+      document.getElementById(targetId).style.display = "block";
+      searchInput.style.visibility = "visible";
+    }
   });
 });
-
-// SEARCH 
-const searchInput = document.getElementById("search");
-
-if (searchInput) {
-  searchInput.addEventListener("keyup", () => {
-    const searchValue = searchInput.value.toLowerCase();
-
-    document.querySelectorAll(".nyimbo").forEach(btn => {
-      const title = btn.querySelector(".title").textContent.toLowerCase();
-      const artist = btn.querySelector(".artist").textContent.toLowerCase();
-
-      if (title.includes(searchValue) || artist.includes(searchValue)) {
-        btn.style.display = "";
-      } else {
-        btn.style.display = "none";
-      }
-    });
-  });
-}
 
 //  LOAD SONGS 
 fetch("PUJO HYMNS.json")
   .then(res => res.json())
   .then(data => {
-    // PLAYLIST SYSTEM 
-const categoryContainer = document.getElementById("Category-names");
-const Songcontainer=document.getElementById("Category-songs")
-let playlistButtons = [];
-
-// Tengeneza buttons za playlist (clone)
-data.forEach(song => {
+    
+    window.allSongs = data;
+    
+    data.forEach(song => {
   const btn = document.createElement("button");
+  btn.className = "nyimbo";
   btn.dataset.file = song.file;
   btn.dataset.lyrics = song.lyrics;
-  btn.dataset.Category = song.Category;
-  btn.className="nyimbo"
+  btn.dataset.image = song.image;
+
   btn.innerHTML = `
   <div class="left-img">
     <div class="btn-image">
-    
-  <img 
-  src="${song.image ? song.image : 'defaul.jpg'}"
-  onerror="this.src='logo.png'">
+      <img
+      src="${song.image ? song.image : 'defaul.jpg'}"
+      onerror="this.src='logo.png'">
     </div>
 
     <div class="text-btn">
@@ -203,116 +157,13 @@ data.forEach(song => {
       <button class="share"> Share </button>
     </div>
   </span>
-`;
+  `;
 
-
-  btn.style.display = "none"; // hide initially
-
-  playlistButtons.push(btn);
-  Songcontainer.appendChild(btn);
+  songList.appendChild(btn);
 });
-
-// CATEGORY CLICK
-
-document.querySelectorAll(".Category").forEach(Cat => {
-  Cat.addEventListener("click", () => {
-
-    const Category = Cat.id;
-    activeCategory= Category;
-
-    // show filtered songs
-    playlistButtons.forEach(btn => {
-      if (btn.dataset.Category === Category) {
-        btn.style.display = "block";
-      } else {
-        btn.style.display = "none";
-      }
-    });
-  document.getElementById("Catjina").textContent=Cat.textContent;
-    Songcontainer.style.display = "block";
-    categoryView= "songs";
-document.getElementById("Category-names").style.display="none";
-  document.getElementById("Catjina-Container").style.display="block";
-  });
-});
-
-// PLAYLIST BUTTON CLICK (OPEN SONG)
-playlistButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
-  lastScreen="playlist-category";
-    const songDetails = document.getElementById("song-details");
-    const lyrics = document.getElementById("lyrics");
-    const audio = document.getElementById("audio");
-    const Playing = document.getElementById("playing");
-
-    const currentSong = {
-      title: btn.querySelector(".title").textContent,
-      artist: btn.querySelector(".artist").textContent,
-      file: btn.dataset.file,
-      lyrics: btn.dataset.lyrics
-    };
-
-    Playing.textContent = currentSong.title + " - " + currentSong.artist;
-
-    fetch(currentSong.lyrics)
-      .then(res => res.text())
-      .then(text => {
-        lyrics.innerHTML = text.replace(/\n/g, "<br>");
-      });
-
-    try {
-     Filesystem.stat({
-      path: fileName,
-      directory: "DATA"
-    });
-    // File ipo — soma kama base64 kisha cheza
-    const result =  Filesystem.readFile({
-      path: fileName,
-      directory: "DATA"
-    });
-    audio.src = "data:audio/mpeg;base64," + result.data;
-  } catch (e) {
-    // File haipo — cheza online
-    audio.src = btn.dataset.file;
-  }
-    // switch screen
-    Songcontainer.style.display = "none";
-    songDetails.style.display = "block";
-    categoryContainer.style.display="none";
-  });
-});
-
-    data.forEach(song => {
-      const btn = document.createElement("button");
-      btn.className = "nyimbo";
-      btn.dataset.file = song.file;
-      btn.dataset.lyrics = song.lyrics;
-      btn.dataset.image = song.image;
-
-      btn.innerHTML = `
-  <div class="left-img">
-    <div class="btn-image">
-    
-  <img 
-  src="${song.image ? song.image : 'defaul.jpg'}"
-  onerror="this.src='logo.png'">
-    </div>
-
-    <div class="text-btn">
-      <div class="title">${song.title}</div>
-      <div class="artist">${song.artist}</div>
-    </div>
-  </div>
-
-  <span class="three-dots">⋮
-    <div class="dots-menu">
-      <button class="share"> Share </button>
-    </div>
-  </span>
-`;
-
-      songList.appendChild(btn);
-    });
+    // PLAYLIST SYSTEM 
+const categoryContainer = document.getElementById("Category-names");
+const Songcontainer=document.getElementById("Category-songs")
 
     //  PLAYLIST CLICK 
     document.querySelectorAll(".playlist").forEach(playlist => {
@@ -408,13 +259,18 @@ const MediaSession = window.Capacitor?.Plugins?.MediaSession;
     audio.src = btn.dataset.file;
   }
 
-  currentSong = {
+  window.currentSong = {
     title: btn.querySelector(".title").textContent,
     artist: btn.querySelector(".artist").textContent,
     file: btn.dataset.file,
     lyrics: btn.dataset.lyrics
   };
 
+  MediaSession?.setMetadata({
+    title: currentSong.title,
+    artist: currentSong.artist
+  });
+  
   Playing.textContent = currentSong.title + " - " + currentSong.artist;
   
 
@@ -489,120 +345,9 @@ const MediaSession = window.Capacitor?.Plugins?.MediaSession;
   play.textContent = "▶";
 });
 
-    //  ❤️ FAVOURITE TOGGLE
-    if (favBtn) {
-      favBtn.addEventListener("click", () => {
-        if (!currentSong) return;
-
-        const exists = favourites.some(song => song.title === currentSong.title);
-
-        if (exists) {
-          favourites = favourites.filter(s => s.title !== currentSong.title);
-        } else {
-          favourites.push(currentSong);
-        }
-
-        localStorage.setItem("favourites", JSON.stringify(favourites));
-
-        updateFavButton();
-        renderFavourites();
-      });
-    }
-
-    //  UPDATE BUTTON 
-    function updateFavButton() {
-      if (!currentSong) return;
-
-      const exists = favourites.some(song => song.title === currentSong.title);
-
-      favBtn.textContent = exists ? "❤️" : " ♡";
-    }
-
-    //  RENDER FAVOURITES 
-    const favScreen = document.getElementById("favourite");
-
-    function renderFavourites() {
-      if (!favScreen) return;
-
-      favScreen.innerHTML = "";
-
-      if (favourites.length === 0) {
-        favScreen.innerHTML = `
-        <h1 class="favmessage"> Your faviurite Songs</h1>
-        <p class="favmessage">No favourite songs yet</p>
-          `;
-        return;
-      }
-
-      favourites.forEach(song => {
-        const btn = document.createElement("button");
-        btn.className = "nyimbo";
-        btn.dataset.image= song.image;
-        btn.innerHTML = `
-  <div class="left-img">
-    <div class="btn-image">
-    
-  <img 
-  src="${song.image ? song.image : 'defaul.jpg'}"
-  onerror="this.src='logo.png'">
-    </div>
-
-    <div class="text-btn">
-      <div class="title">${song.title}</div>
-      <div class="artist">${song.artist}</div>
-    </div>
-  </div>
-
-  <span class="three-dots">⋮
-    <div class="dots-menu">
-      <button class="share"> Share </button>
-    </div>
-  </span>
-`;
 
 
-        // click kutoka favourite
-        btn.addEventListener("click", async () => {
-  const songDetails = document.getElementById("song-details");
-  const lyrics = document.getElementById("lyrics");
-  const audio = document.getElementById("audio");
 
-  currentSong = song;
-  Playing.textContent = currentSong.title + " - " + currentSong.artist;
-
-  const fileName = song.file.split("/").pop();
-
-  try {
-    await Filesystem.stat({ path: fileName, directory: "DATA" });
-    const result = await Filesystem.readFile({ path: fileName, directory: "DATA" });
-    audio.src = "data:audio/mpeg;base64," + result.data;
-  } catch (e) {
-    audio.src = song.file;
-  }
-
-  fetch(song.lyrics)
-    .then(res => res.text())
-    .then(text => {
-      lyrics.innerHTML = text.replace(/\n/g, "<br>");
-    });
-
-  updateDownloadBtn();
-  songList.style.display = "none";
-  songDetails.style.display = "block";
-  favScreen.style.display = "none";
-
-  updateFavButton();
-});
-
-        favScreen.appendChild(btn);
-      });
-    }
-    //  INIT 
-    renderFavourites();
-
-  });
-
-//  MENU
 
 //  MENU 
 const menubtn = document.getElementById("menu-btn");
@@ -631,35 +376,7 @@ if (menubtn) {
 });
 
 
-    const progress = document.getElementById("progress");
-const audio = document.getElementById("audio");
-if(audio){
-audio.addEventListener("timeupdate", () => {
-  if (audio.duration) {
-    const percent = (audio.currentTime / audio.duration) * 100;
-    progress.style.width = percent + "%";
-  }
-});
-}
-
-//THEME CHANGING
-//Seek when user clicks on progress bar
-const progressContainer=document.getElementById("progress-container")
-if(progressContainer){
-progressContainer.addEventListener("click", (e) => {
-  const rect = progressContainer.getBoundingClientRect();
-  const clickX = e.clientX - rect.left;
-  const width = rect.width;
-  const percent = clickX / width;
-  audio.currentTime = percent * audio.duration;
-});
-}
-if(audio){
-audio.addEventListener("error", () => {
-  playing.textContent = "❌ Audio not available";
-  Downloadbtn.textContent="❔"
-});
-}
+    
 
 
 
@@ -670,35 +387,7 @@ setTimeout (()=> {
  }
 },5000);
 // HIDE AND SHOW CATEGORIES
-const CategoryNames=document.getElementById("Category-names")
-const CategorySongs=document.getElementById("Category-songs")
-const Jina=document.getElementById("Catjina")
-const Exitbtn = document.getElementById("Exit")
 
-   if (Exitbtn){
-  Exitbtn.addEventListener("click",(e)=> {
-    e.stopPropagation();
-    e.preventDefault();
-
-    activeCategory = null;
-    categoryView="names";
-
-    CategoryNames.style.display="grid";
-    CategorySongs.style.display="none";
-    document.getElementById("Catjina-Container").style.display="none";
-  });
-}
-
-   const Fontchanger=document.getElementById("Font-changer")
-   if(Fontchanger){
-   Fontchanger.addEventListener("click", () => {
-     if(document.body.style.fontSize === "20px"){
-       document.body.style.fontSize = "25px";
-     } else {
-  document.body.style.fontSize = "20px";
-     }
-});
-}
 
 if (window.Capacitor) {
   const { App } = Capacitor.Plugins;
@@ -839,48 +528,8 @@ Downloadbtn.addEventListener("click", () => {
 });
 }
 
-//LANGUAGE
-const Languages=document.getElementById("Languages")
-const Language=document.querySelectorAll(".Language-name")
-const Languagebtn=document.getElementById("Language")
-let translations = {};
-let currentLang = localStorage.getItem("lang") || "en";
-const SelectedLang=document.getElementById("Lang-selected")
-
-fetch("Language.json")
-  .then(res => res.json())
-  .then(data => {
-    translations = data;
-    applyLanguage(currentLang); // tekeleza lugha iliyohifadhiwa
-  });
-
-
-function applyLanguage(lang) {
-  currentLang = lang;
-  localStorage.setItem("lang", lang);
-  document.querySelectorAll("[data-key]").forEach(el => {
-    if (translations[lang] && translations[lang][el.dataset.key]) {
-      el.textContent = translations[lang][el.dataset.key];
-    }
-  });
-  if(SelectedLang){
-SelectedLang.textContent=currentLang;
-}
-
-}
-
-Language.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const lang = btn.textContent.trim().toLowerCase() === "kiswahili" ? "sw" : "en";
-    applyLanguage(lang);
-    Languages.style.display = "none";
-  });
 });
-if(Languagebtn){
-Languagebtn.addEventListener("click",() => {
-  Languages.style.display="block";
-});
-}
+
 
 
 });
