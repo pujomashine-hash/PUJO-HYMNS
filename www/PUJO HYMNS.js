@@ -266,10 +266,16 @@ const MediaSession = window.Capacitor?.Plugins?.MediaSession;
     lyrics: btn.dataset.lyrics
   };
 
-  MediaSession?.setMetadata({
-    title: currentSong.title,
-    artist: currentSong.artist
-  });
+  try {
+  if (MediaSession) {
+    MediaSession.setMetadata({
+      title: currentSong.title || "",
+      artist: currentSong.artist || ""
+    }).catch(e => alert("MediaSession error: " + e.message));
+  }
+} catch (e) {
+  alert("MediaSession sync error: " + e.message);
+}
   
   Playing.textContent = currentSong.title + " - " + currentSong.artist;
   
