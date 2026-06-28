@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   
-
   window.initPlaylistScreen = function () {
 
     const CategoryNames = document.getElementById("Category-names");
@@ -56,6 +55,12 @@ document.addEventListener("DOMContentLoaded", () => {
     image: song.image
   };
 
+MediaSession?.setMetadata({
+  title: window.currentSong.title,
+  artist: window.currentSong.artist,
+  artwork: []
+});
+      
   const fileName = song.file.split("/").pop();
 
   try {
