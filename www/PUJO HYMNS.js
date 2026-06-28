@@ -267,11 +267,10 @@ const MediaSession = window.Capacitor?.Plugins?.MediaSession;
   };
 
   MediaSession?.setMetadata({
-  title: currentSong.title,
-  artist: currentSong.artist,
-  artwork: []   // ✅ lazima iwepo, hata kama tupu
+  title: window.currentSong.title,
+  artist: window.currentSong.artist,
+  artwork: []
 });
-
   Playing.textContent = currentSong.title + " - " + currentSong.artist;
   
 
