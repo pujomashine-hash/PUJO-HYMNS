@@ -97,6 +97,8 @@ function renderFavourites() {
 
       const Playing =
         document.getElementById("playing");
+      const Filesystem = window.Capacitor?.Plugins?.Filesystem;
+      
 
       window.currentSong = song;
       
