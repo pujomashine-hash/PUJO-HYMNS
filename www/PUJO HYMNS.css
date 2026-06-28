@@ -500,6 +500,38 @@ input#search {
 background: #4FC3F7;
 font-family: 'Poppins',sans-Serif;
 }
+#Shukrani {
+  background-color: violet;
+  color: black;
+}
+#Mavuno {
+  background-color: navy;
+}
+#Majilio {
+  background-color: brown;
+}
+#Devotion {
+  background-color: purple;
+}
+#Patriotic {
+  background-color: green;
+}
+#Ubatizo {
+  background-color:#FF5733 ;
+}
+#Kipaimara {
+  background-color: indigo;
+}
+#Kitubio{
+  background-color: gold;
+  color: navy;
+}
+#Vijana {
+  background-color: teal;
+}
+#Wanawake {
+  background-color: crimson;
+}
   /* CANGING THEME */
 body.light-mode {
   background:white;
