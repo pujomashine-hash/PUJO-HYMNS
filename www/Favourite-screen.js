@@ -99,7 +99,14 @@ function renderFavourites() {
         document.getElementById("playing");
 
       window.currentSong = song;
+      
+MediaSession?.setMetadata({
+  title: window.currentSong.title,
+  artist: window.currentSong.artist,
+  artwork: []
+});
 
+      
       Playing.textContent =
         currentSong.title +
         " - " +
