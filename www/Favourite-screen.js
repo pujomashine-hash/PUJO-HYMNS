@@ -90,7 +90,9 @@ function renderFavourites() {
         </div>
       </span>
     `;
+    
 
+    
     btn.addEventListener("click", async () => {
 
       const songDetails =
@@ -105,7 +107,7 @@ function renderFavourites() {
       const Playing =
         document.getElementById("playing");
 
-      
+      window.initMediaControls(audio, play);
 
       window.currentSong = song;
       
