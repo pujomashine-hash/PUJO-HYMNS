@@ -234,6 +234,36 @@ const MediaSession = window.Capacitor?.Plugins?.MediaSession;
     const back = document.getElementById("back");
     const categories=document.querySelectorAll(".category")
     const favourite=document.getElementById("favourite")
+// ===== MEDIA SESSION CONTROLS =====
+if (MediaSession && !controlsInitialized) {
+  controlsInitialized = true;
+
+  MediaSession.setActionHandler(
+    { action: "play" },
+    async () => {
+      await audio.play();
+
+      play.textContent = "▶";
+
+      MediaSession.setPlaybackState({
+        playbackState: "playing"
+      });
+    }
+  );
+
+  MediaSession.setActionHandler(
+    { action: "pause" },
+    async () => {
+      audio.pause();
+
+      play.textContent = "⏯";
+
+      MediaSession.setPlaybackState({
+        playbackState: "paused"
+      });
+    }
+  );
+} 
   window.scrollPosition = 0;
    songList.addEventListener("click", async(e) => {
   const btn = e.target.closest(".nyimbo");
@@ -267,7 +297,11 @@ const MediaSession = window.Capacitor?.Plugins?.MediaSession;
     image: btn.dataset.image
   };
 
-  
+  MediaSession?.setMetadata({
+  title: window.currentSong.title,
+  artist: window.currentSong.artist,
+  artwork: []
+});
      
   Playing.textContent = currentSong.title + " - " + currentSong.artist;
   
