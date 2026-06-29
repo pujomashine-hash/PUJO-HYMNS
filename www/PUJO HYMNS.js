@@ -263,14 +263,12 @@ const MediaSession = window.Capacitor?.Plugins?.MediaSession;
     title: btn.querySelector(".title").textContent,
     artist: btn.querySelector(".artist").textContent,
     file: btn.dataset.file,
-    lyrics: btn.dataset.lyrics
+    lyrics: btn.dataset.lyrics,
+    image: btn.dataset.image
   };
 
-  MediaSession?.setMetadata({
-  title: window.currentSong.title,
-  artist: window.currentSong.artist,
-  artwork: []
-});
+  
+     
   Playing.textContent = currentSong.title + " - " + currentSong.artist;
   
 
@@ -409,6 +407,7 @@ if (window.Capacitor) {
 
   });
 }
+
 
 const container = document.getElementById("playlist-container");
 
