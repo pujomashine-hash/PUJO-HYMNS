@@ -235,8 +235,12 @@ const MediaSession = window.Capacitor?.Plugins?.MediaSession;
     const categories=document.querySelectorAll(".category")
     const favourite=document.getElementById("favourite")
 // ===== MEDIA SESSION CONTROLS =====
-if (MediaSession && !controlsInitialized) {
-  controlsInitialized = true;
+window.initMediaControls = function (audio, play) {
+  const MediaSession = window.Capacitor?.Plugins?.MediaSession;
+
+  if (!MediaSession || window.controlsInitialized) return;
+
+  window.controlsInitialized = true;
 
   MediaSession.setActionHandler(
     { action: "play" },
@@ -263,7 +267,9 @@ if (MediaSession && !controlsInitialized) {
       });
     }
   );
-} 
+};
+    window.initMediaControls(audio, play);
+    
   window.scrollPosition = 0;
    songList.addEventListener("click", async(e) => {
   const btn = e.target.closest(".nyimbo");
