@@ -1,4 +1,7 @@
 // NEW (FAVOURITES)
+      const Filesystem = window.Capacitor?.Plugins?.Filesystem;
+const MediaSession = window.Capacitor?.Plugins?.MediaSession;
+
 const favBtn = document.getElementById("fav");
 let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
 
@@ -16,7 +19,13 @@ if (favBtn) {
         s => s.title !== currentSong.title
       );
     } else {
-      favourites.push(currentSong);
+      favourites.push({
+  title: currentSong.title,
+  artist: currentSong.artist,
+  file: currentSong.file,
+  lyrics: currentSong.lyrics,
+  image: currentSong.image
+});
     }
 
     localStorage.setItem(
@@ -27,8 +36,6 @@ if (favBtn) {
     updateFavButton();
     renderFavourites()
     
-    alert(currentSong.title);
-alert(currentSong.artist);
   });
 }
 
@@ -97,22 +104,25 @@ function renderFavourites() {
 
       const Playing =
         document.getElementById("playing");
-      const Filesystem = window.Capacitor?.Plugins?.Filesystem;
+
       
 
       window.currentSong = song;
       
-MediaSession?.setMetadata({
+     Playing.textContent =
+        currentSong.title +
+        " - " +
+        currentSong.artist;
+
+      console.log(currentSong);
+      setTimeout(() => {
+        MediaSession?.setMetadata({
   title: window.currentSong.title,
   artist: window.currentSong.artist,
   artwork: []
 });
-
+       },0);
       
-      Playing.textContent =
-        currentSong.title +
-        " - " +
-        currentSong.artist;
 
       const fileName =
         song.file.split("/").pop();
