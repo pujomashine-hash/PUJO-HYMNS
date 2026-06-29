@@ -55,11 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
     image: song.image
   };
 
-MediaSession?.setMetadata({
-  title: window.currentSong.title,
-  artist: window.currentSong.artist,
-  artwork: []
-});
       
   const fileName = song.file.split("/").pop();
 
@@ -71,8 +66,18 @@ MediaSession?.setMetadata({
     audio.src = song.file;
   }
 
+      
   Playing.textContent = window.currentSong.title + " - " + window.currentSong.artist;
 
+      setTimeout(() => {
+        MediaSession?.setMetadata({
+  title: window.currentSong.title,
+  artist: window.currentSong.artist,
+  artwork: []
+});
+ },0);
+
+      
   fetch(song.lyrics)
     .then(res => res.text())
     .then(text => {
@@ -90,6 +95,8 @@ MediaSession?.setMetadata({
 }
 
 buildCategorySongs();
+
+    
     // CATEGORY CLICK
     document.querySelectorAll(".Category").forEach(Cat => {
       Cat.addEventListener("click", () => {
@@ -124,5 +131,6 @@ buildCategorySongs();
     }
 
   };
+  
 
 });
