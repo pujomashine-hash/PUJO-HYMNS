@@ -1260,7 +1260,13 @@
      "title":"America the beautiful","artist":"English Hymns","lyrics":"America the beautiful.txt","Category":"Kusifu","Church":"Congregational","image":"https://i.ibb.co/QF20LCY3/America-the-beautiful.jpg","file":"https://www.dropbox.com/scl/fi/ujffb9mw1ct8dvpdc81xi/America-the-beautiful.mp3?rlkey=q8mk4p5qzq8x5ce9b7sfmzzaz&st=w0zxcep9&dl=1"
    },
    {
-     "title":"My country tis of Thee","artist":"English Hymns","Category":"General","lyrics":"My country tis of Thee.txt","Church":"Baptist","image":"https://i.ibb.co/PZhhD2Ph/My-country-tis-of-Thee.jpg","file":"https://www.dropbox.com/scl/fi/747jn3eiedm4lxrnh9ycq/My-country-tis-of-Thee.mp3?rlkey=8p0ri9cmnu3zcwewwhchvnwux&st=w8ks6z9n&dl=1"
+     "title":"My country tis of Thee","artist":"English Hymns",
+"Category":"Patriotic",
+"Category":"Kusifu",
+"lyrics":"My country tis of Thee.txt",
+"Church":"Baptist",
+"image":"https://i.ibb.co/PZhhD2Ph/My-country-tis-of-Thee.jpg",
+"file":"https://www.dropbox.com/scl/fi/747jn3eiedm4lxrnh9ycq/My-country-tis-of-Thee.mp3?rlkey=8p0ri9cmnu3zcwewwhchvnwux&st=w8ks6z9n&dl=1"
    },
    {
      "title":"I am praying for you","artist":"English Hymns","lyrics":"I am praying for you.txt","Category":"Devotion","Church":"General","image":"https://i.ibb.co/cKhtnFXQ/I-am-praying-for-you.jpg","file":"https://www.dropbox.com/scl/fi/aci3hdlas1kopnfa22beh/I-am-praying-for-you.mp3?rlkey=8mbxpympwft4j5zqoprqcm980&st=k2dfoop3&dl=1"
@@ -1299,10 +1305,10 @@
     "title":"Of the father's love begotten","artist":"English Hymns","lyrics":"Of the father's love begotten.txt","Category":"","Church":"","image":"","file":""
   },
   {
-    "title":"Away in a manger","artist":"English Hymns","lyrics":"Away in a manger.txt","Category":"","Church":"","image":"","file":""
+    "title":"Away in a manger","artist":"English Hymns","lyrics":"Away in a manger.txt","Category":"Christmas","Church":"","image":"","file":""
   },
   {
-    "title":"O little town bethlehem","artist":"English Hymns","lyrics":"O little town bethlehem.txt","Category":"","Church":"","image":"","file":""
+    "title":"O little town bethlehem","artist":"English Hymns","lyrics":"O little town bethlehem.txt","Category":"Christmas","Church":"","image":"","file":""
   },
   {
     "title":"Once in royal David's city","artist":"English Hymns","lyrics":"Once in royal David's city.txt","Category":"","Church":"","image":"","file":""
@@ -1321,5 +1327,32 @@
 },
 {
   "title":"Venite exultemus domino","artist":"","lyrics":"Venite exultemus domino.txt","Category":"","Church":"","image":"","file":""
-}
+},
+  {
+    "title":"Kijiji kimoja","artist":"Nyasubi youth SDA choir","lyrics":"Kijiji kimoja.txt","Category":"","Church":"SDA","image":"https://i.ibb.co/BH64zd3r/Kijiji-Kimoja.jpg","file":""
+  },
+  {
+    "title":"Umewahi kuwa pale","artist":"Pathfinder Nyasubi choir","lyrics":"Umewahi kuwa pale.txt","Category":"Watoto","Church":"SDA","image":"https://i.ibb.co/5WxLycVN/Umewahi-kuwa-pale.jpg","file":"https://raw.githubusercontent.com/pujomashine-hash/PUJO-HYMNS/main/Audio/PF_NYASUBI__CHOIR___UMEWAHI_KUWA_PALE%28256k%29.mp3"
+  },
+  {
+    "title":"Miguuni pake Yesu","artist":"Nyasubi youth SDA choir","lyrics":"Miguuni pake Yesu.txt","Category":"General","Church":"SDA","image":"https://i.ibb.co/FLrNLYBQ/Miguuni-pake.jpg","file":""
+  },
+  {
+    "title":"Shule sabato","artist":"Pathfinder Nyasubi choir","lyrics":"Shule sabato.txt","Category":"Watoto","Church":"SDA","image":"https://i.ibb.co/1tSmkM7N/Shule.jpg","file":""
+  },
+  {
+    "title":"Tumaini lenye baraka","artist":"Nyasubi youth SDA choir","lyrics":"Tumaini lenye baraka.txt","Category":"Comfort","image":"https://i.ibb.co/Kpwxw8Vr/Tumaini-lenye-baraka.jpg","Church":"SDA","file":""
+  },
+  {
+    "title":"Twaja mbele zako","artist":"Nyasubi youth SDA choir","lyrics":"Twaja mbele zako.txt","Category":"General","Church":"SDA","image":"https://i.ibb.co/ks3x7mq6/Twaja-mbele-zako.jpg","file":""
+  },
+  {
+    "title":"Turudi","artist":"Nyasubi youth SDA choir","lyrics":"Turudi.txt","Category":"Kuabudu","Church":"SDA","image":"https://i.ibb.co/wNtdZpJL/Turudi.jpg","file":""
+  },
+  {
+    "title":"Nalipenda kanisa","artist":"Nyasubi youth SDA choir","lyrics":"Nalipenda kanisa.txt","Category":"General","Church":"SDA","image":"https://i.ibb.co/przqGNmg/Nalipenda-kanisa.jpg","file":"https://raw.githubusercontent.com/pujomashine-hash/PUJO-HYMNS/main/Audio/Nalipenda_Kanisa__by_Nyasubi_Youth_Choir.%28256k%29.mp3"
+  },
+  {
+    "title":"Bethlehem","artist":"Nyasubi youth SDA choir","lyrics":"Bethlehem.txt","Category":"Christmas","Church":"SDA","image":"https://i.ibb.co/dZ0mpt6/Bethlehem.jpg","file":""
+  }
 ]
