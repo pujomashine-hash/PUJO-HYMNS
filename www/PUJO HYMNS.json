@@ -45,7 +45,13 @@
    "title":"Muujiza wako","artist":"Sylivester Soud","lyrics":"Muujiza wako.txt","file":"https://www.dropbox.com/scl/fi/esr2b3qb31p6g976rr2lv/Muujiza-wako.mp3?rlkey=tw59dfj8thqpgzc0mpfchbn9w&st=m0z4nt4g&dl=1","Category":"General","Church":"General","image":"https://ik.imagekit.io/pry8rixl0/Muujiza%20wako.jpg"
  },
  {
-   "title":"Living hope","artist":"English Hymns","lyrics":"Living hope.txt","file":""
+   "title":"My faith has found a resting place",
+   "artist":"English Hymns",
+   "lyrics":"My faith has found a resting place.txt",
+   "file":"",
+   "image":"https://i.ibb.co/Y7F0gPG2/My-faith-has-found-a-resting-place.jpg",
+   "Category":"Devotion",
+   "Church":"Methodist"
  },
  {
    "title":"Tis so sweet to trust in Jesus","artist":"English Hymns","lyrics":"Tis so sweet.txt","file":"https://www.dropbox.com/scl/fi/o7y7lv7aukuyuv9f8m9r8/kumtegemea-mwokozi-tis_so_sweet_to_trust_in_Jesus-1.mp3?rlkey=3f9x8iimcf5643e4hhnzvcwvt&st=34fzkbp7&dl=1","Category":"Devotion","Church":"Methodist","image":"https://i.ibb.co/zHr6fgsW/Tis-so-sweet-to-trust-in-Jesus.jpg"
@@ -144,7 +150,12 @@
     "title":"To God be the glory","artist":"English Hymns","lyrics":"To God be the glory.txt","file":"https://www.dropbox.com/scl/fi/ruwj6hycz63v7y6y08vx1/To-god-be-the-glory.mp3?rlkey=1moye0iz3ekdinr64yecfdi1t&st=7ksfjrck&dl=1","Church":"Methodist","image":"https://ik.imagekit.io/pry8rixl0/Fanny%20Crosby%20HD.webp"
   },
   {
-    "title":"How great Thou art","artist":"English Hymns","file":"https://www.dropbox.com/scl/fi/lt2j5ew84uxlvfkzy2l0k/How-great-Thou-art.mp3?rlkey=wk98u1qjinilas37l5f2mnyv4&st=dmca5aeq&dl=1","lyrics":"How great Thou art.txt","Church":"Baptist","image":"https://i.ibb.co/jvXgrDW6/How-great-Thou-art.jpg","Category":"Kusifu"
+    "title":"Marching in the light",
+    "artist":"English Hymns",
+    "file":""
+    ,"lyrics":"Marching in the light.txt","Church":""
+    ,"image":"https://i.ibb.co/fYxGzpxD/Marching-on-the-light.jpg",
+    "Category":""
   },
   {
     "title":"Are you washed in the blood","artist":"English Hymns","lyrics":"Are you washed in the blood.txt","file":"https://www.dropbox.com/scl/fi/cys6xgqfqq86j6w6m8f3s/Are-you-washed-in-the-blood.mp3?rlkey=dd6i87glz1yhe3662bq49ssdm&st=zt9t0gf2&dl=1","image":"https://i.ibb.co/0RVhNLtx/Are-you-washed-in-the-blood.jpg","Church":"Methodist","Category":"Ekaristi"
@@ -204,7 +215,11 @@
     "title":"Mungu atukuzwe","artist":"PUJO Hymns","lyrics":"Mungu atukuzwe.txt","file":"https://www.dropbox.com/scl/fi/ruwj6hycz63v7y6y08vx1/To-god-be-the-glory.mp3?rlkey=1moye0iz3ekdinr64yecfdi1t&st=8uy5axa6&dl=1","Category":"Kusifu","image":"https://ik.imagekit.io/pry8rixl0/Fanny%20Crosby%20HD.webp"
   },
   {
-    "title":"Bwana Mungu nashangaa kabisa","artist":"PUJO Hymns","lyrics":"Bwana Mungu nashangaa kabisa.txt","file":"https://www.dropbox.com/scl/fi/lt2j5ew84uxlvfkzy2l0k/How-great-Thou-art.mp3?rlkey=wk98u1qjinilas37l5f2mnyv4&st=yo5q1g1v&dl=1","image":"","Church":"","Category":"https://i.ibb.co/DP06qnNk/Screenshot-20260705-165950.jpg"
+    "title":"Bwana Mungu nashangaa kabisa","artist":"PUJO Hymns",
+    "lyrics":"Bwana Mungu nashangaa kabisa.txt","file":"https://www.dropbox.com/scl/fi/lt2j5ew84uxlvfkzy2l0k/How-great-Thou-art.mp3?rlkey=wk98u1qjinilas37l5f2mnyv4&st=yo5q1g1v&dl=1",
+    "image":"https://i.ibb.co/jvXgrDW6/How-great-Thou-art.jpg",
+    "Church":"Baptist",
+    "Category":"Kusifu"
   },
   {
     "title":"Yesu kwetu ni rafiki","artist":"Organist:Zawadi Mbilinyi","Category":"General","Church":"General","lyrics":"Yesu kwetu ni rafiki.txt","file":"https://www.dropbox.com/scl/fi/pxdpdbhhn0ihctifcep8w/Yesu_ni_Rafiki_Yetu_TMW_259-256k.mp3?rlkey=pl0srsn9ulzmzxjiz9fpespsv&st=8vifsvtx&dl=1"
@@ -531,7 +546,7 @@
      "title":"Mapenzi yako yafanyike Bwana","artist":"PUJO Hymns","lyrics":"Mapenzi yako yafanyike Bwana.txt","file":""
    },
    {
-     "title":"Bwana Yesu amefufuka","artist":"PUJO Hymns","lyrics":"Bwana Yesu amefufuka.txt","file":""
+     "title":"Bwana Yesu amefufuka","artist":"PUJO Hymns","lyrics":"Bwana Yesu amefufuka.txt","file":"","Category":"Pasaka","Church":"","image":"https://i.ibb.co/LXg1rXJw/Bwana-Yesu-amefufuka.jpg"
    },
    {
      "title":"Siku ya mbingu kujawa na sifa","artist":"PUJO Hymns","lyrics":"Siku ya mbingu kujawa na sifa.txt","file":""
@@ -585,7 +600,7 @@
      "title":"Nitaimba na Yesu","artist":"PUJO Hymns","lyrics":"Nitaimba na Yesu.txt","file":""
    },
    {
-     "title":"Mapya ni mapenzi hayo","artist":"PUJO Hymns","lyrics":"Mapya ni mapenzi hayo.txt","file":"","image":"https://i.ibb.co/DP06qnNk/Screenshot-20260705-165950.jpg","Category":"General","Church":"General"
+     "title":"Mapya ni mapenzi hayo","artist":"PUJO Hymns","lyrics":"Mapya ni mapenzi hayo.txt","file":"https://www.dropbox.com/scl/fi/5rx6azqn14psc0a7v72se/Mapya-ni-mapenzi-hayo.mp3?rlkey=sadegjecb70t6k6lxsjjz0y3p&st=s8ihqka8&dl=1","image":"https://i.ibb.co/DP06qnNk/Screenshot-20260705-165950.jpg","Category":"General","Church":"General"
    },
    {
      "title":"Neno lako Bwana","artist":"PUJO Hymns","lyrics":"Neno lako Bwana.txt","file":""
