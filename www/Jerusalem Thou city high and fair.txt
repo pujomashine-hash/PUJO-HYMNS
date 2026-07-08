@@ -1,6 +1,6 @@
-JERUSALEM, THOU CITY HIGH AND FAIR
-Composer: Johann Matthäus Meyfart (1626)
-Translation: Catherine Winkworth (1858)
+𝕁𝔼ℝ𝕌𝕊𝔸𝕃𝔼𝕄, 𝕋ℍ𝕆𝕌 ℂ𝕀𝕋𝕐 ℍ𝕀𝔾ℍ 𝔸ℕ𝔻 𝔽𝔸𝕀ℝ
+𝐶𝑜𝑚𝑝𝑜𝑠𝑒𝑟: 𝐽𝑜ℎ𝑎𝑛𝑛 𝑀𝑎𝑡𝑡ℎ𝑎̈𝑢𝑠 𝑀𝑒𝑦𝑓𝑎𝑟𝑡 (1626)
+𝑇𝑟𝑎𝑛𝑠𝑙𝑎𝑡𝑖𝑜𝑛: 𝐶𝑎𝑡ℎ𝑒𝑟𝑖𝑛𝑒 𝑊𝑖𝑛𝑘𝑤𝑜𝑟𝑡ℎ (1858)
 
 1. Jerusalem, thou city high and fair,
    Would God I were in thee!
@@ -37,5 +37,7 @@ Translation: Catherine Winkworth (1858)
    Through all the realms above,
    In God’s own face delighting,
    And basking in His love.
+
+
 
 
