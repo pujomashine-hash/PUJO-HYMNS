@@ -541,6 +541,10 @@ font-family: 'Poppins',sans-Serif;
 #Ibada {
   background-color: #F1C;
 }
+#Victory {
+  background-color: white;
+  color: black;
+}
   /* CANGING THEME */
 body.light-mode {
   background:white;
