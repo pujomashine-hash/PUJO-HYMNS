@@ -48,7 +48,7 @@
    "title":"My faith has found a resting place",
    "artist":"English Hymns",
    "lyrics":"My faith has found a resting place.txt",
-   "file":"",
+   "file":"https://www.dropbox.com/scl/fi/yvbbnmtuwjspgg3glv38r/My-faith-has-found-a-resting-place.mp3?rlkey=xsx0lhcmb8xt6lyztfosajxhb&st=mx3kj5ng&dl=1",
    "image":"https://i.ibb.co/Y7F0gPG2/My-faith-has-found-a-resting-place.jpg",
    "Category":"Devotion",
    "Church":"Methodist"
@@ -152,10 +152,10 @@
   {
     "title":"Marching in the light",
     "artist":"English Hymns",
-    "file":""
-    ,"lyrics":"Marching in the light.txt","Church":""
+    "file":"https://www.dropbox.com/scl/fi/b0m555zj5qheqr9b0sdvq/Marching-in-the-light.mp3?rlkey=a17hqske5xcykull2upqz9reu&st=fmw63nn6&dl=1"
+    ,"lyrics":"Marching in the light.txt","Church":"Pentecoste"
     ,"image":"https://i.ibb.co/fYxGzpxD/Marching-on-the-light.jpg",
-    "Category":""
+    "Category":"Kusifu"
   },
   {
     "title":"Are you washed in the blood","artist":"English Hymns","lyrics":"Are you washed in the blood.txt","file":"https://www.dropbox.com/scl/fi/cys6xgqfqq86j6w6m8f3s/Are-you-washed-in-the-blood.mp3?rlkey=dd6i87glz1yhe3662bq49ssdm&st=zt9t0gf2&dl=1","image":"https://i.ibb.co/0RVhNLtx/Are-you-washed-in-the-blood.jpg","Church":"Methodist","Category":"Ekaristi"
@@ -432,7 +432,7 @@
      "title":"Yesu nakupenda u mali yangu","artist":"PUJO Hymns","lyrics":"Yesu nakupenda u mali yangu.txt","file":""
    },
    {
-     "title":"Mungu twatoa shukrani","artist":"PUJO Hymns","lyrics":"Mungu twatoa shukrani.txt","file":""
+     "title":"Mungu twatoa shukrani","artist":"PUJO Hymns","lyrics":"Mungu twatoa shukrani.txt","file":"","Church":"Methodist","Category":"Shukrani","image":"https://i.ibb.co/fdBvkKw6/Shukrani.jpg"
    },
    {
      "title":"Yote namtolea Yesu","artist":"Organist:Zawadi Mbilinyi","lyrics":"Yote namtolea Yesu.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/fjmtfu8uvxgg1q6pox7ae/Yote_Namtolea_Yesu__Played_by_Zawadi_Noel_Mbilinyi-256k.mp3?rlkey=53voa2jm7l72j2w5ih3kvoeqr&st=pl6ytdbu&dl=1"
@@ -630,7 +630,7 @@
      "title":"Mungu ulisema","artist":"PUJO Hymns","lyrics":"Mungu ulisema.txt","file":""
    },
    {
-     "title":"Ati twonane mtoni","artist":"PUJO Hymns","lyrics":"Ati twonane mtoni.txt","file":""
+     "title":"Ati twonane mtoni","artist":"PUJO Hymns","lyrics":"Ati twonane mtoni.txt","image":"https://i.ibb.co/s9rv83BR/Shall-we-gather-at-the-river.jpg","Category":"Devotion","Church":"Baptist","file":"https://www.dropbox.com/scl/fi/3l00x8tzuzm5h28uxzb1v/Shall-we-gather.mp3?rlkey=j9jidln5nfsd6sz8tzmij8mor&st=wuggceqc&dl=1"
    },
    {
      "title":"Ni mji mzuri","artist":"PUJO Hymns","lyrics":"Ni mji mzuri.txt","file":"","image":"https://ik.imagekit.io/pry8rixl0/Andrew%20Young.jpg","Category":"Mazishi","Church":"Church of Scotland","file":""
@@ -1369,5 +1369,48 @@
   },
   {
     "title":"Bethlehem","artist":"Nyasubi youth SDA choir","lyrics":"Bethlehem.txt","Category":"Christmas","Church":"SDA","image":"https://i.ibb.co/dZ0mpt6/Bethlehem.jpg","file":"https://raw.githubusercontent.com/pujomashine-hash/PUJO-HYMNS/main/Audio/Bethlehem.mp3"
+  },
+  {
+    "title":"Shall we gather at the river",
+    "artist":"English Hymns",
+    "lyrics":"Shall we gather at the river.txt",
+    "Category":"Devotion",
+    "Church":"Baptist",
+    "image":"https://i.ibb.co/s9rv83BR/Shall-we-gather-at-the-river.jpg"
+  },
+  {
+    "title":"Father we Thank Thee",
+    "artist":"English Hymns",
+    "lyrics":"Father we Thank Thee.txt",
+    "Category":"Shukrani",
+    "Church":"Methodist",
+    "image":"https://i.ibb.co/fdBvkKw6/Shukrani.jpg",
+    "file":""
+  },
+  {
+    "title":"Souls of men",
+    "artist":"English Hymns",
+    "lyrics":"Souls of men.txt",
+    "Category":"Victory",
+    "Church":"Pentecoste",
+    "image":"https://i.ibb.co/PvXnQPnX/Souls-of-men.jpg",
+    "file":""
+  },
+  {
+    "title":"Auf, Ihr Christen, Christi Glieder","artist":"German Hymns",
+    "lyrics":"Auf, Ihr Christen, Christi Glieder.txt",
+    "Category":"Wito",
+    "Church":"Lutheran choir",
+    "image":"https://i.ibb.co/SDM2Pk02/Haya-umati-wa-Yesu.jpg",
+    "file":""
+  },
+  {
+    "title":"More about Jesus",
+    "artist":"English Hymns",
+    "lyrics":"More about Jesus.txt",
+    "Category":"Devotion",
+    "Church":"Presbyterian",
+    "image":"https://i.ibb.co/8g2ng7DP/More-about-Jesus.jpg",
+    "file":""
   }
 ]
