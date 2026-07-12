@@ -38,7 +38,7 @@ const All = document.getElementById("All");
 if(songList)songList.style.display = "block";
 //initial update check
 function checkUpdate() {
-  const currentVersion = "1.0.3";
+  const currentVersion = "1.0.4";
 
   fetch("https://raw.githubusercontent.com/pujomashine-hash/PUJO-HYMNS/main/Version.json")
     .then(res => res.json())
@@ -234,42 +234,6 @@ const MediaSession = window.Capacitor?.Plugins?.MediaSession;
     const back = document.getElementById("back");
     const categories=document.querySelectorAll(".category")
     const favourite=document.getElementById("favourite")
-// ===== MEDIA SESSION CONTROLS =====
-window.initMediaControls = function (audio, play) {
-  const MediaSession = window.Capacitor?.Plugins?.MediaSession;
-
-  if (!MediaSession || window.controlsInitialized) return;
-
-  window.controlsInitialized = true;
-
-  MediaSession.setActionHandler(
-    { action: "play" },
-    async () => {
-      await audio.play();
-
-      play.textContent = "▶";
-
-      MediaSession.setPlaybackState({
-        playbackState: "playing"
-      });
-    }
-  );
-
-  MediaSession.setActionHandler(
-    { action: "pause" },
-    async () => {
-      audio.pause();
-
-      play.textContent = "⏯";
-
-      MediaSession.setPlaybackState({
-        playbackState: "paused"
-      });
-    }
-  );
-};
-    window.initMediaControls(audio, play);
-    
   window.scrollPosition = 0;
    songList.addEventListener("click", async(e) => {
   const btn = e.target.closest(".nyimbo");
@@ -300,15 +264,15 @@ window.initMediaControls = function (audio, play) {
     artist: btn.querySelector(".artist").textContent,
     file: btn.dataset.file,
     lyrics: btn.dataset.lyrics,
-    image: btn.dataset.image
+    lazima: btn.dataset.image
   };
 
   MediaSession?.setMetadata({
-  title: window.currentSong.title,
-  artist: window.currentSong.artist,
-  artwork: []
+  title: currentSong.title,
+  artist: currentSong.artist,
+  artwork: []   // ✅ lazima iwepo, hata kama tupu
 });
-     
+
   Playing.textContent = currentSong.title + " - " + currentSong.artist;
   
 
@@ -447,7 +411,6 @@ if (window.Capacitor) {
 
   });
 }
-
 
 const container = document.getElementById("playlist-container");
 
