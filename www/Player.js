@@ -2,6 +2,31 @@
 
 document.addEventListener("DOMContentLoaded", ()=>{
   
+  // media.js
+window.initMediaControls = function(audio, play) {
+  const MediaSession = window.Capacitor?.Plugins?.MediaSession;
+
+  if (!MediaSession || window.controlsInitialized) return;
+
+  window.controlsInitialized = true;
+
+  MediaSession.setActionHandler({ action: "play" }, async () => {
+    await audio.play();
+    play.textContent = "▶";
+    MediaSession.setPlaybackState({
+      playbackState: "playing"
+    });
+  });
+
+  MediaSession.setActionHandler({ action: "pause" }, async () => {
+    audio.pause();
+    play.textContent = "⏯";
+    MediaSession.setPlaybackState({
+      playbackState: "paused"
+    });
+  });
+};
+  
 const progress = document.getElementById("progress");
 const audio = document.getElementById("audio");
 if(audio){
