@@ -25,7 +25,7 @@ async function downloadfile(url) {
     const fileName = currentSong.file.split("/").pop();
     Downloadbtn.textContent = "⏳";
 
-    // Chunked download - haisimami hata data ikiwa polepole
+    // Chunked download haisimami hata data ikiwa polepole
     const response = await fetch(url);
     if (!response.ok) throw new Error("Download failed");
 
@@ -97,3 +97,9 @@ Downloadbtn.addEventListener("click", () => {
   downloadfile(fileUrl);
 });
 }
+
+const Downloadedbtn= document.getElementById("Downloaded-btn").addEventListener("click",()=>{
+  openPopup("Notice",
+    "<p>Downloaded hymns will appear here</p>"        )
+})
+

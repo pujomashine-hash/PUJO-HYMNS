@@ -3,7 +3,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const sharebtn = document.getElementById("share-app");
 
-
 const Filesystem = window.Capacitor?.Plugins?.Filesystem;
 const searchInput = document.getElementById("search");
 
@@ -38,7 +37,7 @@ const All = document.getElementById("All");
 if(songList)songList.style.display = "block";
 //initial update check
 function checkUpdate() {
-  const currentVersion = "1.0.4";
+  const currentVersion = "1.0.4";  document.getElementById("Version").textContent=`Version `+ currentVersion 
 
   fetch("https://raw.githubusercontent.com/pujomashine-hash/PUJO-HYMNS/main/Version.json")
     .then(res => res.json())
@@ -379,37 +378,71 @@ if (MediaSession && !controlsInitialized) {
 
 
 
+//MENU
 
+  const menuBtn = document.getElementById("menu-btn");
+  const menu = document.getElementById("menu");
+  const overlay = document.getElementById("overlay");
+  const closeBtn = document.getElementById("close-menu");
 
-//  MENU 
-const menubtn = document.getElementById("menu-btn");
-const menucontent = document.getElementById("menu");
-const Aboutbtn=document.getElementById("About")
-if(Aboutbtn){
-Aboutbtn.addEventListener("click",()=>{
-  window.location.href="https://pujomashine-hash.github.io/PUJO-HYMNS/About.html"
-});
-}
-if (menubtn) {
-  menubtn.addEventListener("click", function() {
-    menucontent.style.display =
-      menucontent.style.display === "block" ? "none" : "block";
-  });
-}
-
-  document.addEventListener("click", function(e) {
-
-  if (!menubtn || !menucontent) return;
-
-  if (!menubtn.contains(e.target) && !menucontent.contains(e.target)) {
-    menucontent.style.display = "none";
+  // Fungua menu
+  if (menuBtn && menu && overlay) {
+    menuBtn.addEventListener("click", () => {
+      menu.classList.add("active");
+      overlay.classList.add("active");
+    });
   }
 
-});
+  // Funga kwa X
+  if (closeBtn && menu && overlay) {
+    closeBtn.addEventListener("click", () => {
+      menu.classList.remove("active");
+      overlay.classList.remove("active");
+    });
+  }
+
+  // Funga ukibonyeza overlay
+  if (overlay && menu) {
+    overlay.addEventListener("click", () => {
+      menu.classList.remove("active");
+      overlay.classList.remove("active");
+    });
+  }
 
 
-    
+ //POPUP
+    window.openPopup=openPopup
+    window.closePopup=closePopup
+    const popupOverlay = document.getElementById("popup-overlay")  
+const popup = document.getElementById("popup")
+const popupHeader= document.getElementById("popup-header")
+const popupTitle= document.getElementById("popup-title")
+const popupClose = document.getElementById("popup-close")
+const popupContent= document.getElementById("popup-content")
 
+function openPopup(title, content ){
+  popupTitle.textContent=title;
+  popupContent.innerHTML=content;
+
+  popup.classList.add("active")
+  popupOverlay.classList.add("active")
+}
+function closePopup(){
+  popup.classList.remove("active")
+  popupOverlay.classList.remove("active")
+}
+if(popupClose && popupOverlay){
+popupClose.addEventListener("click",closePopup)
+popupOverlay.addEventListener("click",closePopup)
+}
+const churchBtn=document.getElementById("church-btn")
+if(churchBtn){
+churchBtn.addEventListener("click",()=>{
+  openPopup("Choose your Church",
+            "<h5>Churches will be available here</h5>"
+            )
+})
+}
 
 
 setTimeout (()=> {
@@ -462,8 +495,6 @@ container.addEventListener("scroll", () => {
 
 
 
-});
+})
 
-
-
-});
+})

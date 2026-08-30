@@ -1,7 +1,7 @@
 //LANGUAGE
 const Languages=document.getElementById("Languages")
 const Language=document.querySelectorAll(".Language-name")
-const Languagebtn=document.getElementById("Language")
+const Languagebtn=document.getElementById("Languagebtn")
 let translations = {};
 let currentLang = localStorage.getItem("lang") || "en";
 const SelectedLang=document.getElementById("Lang-selected")
@@ -28,15 +28,23 @@ SelectedLang.textContent=currentLang;
 
 }
 
-Language.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const lang = btn.textContent.trim().toLowerCase() === "kiswahili" ? "sw" : "en";
-    applyLanguage(lang);
-    Languages.style.display = "none";
+Languagebtn.addEventListener("click", () => {
+
+  openPopup(
+    "Your Language",
+    `
+    <button class="popup-lang" data-lang="sw">Kiswahili</button>
+    <button class="popup-lang" data-lang="en">English</button>
+    `
+  );
+
+  const buttons = document.querySelectorAll(".popup-lang");
+
+  buttons.forEach(btn => {
+    btn.onclick = () => {
+      applyLanguage(btn.dataset.lang);
+      closePopup();
+    };
   });
+
 });
-if(Languagebtn){
-Languagebtn.addEventListener("click",() => {
-  Languages.style.display="block";
-});
-}

@@ -9,23 +9,95 @@
  </head>
  <body>
    <!-- MENU NA TOP -->
-   <div id="top">
-     <aside id="left">
-       <button id="menu-btn"> ≡ </button>
-        <div id="menu">
-         <button class="settings" id="theme" data-key="settings_theme"> Change theme 🌓 </button> <br>
-         <button id="share-app" class="settings" data-key="settings-share">Share our app </button>
-         <button id="About" class="settings" data-key="settings-about"> About</button><br>
-         <button id="Language" class="settings">
-           Language <span id="Lang-selected"><em>English</em></span> </button>
-           <div id="Languages">
-           <button class="Language-name">English</button><br>
-            <button class="Language-name">Kiswahili</button>
-            </div>
-         <p id="Version"> PUJO HYMNS<br> Version 1.0.4 </p>
-         <p id="Copyright"> ©️ All rights reserved.</p>
-        </div>
-      </aside>
+ <button id="menu-btn">☰</button>
+    <div id="overlay"></div>
+    <div id="menu">
+
+  <div class="menu-header">
+    <button id="close-menu">✕</button>
+    <h2 id="menu-header">PUJO HYMNS</h2>
+  </div>
+
+
+  <p class="menu-title">📚 LIBRARY</p>
+
+  <button class="menu-item"
+    id="Downloaded-btn">
+    <span>📥</span>
+    <span>Downloaded</span>
+  </button>
+
+  <p class="menu-title">👥 COMMUNITY</p>
+
+  <button class="menu-item"
+    id="church-btn">
+    <span>⛪</span>
+    <span>Church</span>
+  </button>
+
+  <p class="menu-title">⚙️ SETTINGS</p>
+
+  <button class="menu-item"
+    id="Languagebtn">
+    <span>🌐</span>
+    <span>Language</span>
+  </button>
+
+  <button class="menu-item"
+    id="theme">
+    <span>🎨</span>
+    <span>Theme</span>
+  </button>
+
+  <button class="menu-item"
+    id="Settings">
+    <span>⚙️</span>
+    <span>Settings</span>
+  </button>
+
+  <p class="menu-title">ℹ️ MORE</p>
+
+  <button class="menu-item"
+    id="share-app">
+    <span>🤝</span>
+    <span>Share App</span>
+  </button>
+
+  <button class="menu-item"
+    id="Rate-app">
+    <span>⭐</span>
+    <span>Rate App</span>
+  </button>
+
+  <button class="menu-item"
+    id="Contact">
+    <span>📞</span>
+    <span>Contact Us</span>
+  </button>
+
+  <button class="menu-item"
+    id="about-btn">
+    <span>ℹ️</span>
+    <span>About</span>
+  </button>
+
+  <div class="menu-footer"
+    id="Version">
+    Version 2.0.0
+  </div>
+    </div>
+   <div id="popup-overlay"></div>
+   <div id="popup">
+     <div class="popup-header">
+       <h1 id="popup-title"></h1>
+       <button id="popup-close">✕</button>
+     </div>
+     <div id="popup-content">
+       popup content
+     </div>
+   </div>
+
+     <div id="top">
      <input type="text" placeholder="Tafuta wimbo  hapa" id="search">
    </div>
 
