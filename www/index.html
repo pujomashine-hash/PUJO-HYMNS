@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" href="PUJO HYMNS.css">
+  <link rel="stylesheet" href="Online-songs.css">
   <link rel="manifest" href="manifest.json">
  </head>
  <body>
@@ -98,14 +99,13 @@
    </div>
 
      <div id="top">
-     <input type="text" placeholder="Tafuta wimbo  hapa" id="search">
+      <button id="search-toggle">🔎</button>
+      <button id="notification-toggle">
+        💬⁰
+      </button>
    </div>
 
     <div id="song-list" class="screen">
-      <div id="jina-container">
-         <button id="All"> All </button>
-         <p id="jina"> PUJO Hymns</p>
-      </div>
     <!-- PLAYLIST -->
      <div id="playlist-container">
       <div id="playlist-content">
@@ -158,9 +158,57 @@
         <img src="https://ik.imagekit.io/pry8rixl0/Sample%20ad.jpg">
       </a>
      </div>
-   <!-- js inaunda button hapa -->
-
+<section id="My-music">
+  <div id="My-music-header">
+    <h2 id="Home-header1" data-key="My-music"> My music</h2>
+    <button class="see-all">See all</button>
   </div>
+
+  <div id="My-music-list">
+    <!-- Nyimbo 5 za kwanza -->
+  </div>
+</section>
+<section id="New-songs">
+  <div id="New-songs-header">
+    <h2 id="Home-header2" data-key="New-songs">New songs</h2>
+    <button class="see-all">See all</button>
+  </div>
+  <div id="New-songs-list"><!--nyimbo 3--></div>
+</section>
+ </div>
+<div id="Artist-screen" class="screen">
+       <div id="jina-container">
+         <button id="All"> Back </button>
+         <p id="jina"> PUJO Hymns</p>
+       </div>
+       <div id="Artist-screen-list"></div>
+</div>
+   <!-- Full My Music Screen -->
+<div id="my-music-screen" class="screen">
+
+  <div id="screen-header">
+    <button id="back-my-music">←</button>
+    <h2>My Music</h2>
+  </div>
+
+  <div id="my-music-screen-list">
+    <!-- Nyimbo zote zitawekwa hapa -->
+  </div>
+</div>
+<div id="search-screen" class="screen">
+  <div id="Search-header">
+    <input type="text" placeholder="Tafuta wimbo  hapa" id="search">
+  </div>
+  <div id="search-results"><!--Songs will be filtered here --></div>
+</div>
+<div id="New-songs-screen" class="screen">
+    <div class="New-screen-header">
+      <button id="back-new-songs">Back </button>
+      <h2>New hymns </h2>
+    </div>
+    <div id="New-songs-screen-list"> </div>
+</div>
+
   <div id="song-details" class="screen">
      <div class="player">
          <p id="playing"> Nothing here </p>
@@ -227,9 +275,12 @@
   <script src="Playlist-screen.js"></script>
   <script src="Download-screen.js"></script>
   <script src="Language.js"></script>
+  <script src="Navigation.js"></script>
   <script src="Theme.js"></script>
   <script src="Search.js"></script>
   <script src="Player.js"></script>
   <script src="Favourite-screen.js"></script>
+   <script src="Artist-screen.js"></script>
+   <script src="New-hymns.js"></script>
  </body>
 </html>
