@@ -11,7 +11,7 @@ const myMusicScreen = document.getElementById("my-music-screen");
 const menuBtn = document.getElementById("menu-btn");
 const searchInput = document.getElementById("search");
   const back = document.getElementById("back");
-const songDetails = document.getElementById("song-details");
+const songDetails= document.getElementById("song-details");
 const audio = document.getElementById("audio");
 const play = document.getElementById("play");
 const Songcontainer = document.getElementById("Category-songs");
@@ -40,6 +40,8 @@ navButtons.forEach(btn => {
     window.scrollPosition = 0;
     const targetId = btn.getAttribute("data-target");
     Top.style.display = "block";
+
+   
     
     if (targetId === "favourite") {
       Top.style.display="block"
@@ -117,22 +119,23 @@ if (targetId === "playlist-category") {
     }
 })
 })
+  
 
 // BACK
     back.addEventListener("click", () => {
-
   screens.forEach(screen => screen.style.display = "none");
-
+      audio.pause();
+  play.textContent = "▶";
   const last = document.getElementById(lastScreen);
   last.style.display = "block";
 
   songDetails.style.display = "none";
 
   if (categoryView === "names") {
-    categoryContainer.style.display = "grid";   // categories
+    CategoryNames.style.display = "grid";   // categories
     Songcontainer.style.display = "none";
   } else {
-    categoryContainer.style.display = "none";
+    CategoryNames.style.display = "none";
     Songcontainer.style.display = "block";      // songs
   }
 
@@ -140,8 +143,7 @@ if (targetId === "playlist-category") {
     window.scrollTo(0, scrollPosition);
   });
 
-  audio.pause();
-  play.textContent = "▶";
+  
 });
   
 })
