@@ -74,12 +74,18 @@ Network.addListener("networkStatusChange", ({ connected }) => {
 
 });
   
+let syncing = false;
+
 async function syncData() {
+  if (syncing) return;
+
+  syncing = true;
+
   try {
     checkUpdate();
     await getSongs();
-  } catch (err) {
-    console.error(err);
+  } finally {
+    syncing = false;
   }
 }
 });
