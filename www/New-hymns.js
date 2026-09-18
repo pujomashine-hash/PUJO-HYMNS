@@ -52,17 +52,19 @@ onlineBtn.dataset.artist = song.artist;
   `;
   return onlineBtn;
 }
- function showNewSongs(data){
+ function showNewSongs(data) {
 
-    data.slice(0,3).forEach(song=>{
+    list.innerHTML = "";
+    NewSongScreenList.innerHTML = "";
+
+    data.slice(0,3).forEach(song => {
         list.appendChild(createOnlineSongs(song));
     });
 
-    data.forEach(song=>{
+    data.forEach(song => {
         NewSongScreenList.appendChild(createOnlineSongs(song));
     });
  }
-
  SongList.addEventListener("click",(e)=>{
     const onlineBtn = e.target.closest(".online-btn")
    if(!onlineBtn) return
