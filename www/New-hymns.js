@@ -7,7 +7,7 @@ const NewSongScreen = document.getElementById("New-songs-screen")
 const menuBtn = document.getElementById("menu-btn")
 const BackNewSongs= document.querySelector("#New-songs-screen #back-new-songs")
 const NewSongScreenList = document.getElementById("New-songs-screen-list")
-
+window.getSongs=getSongs
   
 async function getSongs (){
   await
