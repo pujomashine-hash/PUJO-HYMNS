@@ -26,59 +26,32 @@ checkUpdate();
 
 
 
-  async function checkNetwork() {
-
-    // Browser
-    if (!Network) {
-      if (navigator.onLine) {
-        syncData();
-      } else {
-        openPopup(
-          "No Internet",
-          "You can browse offline songs. Audio streaming requires an internet connection."
-        );
-      }
-      return;
-    }
-
-    // Android (Capacitor)
-    const status = await Network.getStatus();
-
-    if (status.connected) {
-      syncData();
-    } else {
-      openPopup(
-        "No Internet",
-        "You can browse offline songs. Audio streaming requires an internet connection."
-      );
-    }
-  }
-
-  if (Network) {
-    Network.addListener("networkStatusChange", ({ connected }) => {
-      if (connected) {
-        syncData();
-      } else {
-        openPopup(
-          "No Internet",
-          "You are now offline."
-        );
-      }
-    });
+  function checkNetwork() {
+  if (navigator.onLine) {
+    syncData();
   } else {
-    // Browser listeners
-    window.addEventListener("online", syncData);
-
-    window.addEventListener("offline", () => {
-      openPopup(
-        "No Internet",
-        "You are now offline."
-      );
-    });
+    openPopup(
+      "No Internet",
+      "You can browse offline songs. Audio streaming requires an internet connection."
+    );
   }
+}
 
-  checkNetwork();
+// App ikianza
+checkNetwork();
 
+// Internet ikirudi
+window.addEventListener("online", () => {
+  syncData();
+});
+
+// Internet ikikatika
+window.addEventListener("offline", () => {
+  openPopup(
+    "No Internet",
+    "You are now offline."
+  );
+});
   async function syncData() {
     try {
       checkUpdate();
