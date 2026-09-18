@@ -11,7 +11,7 @@ const NewSongScreenList = document.getElementById("New-songs-screen-list")
   
 async function getSongs (){
   await
-fetch("http://localhost:3000/songs")
+fetch("https://pujo-server.onrender.com/songs")
       .then(res => res.json())
       .then(data =>{
         showNewSongs(data)
