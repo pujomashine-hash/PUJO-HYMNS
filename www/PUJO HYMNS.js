@@ -18,7 +18,6 @@ const searchToggle= document.getElementById("search-toggle")
 const MymusicList= document.getElementById("My-music-list")
 const playlistContainer = document.getElementById("playlist-container");
 
-
   window.currentSong = null;
 
 if (sharebtn) {
@@ -44,26 +43,6 @@ window.lastScreen= "song-list";
 window.categoryView= "names";
 const All = document.getElementById("All");
 if(songList)songList.style.display = "block";
-//initial update check
-function checkUpdate() {
-  const currentVersion = "1.0.4";  document.getElementById("Version").textContent=`Version `+ currentVersion 
-
-  fetch("https://raw.githubusercontent.com/pujomashine-hash/PUJO-HYMNS/main/Version.json")
-    .then(res => res.json())
-    .then(data => {
-
-      if (data.version !== currentVersion) {
-        if (confirm("The new version is available do yo want to install it?(Kuna update mpya Unataka kupakua?)")) {
-          window.location.href = data.url;
-        }
-      } 
-
-    })
-    .catch(() => {
-    });
-}
-checkUpdate();
-
 
 
 //  LOAD SONGS 
