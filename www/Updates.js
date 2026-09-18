@@ -54,19 +54,28 @@ async function checkNetwork() {
 checkNetwork();
 
 // Sikiliza mabadiliko ya network
-if (Network) {
-  Network.addListener("networkStatusChange", ({ connected }) => {
-    if (connected) {
+let isOffline = false;
+
+Network.addListener("networkStatusChange", ({ connected }) => {
+
+  if (connected) {
+    if (isOffline) {
+      closePopup();
       syncData();
-    } else {
+      isOffline = false;
+    }
+  } else {
+    if (!isOffline) {
+      isOffline = true;
       openPopup(
         "No Internet",
-        "You are now offline."
+        "You can browse offline songs. Audio streaming requires an internet connection."
       );
     }
-  });
-}
+  }
 
+});
+  
 async function syncData() {
   try {
     checkUpdate();
