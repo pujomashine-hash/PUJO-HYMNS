@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   const Network = window.Capacitor?.Plugins?.Network;
-  alert("Capacitor: " + !!window.Capacitor);
-alert("Network plugin: " + !!Network);
   window.checkUpdate= checkUpdate
   
 
