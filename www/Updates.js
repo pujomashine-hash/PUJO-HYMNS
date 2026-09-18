@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   const Network = window.Capacitor?.Plugins?.Network;
+  alert("Capacitor: " + !!window.Capacitor);
+alert("Network plugin: " + !!Network);
   window.checkUpdate= checkUpdate
   
 
@@ -25,40 +27,52 @@ function checkUpdate() {
 checkUpdate();
 
 
+async function checkNetwork() {
+  // Kama plugin haipo, usifanye chochote
+  if (!Network) {
+    console.warn("Network plugin not found");
+    return;
+  }
 
-  function checkNetwork() {
-  if (navigator.onLine) {
-    syncData();
-  } else {
-    openPopup(
-      "No Internet",
-      "You can browse offline songs. Audio streaming requires an internet connection."
-    );
+  try {
+    const status = await Network.getStatus();
+
+    if (status.connected) {
+      syncData();
+    } else {
+      openPopup(
+        "No Internet",
+        "You can browse offline songs. Audio streaming requires an internet connection."
+      );
+    }
+  } catch (err) {
+    console.error(err);
   }
 }
 
 // App ikianza
 checkNetwork();
 
-// Internet ikirudi
-window.addEventListener("online", () => {
-  syncData();
-});
-
-// Internet ikikatika
-window.addEventListener("offline", () => {
-  openPopup(
-    "No Internet",
-    "You are now offline."
-  );
-});
-  async function syncData() {
-    try {
-      checkUpdate();
-      await getSongs();
-    } catch (err) {
-      console.error(err);
+// Sikiliza mabadiliko ya network
+if (Network) {
+  Network.addListener("networkStatusChange", ({ connected }) => {
+    if (connected) {
+      syncData();
+    } else {
+      openPopup(
+        "No Internet",
+        "You are now offline."
+      );
     }
-  }
+  });
+}
 
+async function syncData() {
+  try {
+    checkUpdate();
+    await getSongs();
+  } catch (err) {
+    console.error(err);
+  }
+}
 });
