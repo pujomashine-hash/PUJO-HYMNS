@@ -43,7 +43,7 @@ searchInput.addEventListener("input", () => {
      <p> Try another song title or artist </p>
     </div>`
   }
-  alert(found)
+  
 });
 
   
