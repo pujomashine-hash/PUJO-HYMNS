@@ -18,7 +18,6 @@ fetch("https://pujo-server.onrender.com/songs")
         window.onlineSongs=data
       })
 }
-getSongs();
 
 
 window.createOnlineSongs= createOnlineSongs;
