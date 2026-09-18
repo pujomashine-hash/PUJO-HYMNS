@@ -11,6 +11,8 @@ const All = document.getElementById("All");
     const artistScreen = document.getElementById("Artist-screen");
 const artistList = document.getElementById("Artist-screen-list");
 
+   
+  
 document.querySelectorAll(".playlist").forEach(playlist => {
   playlist.addEventListener("click", () => {
 
@@ -19,10 +21,11 @@ document.querySelectorAll(".playlist").forEach(playlist => {
 
     // Fungua screen mpya
     songList.style.display = "none";
-    searchInput.style.visibility="hidden";
     artistScreen.style.display = "block";
     jinaContainer.style.display="block"
     All.style.display="block"
+    window.searchToggle.style.visibility = "hidden";
+    window.notificationToggle.style.visibility = "visible";
 
     // Weka jina
     document.getElementById("jina").textContent = artist;
@@ -64,6 +67,7 @@ artistList.addEventListener("click",(e)=>{
      playlistContainer.style.display = "block";
         artistScreen.style.display="none";
         songList.style.display="block"
+        window.searchToggle.style.visibility="visible"
 
         document.querySelectorAll(".playlist").forEach(p => {
           p.classList.remove("active");
