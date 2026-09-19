@@ -5,11 +5,14 @@ const SongDetails = document.getElementById("song-details")
 const NewSeeAllBtn=document.querySelector("#New-songs .see-all")
 const NewSongScreen = document.getElementById("New-songs-screen")
 const menuBtn = document.getElementById("menu-btn")
-const BackNewSongs= document.querySelector("#New-songs-screen #back-new-songs")
+const BackNewSongs= document.querySelector("#New-songs-screen .back-new-songs")
 const NewSongScreenList = document.getElementById("New-songs-screen-list")
 window.getSongs=getSongs
   
 async function getSongs (){
+const loader = document.querySelector("#New-songs-loader")
+  loader.style.display="block"
+  
   await
 fetch("https://pujo-server.onrender.com/songs")
       .then(res => res.json())
@@ -17,8 +20,14 @@ fetch("https://pujo-server.onrender.com/songs")
         showNewSongs(data)
         window.onlineSongs=data
       })
+    .catch((e)=>{
+  console.log(e)
+    })
+    
+  .finally(()=>{
+    loader.style.display="none";
+  })
 }
-
 
 window.createOnlineSongs= createOnlineSongs;
  function createOnlineSongs (song){
