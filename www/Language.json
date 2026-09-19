@@ -7,7 +7,8 @@
     "settings-share": "Share our app",
     "settings-about":"About",
     "New-songs":"New songs ",
-    "My-music":"My music"
+    "My-music":"My music",
+    "My-church":"My church"
   },
   "sw": {
     "nav_home": "🏠 Nyumbani",
@@ -17,7 +18,8 @@
     "settings-share":"Shiriki programu",
     "settings-about":"Kuhusu",
     "New-songs":"Nyimbo mpya ",
-    "My-music":"Nyimbo zangu"
+    "My-music":"Nyimbo zangu",
+    "My-church":"Kanisa Langu"
     
   }
 }
