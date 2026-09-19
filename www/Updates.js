@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const Network = window.Capacitor?.Plugins?.Network;
   window.checkUpdate= checkUpdate
-  
+
 
   //initial update check
 function checkUpdate() {
@@ -73,7 +73,7 @@ Network.addListener("networkStatusChange", ({ connected }) => {
   }
 
 });
-  
+
 let syncing = false;
 
 async function syncData() {
@@ -84,6 +84,7 @@ async function syncData() {
   try {
     checkUpdate();
     await getSongs();
+    getChurchSongs();
   } finally {
     syncing = false;
   }
