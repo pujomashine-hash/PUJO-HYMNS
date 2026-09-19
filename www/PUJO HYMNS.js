@@ -17,7 +17,6 @@ const searchToggle= document.getElementById("search-toggle")
   const songList = document.getElementById("song-list");
 const MymusicList= document.getElementById("My-music-list")
 const playlistContainer = document.getElementById("playlist-container");
-
   window.currentSong = null;
 
 if (sharebtn) {
@@ -302,14 +301,7 @@ if(popupClose && popupOverlay){
 popupClose.addEventListener("click",closePopup)
 popupOverlay.addEventListener("click",closePopup)
 }
-const churchBtn=document.getElementById("church-btn")
-if(churchBtn){
-churchBtn.addEventListener("click",()=>{
-  openPopup("Choose your Church",
-            "<h5>Churches will be available here</h5>"
-            )
-})
-}
+
 
 
 setTimeout (()=> {
