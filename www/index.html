@@ -173,7 +173,19 @@
     <h2 id="Home-header2" data-key="New-songs">New songs</h2>
     <button class="see-all">See all</button>
   </div>
-  <div id="New-songs-list"><!--nyimbo 3--></div>
+  <div id="New-songs-list">
+    <!--nyimbo 3-->
+    <div id="New-songs-loader" class="loader"></div>
+  </div>
+</section>
+<section id="My-church">
+  <div id="My-church-header">
+    <h2 id="Home-header3" data-key="My-church">My church </h2>
+    <button class="see-all">See all </button>
+  </div>
+  <div id="My-church-song-list">
+  </div>
+  <div id="My-church-loader" class="loader"></div>
 </section>
  </div>
 <div id="Artist-screen" class="screen" data-target="Artist-screen">
@@ -203,10 +215,17 @@
 </div>
 <div id="New-songs-screen" class="screen">
     <div class="New-screen-header">
-      <button id="back-new-songs">Back </button>
+      <button class="back-new-songs">Back </button>
       <h2>New hymns </h2>
     </div>
-    <div id="New-songs-screen-list"> </div>
+    <div id="New-songs-screen-list"></div>
+</div>
+<div id="My-church-screen" class="screen">
+  <div id="My-church-screen-header" class="New-screen-header">
+    <button class="back-new-songs">Back </button>
+    <h2>From my church </h2>
+  </div>
+  <div id="My-church-screen-list"></div>
 </div>
 
   <div id="song-details" class="screen">
@@ -276,12 +295,13 @@
   <script src="Download-screen.js"></script>
   <script src="Language.js"></script>
   <script src="Navigation.js"></script>
-  <script src="Theme.js"></script>
   <script src="Search.js"></script>
   <script src="Player.js"></script>
   <script src="Favourite-screen.js"></script>
    <script src="Artist-screen.js"></script>
    <script src="New-hymns.js"></script>
    <script src="Updates.js"></script>
+   <script src="Theme.js"></script>
+   <script src="My church.js"></script>
  </body>
 </html>
