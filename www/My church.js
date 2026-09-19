@@ -23,7 +23,7 @@ async function getChurchSongs() {
   try {
 
     const res = await fetch(
-      `https://pujo-server.onrender.com/songs?church=Lutheran%20choir`
+      `https://pujo-server.onrender.com/songs?church=${encodeURIComponent(church)}`
     );
 
     const data = await res.json();
@@ -71,7 +71,7 @@ if (churchBtn) {
       `
     );
 
-    fetch("http://localhost:3000/churches")
+    fetch("https://pujo-server.onrender.com/churches")
       .then(res => res.json())
       .then(data => {
 
