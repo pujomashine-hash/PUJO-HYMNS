@@ -23,7 +23,7 @@ async function getChurchSongs() {
   try {
 
     const res = await fetch(
-      `http://localhost:3000/songs?church=Lutheran%20choir`
+      `https://pujo-server.onrender.com/songs?church=Lutheran%20choir`
     );
 
     const data = await res.json();
