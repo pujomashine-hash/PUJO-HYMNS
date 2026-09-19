@@ -52,7 +52,7 @@ function showChurchSongs(data) {
 
 }
 
-getChurchSongs();
+
 
 
 if (churchBtn) {
