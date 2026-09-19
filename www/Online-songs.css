@@ -61,7 +61,7 @@
   display: flex;
   justify-content: space-between;
   align-items:center;
-
+  
 }
 #New-songs-header h2{
   margin:0;
@@ -108,7 +108,7 @@
     font-size:22px;
 }
 
-#back-new-songs{
+.back-new-songs{
     width:42px;
     height:42px;
     border:none;
@@ -131,13 +131,93 @@
     padding:15px;
     padding-bottom: 5px;
 }
+#My-church-screen{
+  display:none;
+    position:fixed;
+    inset:0;
+    background:#000;
+    overflow-y:auto;
+    z-index:1000;
+    padding-top:70px;
+}
+
+#church-select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #555;
+  border-radius: 8px;
+  background: #222;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+#church-select option {
+  background: #222;
+  color: white;
+}
+
+#save-church {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #2e7d32;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#save-church:hover {
+  background: #388e3c;
+}
+
+#save-church:active {
+  transform: scale(0.98);
+}
+#My-church {
+  margin-top: 10px;
+  padding: 10px;
+}
+#My-church-header{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+#My-church-header h2{
+  margin:0;
+  font-size: 22px;
+}
+
+.loader{
+  width: 35px;
+  height: 35px;
+  border: 4px solid #ddd;
+  border-top: 4px solid #2e7d32;
+  border-radius: 50%;
+  animation: spin .8s linear infinite;
+  margin: 20px auto;
+  display: none;
+}
+
+@keyframes spin{
+  to{
+    transform: rotate(360deg);
+  }
+}
 
 body.light-mode .online-btn,
-body.light-mode #New-songs-screen {
+body.light-mode #New-songs-screen,
+body.light-mode #My-church-header,
+body.light-mode #My-church-screen{
   background: white;
   color:black;
 }
-body.light-mode .New-screen-header {
+body.light-mode .New-screen-header{
   background: hwb(0 90% 6%)
 }
 body.light-mode .New-screen-header h2{
