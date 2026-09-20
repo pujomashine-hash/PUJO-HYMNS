@@ -1,5 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
 
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const MyChurch = document.getElementById("My-church")
+  const NewSongs = document.getElementById("New-songs")
   const Network = window.Capacitor?.Plugins?.Network;
   window.checkUpdate= checkUpdate
 
@@ -37,11 +41,15 @@ async function checkNetwork() {
 
     if (status.connected) {
       syncData();
+      MyChurch.style.display="block"
+        NewSongs.style.display="block";
     } else {
       openPopup(
         "No Internet",
         "You can browse offline songs. Audio streaming requires an internet connection."
       );
+     MyChurch.style.dispaly="none"
+       NewSongs.style.display="none" 
     }
   } catch (err) {
     console.error(err);
