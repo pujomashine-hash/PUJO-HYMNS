@@ -192,6 +192,53 @@
   margin:0;
   font-size: 22px;
 }
+#Downloaded-songs{
+  margin-top: 10px;
+  padding: 10px;
+}
+#Downloaded-songs-header{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+#Downloaded-songs-header h2{
+  margin:0;
+  font-size: 22px;
+}
+#Downloaded-screen{
+  display:none;
+  background:#000;
+}
+
+#Download-screen-header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:60px;
+  display:flex;
+  align-items:center;
+  padding:0 12px;
+  background:#0b0b4f;
+  z-index:1000;
+  gap: 15px;
+}
+
+#Download-screen-list{
+  padding-top:70px;
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+
+#Download-count{
+  border:none;
+  background:#00bfff;
+  color:#fff;
+  padding:4px 10px;
+  border-radius:20px;
+  font-weight:bold;
+}
 
 .loader{
   width: 35px;
@@ -213,6 +260,8 @@
 body.light-mode .online-btn,
 body.light-mode #New-songs-screen,
 body.light-mode #My-church-header,
+body.light-mode #Downloaded-songs-header,
+body.light-mode #Downloaded-screen,
 body.light-mode #My-church-screen{
   background: white;
   color:black;
@@ -222,4 +271,7 @@ body.light-mode .New-screen-header{
 }
 body.light-mode .New-screen-header h2{
   color: black;
+}
+body.light-mode #Download-screen-header h2{
+  color: white;
 }
