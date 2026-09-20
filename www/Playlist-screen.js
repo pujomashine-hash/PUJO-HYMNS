@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="artist">${song.artist}</div>
         </div>
       </div>
-      <span class="three-dots">⋮
+      <span class="three-dots">
         <div class="dots-menu">
           <button class="share"> Share </button>
         </div>
@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const lyrics = document.getElementById("lyrics");
   const audio = document.getElementById("audio");
   const Playing = document.getElementById("playing");
+  const play = document.getElementById("play");
   const Filesystem = window.Capacitor?.Plugins?.Filesystem;
 
       window.initMediaControls(audio, play);
