@@ -23,7 +23,7 @@ async function getChurchSongs() {
   try {
 
     const res = await fetch(
-      `https://pujo-server.onrender.com/songs?church=${encodeURIComponent(church)}`
+      `https://pujo-server.onrender.com/churches/songs?church=${encodeURIComponent(church)}`
     );
 
     const data = await res.json();
