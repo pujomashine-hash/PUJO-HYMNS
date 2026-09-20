@@ -1,6 +1,3 @@
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const MyChurch = document.getElementById("My-church")
   const NewSongs = document.getElementById("New-songs")
@@ -29,6 +26,11 @@ function checkUpdate() {
 checkUpdate();
 
 
+function toggleOnlineSections(show) {
+  MyChurch.style.display = show ? "block" : "none";
+  NewSongs.style.display = show ? "block" : "none";
+}
+  
 async function checkNetwork() {
   // Kama plugin haipo, usifanye chochote
   if (!Network) {
@@ -41,15 +43,14 @@ async function checkNetwork() {
 
     if (status.connected) {
       syncData();
-      MyChurch.style.display="block"
-        NewSongs.style.display="block";
+      toggleOnlineSections(true)
     } else {
+      toggleOnlineSections(false)
       openPopup(
         "No Internet",
         "You can browse offline songs. Audio streaming requires an internet connection."
       );
-     MyChurch.style.dispaly="none"
-       NewSongs.style.display="none" 
+    
     }
   } catch (err) {
     console.error(err);
@@ -65,12 +66,14 @@ let isOffline = false;
 Network.addListener("networkStatusChange", ({ connected }) => {
 
   if (connected) {
+    toggleOnlineSections(true)
     if (isOffline) {
       closePopup();
       syncData();
       isOffline = false;
     }
   } else {
+    toggleOnlineSections(false)
     if (!isOffline) {
       isOffline = true;
       openPopup(
