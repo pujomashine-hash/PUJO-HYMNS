@@ -1,4 +1,14 @@
 const Downloadbtn = document.getElementById("Download");
+const DownloadList = document.getElementById("Downloaded-songs-list");
+const DownloadScreenList = document.getElementById("Download-screen-list");
+const DownloadCount = document.getElementById("Download-count");
+const SongList = document.getElementById("song-list")
+const SeeAllDownloaded= document.querySelector("#Downloaded-songs-header .see-all")
+const DownloadScreen = document.getElementById("Downloaded-screen")
+const menuBtn = document.getElementById("menu-btn")
+
+window.loadDownloadedSongs = loadDownloadedSongs;
+
 
 window.updateDownloadBtn=updateDownloadBtn;
 async function updateDownloadBtn() {
@@ -62,6 +72,29 @@ const base64 = btoa(binary);
       recursive: true
     });
 
+    // Hifadhi taarifa za wimbo
+let downloadedSongs =
+  JSON.parse(localStorage.getItem("downloadedSongs")) || [];
+
+// Epuka duplicate
+const exists = downloadedSongs.some(song => song.file === currentSong.file);
+
+if (!exists) {
+  downloadedSongs.push({
+    title: currentSong.title,
+    artist: currentSong.artist,
+    image: currentSong.image,
+    lyrics: currentSong.lyrics,
+    file: currentSong.file
+  });
+
+  localStorage.setItem(
+    "downloadedSongs",
+    JSON.stringify(downloadedSongs)
+  );
+}
+    loadDownloadedSongs();
+
     Downloadbtn.textContent = "✔";
 
   } catch (error) {
@@ -90,7 +123,8 @@ Downloadbtn.addEventListener("click", () => {
   const fileUrl = currentSong.file;
 
   if (!fileUrl) {
-    alert("❌ No audio source");
+    openPopup("Notice",
+             "😭😭Currently there is no audio file for this song Yo can browse only the song's lyrics.Thank you")
     return;
   }
 
@@ -98,8 +132,45 @@ Downloadbtn.addEventListener("click", () => {
 });
 }
 
-const Downloadedbtn= document.getElementById("Downloaded-btn").addEventListener("click",()=>{
-  openPopup("Notice",
-    "<p>Downloaded hymns will appear here</p>"        )
-})
+function OpenDownloadScreen (){
+  SongList.style.display="none"
+  DownloadScreen.style.display="block" 
+  loadDownloadedSongs();
+  menuBtn.style.display="none"
+}
 
+
+
+const Downloadedbtn= document.getElementById("Downloaded-btn").addEventListener("click",()=>{
+OpenDownloadScreen()
+  })
+function loadDownloadedSongs() {
+
+  const songs =
+    JSON.parse(localStorage.getItem("downloadedSongs")) || [];
+
+  DownloadList.innerHTML = "";
+  DownloadScreenList.innerHTML = "";
+
+  if (songs.length === 0) {
+    DownloadList.innerHTML = "<p>No Downloaded songs</p>";
+    DownloadCount.textContent = "0";
+    return;
+  }
+
+  // Home (onyesha 3 tu)
+  songs.slice(0, 3).forEach(song => {
+    DownloadList.appendChild(createOnlineSongs(song));
+  });
+
+  // Screen nzima
+  songs.forEach(song => {
+    DownloadScreenList.appendChild(createOnlineSongs(song));
+  });
+
+  DownloadCount.textContent = songs.length;
+}
+  
+SeeAllDownloaded.addEventListener("click",()=>{
+  OpenDownloadScreen()
+})
