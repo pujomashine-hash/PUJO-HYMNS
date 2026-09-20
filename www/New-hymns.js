@@ -14,7 +14,7 @@ const loader = document.querySelector("#New-songs-loader")
   loader.style.display="block"
   
   await
-fetch("https://pujo-server.onrender.com/songs")
+fetch("http://localhost:3000/songs")
       .then(res => res.json())
       .then(data =>{
         showNewSongs(data)
@@ -61,6 +61,7 @@ onlineBtn.dataset.artist = song.artist;
   `;
   return onlineBtn;
 }
+  getSongs()
  function showNewSongs(data) {
 
     list.innerHTML = "";
