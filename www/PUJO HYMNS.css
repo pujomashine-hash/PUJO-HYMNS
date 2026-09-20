@@ -475,12 +475,12 @@ background-image: url("https://ik.imagekit.io/pry8rixl0/Kwaya%20kuu%20KKKT%20mwi
 .nyimbo {
   width: 95%;
   max-width: 400px;
-  margin: 2px 0;
+  margin: 1px 0;
   padding: 12px;
   background: black;
   color: white;
   border: none;
-  border-radius: 15px;
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   cursor: pointer;
@@ -491,8 +491,8 @@ background-image: url("https://ik.imagekit.io/pry8rixl0/Kwaya%20kuu%20KKKT%20mwi
   background-color: #2a2a2a;
 }
 .btn-image {
-  width: 40px;
-  height: 40px;
+  width: 55px;
+  height: 55px;
   flex-shrink: 0;
   background: #ccc;
   background-image: url("logo.png");
@@ -502,8 +502,10 @@ background-image: url("https://ik.imagekit.io/pry8rixl0/Kwaya%20kuu%20KKKT%20mwi
 }
 .btn-image img {
   object-fit: cover;
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 .left-img {
   display: flex;
@@ -877,9 +879,8 @@ body.light-mode #menu-btn{
   border-radius: 1px;
 }
 body.light-mode .nyimbo {
-  background-color: #FFF8E7;
+  background-color:white;
   color: black;
-
   width: 95%;
 }
 body.light-mode .playlist-name {
