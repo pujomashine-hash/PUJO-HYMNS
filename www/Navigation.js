@@ -16,7 +16,10 @@ const audio = document.getElementById("audio");
 const play = document.getElementById("play");
 const Songcontainer = document.getElementById("Category-songs");
   const CategoryNames = document.getElementById("Category-names");
-
+const screenTop = document.getElementById("screen-top")
+const screenTitle= document.getElementById("screen-title")
+window.showScreenTop=showScreenTop
+window.hideScreenTop=hideScreenTop
   
 if (window.playlistInitialized) return;
 window.playlistInitialized = true;
@@ -28,6 +31,17 @@ window.categoryView= "names";
 // ===== INIT: SHOW PLAYLISTS =====
 if (playlistContainer) {
   playlistContainer.style.visibility = "visible";
+}
+
+  function showScreenTop(title){
+    Top.style.display = "none";
+    screenTop.style.display = "flex";
+    screenTitle.textContent = title;
+}
+
+function hideScreenTop(){
+    screenTop.style.display = "none";
+    Top.style.display = "block";
 }
 
 // NAVIGATION 
@@ -44,10 +58,7 @@ navButtons.forEach(btn => {
    
     
     if (targetId === "favourite") {
-      Top.style.display="block"
-      window.searchToggle.style.visibility="hidden"
-      menuBtn.style.display="block"
- window.notificationToggle.style.visibility="visible"
+      showScreenTop("favourite")
       document.querySelectorAll(".nyimbo").forEach(btn => {
         btn.style.display = "";
       });
@@ -60,6 +71,7 @@ navButtons.forEach(btn => {
       menuBtn.style.display="block"
       window.searchToggle.style.visibility="visible"
  window.notificationToggle.style.visibility="visible"
+      hideScreenTop()
       document.querySelectorAll(".nyimbo").forEach(btn => {
         btn.style.display = "";
       });
@@ -77,9 +89,6 @@ navButtons.forEach(btn => {
     if (targetId === "playlist-category") {
 
   document.getElementById(targetId).style.display = "grid";
-  Top.style.display = "block";
-  window.searchToggle.style.visibility="hidden"
- window.notificationToggle.style.visibility="visible"
       
 if (window.initPlaylistScreen) {
     window.initPlaylistScreen();
@@ -95,19 +104,14 @@ document.querySelectorAll("#Category-songs .nyimbo").forEach(btn => {
 });
 
 if (targetId === "playlist-category") {
-
     // Kila uki-click Makundi, anza upya
     window.activeCategory = null;
     window.categoryView = "names";
-
+    showScreenTop("Makundi")
     document.getElementById(targetId).style.display = "grid";
     CategoryNames.style.display = "grid";
     Songcontainer.style.display = "none";
     document.getElementById("Catjina-Container").style.display = "none";
-
-    window.searchToggle.style.visibility = "hidden";
-    window.notificationToggle.style.visibility = "visible";
-
 }
 
   
@@ -120,30 +124,61 @@ if (targetId === "playlist-category") {
 })
 })
   
+   back.addEventListener("click", () => {
 
-// BACK
-    back.addEventListener("click", () => {
-  screens.forEach(screen => screen.style.display = "none");
-      audio.pause();
-  play.textContent = "▶";
-  const last = document.getElementById(lastScreen);
-  last.style.display = "block";
+    // Simamisha audio
+    audio.pause();
+    play.textContent = "▶";
 
-  songDetails.style.display = "none";
+    // Ficha screens zote
+    screens.forEach(screen => {
+        screen.style.display = "none";
+    });
 
-  if (categoryView === "names") {
-    CategoryNames.style.display = "grid";   // categories
-    Songcontainer.style.display = "none";
-  } else {
-    CategoryNames.style.display = "none";
-    Songcontainer.style.display = "block";      // songs
-  }
+    // Ficha player
+    songDetails.style.display = "none";
 
-  requestAnimationFrame(()=> {
-    window.scrollTo(0, scrollPosition);
-  });
+    // Onyesha screen ya mwisho
+    const last = document.getElementById(window.lastScreen);
+    if (last) last.style.display = "block";
 
+    // Header ya juu
+    switch (window.lastScreen) {
+
+        case "song-list":
+            hideScreenTop();
+            break;
+
+        case "playlist-category":
+            showScreenTop("Makundi");
+
+            if (window.categoryView === "names") {
+                CategoryNames.style.display = "grid";
+                Songcontainer.style.display = "none";
+            } else {
+                CategoryNames.style.display = "none";
+                Songcontainer.style.display = "block";
+            }
+            break;
+
+        case "favourite":
+            showScreenTop("Favourite");
+            break;
+
+        case"Artist-screen":
+            showScreenTop("The voice of praise")
+            break;
+        
+        default:
+            hideScreenTop();
+    }
+
+    // Rudisha scroll
+    requestAnimationFrame(() => {
+        window.scrollTo(0, window.scrollPosition || 0);
+    });
+
+}); 
   
 });
-  
-})
+
