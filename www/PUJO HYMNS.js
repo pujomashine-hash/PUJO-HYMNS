@@ -43,6 +43,22 @@ const All = document.getElementById("All");
 if(songList)songList.style.display = "block";
 
 
+  const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+
+    if (!entry.isIntersecting) return;
+
+    const img = entry.target;
+
+    img.src = img.dataset.src;
+
+    observer.unobserve(img);
+  });
+
+}, {
+  root: null,
+  threshold: 0.1
+});
 
   
 //  LOAD SONGS 
@@ -63,8 +79,10 @@ window.createSongButton=    function createSongButton(song){
   <div class="left-img">
     <div class="btn-image">
       <img
-      src="${song.image ? song.image : 'defaul.jpg'}"
-      onerror="this.src='logo.png'">
+  class="lazy-img"
+  data-src="${song.image ? song.image : 'default.jpg'}"
+  src="logo.png"
+  onerror="this.src='logo.png'">
     </div>
 
     <div class="text-btn">
@@ -79,6 +97,7 @@ window.createSongButton=    function createSongButton(song){
     </div>
   </span>
   `;
+  observer.observe(btn.querySelector(".lazy-img"));
 return btn;
     }
     
@@ -87,7 +106,9 @@ return btn;
 
    data.forEach(song=>{ 
     myMusicScreenList.appendChild(createSongButton(song));                     
-})
+}) 
+
+    
     seeAllBtn.addEventListener("click",()=>{
     songList.style.display="none";
     myMusicScreen.style.display="block";
@@ -290,7 +311,7 @@ const popupClose = document.getElementById("popup-close")
 const popupContent= document.getElementById("popup-content")
 
 function openPopup(title, content ){
-  popupTitle.textContent=title;
+  popupTitle.innerHTML=title;
   popupContent.innerHTML=content;
 
   popup.classList.add("active")
