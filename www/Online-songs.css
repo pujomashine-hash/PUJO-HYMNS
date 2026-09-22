@@ -1,3 +1,23 @@
+#screen-top{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background: black;
+    border-bottom: 1px solid #ddd;
+    z-index: 1101;
+}
+
+#screen-title{
+    margin: 0;
+    font-size: 20px;
+}
 .online-btn{
     width:100%;
     display:flex;
@@ -66,6 +86,7 @@
 #New-songs-header h2{
   margin:0;
   font-size: 22px;
+  padding-left: 0;
 }
 #New-songs-list {
   display: flex;
@@ -208,6 +229,8 @@
 #Downloaded-screen{
   display:none;
   background:#000;
+  z-index: 1000;
+
 }
 
 #Download-screen-header{
@@ -220,15 +243,16 @@
   align-items:center;
   padding:0 12px;
   background:#0b0b4f;
+  gap: 15px; 
   z-index:1000;
-  gap: 15px;
 }
 
 #Download-screen-list{
-  padding-top:70px;
+  padding-top:40px;
   display:flex;
   flex-direction:column;
   gap:2px;
+  z-index: 1000;
 }
 
 #Download-count{
