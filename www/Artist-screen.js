@@ -18,14 +18,14 @@ document.querySelectorAll(".playlist").forEach(playlist => {
 
     const artist = playlist.querySelector(".playlist-name")
       .textContent.trim().toLowerCase();
-
+     
     // Fungua screen mpya
+    showScreenTop(artist)
     songList.style.display = "none";
     artistScreen.style.display = "block";
     jinaContainer.style.display="block"
     All.style.display="block"
-    window.searchToggle.style.visibility = "hidden";
-    window.notificationToggle.style.visibility = "visible";
+    lastScreen="Artist-screen"
 
     // Weka jina
     document.getElementById("jina").textContent = artist;
@@ -62,8 +62,8 @@ artistList.addEventListener("click",(e)=>{
         document.querySelectorAll(".nyimbo").forEach(btn => {
           btn.style.display = "";
         });
-
-     searchInput.style.visibility="visible";
+     
+     hideScreenTop();
      playlistContainer.style.display = "block";
         artistScreen.style.display="none";
         songList.style.display="block"
