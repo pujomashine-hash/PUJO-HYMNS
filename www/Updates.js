@@ -46,8 +46,10 @@ async function checkNetwork() {
       toggleOnlineSections(true)
     } else {
       toggleOnlineSections(false)
-      openPopup(
-        "No Internet",
+      openPopup(`<div class="popup-title">
+    <span class="popup-logo-btn"></span>
+    <p>No internet</p>
+  </div>`,
         "You can browse offline songs. Audio streaming requires an internet connection."
       );
     
@@ -76,8 +78,10 @@ Network.addListener("networkStatusChange", ({ connected }) => {
     toggleOnlineSections(false)
     if (!isOffline) {
       isOffline = true;
-      openPopup(
-        "No Internet",
+      openPopup(`<div class="popup-title">
+    <span class="popup-logo-btn"></span>
+    <p>No internet</p>
+  </div>`,
         "You can browse offline songs. Audio streaming requires an internet connection."
       );
     }
