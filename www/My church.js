@@ -59,7 +59,10 @@ if (churchBtn) {
   churchBtn.addEventListener("click", () => {
 
     openPopup(
-      "Choose your Church",
+     `<div class="popup-title">
+    <span class="popup-logo-btn"></span>
+    <p>Choose your Church</p>
+  </div>`,
       `
         <select id="church-select">
           <option value="">Loading churches...</option>
@@ -120,7 +123,10 @@ if (churchBtn) {
      closePopup();
      await getChurchSongs()
 
-      openPopup("Success",
+      openPopup(`<div class="popup-title">
+    <span class="popup-logo-btn"></span>
+    <p>Success</p>
+  </div>`,
                "Your songs available at My Church")
       // Ondoa listener ili isijirudie kila popup ikifunguliwa
       document.removeEventListener("click", saveChurch);
