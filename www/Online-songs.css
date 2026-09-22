@@ -85,7 +85,7 @@
 }
 #New-songs-header h2{
   margin:0;
-  font-size: 22px;
+  font-size:22px;
   padding-left: 0;
 }
 #New-songs-list {
@@ -273,6 +273,21 @@
   animation: spin .8s linear infinite;
   margin: 20px auto;
   display: none;
+}
+.popup-title{
+  display:flex;
+  align-items: center;
+  padding: 0;
+}
+.popup-logo-btn{
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  background-image: url("logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
 }
 
 @keyframes spin{
