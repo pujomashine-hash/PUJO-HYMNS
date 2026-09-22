@@ -5,6 +5,7 @@ window.notificationToggle= document.getElementById("notification-toggle")
 window.searchToggle= document.getElementById("search-toggle") 
 const searchInput = document.getElementById("search");
 const searchResults = document.getElementById("search-results");
+  const menuBtn = document.getElementById("menu-btn")
 
 searchInput.addEventListener("input", () => {
   const value = searchInput.value.toLowerCase().trim();
@@ -58,6 +59,7 @@ searchResults.addEventListener("click", (e) => {
   searchToggle.addEventListener("click",()=>{
     searchScreen.style.display="block"
     songList.style.display="none"
+    menuBtn.style.display="none"
   })
   notificationToggle.addEventListener("click",()=>{
   openPopup("Notice","<h5>No new notification</h5>")
