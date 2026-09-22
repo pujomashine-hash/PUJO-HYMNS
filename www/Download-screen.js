@@ -10,11 +10,11 @@ const DownloadScreen = document.getElementById("Downloaded-screen")
 const menuBtn = document.getElementById("menu-btn")
 const DownloadedBack=document.querySelector("#Download-screen-header .back-new-songs")
 
-
 window.loadDownloadedSongs = loadDownloadedSongs;
-
-
 window.updateDownloadBtn=updateDownloadBtn;
+
+  
+  
 async function updateDownloadBtn() {
   if (!currentSong) return;
 
@@ -84,7 +84,7 @@ let downloadedSongs =
 const exists = downloadedSongs.some(song => song.file === currentSong.file);
 
 if (!exists) {
-  downloadedSongs.push({
+  downloadedSongs.unshift({
     title: currentSong.title,
     artist: currentSong.artist,
     image: currentSong.image,
@@ -147,9 +147,7 @@ function OpenDownloadScreen (){
 
 
 
-const Downloadedbtn= document.getElementById("Downloaded-btn").addEventListener("click",()=>{
-OpenDownloadScreen()
-  })
+
 function loadDownloadedSongs() {
 
   const songs =
@@ -197,6 +195,13 @@ DownloadedBack.addEventListener("click",()=>{
 
 
     loadDownloadedSongs();
+
+
+const Downloadedbtn= document.getElementById("Downloaded-btn").addEventListener("click",()=>{
+OpenDownloadScreen();
+  })
+
   
 })
+
 
