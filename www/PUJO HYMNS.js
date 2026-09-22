@@ -14,6 +14,7 @@ const myMusicBack = document.getElementById("back-my-music");
   const overlay = document.getElementById("overlay");
   const closeBtn = document.getElementById("close-menu");
 const searchToggle= document.getElementById("search-toggle")
+  const notificationToggle= document.getElementById("notification-toggle")
   const songList = document.getElementById("song-list");
 const MymusicList= document.getElementById("My-music-list")
 const playlistContainer = document.getElementById("playlist-container");
@@ -33,9 +34,7 @@ if (sharebtn) {
   });
 }
 
-let controlsInitialized = false;
-
-
+let controlsInitialized = false;  
 
 window.activeCategory = null;
 window.lastScreen= "song-list";
@@ -44,6 +43,8 @@ const All = document.getElementById("All");
 if(songList)songList.style.display = "block";
 
 
+
+  
 //  LOAD SONGS 
 fetch("PUJO HYMNS.json")
   .then(res => res.json())
@@ -156,6 +157,7 @@ if (MediaSession && !controlsInitialized) {
                                       )
    songList.addEventListener("click", async(e) => {
      const btn = e.target.closest(".nyimbo");
+     if(!btn) return
  openSong(btn)
      lastScreen ="song-list"
 });
@@ -213,6 +215,7 @@ window.openSong = async  function openSong(btn){
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
   updateFavButton();
+ showScreenTop("The voice of praise")
 }
         
     play.addEventListener("click", async () => {
