@@ -104,7 +104,7 @@ if (churchBtn) {
       });
 
     // Save
-    document.addEventListener("click", function saveChurch(e) {
+    document.addEventListener("click",async function saveChurch(e) {
 
       if (e.target.id !== "save-church") return;
 
@@ -118,7 +118,10 @@ if (churchBtn) {
       localStorage.setItem("church", select.value);
 
      closePopup();
+     await getChurchSongs()
 
+      openPopup("Success",
+               "Your songs available at My Church")
       // Ondoa listener ili isijirudie kila popup ikifunguliwa
       document.removeEventListener("click", saveChurch);
     });
