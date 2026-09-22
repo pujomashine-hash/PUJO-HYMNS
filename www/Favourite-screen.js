@@ -35,7 +35,7 @@ if (favBtn) {
 
     updateFavButton();
     renderFavourites()
-    
+
   });
 }
 
@@ -90,9 +90,9 @@ function renderFavourites() {
         </div>
       </span>
     `;
-    
 
-    
+
+
     btn.addEventListener("click", async () => {
 
       const songDetails =
@@ -110,7 +110,7 @@ function renderFavourites() {
       window.initMediaControls(audio, play);
 
       window.currentSong = song;
-      
+
      Playing.textContent =
         currentSong.title +
         " - " +
@@ -124,7 +124,7 @@ function renderFavourites() {
   artwork: []
 });
        },0);
-      
+
 
       const fileName =
         song.file.split("/").pop();
