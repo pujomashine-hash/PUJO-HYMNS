@@ -1,52 +1,121 @@
 name: Build Signed APK
 
 on:
-  workflow_dispatch:   # 👈 manual only (button)
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
+      # ==========================
+      # CHECKOUT
+      # ==========================
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
 
+      - name: Debug Checkout
+        run: |
+          echo "===== BRANCH ====="
+          git branch
+
+          echo "===== COMMIT ====="
+          git rev-parse HEAD
+
+          echo "===== LAST COMMIT ====="
+          git log --oneline -1
+
+      # ==========================
+      # NODE
+      # ==========================
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
+      # ==========================
+      # JAVA
+      # ==========================
       - name: Setup Java
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y openjdk-17-jdk
-          echo "JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64" >> $GITHUB_ENV
-          echo "/usr/lib/jvm/java-17-openjdk-amd64/bin" >> $GITHUB_PATH
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
 
+      # ==========================
+      # INSTALL
+      # ==========================
       - name: Install dependencies
         run: npm install
 
       - name: Fix permissions
         run: chmod -R 755 node_modules/.bin
 
+      # ==========================
+      # DEBUG PROJECT
+      # ==========================
+      - name: Show project files
+        run: |
+          echo "===== ROOT FILES ====="
+          ls -la
+
+          echo "===== WWW ====="
+          ls -la www || true
+
+          echo "===== DIST ====="
+          ls -la dist || true
+
+      # ==========================
+      # CAPACITOR
+      # ==========================
       - name: Sync Capacitor
         run: npx --yes cap sync android
 
+      - name: Debug Android Assets
+        run: |
+          echo "===== ASSETS ====="
+          ls -la android/app/src/main/assets || true
+
+          echo "===== PUBLIC ====="
+          ls -la android/app/src/main/assets/public || true
+
+          echo "===== INDEX ====="
+          head -20 android/app/src/main/assets/public/index.html || true
+
+          echo "===== NAVIGATION ====="
+          head -20 android/app/src/main/assets/public/Navigation.js || true
+
+      # ==========================
+      # KEYSTORE
+      # ==========================
       - name: Decode Keystore
         run: |
           mkdir -p android/app
           echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > android/app/release.keystore
 
+      # ==========================
+      # BUILD
+      # ==========================
       - name: Build Release APK
         run: |
           cd android/app
           chmod +x ../gradlew
-          ../gradlew assembleRelease \
-          -Pandroid.injected.signing.store.file=release.keystore \
-          -Pandroid.injected.signing.store.password=${{ secrets.KEYSTORE_PASSWORD }} \
-          -Pandroid.injected.signing.key.alias=${{ secrets.KEY_ALIAS }} \
-          -Pandroid.injected.signing.key.password=${{ secrets.KEY_PASSWORD }}
 
+          ../gradlew clean
+
+          ../gradlew assembleRelease \
+            --no-build-cache \
+            -Pandroid.injected.signing.store.file=release.keystore \
+            -Pandroid.injected.signing.store.password=${{ secrets.KEYSTORE_PASSWORD }} \
+            -Pandroid.injected.signing.key.alias=${{ secrets.KEY_ALIAS }} \
+            -Pandroid.injected.signing.key.password=${{ secrets.KEY_PASSWORD }}
+
+      # ==========================
+      # UPLOAD
+      # ==========================
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
