@@ -26,6 +26,7 @@ function checkUpdate() {
   const UpdateBtn = document.getElementById("update-btn")
     UpdateBtn.addEventListener("click",()=>{
       window.location.href=data.url
+      closePopup()
     })
       
     })
