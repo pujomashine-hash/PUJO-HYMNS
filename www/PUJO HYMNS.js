@@ -177,6 +177,11 @@ if (MediaSession && !controlsInitialized) {
     }
                                       )
    songList.addEventListener("click", async(e) => {
+    if(e.target.closest(".share") || e.target.closest(".three-dots")){
+      return
+    }
+      
+     
      const btn = e.target.closest(".nyimbo");
      if(!btn) return
  openOfflineSong(btn)
@@ -243,7 +248,7 @@ window.openOfflineSong = async  function openOfflineSong(btn){
 
     document.querySelectorAll(".three-dots").forEach(dot => {
       dot.addEventListener("click",(e)=>{
-        e.stopPropagation();
+      // e.stopPropagation();
       })
     })
 
@@ -255,7 +260,7 @@ document.addEventListener("click", async (e) => {
   if (!shareBtn) return;
 
   e.stopPropagation();
-
+alert("clicked")
   const songBtn = shareBtn.closest(".nyimbo, .online-btn");
 
   await Capacitor.Plugins.Share.share({

@@ -212,12 +212,17 @@ async  function openOnlineSongs(btn){
         NewSongScreenList.appendChild(createOnlineSongs(song));
     });
  }
- SongList.addEventListener("click",(e)=>{
-    const onlineBtn = e.target.closest(".online-btn")
-   if(!onlineBtn) return
-    openOnlineSongs(onlineBtn);
-    
-  })
+ SongList.addEventListener("click", (e) => {
+
+  if (e.target.closest(".share") || e.target.closest(".three-dots")) {
+    return;
+  }
+
+  const onlineBtn = e.target.closest(".online-btn");
+  if (!onlineBtn) return;
+
+  openOnlineSongs(onlineBtn);
+});
 
   NewSeeAllBtn.addEventListener("click",()=>{
     SongList.style.display="none"
@@ -232,14 +237,17 @@ async  function openOnlineSongs(btn){
     menuBtn.style.display="block"
   })
 
-  NewSongScreen.addEventListener("click",(e)=>{
-    const onlineBtn = e.target.closest(".online-btn")
-   if(!onlineBtn) return
-    openOnlineSongs(onlineBtn);
-    NewSongScreen.style.display="none"
-    lastScreen= "New-songs-screen"
-  })
-  
+  NewSongScreen.addEventListener("click", (e) => {
+
+  if (e.target.closest(".share") || e.target.closest(".three-dots")) {
+    return;
+  }
+
+  const onlineBtn = e.target.closest(".online-btn");
+  if (!onlineBtn) return;
+
+  openOnlineSongs(onlineBtn);
+});
   
 })
 
