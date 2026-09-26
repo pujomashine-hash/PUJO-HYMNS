@@ -1,19 +1,25 @@
 {
   "en": {
     "nav_home": "🏠 Home",
-    "nav_playlist": "🎬 Playlist",
+    "nav_playlist": "📚 Categories",
     "nav_favourite": "♥️ Favourite",
     "settings_theme":"Change theme 🌓",
     "settings-share": "Share our app",
-    "settings-about":"About"
+    "settings-about":"About",
+    "New-songs":"New songs ",
+    "My-music":"My music",
+    "My-church":"My church"
   },
   "sw": {
     "nav_home": "🏠 Nyumbani",
-    "nav_playlist": "🎬 Orodha",
+    "nav_playlist": "📚 Makundi",
     "nav_favourite": "♥️ Pendwa",
     "settings_theme": " 🌓 Mandhari",
     "settings-share":"Shiriki programu",
-    "settings-about":"Kuhusu"
+    "settings-about":"Kuhusu",
+    "New-songs":"Nyimbo mpya ",
+    "My-music":"Nyimbo zangu",
+    "My-church":"Kanisa Langu"
     
   }
 }
