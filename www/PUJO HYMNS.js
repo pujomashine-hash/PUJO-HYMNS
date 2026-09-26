@@ -242,7 +242,8 @@ window.openOfflineSong = async  function openOfflineSong(btn){
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
   updateFavButton();
- showScreenTop("The voice of praise")
+ showScreenTop(`<p data-key="details-top">The voice of praise</p>`)
+     
 }
         
 
@@ -260,7 +261,6 @@ document.addEventListener("click", async (e) => {
   if (!shareBtn) return;
 
   e.stopPropagation();
-alert("clicked")
   const songBtn = shareBtn.closest(".nyimbo, .online-btn");
 
   await Capacitor.Plugins.Share.share({

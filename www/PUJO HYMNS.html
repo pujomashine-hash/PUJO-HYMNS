@@ -24,7 +24,7 @@
   <button class="menu-item"
     id="Downloaded-btn">
     <span>📥</span>
-    <span>Downloaded</span>
+    <span data-key="Downloaded-songs">Downloaded</span>
   </button>
 
   <p class="menu-title">👥 COMMUNITY</p>
@@ -32,7 +32,7 @@
   <button class="menu-item"
     id="church-btn">
     <span>⛪</span>
-    <span>Church</span>
+    <span data-key="Church">Church</span>
   </button>
 
   <p class="menu-title">⚙️ SETTINGS</p>
@@ -40,19 +40,19 @@
   <button class="menu-item"
     id="Languagebtn">
     <span>🌐</span>
-    <span>Language</span>
+    <span data-key="Language">Language</span>
   </button>
 
   <button class="menu-item"
     id="theme">
     <span>🎨</span>
-    <span>Theme</span>
+    <span data-key="Theme">Theme</span>
   </button>
 
   <button class="menu-item"
     id="Settings">
     <span>⚙️</span>
-    <span>Settings</span>
+    <span data-key="Settings">Settings</span>
   </button>
 
   <p class="menu-title">ℹ️ MORE</p>
@@ -60,25 +60,25 @@
   <button class="menu-item"
     id="share-app">
     <span>🤝</span>
-    <span>Share App</span>
+    <span data-key="settings-share">Share App</span>
   </button>
 
   <button class="menu-item"
     id="Rate-app">
     <span>⭐</span>
-    <span>Rate App</span>
+    <span data-key="Rate">Rate App</span>
   </button>
 
   <button class="menu-item"
     id="Contact">
     <span>📞</span>
-    <span>Contact Us</span>
+    <span data-key="Contact">Contact Us</span>
   </button>
 
   <button class="menu-item"
     id="about-btn">
     <span>ℹ️</span>
-    <span>About</span>
+    <span data-key="settings-about">About</span>
   </button>
 
   <div class="menu-footer"
@@ -161,7 +161,8 @@
 <section id="My-music">
   <div id="My-music-header">
     <h2 id="Home-header1" data-key="My-music"> My music</h2>
-    <button class="see-all">See all</button>
+    <button class="see-all"
+    data-key="all">See all</button>
   </div>
 
   <div id="My-music-list">
@@ -171,7 +172,8 @@
 <section id="New-songs">
   <div id="New-songs-header">
     <h2 id="Home-header2" data-key="New-songs">New songs</h2>
-    <button class="see-all">See all</button>
+    <button class="see-all"
+      data-key="all">See all</button>
   </div>
   <div id="New-songs-list">
     <!--nyimbo 3-->
@@ -181,7 +183,8 @@
 <section id="My-church">
   <div id="My-church-header">
     <h2 id="Home-header3" data-key="My-church">My church </h2>
-    <button class="see-all">See all </button>
+    <button class="see-all"
+      data-key="all">See all </button>
   </div>
   <div id="My-church-song-list">
   </div>
@@ -190,7 +193,8 @@
 <section id="Downloaded-songs">
   <div id="Downloaded-songs-header">
     <h2 data-key="Downloaded-songs">Downloaded</h2>
-    <button class="see-all">See all </button>
+    <button class="see-all"
+      data-key="all">See all </button>
   </div>
   <div id="Downloaded-songs-list">
     <p id="No Download">No Downloaded songs </p>
@@ -224,22 +228,25 @@
 </div>
 <div id="New-songs-screen" class="screen">
     <div class="New-screen-header">
-      <button class="back-new-songs">Back </button>
-      <h2>New hymns </h2>
+      <button class="back-new-songs
+       data-key="back">Back </button>
+      <h2 data-key="New-hymns">New hymns </h2>
     </div>
     <div id="New-songs-screen-list"></div>
 </div>
 <div id="My-church-screen" class="screen">
   <div id="My-church-screen-header" class="New-screen-header">
-    <button class="back-new-songs">Back </button>
+    <button class="back-new-songs"
+    data-key="back">Back </button>
     <h2>From my church </h2>
   </div>
   <div id="My-church-screen-list"></div>
 </div>
 <div id="Downloaded-screen" class="screen">
   <div id="Download-screen-header">
-    <button class="back-new-songs">Back </button>
-    <h2> Offline Hymns </h2>
+    <button class="back-new-songs"
+      data-key="back">Back </button>
+    <h2 data-key="Offline-hymns"> Offline Hymns </h2>
     <button id="Download-count">0</button>
   </div>
   <div id="Download-screen-list"></div>
@@ -294,7 +301,7 @@
     </div>
     <div id="Category-songs">
       <div id="Catjina-Container"> 
-      <button id="Exit">⌫</button><p id="Catjina">Category name</p> </div>
+       <button id="Exit">⌫</button><p id="Catjina">Category name</p> </div>
       <!--filtered button will appear here -->
     </div>
   </div>

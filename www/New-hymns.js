@@ -39,7 +39,7 @@ window.createOnlineSongs= createOnlineSongs;
  function createOnlineSongs (song){
   const onlineBtn= document.createElement("button")
      onlineBtn.className="online-btn"
-   onlineBtn.dataset.id = song._id
+   onlineBtn.dataset.id = song._id || song.id;
    onlineBtn.dataset.file = song.file;
 onlineBtn.dataset.lyrics = song.lyrics;
 onlineBtn.dataset.image = song.image;
@@ -186,7 +186,7 @@ async  function openOnlineSongs(btn){
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
   updateFavButton();
- showScreenTop("The voice of praise")
+ showScreenTop(`<p data-key="details-top"></p>`)
 }
         
     
@@ -222,6 +222,7 @@ async  function openOnlineSongs(btn){
   if (!onlineBtn) return;
 
   openOnlineSongs(onlineBtn);
+ lastScreen="song-list"
 });
 
   NewSeeAllBtn.addEventListener("click",()=>{
@@ -247,6 +248,8 @@ async  function openOnlineSongs(btn){
   if (!onlineBtn) return;
 
   openOnlineSongs(onlineBtn);
+    NewSongScreen.style.display="none"
+    lastScreen="New-songs-screen"
 });
   
 })

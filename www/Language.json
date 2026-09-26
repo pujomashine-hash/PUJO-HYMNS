@@ -8,7 +8,21 @@
     "settings-about":"About",
     "New-songs":"New songs ",
     "My-music":"My music",
-    "My-church":"My church"
+    "My-church":"My church",
+    "fav-top":"Favourite Hymns",
+    "Downloaded-songs":"Downloaded",
+    "makundi-top":"Collections and Categories",
+    "details-top":"The voice of paise",
+    "Language":"Language",
+    "Theme":"Theme",
+    "Contact":"Contact",
+    "Rate":"Rate app",
+    "Settings":"Settings",
+    "Church":"Church",
+    "all":"see all",
+    "back":"Back",
+    "New-hymns":"New hymns",
+    "Offline-hymns":"Offline Hymns"
   },
   "sw": {
     "nav_home": "🏠 Nyumbani",
@@ -19,7 +33,20 @@
     "settings-about":"Kuhusu",
     "New-songs":"Nyimbo mpya ",
     "My-music":"Nyimbo zangu",
-    "My-church":"Kanisa Langu"
-    
+    "My-church":"Kanisa Langu",
+    "Downloaded-songs":"Zilizopakuliwa",
+    "fav-top":"Nyimbo Pendwa",
+    "makundi-top":"Makundi ya Nyimbo",
+    "details-top":"Sauti ya kusifu",
+    "Language":"Lugha",
+    "Theme":"Mandhari",
+    "Contact":"Mawasiliano",
+    "Rate":"Tathmini",
+    "Settings":"Mipangilio",
+    "Church":"Kanisa",
+    "all":"Tembelea",
+    "back":"Nyuma",
+    "New-hymns":"Nyimbo mpya",
+    "Offline-hymns":"Zilizopakuliwa"
   }
 }

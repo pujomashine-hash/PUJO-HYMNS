@@ -308,7 +308,7 @@
 
 .author{
     text-align:center;
-    color:#888;
+    color:#ce4cce;
     margin-bottom:25px;
 }
 
@@ -322,7 +322,7 @@
 
 .lyrics-chorus{
     font-weight:bold;
-    color:#0a84ff;
+    color:yellow;
 }
 
 @keyframes spin{
@@ -333,6 +333,12 @@
 body.light-mode #update-btn{
   color: white;
   background: black;
+}
+body.light-mode .author {
+  color: #888;
+}
+body.light-mode .lyrics-chorus{
+  color: #0a84ff;
 }
 
 body.light-mode .online-btn,

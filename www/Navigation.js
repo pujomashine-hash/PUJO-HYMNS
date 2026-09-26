@@ -18,6 +18,7 @@ const Songcontainer = document.getElementById("Category-songs");
   const CategoryNames = document.getElementById("Category-names");
 const screenTop = document.getElementById("screen-top")
 const screenTitle= document.getElementById("screen-title")
+  
 window.showScreenTop=showScreenTop
 window.hideScreenTop=hideScreenTop
   
@@ -36,7 +37,12 @@ if (playlistContainer) {
   function showScreenTop(title){
     Top.style.display = "none";
     screenTop.style.display = "flex";
-    screenTitle.textContent = title;
+    screenTitle.innerHTML = title;
+
+    // translate element mpya
+    if (window.applyLanguage) {
+        window.applyLanguage(currentLang);
+    }
 }
 
 function hideScreenTop(){
@@ -58,7 +64,7 @@ navButtons.forEach(btn => {
    
     
     if (targetId === "favourite") {
-      showScreenTop("favourite")
+      showScreenTop(`<p data-key="fav-top">favourites</p>`)
       document.querySelectorAll(".nyimbo").forEach(btn => {
         btn.style.display = "";
       });
@@ -107,11 +113,15 @@ if (targetId === "playlist-category") {
     // Kila uki-click Makundi, anza upya
     window.activeCategory = null;
     window.categoryView = "names";
-    showScreenTop("Makundi")
+    showScreenTop(`<p data-key="makundi-top"> Makundi</p>`)
     document.getElementById(targetId).style.display = "grid";
     CategoryNames.style.display = "grid";
     Songcontainer.style.display = "none";
-    document.getElementById("Catjina-Container").style.display = "none";
+    document.getElementById("Catjina-Container").style.display = "none"
+  const threeDots = document.querySelectorAll(".three-dots").forEach(dot =>{
+    dot.style.display="none"
+  })
+   
 }
 
   
@@ -150,7 +160,8 @@ if (targetId === "playlist-category") {
             break;
 
         case "playlist-category":
-            showScreenTop("Makundi");
+            showScreenTop(`<p data-key="makundi-top">Makundi</p>`)
+     
 
             if (window.categoryView === "names") {
                 CategoryNames.style.display = "grid";
@@ -162,7 +173,8 @@ if (targetId === "playlist-category") {
             break;
 
         case "favourite":
-            showScreenTop("Favourite");
+            showScreenTop(`<p data-key="fav-top">favourites</p>`)
+     
             break;
 
         case"Artist-screen":
@@ -175,8 +187,19 @@ if (targetId === "playlist-category") {
 
     // Rudisha scroll
     requestAnimationFrame(() => {
+
+    if (window.lastScreen === "playlist-category" &&
+        window.categoryView === "songs") {
+
+        Songcontainer.scrollTop = window.categoryScroll || 0;
+
+    } else {
+
         window.scrollTo(0, window.scrollPosition || 0);
-    });
+
+    }
+
+});
 
 }); 
   

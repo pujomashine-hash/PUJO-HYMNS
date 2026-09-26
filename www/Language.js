@@ -14,7 +14,7 @@ fetch("Language.json")
   });
 
 
-function applyLanguage(lang) {
+window.applyLanguage= function applyLanguage(lang) {
   currentLang = lang;
   localStorage.setItem("lang", lang);
   document.querySelectorAll("[data-key]").forEach(el => {
