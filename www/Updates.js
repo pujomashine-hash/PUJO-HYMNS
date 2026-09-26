@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //initial update check
 function checkUpdate() {
-  const currentVersion = "1.0.4";  document.getElementById("Version").textContent=`Version `+ currentVersion 
+  const currentVersion = "1.0.5";  document.getElementById("Version").textContent=`Version `+ currentVersion 
 
   fetch("https://raw.githubusercontent.com/pujomashine-hash/PUJO-HYMNS/main/Version.json")
     .then(res => res.json())

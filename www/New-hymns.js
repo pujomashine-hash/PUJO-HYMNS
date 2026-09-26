@@ -68,7 +68,6 @@ onlineBtn.dataset.artist = song.artist;
   `;
   return onlineBtn;
 }
-getSongs()
 
 function renderLyrics(text) {
   const container = document.getElementById("lyrics");
