@@ -51,8 +51,11 @@ searchInput.addEventListener("input", () => {
 searchResults.addEventListener("click", (e) => {
   const btn = e.target.closest(".nyimbo, .online-btn");
   if (!btn) return;
-
-  openSong(btn);
+   if (btn.className==="nyimbo") {
+     openOfflineSong(btn)
+   }else{
+  openOnlineSongs(btn);
+   }
   lastScreen="search-screen"
   searchScreen.style.display="none"
 });

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title> PUJO HYMNS </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="PUJO HYMNS.css">
+  <link rel="stylesheet" href="Online-songs.css">
+  <link rel="manifest" href="manifest.json">
+ </head>
+ <body>
+   <!-- MENU NA TOP -->
+ <button id="menu-btn">☰</button>
+    <div id="overlay"></div>
+    <div id="menu">
+
+  <div class="menu-header">
+    <button id="close-menu">✕</button>
+    <h2 id="menu-header">PUJO HYMNS</h2>
+  </div>
+
+  <p class="menu-title">📚 LIBRARY</p>
+
+  <button class="menu-item"
+    id="Downloaded-btn">
+    <span>📥</span>
+    <span>Downloaded</span>
+  </button>
+
+  <p class="menu-title">👥 COMMUNITY</p>
+
+  <button class="menu-item"
+    id="church-btn">
+    <span>⛪</span>
+    <span>Church</span>
+  </button>
+
+  <p class="menu-title">⚙️ SETTINGS</p>
+
+  <button class="menu-item"
+    id="Languagebtn">
+    <span>🌐</span>
+    <span>Language</span>
+  </button>
+
+  <button class="menu-item"
+    id="theme">
+    <span>🎨</span>
+    <span>Theme</span>
+  </button>
+
+  <button class="menu-item"
+    id="Settings">
+    <span>⚙️</span>
+    <span>Settings</span>
+  </button>
+
+  <p class="menu-title">ℹ️ MORE</p>
+
+  <button class="menu-item"
+    id="share-app">
+    <span>🤝</span>
+    <span>Share App</span>
+  </button>
+
+  <button class="menu-item"
+    id="Rate-app">
+    <span>⭐</span>
+    <span>Rate App</span>
+  </button>
+
+  <button class="menu-item"
+    id="Contact">
+    <span>📞</span>
+    <span>Contact Us</span>
+  </button>
+
+  <button class="menu-item"
+    id="about-btn">
+    <span>ℹ️</span>
+    <span>About</span>
+  </button>
+
+  <div class="menu-footer"
+    id="Version">
+    Version 2.0.0
+  </div>
+    </div>
+   <div id="popup-overlay"></div>
+   <div id="popup">
+     <div class="popup-header">
+       <h3 id="popup-title"></h3>
+       <button id="popup-close">✕</button>
+     </div>
+     <div id="popup-content">
+       popup content
+     </div>
+   </div>
+
+   <div id="top">
+          <button id="search-toggle">🔎</button>
+          <button id="notification-toggle">
+            💬⁰
+          </button>
+   </div>
+   
+
+    <div id="song-list" class="screen">
+    <!-- PLAYLIST -->
+     <div id="playlist-container">
+      <div id="playlist-content">
+       <div class="playlist">
+         <div class="circle" style="background-image:url(https://ik.imagekit.io/pry8rixl0/logo.png)"></div>
+         <div class="playlist-name">PUJO hymns</div>
+       </div>
+       <div class="playlist">
+         <div class="circle" style="background-image:url(https://ik.imagekit.io/pry8rixl0/I.jpeg)"></div>
+         <div class="playlist-name">Kijitonyama youth choir</div>
+       </div>
+       <div class="playlist">
+         <div class="circle" id="Kwaya-kuu-Mabibo"></div>
+         <div class="playlist-name">
+           Kwaya kuu KKKT-<br>Mabibo external
+         </div>
+       </div>
+       <div class="playlist">
+         <div class="circle" id="Mt-Yohane-Paulo-II"></div>
+         <div class="playlist-name">Kwaya ya mt. Yohane <br>Paulo II Kibao-Mafinga</div>  
+       </div>
+       <div class="playlist">
+         <div class="circle" id="Kwaya-ya-mt-romano-mtunzi"></div>
+         <div class="playlist-name">Kwaya ya Mt.<br> Romano Mtunzi</div>
+       </div>
+       <div class="playlist">
+         <div class="circle" style="background-image:url(https://ik.imagekit.io/pry8rixl0/IMG-20260416-WA0004.jpg?updatedAt=1776533786779)"></div>
+         <div class="playlist-name">Sylivester Soud</div>
+       </div>
+       <div class="playlist">
+         <div class="circle" id="Kwaya-kuu-mwimbieni-Bwana"></div>
+         <div class="playlist-name">Kwaya kuu mwimbieni<br> Bwana-KKKT Dodoma</div>
+       </div>
+       <div class="playlist">
+         <div class="circle" id="Nyasubi-youth-choir"></div>
+         <div class="playlist-name">Nyasubi youth SDA<br> choir</div>
+       </div>
+       <div class="playlist">
+         <div class="circle" style="background-image:url(https://ik.imagekit.io/pry8rixl0/EH.png)"></div>
+         <div class="playlist-name">English Hymns</div>
+       </div>
+       <div class="playlist">
+         <div class="circle" id="German-Hymns"></div>
+        <div class="playlist-name">German Hymns</div>
+       </div>
+     </div>
+   </div>
+     <div id="ad">
+      <a href="https://youtube.com/@pujotv496?si=wCMmeRJu4cM1Prrn" target="_blank">
+        <img src="https://ik.imagekit.io/pry8rixl0/Sample%20ad.jpg">
+      </a>
+     </div>
+<section id="My-music">
+  <div id="My-music-header">
+    <h2 id="Home-header1" data-key="My-music"> My music</h2>
+    <button class="see-all">See all</button>
+  </div>
+
+  <div id="My-music-list">
+    <!-- Nyimbo 5 za kwanza -->
+  </div>
+</section>
+<section id="New-songs">
+  <div id="New-songs-header">
+    <h2 id="Home-header2" data-key="New-songs">New songs</h2>
+    <button class="see-all">See all</button>
+  </div>
+  <div id="New-songs-list">
+    <!--nyimbo 3-->
+    <div id="New-songs-loader" class="loader"></div>
+  </div>
+</section>
+<section id="My-church">
+  <div id="My-church-header">
+    <h2 id="Home-header3" data-key="My-church">My church </h2>
+    <button class="see-all">See all </button>
+  </div>
+  <div id="My-church-song-list">
+  </div>
+  <div id="My-church-loader" class="loader"></div>
+</section>
+<section id="Downloaded-songs">
+  <div id="Downloaded-songs-header">
+    <h2 data-key="Downloaded-songs">Downloaded</h2>
+    <button class="see-all">See all </button>
+  </div>
+  <div id="Downloaded-songs-list">
+    <p id="No Download">No Downloaded songs </p>
+  </div>
+</section>
+ </div>
+<div id="Artist-screen" class="screen" data-target="Artist-screen">
+       <div id="jina-container">
+         <button id="All"> Back </button>
+         <p id="jina"> PUJO Hymns</p>
+       </div>
+       <div id="Artist-screen-list"></div>
+</div>
+   <!-- Full My Music Screen -->
+<div id="my-music-screen" class="screen">
+
+  <div id="screen-header">
+    <button id="back-my-music">←</button>
+    <h2>My Music</h2>
+  </div>
+
+  <div id="my-music-screen-list">
+    <!-- Nyimbo zote zitawekwa hapa -->
+  </div>
+</div>
+<div id="search-screen" class="screen">
+  <div id="Search-header">
+    <input type="text" placeholder="Tafuta wimbo  hapa" id="search">
+  </div>
+  <div id="search-results"><!--Songs will be filtered here --></div>
+</div>
+<div id="New-songs-screen" class="screen">
+    <div class="New-screen-header">
+      <button class="back-new-songs">Back </button>
+      <h2>New hymns </h2>
+    </div>
+    <div id="New-songs-screen-list"></div>
+</div>
+<div id="My-church-screen" class="screen">
+  <div id="My-church-screen-header" class="New-screen-header">
+    <button class="back-new-songs">Back </button>
+    <h2>From my church </h2>
+  </div>
+  <div id="My-church-screen-list"></div>
+</div>
+<div id="Downloaded-screen" class="screen">
+  <div id="Download-screen-header">
+    <button class="back-new-songs">Back </button>
+    <h2> Offline Hymns </h2>
+    <button id="Download-count">0</button>
+  </div>
+  <div id="Download-screen-list"></div>
+</div>
+
+  <div id="song-details" class="screen">
+     <div class="player">
+         <p id="playing"> Nothing here </p>
+         <audio id="audio"> </audio>
+         <button class="controlbtn" id="Font-changer">A</button>
+         <button id="back" class="controlbtn"> ⌫</button>
+       <button id="play" class="controlbtn">  ⏯ </button>
+         <button id="fav" class="controlbtn" > ♥️</button>
+         <button id="Download" class="controlbtn">📥</button>
+         <div id="progress-container">
+          <div id="progress"></div>
+        </div>
+     </div>
+            <p id="lyrics"> </p>
+  </div>
+
+      <div id="screen-top">
+    <h2 id="screen-title"></h2>
+      </div>
+  <!-- Playlist Screen-->
+  <div id="playlist-category" class="screen">
+    <div id="Category-names">
+       <div id="Pasaka" class="Category">Pasaka</div>
+       <div id="Kwaresma" class="Category">Kwaresma</div>
+       <div id="Christmas" class="Category"> Christmas</div>
+       <div id="Kuabudu" class="Category">Kuabudu</div>
+       <div id="Kusifu" class="Category">Kusifu</div>
+       <div id="General" class="Category">General</div>
+       <div id="Sadaka" class="Category"> Sadaka</div>
+       <div id="Ndoa" class="Category"> Ndoa</div>
+       <div id="Ekaristi" class="Category"> Ekaristi</div>
+       <div id="Mazishi" class="Category"> Mazishi</div>
+       <div id="Nyimbo-za-asili" class="Category">Nyimbo za asili</div>
+       <div id="Watoto" class="Category"> Watoto</div>
+       <div id="Shukrani" class="Category"> Shukrani </div>
+       <div id="Mavuno" class="Category">Mavuno </div>
+       <div id="Majilio" class="Category"> Majilio </div>
+       <div id="Devotion" class="Category"> Devotion </div>
+       <div id="Patriotic" class="Category"> Patriotic </div>
+       <div id="Ubatizo" class="Category"> Ubatizo</div>
+       <div id="Kipaimara" class="Category">Kipaimara </div>
+       <div id="Kitubio" class="Category"> Kitubio </div>
+       <div id="Vijana" class="Category"> Vijana</div>
+       <div id="Wanawake" class="Category"> Wanawake</div>
+       <div id="Ibada" class="Category">Ibada</div>
+       <div id="Victory" class="Category">Victory</div>
+    </div>
+    <div id="Category-songs">
+      <div id="Catjina-Container"> 
+      <button id="Exit">⌫</button><p id="Catjina">Category name</p> </div>
+      <!--filtered button will appear here -->
+    </div>
+  </div>
+   <!--Hii ni Favourite screen. -->
+  <div id="favourite" class="screen">
+         <p id="fav-message"> </p>
+  </div>
+  <!-- navigation-bar-->
+  <div id="navigation-bar">
+    <button class="change"
+    data-target="song-list" data-key="nav_home">🏠 Home </button> 
+    <button class="change"
+    data-target="playlist-category" data-key="nav_playlist">🎬 Playlist</button>
+    <button class="change"
+    data-target="favourite" data-key="nav_favourite">♥️ Favourite</button>
+  </div>
+  <script  src="PUJO HYMNS.js"> </script>
+  <script src="Playlist-screen.js"></script>
+  <script src="Language.js"></script>
+  <script src="Navigation.js"></script>
+  <script src="Search.js"></script>
+  <script src="Player.js"></script>
+  <script src="Favourite-screen.js"></script>
+   <script src="Artist-screen.js"></script>
+   <script src="New-hymns.js"></script>
+     <script src="Download-screen.js"></script>
+   <script src="Updates.js"></script>
+   <script src="Theme.js"></script>
+   <script src="My church.js"></script>
+ </body>
+</html>

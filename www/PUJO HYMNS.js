@@ -26,7 +26,7 @@ if (sharebtn) {
       await Capacitor.Plugins.Share.share({
         title: 'PUJO HYMNS',
         text: 'Install for free',
-        url: 'https://www.mediafire.com/folder/eyz4rcw94hr5l/Updates'
+        url: 'https://apkpure.com/pujo-hymns/com.pujo.hymns'
       });
     } catch (e) {
       console.log(e);
@@ -172,18 +172,18 @@ if (MediaSession && !controlsInitialized) {
       myMusicScreen.style.display="none"
       const btn = e.target.closest(".nyimbo")
     if(!btn)  return
-      openSong(btn)
+      openOfflineSong(btn)
       lastScreen = "my-music-screen"
     }
                                       )
    songList.addEventListener("click", async(e) => {
      const btn = e.target.closest(".nyimbo");
      if(!btn) return
- openSong(btn)
+ openOfflineSong(btn)
      lastScreen ="song-list"
 });
     
-window.openSong = async  function openSong(btn){
+window.openOfflineSong = async  function openOfflineSong(btn){
   
   scrollPosition = window.scrollY
 
@@ -201,6 +201,7 @@ window.openSong = async  function openSong(btn){
       directory: "DATA"
     });
     audio.src = "data:audio/mpeg;base64," + result.data;
+    audio.load();
   } catch (e) {
     // File haipo — cheza online
     audio.src = btn.dataset.file;
@@ -239,30 +240,6 @@ window.openSong = async  function openSong(btn){
  showScreenTop("The voice of praise")
 }
         
-    play.addEventListener("click", async () => {
-
-  if (audio.paused) {
-
-    await audio.play();
-
-    MediaSession?.setPlaybackState({
-      playbackState: "playing"
-    });
-
-    play.textContent = "▶";
-
-  } else {
-
-    audio.pause();
-
-    MediaSession?.setPlaybackState({
-      playbackState: "paused"
-    });
-
-    play.textContent = "⏯";
-
-}
-  })
 
     document.querySelectorAll(".three-dots").forEach(dot => {
       dot.addEventListener("click",(e)=>{
@@ -272,6 +249,24 @@ window.openSong = async  function openSong(btn){
 
     
 
+
+document.addEventListener("click", async (e) => {
+  const shareBtn = e.target.closest(".share");
+  if (!shareBtn) return;
+
+  e.stopPropagation();
+
+  const songBtn = shareBtn.closest(".nyimbo, .online-btn");
+
+  await Capacitor.Plugins.Share.share({
+    title: songBtn.querySelector(".title").textContent,
+    text: "Come and Praise the Lord together",
+    url: "https://apkpure.com/pujo-hymns/com.pujo.hymns"
+  });
+});
+
+
+    
 
 
 //MENU

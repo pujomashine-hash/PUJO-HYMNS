@@ -103,7 +103,10 @@ if (!exists) {
 
   } catch (error) {
     Downloadbtn.textContent = "📥";
-    openPopup("Notice",
+    openPopup(`<div class="popup-title">
+    <span class="popup-logo-btn"></span>
+    <p>Notice</p>
+  </div>`,
              `<p>1.Note only audio from choirs are allowed to download up to now</p> <br>
              <p>2.By consider the notice(1) above Check the network and try again`);
   }
@@ -129,7 +132,10 @@ Downloadbtn.addEventListener("click", () => {
   const fileUrl = currentSong.file;
 
   if (!fileUrl) {
-    openPopup("Notice",
+    openPopup(`<div class="popup-title">
+    <span class="popup-logo-btn"></span>
+    <p>Notice</p>
+  </div>`,
              "😭😭Currently there is no audio file for this song Yo can browse only the song's lyrics.Thank you.")
     return;
   }
@@ -182,7 +188,7 @@ SeeAllDownloaded.addEventListener("click",()=>{
 DownloadScreenList.addEventListener("click",(e)=>{
   const onlineBtn = e.target.closest(".online-btn")
    if(!onlineBtn) return
-    openSong(onlineBtn);
+    openOnlineSongs(onlineBtn);
     DownloadScreen.style.display="none"
     lastScreen= "Downloaded-screen"
 })

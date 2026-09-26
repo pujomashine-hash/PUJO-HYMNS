@@ -14,16 +14,25 @@ function checkUpdate() {
     .then(data => {
 
       if (data.version !== currentVersion) {
-        if (confirm("The new version is available do yo want to install it?(Kuna update mpya Unataka kupakua?)")) {
-          window.location.href = data.url;
-        }
+       openPopup(`<div class="popup-title">
+    <span class="popup-logo-btn"></span>
+    <p>Update</p>
+  </div>`,
+        `<div>
+          <p data-key="update-message" class="update-message">The new version of PUJO Hymns available click the button below to install it</p>
+          <button id="update-btn" data-key="update-btn">Update</button>
+        </div>`)
       } 
-
+  const UpdateBtn = document.getElementById("update-btn")
+    UpdateBtn.addEventListener("click",()=>{
+      window.location.href=data.url
+    })
+      
     })
     .catch(() => {
     });
 }
-checkUpdate();
+  checkUpdate();
 
 
 function toggleOnlineSections(show) {

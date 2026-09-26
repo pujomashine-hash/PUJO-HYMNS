@@ -289,11 +289,50 @@
   background-size: cover;
   display: inline-block;
 }
+#update-btn{
+  font-weight: bold;
+  border-radius: 7px;
+  border: 2px solid black;
+  width: 80px;
+  height: 40px;
+}
+.update-message{
+  font-weight: bold;
+}
+.lyrics-title{
+    font-size:28px;
+    font-weight:bold;
+    text-align:center;
+    margin:20px 0;
+}
+
+.author{
+    text-align:center;
+    color:#888;
+    margin-bottom:25px;
+}
+
+.lyrics-verse,
+.lyrics-chorus,
+.lyrics-bridge{
+    white-space:pre-line;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.lyrics-chorus{
+    font-weight:bold;
+    color:#0a84ff;
+}
 
 @keyframes spin{
   to{
     transform: rotate(360deg);
   }
+}
+body.light-mode #update-btn{
+  color: white;
+  background: black;
 }
 
 body.light-mode .online-btn,

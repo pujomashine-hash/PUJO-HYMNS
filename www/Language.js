@@ -30,8 +30,10 @@ SelectedLang.textContent=currentLang;
 
 Languagebtn.addEventListener("click", () => {
 
-  openPopup(
-    "Your Language",
+  openPopup(`<div class="popup-title">
+    <span class="popup-logo-btn"></span>
+    <p> Your Language</p>
+  </div>`,
     `
     <button class="popup-lang" data-lang="sw">Kiswahili</button>
     <button class="popup-lang" data-lang="en">English</button>

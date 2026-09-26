@@ -1,6 +1,7 @@
 
-
 document.addEventListener("DOMContentLoaded", ()=>{
+  const playing = document.getElementById("playing");
+const Downloadbtn = document.getElementById("download-btn");
   
   // media.js
 window.initMediaControls = function(audio, play) {
@@ -58,4 +59,29 @@ audio.addEventListener("error", () => {
 });
 }
 
+play.addEventListener("click", async () => {
+
+  if (audio.paused) {
+
+    await audio.play();
+
+    MediaSession?.setPlaybackState({
+      playbackState: "playing"
+    });
+
+    play.textContent = "▶";
+
+  } else {
+
+    audio.pause();
+
+    MediaSession?.setPlaybackState({
+      playbackState: "paused"
+    });
+
+    play.textContent = "⏯";
+
+}
+  })
+  
 });

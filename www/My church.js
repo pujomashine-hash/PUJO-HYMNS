@@ -114,7 +114,11 @@ if (churchBtn) {
       const select = document.getElementById("church-select");
 
       if (!select.value) {
-        alert("Please choose a church.");
+        openPopup(`<div class="popup-title">
+    <span class="popup-logo-btn"></span>
+    <p>Success</p>
+  </div>`,
+          "Please select a church")
         return;
       }
 
@@ -150,7 +154,7 @@ BackMyChurch.addEventListener("click",()=>{
   screenList.addEventListener("click",(e)=>{
     const onlineBtn = e.target.closest(".online-btn")
    if(!onlineBtn) return
-    openSong(onlineBtn);
+    openOnlineSongs(onlineBtn);
     ChurchScreen.style.display="none"
     lastScreen= "My-church-screen"
   })

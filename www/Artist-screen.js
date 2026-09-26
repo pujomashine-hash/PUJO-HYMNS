@@ -51,7 +51,7 @@ artistList.addEventListener("click",(e)=>{
   artistScreen.style.display="none"
   const btn = e.target.closest(".nyimbo")
     if(!btn)  return
-     window.openSong(btn)
+     openOfflineSong(btn)
   lastScreen="Artist-screen"
 })
   
