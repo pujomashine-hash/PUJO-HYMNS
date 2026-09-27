@@ -20,6 +20,7 @@ const MymusicList= document.getElementById("My-music-list")
 const playlistContainer = document.getElementById("playlist-container");
 
   window.currentSong = null;
+  
 
   
 if (sharebtn) {
@@ -102,8 +103,7 @@ window.createSongButton=    function createSongButton(song){
   observer.observe(btn.querySelector(".lazy-img"));
 return btn;
     }
-    renderFavourites()
-    loadDownloadedSongs();
+    renderFavourites();
     
     data.slice(0, 5).forEach(song => {  MymusicList.appendChild(createSongButton(song));
 });
@@ -111,7 +111,7 @@ return btn;
    data.forEach(song=>{ 
     myMusicScreenList.appendChild(createSongButton(song));                     
 }) 
-
+loadDownloadedSongs()
     
     seeAllBtn.addEventListener("click",()=>{
     songList.style.display="none";
@@ -177,9 +177,7 @@ if (MediaSession && !controlsInitialized) {
       const btn = e.target.closest(".nyimbo")
     if(!btn)  return
       openOfflineSong(btn)
-      lastScreen = "my-music-screen"
-    }
-                                      )
+      lastScreen = "my-music-screen"                         } )
    songList.addEventListener("click", async(e) => {
     if(e.target.closest(".share") || e.target.closest(".three-dots")){
       return
