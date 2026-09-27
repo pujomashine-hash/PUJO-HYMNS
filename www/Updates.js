@@ -19,7 +19,7 @@ function checkUpdate() {
     <p>Update</p>
   </div>`,
         `<div>
-          <p data-key="update-message" class="update-message">The new version of PUJO Hymns available click the button below to install it</p>
+          <p data-key="update-message" class="update-message">The new version of PUJO Hymns available click the button below to install it safely</p>
           <button id="update-btn" data-key="update-btn">Update</button>
         </div>`)
       } 
