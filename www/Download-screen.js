@@ -174,12 +174,12 @@ function loadDownloadedSongs() {
 
   // Home (onyesha 3 tu)
   songs.slice(0, 3).forEach(song => {
-    DownloadList.appendChild(createOnlineSongs(song));
+    DownloadList.appendChild(createSongButton(song));
   });
 
   // Screen nzima
   songs.forEach(song => {
-    DownloadScreenList.appendChild(createOnlineSongs(song));
+    DownloadScreenList.appendChild(createSongButton(song));
   });
 
   DownloadCount.textContent = songs.length;

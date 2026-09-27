@@ -34,7 +34,7 @@ fetch("https://pujo-server.onrender.com/songs")
     loader.style.display="none";
   })
 }
-
+getSongs()
 window.createOnlineSongs= createOnlineSongs;
  function createOnlineSongs (song){
   const onlineBtn= document.createElement("button")

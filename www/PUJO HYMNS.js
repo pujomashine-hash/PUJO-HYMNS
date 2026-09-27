@@ -232,7 +232,7 @@ window.openOfflineSong = async  function openOfflineSong(btn){
   Playing.textContent = currentSong.title + " ᖴᖇOᗰ " + currentSong.artist;
   
 
-
+alert(btn.dataset.lyrics)
   fetch(btn.dataset.lyrics)
     .then(res => res.text())
     .then(text => {
