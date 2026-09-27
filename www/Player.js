@@ -2,6 +2,8 @@
 document.addEventListener("DOMContentLoaded", ()=>{
   const playing = document.getElementById("playing");
 const Downloadbtn = document.getElementById("download-btn");
+  const play = document.getElementById("play");
+  const MediaSession = window.Capacitor?.Plugins?.MediaSession;
   
   // media.js
 window.initMediaControls = function(audio, play) {
@@ -58,6 +60,10 @@ audio.addEventListener("error", () => {
   Downloadbtn.textContent="❔"
 });
 }
+
+  if (audio && play) {
+  initMediaControls(audio, play);
+  }
 
 play.addEventListener("click", async () => {
 
