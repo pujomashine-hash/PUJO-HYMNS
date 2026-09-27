@@ -189,6 +189,14 @@ SeeAllDownloaded.addEventListener("click",()=>{
   OpenDownloadScreen()
 })
 
+DownloadList.addEventListener("click",(e)=>{
+  const btn= e.target.closest(".online-btn")
+   if(!btn) return
+    openOfflineSong(btn);
+    SongList.style.display="none"
+    lastScreen= "song-list"
+})
+
 DownloadScreenList.addEventListener("click",(e)=>{
   const btn= e.target.closest(".online-btn")
    if(!btn) return
