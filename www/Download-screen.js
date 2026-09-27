@@ -190,7 +190,7 @@ SeeAllDownloaded.addEventListener("click",()=>{
 })
 
 DownloadList.addEventListener("click",(e)=>{
-  const btn= e.target.closest(".online-btn")
+  const btn= e.target.closest(".nyimbo")
    if(!btn) return
     openOfflineSong(btn);
     SongList.style.display="none"
@@ -198,7 +198,7 @@ DownloadList.addEventListener("click",(e)=>{
 })
 
 DownloadScreenList.addEventListener("click",(e)=>{
-  const btn= e.target.closest(".online-btn")
+  const btn= e.target.closest(".nyimbo")
    if(!btn) return
     openOfflineSong(btn);
     DownloadScreen.style.display="none"
