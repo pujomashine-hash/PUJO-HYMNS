@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const favBtn = document.getElementById("fav");
   const favScreen = document.getElementById("favourite");
-
+  
   let favourites =
     JSON.parse(localStorage.getItem("favourites")) || [];
   // ===============================
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ===============================
-  renderFavourites()
+  
   // ===============================
 
 });
