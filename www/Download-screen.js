@@ -109,7 +109,9 @@ if (!exists) {
   </div>`,
              `<p>1.Note only audio from choirs are allowed to download up to now</p> <br>
              <p>2.By consider the notice(1) above Check the network and try again`);
+    alert(error)
   }
+  
 }
 
 
