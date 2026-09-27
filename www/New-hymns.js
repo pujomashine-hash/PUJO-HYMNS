@@ -164,7 +164,7 @@ async  function openOnlineSongs(btn){
   artwork: []
 });
      
-  Playing.textContent = currentSong.title + " - " + currentSong.artist;
+  Playing.textContent = currentSong.title + " ᖴᖇOᗰ " + currentSong.artist;
   
 
 
