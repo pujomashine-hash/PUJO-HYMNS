@@ -8,7 +8,9 @@ const SongList = document.getElementById("song-list")
 const SeeAllDownloaded= document.querySelector("#Downloaded-songs-header .see-all")
 const DownloadScreen = document.getElementById("Downloaded-screen")
 const menuBtn = document.getElementById("menu-btn")
-const DownloadedBack=document.querySelector("#Download-screen-header .back-new-songs")
+const DownloadedBack=document.querySelector
+  ("#Download-screen-header .back-new-songs")
+  const Filesystem = window.Capacitor?.Plugins?.Filesystem;
 
 window.loadDownloadedSongs = loadDownloadedSongs;
 window.updateDownloadBtn=updateDownloadBtn;
@@ -109,7 +111,7 @@ if (!exists) {
   </div>`,
              `<p>1.Note only audio from choirs are allowed to download up to now</p> <br>
              <p>2.By consider the notice(1) above Check the network and try again`);
-    alert(error)
+    
   }
   
 }
