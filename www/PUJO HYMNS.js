@@ -103,6 +103,7 @@ window.createSongButton=    function createSongButton(song){
 return btn;
     }
     renderFavourites()
+    loadDownloadedSongs();
     
     data.slice(0, 5).forEach(song => {  MymusicList.appendChild(createSongButton(song));
 });
@@ -232,7 +233,6 @@ window.openOfflineSong = async  function openOfflineSong(btn){
   Playing.textContent = currentSong.title + " ᖴᖇOᗰ " + currentSong.artist;
   
 
-alert(btn.dataset.lyrics)
   fetch(btn.dataset.lyrics)
     .then(res => res.text())
     .then(text => {

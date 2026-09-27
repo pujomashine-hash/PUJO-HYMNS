@@ -158,7 +158,7 @@ function OpenDownloadScreen (){
 
 
 
-function loadDownloadedSongs() {
+window.loadDownloadedSongs = function loadDownloadedSongs() {
 
   const songs =
     JSON.parse(localStorage.getItem("downloadedSongs")) || [];
@@ -190,6 +190,10 @@ SeeAllDownloaded.addEventListener("click",()=>{
 })
 
 DownloadList.addEventListener("click",(e)=>{
+   if (e.target.closest(".share") || e.target.closest(".three-dots")) {
+    return;
+   }
+  
   const btn= e.target.closest(".nyimbo")
    if(!btn) return
     openOfflineSong(btn);
@@ -198,6 +202,10 @@ DownloadList.addEventListener("click",(e)=>{
 })
 
 DownloadScreenList.addEventListener("click",(e)=>{
+   if (e.target.closest(".share") || e.target.closest(".three-dots")) {
+    return;
+  }
+  
   const btn= e.target.closest(".nyimbo")
    if(!btn) return
     openOfflineSong(btn);
@@ -212,7 +220,6 @@ DownloadedBack.addEventListener("click",()=>{
 })
 
 
-    loadDownloadedSongs();
 
 
 const Downloadedbtn= document.getElementById("Downloaded-btn").addEventListener("click",()=>{
