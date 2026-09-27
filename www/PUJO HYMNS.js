@@ -20,7 +20,7 @@ const MymusicList= document.getElementById("My-music-list")
 const playlistContainer = document.getElementById("playlist-container");
   window.currentSong = null;
 
-  alert("Build today")
+  
 if (sharebtn) {
   sharebtn.addEventListener("click", async () => {
     try {
