@@ -156,8 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ===============================
-  // INITIAL LOAD
+  renderFavourites()
   // ===============================
-  setTimeout(renderFavourites, 0);
 
 });
