@@ -118,18 +118,15 @@ if (targetId === "playlist-category") {
     CategoryNames.style.display = "grid";
     Songcontainer.style.display = "none";
     document.getElementById("Catjina-Container").style.display = "none"
-  const threeDots = document.querySelectorAll(".three-dots").forEach(dot =>{
-    dot.style.display="none"
-  })
    
-}
+} 
 
   
 } else {
 
   document.getElementById(targetId).style.display = "block";
   searchInput.style.visibility = "visible";
-
+    
     }
 })
 })

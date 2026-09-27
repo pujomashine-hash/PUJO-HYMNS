@@ -10,38 +10,24 @@ document.addEventListener("DOMContentLoaded", () => {
     
   function buildCategorySongs() {
 
-  if (!window.allSongs || !window.onlineSongs) {
-    setTimeout(buildCategorySongs, 200);
-    return;
+  if (window.allSongs) {
+    window.allSongs.forEach(song => {
+      const btn = createSongButton(song);
+      btn.dataset.Category = song.Category;
+      btn.style.display = "none";
+      CategorySongs.appendChild(btn);
+    });
   }
 
-  
-
-  // OFFLINE
-  window.allSongs.forEach(song => {
-
-    const btn = createSongButton(song);
-
-    btn.dataset.Category = song.Category;
-    btn.style.display = "none";
-
-    CategorySongs.appendChild(btn);
-
-  });
-
-  // ONLINE
-  window.onlineSongs.forEach(song => {
-
-    const btn = createOnlineSongs(song);
-
-    btn.dataset.Category = song.Category;
-    btn.style.display = "none";
-
-    CategorySongs.appendChild(btn);
-
-  });
-
+  if (window.onlineSongs) {
+    window.onlineSongs.forEach(song => {
+      const btn = createOnlineSongs(song);
+      btn.dataset.Category = song.Category;
+      btn.style.display = "none";
+      CategorySongs.appendChild(btn);
+    });
   }
+}
 buildCategorySongs();
 
     document.querySelectorAll(".Category").forEach(cat => {

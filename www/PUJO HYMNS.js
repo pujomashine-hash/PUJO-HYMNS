@@ -18,6 +18,7 @@ const searchToggle= document.getElementById("search-toggle")
   const songList = document.getElementById("song-list");
 const MymusicList= document.getElementById("My-music-list")
 const playlistContainer = document.getElementById("playlist-container");
+
   window.currentSong = null;
 
   
@@ -101,6 +102,7 @@ window.createSongButton=    function createSongButton(song){
   observer.observe(btn.querySelector(".lazy-img"));
 return btn;
     }
+    renderFavourites()
     
     data.slice(0, 5).forEach(song => {  MymusicList.appendChild(createSongButton(song));
 });
@@ -227,7 +229,7 @@ window.openOfflineSong = async  function openOfflineSong(btn){
   artwork: []
 });
      
-  Playing.textContent = currentSong.title + " - " + currentSong.artist;
+  Playing.textContent = currentSong.title + " ᖴᖇOᗰ " + currentSong.artist;
   
 
 

@@ -710,6 +710,10 @@ background-image: url("https://ik.imagekit.io/pry8rixl0/Kwaya%20kuu%20KKKT%20mwi
 .category.active {
   background-color: gray;
 }
+#Category-songs{
+    display: none;
+    width: 100%;
+}
   #Pasaka {
     background:white;
     color: black;
