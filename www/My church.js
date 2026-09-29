@@ -149,6 +149,7 @@ BackMyChurch.addEventListener("click",()=>{
   SongList.style.display="block" 
  ChurchScreen.style.display="none"
   menuBtn.style.display="block"
+  lastScreen="song-list"
 })
 
   screenList.addEventListener("click",(e)=>{

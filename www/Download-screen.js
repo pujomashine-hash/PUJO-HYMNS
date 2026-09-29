@@ -212,6 +212,7 @@ DownloadedBack.addEventListener("click",()=>{
   SongList.style.display="block"
   DownloadScreen.style.display="none"
   menuBtn.style.display="block"
+  lastScreen="song-list"
 })
 
 

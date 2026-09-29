@@ -64,6 +64,7 @@ artistList.addEventListener("click",(e)=>{
         });
      
      hideScreenTop();
+    lastScreen="song-list"
      playlistContainer.style.display = "block";
         artistScreen.style.display="none";
         songList.style.display="block"

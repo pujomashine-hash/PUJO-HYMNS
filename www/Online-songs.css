@@ -226,6 +226,13 @@
   margin:0;
   font-size: 22px;
 }
+#Downloaded-songs-list {
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+
+
 #Downloaded-screen{
   display:none;
   background:#000;

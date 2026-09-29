@@ -442,13 +442,10 @@ background-image: url("https://ik.imagekit.io/pry8rixl0/Kwaya%20kuu%20KKKT%20mwi
     left:0;
     width:100%;
     height:65px;
-
     display:flex;
     align-items:center;
     gap:18px;
-
     padding:0 18px;
-
     background:#0b0b4f;   /* rangi ya screen yako */
     z-index:1000;
 }
