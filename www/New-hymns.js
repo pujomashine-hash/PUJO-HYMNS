@@ -235,6 +235,7 @@ async  function openOnlineSongs(btn){
     SongList.style.display="block"
     NewSongScreen.style.display="none"
     menuBtn.style.display="block"
+    lastScreen="song-list"
   })
 
   NewSongScreen.addEventListener("click", (e) => {
