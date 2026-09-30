@@ -173,7 +173,7 @@ function loadDownloadedSongs() {
   }
 
   // Home (onyesha 3 tu)
-  songs.slice(0, 3).forEach(song => {
+  songs.slice(0,3).forEach(song => {
     DownloadList.appendChild(createSongButton(song));
   });
 

@@ -203,11 +203,11 @@ async  function openOnlineSongs(btn){
     list.innerHTML = "";
     NewSongScreenList.innerHTML = "";
 
-    data.slice(0,3).forEach(song => {
+    data.slice(-3).reverse().forEach(song => {
         list.appendChild(createOnlineSongs(song));
     });
 
-    data.forEach(song => {
+    data.reverse().forEach(song => {
         NewSongScreenList.appendChild(createOnlineSongs(song));
     });
  }
