@@ -116,7 +116,92 @@ if (!exists) {
   
 }
 
+  async function saveSongMetadata() {
+  const fileName = currentSong.file.split("/").pop();
+  const jsonName = fileName.replace(".mp3", ".json");
 
+  await Filesystem.writeFile({
+    path: jsonName,
+    data: JSON.stringify({
+      id: currentSong.id,
+      title: currentSong.title,
+      artist: currentSong.artist,
+      image: currentSong.image,
+      lyrics: currentSong.lyrics,
+      file: fileName // jina la file la offline
+    }),
+    directory: "DATA",
+    recursive: true
+  });
+  }
+
+async function downloadOnlineFile() {
+  try {
+    Downloadbtn.textContent = "⏳";
+
+    const fileName = currentSong.file.split("/").pop();
+
+    const response = await fetch(
+      `https://pujo-server.onrender.com/songs/${currentSong.id}/download`
+    );
+
+    if (!response.ok) {
+      throw new Error("Download failed");
+    }
+
+    const reader = response.body.getReader();
+
+const chunks = [];
+
+while (true) {
+  const { done, value } = await reader.read();
+
+  if (done) break;
+
+  chunks.push(value);
+}
+
+    // Unganisha chunks zote
+const totalLength = chunks.reduce(
+  (sum, chunk) => sum + chunk.length,
+  0
+);
+
+const fullArray = new Uint8Array(totalLength);
+
+let offset = 0;
+
+for (const chunk of chunks) {
+  fullArray.set(chunk, offset);
+  offset += chunk.length;
+}
+
+let binary = "";
+const chunkSize = 8192;
+
+for (let i = 0; i < fullArray.length; i += chunkSize) {
+  binary += String.fromCharCode(
+    ...fullArray.subarray(i, i + chunkSize)
+  );
+}
+
+const base64 = btoa(binary);
+
+await Filesystem.writeFile({
+  path: fileName,
+  data: base64,
+  directory: "DATA",
+  recursive: true
+});
+
+await saveSongMetadata();
+
+  } catch (e) {
+    console.log(e);
+    Downloadbtn.textContent = "📥";
+  }
+}
+  
 function convertToBase64(blob) {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
@@ -144,7 +229,11 @@ Downloadbtn.addEventListener("click", () => {
     return;
   }
 
-  downloadfile(fileUrl);
+  if (currentSong.id) {
+    downloadOnlineFile();
+} else {
+    downloadfile(fileUrl);
+  }
 });
 }
 
@@ -158,19 +247,34 @@ function OpenDownloadScreen (){
 
 
 
-function loadDownloadedSongs() {
+async function loadDownloadedSongs() {
 
-  const songs =
+  const songs = [];
+
+  // 1. Soma za localStorage
+  const localSongs =
     JSON.parse(localStorage.getItem("downloadedSongs")) || [];
 
-  DownloadList.innerHTML = "";
-  DownloadScreenList.innerHTML = "";
+  songs.push(...localSongs);
 
-  if (songs.length === 0) {
-    DownloadList.innerHTML = "<p>No Downloaded songs</p>";
-    DownloadCount.textContent = "0";
-    return;
+  // 2. Soma za Filesystem
+  const result = await Filesystem.readdir({
+    directory: "DATA",
+    path: ""
+  });
+
+  for (const file of result.files) {
+    if (!file.name.endsWith(".json")) continue;
+
+    const json = await Filesystem.readFile({
+      directory: "DATA",
+      path: file.name
+    });
+
+    songs.push(JSON.parse(json.data));
   }
+
+  // Endelea kujenga Ui
 
   // Home (onyesha 3 tu)
   songs.slice(0,3).forEach(song => {
@@ -184,6 +288,7 @@ function loadDownloadedSongs() {
 
   DownloadCount.textContent = songs.length;
 }
+
   
 SeeAllDownloaded.addEventListener("click",()=>{
   OpenDownloadScreen()
