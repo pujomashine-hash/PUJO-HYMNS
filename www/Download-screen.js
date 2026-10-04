@@ -149,7 +149,6 @@ function fromBase64(base64) {
   path: jsonName,
   data: toBase64(metadata),
   directory: "DATA",
-  encoding:"utf8",
   recursive: true
 });
     
@@ -212,7 +211,6 @@ const base64 = btoa(binary);
 await Filesystem.writeFile({
   path: fileName,
   data: base64,
-  encoding:"utf8",
   directory: "DATA",
   recursive: true
 });
