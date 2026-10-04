@@ -195,6 +195,7 @@ await Filesystem.writeFile({
 });
 
 await saveSongMetadata();
+    alert("metadata saved")
 
   } catch (e) {
     console.log(e);
@@ -274,7 +275,7 @@ DownloadScreenList.innerHTML = "";
       directory: "DATA",
       path: file.name
     });
-
+alert(json.data)
     songs.push(JSON.parse(json.data));
   }
 alert("Songs zilizopatikana: " + songs.length);
