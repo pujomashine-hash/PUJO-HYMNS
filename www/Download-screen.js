@@ -186,14 +186,14 @@ for (let i = 0; i < fullArray.length; i += chunkSize) {
 }
 
 const base64 = btoa(binary);
-
+alert("1")
 await Filesystem.writeFile({
   path: fileName,
   data: base64,
   directory: "DATA",
   recursive: true
 });
-
+alert("2")
 await saveSongMetadata();
     alert("metadata saved")
 
