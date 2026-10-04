@@ -121,6 +121,12 @@ if (!exists) {
     const fileName = currentSong.file.split("/").pop();
     const jsonName = fileName.replace(".mp3", ".json");
 
+const lyricsText = await fetch(
+  `https://pujo-server.onrender.com/songs/${currentSong.id}/lyrics`
+).then(r => r.text());
+
+currentSong.lyrics = lyricsText;
+    
     const metadata = JSON.stringify({
   id: currentSong.id,
   title: currentSong.title,
@@ -348,7 +354,8 @@ DownloadList.addEventListener("click", (e) => {
 });
 
 DownloadScreenList.addEventListener("click", (e) => {
-  lastScreen="song-list"
+  DownloadScreen.style.display="none"
+  lastScreen="Downloaded-screen"
   const onlineBtn = e.target.closest(".online-btn");
   if (onlineBtn) {
     openOnlineSongs(onlineBtn);
