@@ -281,13 +281,29 @@ DownloadScreenList.innerHTML = "";
   for (const file of result.files) {
   if (!file.name.endsWith(".json")) continue;
 
-  const json = await Filesystem.readFile({
-    directory: "DATA",
-    path: file.name
-  });
+  try {
+    alert("Inasoma file: " + file.name);
 
-  const text = atob(json.data);
-  songs.push(JSON.parse(text));
+    const json = await Filesystem.readFile({
+      directory: "DATA",
+      path: file.name
+    });
+
+    alert("Base64 length: " + json.data.length);
+
+    const text = atob(json.data);
+
+    alert("Decoded:\n" + text);
+
+    const song = JSON.parse(text);
+
+    alert("JSON imeparse vizuri");
+
+    songs.push(song);
+
+  } catch (e) {
+    alert("ERROR kwenye file: " + file.name + "\n\n" + e.message);
+  }
 }
     alert("Songs zilizopatikana: " + songs.length);
     
