@@ -149,6 +149,7 @@ function fromBase64(base64) {
   path: jsonName,
   data: toBase64(metadata),
   directory: "DATA",
+  encoding:"utf8",
   recursive: true
 });
     
@@ -211,6 +212,7 @@ const base64 = btoa(binary);
 await Filesystem.writeFile({
   path: fileName,
   data: base64,
+  encoding:"utf8",
   directory: "DATA",
   recursive: true
 });
@@ -297,14 +299,13 @@ DownloadScreenList.innerHTML = "";
 
     const json = await Filesystem.readFile({
       directory: "DATA",
+      encoding:"utf8",
       path: file.name
     });
 
     const text = fromBase64(json.data);
 const song = JSON.parse(text);
     songs.push(song);
-    alert(JSON.stringify(song));
-    alert(song.lyrics.substring(0, 100));
 
   } catch (e) {
     continue;
