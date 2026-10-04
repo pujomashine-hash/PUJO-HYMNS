@@ -204,6 +204,9 @@ await Filesystem.writeFile({
 await saveSongMetadata();
     alert("metadata saved")
 
+    Downloadbtn.textContent = "✔";
+await loadDownloadedSongs();
+
   } catch (e) {
     console.log(e);
     Downloadbtn.textContent = "📥";
