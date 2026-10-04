@@ -117,22 +117,33 @@ if (!exists) {
 }
 
   async function saveSongMetadata() {
-  const fileName = currentSong.file.split("/").pop();
-  const jsonName = fileName.replace(".mp3", ".json");
+  try {
+    const fileName = currentSong.file.split("/").pop();
+    const jsonName = fileName.replace(".mp3", ".json");
 
-  await Filesystem.writeFile({
-    path: jsonName,
-    data: JSON.stringify({
+    const metadata = JSON.stringify({
       id: currentSong.id,
       title: currentSong.title,
       artist: currentSong.artist,
       image: currentSong.image,
       lyrics: currentSong.lyrics,
-      file: fileName // jina la file la offline
-    }),
-    directory: "DATA",
-    recursive: true
-  });
+      file: fileName
+    });
+
+    alert(metadata);
+
+    await Filesystem.writeFile({
+      path: jsonName,
+      data: metadata,
+      directory: "DATA",
+      recursive: true
+    });
+
+    alert("JSON imeandikwa");
+
+  } catch (e) {
+    alert("saveSongMetadata: " + e.message);
+  }
   }
 
 async function downloadOnlineFile() {
@@ -186,14 +197,12 @@ for (let i = 0; i < fullArray.length; i += chunkSize) {
 }
 
 const base64 = btoa(binary);
-alert("1")
 await Filesystem.writeFile({
   path: fileName,
   data: base64,
   directory: "DATA",
   recursive: true
 });
-alert("2")
 await saveSongMetadata();
     alert("metadata saved")
 
