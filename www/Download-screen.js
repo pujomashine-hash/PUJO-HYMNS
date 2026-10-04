@@ -122,23 +122,21 @@ if (!exists) {
     const jsonName = fileName.replace(".mp3", ".json");
 
     const metadata = JSON.stringify({
-      id: currentSong.id,
-      title: currentSong.title,
-      artist: currentSong.artist,
-      image: currentSong.image,
-      lyrics: currentSong.lyrics,
-      file: fileName
-    });
+  id: currentSong.id,
+  title: currentSong.title,
+  artist: currentSong.artist,
+  image: currentSong.image,
+  lyrics: currentSong.lyrics,
+  file: fileName
+});
 
-    alert(metadata);
-
-    await Filesystem.writeFile({
-      path: jsonName,
-      data: metadata,
-      directory: "DATA",
-      recursive: true
-    });
-
+await Filesystem.writeFile({
+  path: jsonName,
+  data: btoa(metadata),   // <-- Geuza kuwa Base64
+  directory: "DATA",
+  recursive: true
+});
+    
     alert("JSON imeandikwa");
 
   } catch (e) {
@@ -285,7 +283,7 @@ DownloadScreenList.innerHTML = "";
       path: file.name
     });
 alert(json.data)
-    songs.push(JSON.parse(json.data));
+    songs.push(JSON.parse(atob(json.data)));
   }
 alert("Songs zilizopatikana: " + songs.length);
     
