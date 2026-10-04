@@ -279,16 +279,17 @@ DownloadScreenList.innerHTML = "";
    
     
   for (const file of result.files) {
-    if (!file.name.endsWith(".json")) continue;
+  if (!file.name.endsWith(".json")) continue;
 
-    const json = await Filesystem.readFile({
-      directory: "DATA",
-      path: file.name
-    });
-alert(json.data)
-    songs.push(JSON.parse(atob(json.data)));
-  }
-alert("Songs zilizopatikana: " + songs.length);
+  const json = await Filesystem.readFile({
+    directory: "DATA",
+    path: file.name
+  });
+
+  const text = atob(json.data);
+  songs.push(JSON.parse(text));
+}
+    alert("Songs zilizopatikana: " + songs.length);
     
 if (songs.length === 0) {
   DownloadList.innerHTML = "<p>No Downloaded songs</p>";
