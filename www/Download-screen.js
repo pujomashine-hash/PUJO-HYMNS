@@ -118,37 +118,41 @@ if (!exists) {
 
   async function saveSongMetadata() {
   try {
-    const fileName = currentSong.file.split("/").pop();
-    const jsonName = fileName.replace(".mp3", ".json");
 
-const lyricsText = await fetch(
-  `https://pujo-server.onrender.com/songs/${currentSong.id}/lyrics`
-).then(r => r.text());
+    alert("1");
 
-currentSong.lyrics = lyricsText;
-    
+    const lyricsText = await fetch(
+      `https://pujo-server.onrender.com/songs/${currentSong.id}/lyrics`
+    ).then(r => r.text());
+
+    alert("2");
+
+    currentSong.lyrics = lyricsText;
+
     const metadata = JSON.stringify({
-  id: currentSong.id,
-  title: currentSong.title,
-  artist: currentSong.artist,
-  image: currentSong.image,
-  lyrics: currentSong.lyrics,
-  file: fileName
-});
+      id: currentSong.id,
+      title: currentSong.title,
+      artist: currentSong.artist,
+      image: currentSong.image,
+      lyrics: currentSong.lyrics,
+      file: fileName
+    });
 
-await Filesystem.writeFile({
-  path: jsonName,
-  data: btoa(metadata),   // <-- Geuza kuwa Base64
-  directory: "DATA",
-  recursive: true
-});
-    
-    console.log("JSON imeandikwa");
+    alert("3");
+
+    await Filesystem.writeFile({
+      path: jsonName,
+      data: btoa(metadata),
+      directory: "DATA",
+      recursive: true
+    });
+
+    alert("4");
 
   } catch (e) {
-    console.log("saveSongMetadata: " + e.message);
+    alert(e.message);
   }
-  }
+}
 
 async function downloadOnlineFile() {
   try {
