@@ -116,6 +116,15 @@ if (!exists) {
   
 }
 
+  function toBase64(str) {
+  return btoa(unescape(encodeURIComponent(str)));
+}
+
+function fromBase64(base64) {
+  return decodeURIComponent(escape(atob(base64)));
+}
+  
+
   async function saveSongMetadata() {
   try {
     const fileName = currentSong.file.split("/").pop();
@@ -137,12 +146,12 @@ if (!exists) {
     });
 
     await Filesystem.writeFile({
-      path: jsonName,
-      data: btoa(metadata),
-      directory: "DATA",
-      recursive: true
-    });
-
+  path: jsonName,
+  data: toBase64(metadata),
+  directory: "DATA",
+  recursive: true
+});
+    
   } catch (e) {
     alert(e.message);
   }
@@ -291,8 +300,8 @@ DownloadScreenList.innerHTML = "";
       path: file.name
     });
 
-    const text = atob(json.data)
-    const song = JSON.parse(text);
+    const text = fromBase64(json.data);
+const song = JSON.parse(text);
     songs.push(song);
     alert(JSON.stringify(song));
     alert(song.lyrics.substring(0, 100));
