@@ -118,14 +118,12 @@ if (!exists) {
 
   async function saveSongMetadata() {
   try {
-
-    alert("1");
+    const fileName = currentSong.file.split("/").pop();
+    const jsonName = fileName.replace(".mp3", ".json");
 
     const lyricsText = await fetch(
       `https://pujo-server.onrender.com/songs/${currentSong.id}/lyrics`
     ).then(r => r.text());
-
-    alert("2");
 
     currentSong.lyrics = lyricsText;
 
@@ -138,16 +136,12 @@ if (!exists) {
       file: fileName
     });
 
-    alert("3");
-
     await Filesystem.writeFile({
       path: jsonName,
       data: btoa(metadata),
       directory: "DATA",
       recursive: true
     });
-
-    alert("4");
 
   } catch (e) {
     alert(e.message);
