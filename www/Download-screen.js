@@ -297,7 +297,6 @@ DownloadScreenList.innerHTML = "";
 
     const json = await Filesystem.readFile({
       directory: "DATA",
-      encoding:"utf8",
       path: file.name
     });
 
