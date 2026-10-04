@@ -290,6 +290,8 @@ DownloadScreenList.innerHTML = "";
     const text = atob(json.data)
     const song = JSON.parse(text);
     songs.push(song);
+    alert(JSON.stringify(song));
+    alert(song.lyrics.substring(0, 100));
 
   } catch (e) {
     continue;
@@ -332,7 +334,7 @@ SeeAllDownloaded.addEventListener("click",()=>{
 })
 
 DownloadList.addEventListener("click", (e) => {
-
+   lastScreen="song-list"
   const onlineBtn = e.target.closest(".online-btn");
   if (onlineBtn) {
     openOnlineSongs(onlineBtn);
@@ -346,7 +348,7 @@ DownloadList.addEventListener("click", (e) => {
 });
 
 DownloadScreenList.addEventListener("click", (e) => {
-
+  lastScreen="song-list"
   const onlineBtn = e.target.closest(".online-btn");
   if (onlineBtn) {
     openOnlineSongs(onlineBtn);
