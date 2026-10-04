@@ -248,7 +248,10 @@ function OpenDownloadScreen (){
 
 
 async function loadDownloadedSongs() {
+  try{
 
+  DownloadList.innerHTML = "";
+DownloadScreenList.innerHTML = "";
   const songs = [];
 
   // 1. Soma za localStorage
@@ -262,7 +265,8 @@ async function loadDownloadedSongs() {
     directory: "DATA",
     path: ""
   });
-
+   
+    
   for (const file of result.files) {
     if (!file.name.endsWith(".json")) continue;
 
@@ -273,8 +277,14 @@ async function loadDownloadedSongs() {
 
     songs.push(JSON.parse(json.data));
   }
-
-  // Endelea kujenga Ui
+alert("Songs zilizopatikana: " + songs.length);
+    
+if (songs.length === 0) {
+  DownloadList.innerHTML = "<p>No Downloaded songs</p>";
+  DownloadScreenList.innerHTML = "<p>No Downloaded songs</p>";
+  DownloadCount.textContent = "0";
+  return;
+}
 
   // Home (onyesha 3 tu)
   songs.slice(0,3).forEach(song => {
@@ -287,8 +297,10 @@ async function loadDownloadedSongs() {
   });
 
   DownloadCount.textContent = songs.length;
+} catch (e){
+    alert(e.message)
 }
-
+}
   
 SeeAllDownloaded.addEventListener("click",()=>{
   OpenDownloadScreen()
