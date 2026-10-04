@@ -137,10 +137,10 @@ await Filesystem.writeFile({
   recursive: true
 });
     
-    alert("JSON imeandikwa");
+    console.log("JSON imeandikwa");
 
   } catch (e) {
-    alert("saveSongMetadata: " + e.message);
+    console.log("saveSongMetadata: " + e.message);
   }
   }
 
@@ -202,7 +202,6 @@ await Filesystem.writeFile({
   recursive: true
 });
 await saveSongMetadata();
-    alert("metadata saved")
 
     Downloadbtn.textContent = "✔";
 await loadDownloadedSongs();
@@ -282,30 +281,20 @@ DownloadScreenList.innerHTML = "";
   if (!file.name.endsWith(".json")) continue;
 
   try {
-    alert("Inasoma file: " + file.name);
 
     const json = await Filesystem.readFile({
       directory: "DATA",
       path: file.name
     });
 
-    alert("Base64 length: " + json.data.length);
-
-    const text = atob(json.data);
-
-    alert("Decoded:\n" + text);
-
+    const text = atob(json.data)
     const song = JSON.parse(text);
-
-    alert("JSON imeparse vizuri");
-
     songs.push(song);
 
   } catch (e) {
-    alert("ERROR kwenye file: " + file.name + "\n\n" + e.message);
+    continue;
   }
 }
-    alert("Songs zilizopatikana: " + songs.length);
     
 if (songs.length === 0) {
   DownloadList.innerHTML = "<p>No Downloaded songs</p>";
@@ -315,18 +304,26 @@ if (songs.length === 0) {
 }
 
   // Home (onyesha 3 tu)
-  songs.slice(0,3).forEach(song => {
-    DownloadList.appendChild(createSongButton(song));
-  });
+  songs.slice(0, 3).forEach(song => {
+  const btn = song.id
+    ? createOnlineSongs(song)
+    : createSongButton(song);
 
+  DownloadList.appendChild(btn);
+});
+    
   // Screen nzima
   songs.forEach(song => {
-    DownloadScreenList.appendChild(createSongButton(song));
-  });
+  const btn = song.id
+    ? createOnlineSongs(song)
+    : createSongButton(song);
 
+  DownloadScreenList.appendChild(btn);
+});
+    
   DownloadCount.textContent = songs.length;
 } catch (e){
-    alert(e.message)
+    console.log(e.message)
 }
 }
   
@@ -334,25 +331,34 @@ SeeAllDownloaded.addEventListener("click",()=>{
   OpenDownloadScreen()
 })
 
-DownloadList.addEventListener("click",(e)=>{
-  
-  const btn= e.target.closest(".nyimbo")
-   if(!btn) return
-    openOfflineSong(btn);
-    SongList.style.display="none"
-    lastScreen= "song-list"
-})
+DownloadList.addEventListener("click", (e) => {
 
-DownloadScreenList.addEventListener("click",(e)=>{
-   
-  
-  const btn= e.target.closest(".nyimbo")
-   if(!btn) return
-    openOfflineSong(btn);
-    DownloadScreen.style.display="none"
-    lastScreen= "Downloaded-screen"
-})
+  const onlineBtn = e.target.closest(".online-btn");
+  if (onlineBtn) {
+    openOnlineSongs(onlineBtn);
+    return;
+  }
 
+  const offlineBtn = e.target.closest(".nyimbo");
+  if (offlineBtn) {
+    openOfflineSong(offlineBtn);
+  }
+});
+
+DownloadScreenList.addEventListener("click", (e) => {
+
+  const onlineBtn = e.target.closest(".online-btn");
+  if (onlineBtn) {
+    openOnlineSongs(onlineBtn);
+    return;
+  }
+
+  const offlineBtn = e.target.closest(".nyimbo");
+  if (offlineBtn) {
+    openOfflineSong(offlineBtn);
+  }
+});
+  
 DownloadedBack.addEventListener("click",()=>{
   SongList.style.display="block"
   DownloadScreen.style.display="none"

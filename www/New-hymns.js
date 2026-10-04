@@ -143,20 +143,6 @@ async  function openOnlineSongs(btn){
   };
   const fileName = btn.dataset.file.split("/").pop();
 
-  // Angalia kama file ipo kwanza
-  try {
-  const result = await Filesystem.readFile({
-    path: fileName,
-    directory: "DATA"
-  });
-
-  audio.src = "data:audio/mpeg;base64," + result.data;
-
-} catch (e) {
-
-  audio.src = `https://pujo-server.onrender.com/songs/${btn.dataset.id}/audio`;
-}
-
 
   MediaSession?.setMetadata({
   title: window.currentSong.title,
@@ -167,18 +153,40 @@ async  function openOnlineSongs(btn){
   Playing.textContent = currentSong.title + " ᖴᖇOᗰ " + currentSong.artist;
   
 
+  try {
 
-
-  fetch(`https://pujo-server.onrender.com/songs/${btn.dataset.id}/lyrics`)
-  .then(res => {
-      if (!res.ok) throw new Error("Lyrics not found");
-      return res.text();
-  })
-  .then(renderLyrics)
-  .catch(() => {
-      lyrics.innerHTML = "<p>Loading lyrics....</p>";
+  const result = await Filesystem.readFile({
+    path: fileName,
+    directory: "DATA"
   });
 
+  audio.src = "data:audio/mpeg;base64," + result.data;
+
+  // Soma metadata ya local
+  const json = await Filesystem.readFile({
+    path: fileName.replace(".mp3", ".json"),
+    directory: "DATA"
+  });
+
+  const song = JSON.parse(atob(json.data));
+  renderLyrics(song.lyrics);
+
+} catch (e) {
+
+  audio.src = `https://pujo-server.onrender.com/songs/${btn.dataset.id}/audio`;
+
+  fetch(`https://pujo-server.onrender.com/songs/${btn.dataset.id}/lyrics`)
+    .then(res => {
+      if (!res.ok) throw new Error();
+      return res.text();
+    })
+    .then(renderLyrics)
+    .catch(() => {
+      lyrics.innerHTML = "<p>Lyrics unavailable</p>";
+    });
+
+}
+  
   updateDownloadBtn();
   SongList.style.display = "none";
   SongDetails.style.display = "block";
