@@ -109,7 +109,7 @@ if (!exists) {
     <span class="popup-logo-btn"></span>
     <p>Notice</p>
   </div>`,
-             `<p>1.Note only audio from choirs are allowed to download up to now</p> <br>
+             `<p>1.Midi/piano sounds are not allowed to download you can still download all other recordings and audio from choirs</p> <br>
              <p>2.By consider the notice(1) above Check the network and try again`);
     
   }

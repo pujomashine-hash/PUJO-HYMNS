@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("./fonts/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Regular";
+  src: url("./fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Sans";
+  src: url("./fonts/OpenSans_Condensed-Italic.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins-ExtraBold.ttf") format("truetype");
+  font-weight: 700;
+}
+
 #screen-top{
     position: fixed;
     top: 0;
@@ -311,25 +335,35 @@
     font-weight:bold;
     text-align:center;
     margin:20px 0;
+  font-family: "Poppins";
 }
 
 .author{
     text-align:center;
     color:#ce4cce;
     margin-bottom:25px;
+  font-family: Sans;
 }
 
-.lyrics-verse,
+.lyrics-verse{
+  white-space:pre-line;
+    line-height:1.8;
+    margin-bottom:20px;
+  font-family: "Regular"
+}
+
 .lyrics-chorus,
 .lyrics-bridge{
     white-space:pre-line;
     line-height:1.8;
     margin-bottom:20px;
+  
 }
 
 .lyrics-chorus{
     font-weight:bold;
     color:yellow;
+  font-family: "Poppins-SemiBold";
 }
 
 @keyframes spin{
