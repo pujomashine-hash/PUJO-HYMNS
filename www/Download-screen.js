@@ -317,7 +317,7 @@ if (songs.length === 0) {
 }
 
   // Home (onyesha 3 tu)
-  songs.slice(0, 3).forEach(song => {
+  songs.slice(-3).reverse().forEach(song => {
   const btn = song.id
     ? createOnlineSongs(song)
     : createSongButton(song);

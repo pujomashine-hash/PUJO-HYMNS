@@ -426,6 +426,7 @@ background-image: url("https://ik.imagekit.io/pry8rixl0/Kwaya%20kuu%20KKKT%20mwi
   display:flex;
   flex-direction:column;
   gap:2px;
+  margin-left: 10px;
 }
 #my-music-screen{
     display:none;
@@ -470,19 +471,17 @@ background-image: url("https://ik.imagekit.io/pry8rixl0/Kwaya%20kuu%20KKKT%20mwi
 }
 
 /*  BUTTONS */
-.nyimbo {
-  width: 100%;
-  max-width: 400px;
-  margin: 1px 0;
-  padding: 12px;
-  background: black;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-  align-items: flex-start;
+.nyimbo{
+    width:100%;
+    margin:2px 0;
+    padding:1px;
+    background:black;
+    color:white;
+    border:none;
+    border-radius:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 .nyimbo:hover {

@@ -82,7 +82,7 @@ function renderLyrics(text) {
 
       case "TITLE":
         div.className = "lyrics-title";
-        div.textContent = section.content;
+        div.textContent =section.content;
         break;
 
       case "AUTHOR":
