@@ -4,34 +4,68 @@ document.addEventListener("DOMContentLoaded", () => {
   const Network = window.Capacitor?.Plugins?.Network;
   window.checkUpdate= checkUpdate
 
-
   //initial update check
 function checkUpdate() {
-  const currentVersion = "1.0.5";  document.getElementById("Version").textContent=`Version `+ currentVersion 
+
+  const currentVersion = 8; // versionCode
+  document.getElementById("Version").textContent = "Version 1.0.6";
 
   fetch("https://raw.githubusercontent.com/pujomashine-hash/PUJO-HYMNS/main/Version.json")
     .then(res => res.json())
     .then(data => {
 
-      if (data.version !== currentVersion) {
-       openPopup(`<div class="popup-title">
-    <span class="popup-logo-btn"></span>
-    <p>Update</p>
-  </div>`,
-        `<div>
-          <p data-key="update-message" class="update-message">The new version of PUJO Hymns available click the button below to install it safely</p>
-          <button id="update-btn" data-key="update-btn">Update</button>
-        </div>`)
-      } 
-  const UpdateBtn = document.getElementById("update-btn")
-    UpdateBtn.addEventListener("click",()=>{
-      window.location.href=data.url
-      closePopup()
+      const difference = data.version - currentVersion;
+
+      // FORCE UPDATE
+      if (difference >= 10) {
+
+        openPopup(
+          `<div class="popup-title">
+              <span class="popup-logo-btn"></span>
+              <p>Update Required</p>
+          </div>`,
+          `<div>
+              <p>Your version is no longer supported. Please update the app.</p>
+              <button id="update-btn">Update Now</button>
+          </div>`
+        );
+
+        popupClose.style.display = "none";
+        popupOverlay.onclick = null;
+
+        document.getElementById("update-btn").onclick = () => {
+          window.location.href = data.url;
+        };
+
+        setTimeout(() => {
+          window.location.href = data.url;
+        }, 5000);
+
+        return;
+      }
+
+      // NORMAL UPDATE
+      if (difference > 0) {
+
+        openPopup(
+          `<div class="popup-title">
+              <span class="popup-logo-btn"></span>
+              <p>Update</p>
+          </div>`,
+          `<div>
+              <p>The new version of PUJO Hymns is available.</p>
+              <button id="update-btn">Update</button>
+          </div>`
+        );
+
+        document.getElementById("update-btn").onclick = () => {
+          window.location.href = data.url;
+          closePopup();
+        };
+      }
+
     })
-      
-    })
-    .catch(() => {
-    });
+    .catch(() => {});
 }
   checkUpdate();
 

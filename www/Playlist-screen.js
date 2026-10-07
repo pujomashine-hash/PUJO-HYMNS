@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
     
   function buildCategorySongs() {
 
+  // Futa zilizopo kwanza
+  CategorySongs.innerHTML = "";
+
   if (window.allSongs) {
     window.allSongs.forEach(song => {
       const btn = createSongButton(song);
@@ -20,12 +23,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (window.onlineSongs) {
-    window.onlineSongs.forEach(song => {
-      const btn = createOnlineSongs(song);
-      btn.dataset.Category = song.Category;
-      btn.style.display = "none";
-      CategorySongs.appendChild(btn);
-    });
+    window.onlineSongs
+      .filter(onlineSong =>
+        !window.allSongs.some(
+          offlineSong => offlineSong.title === onlineSong.title
+        )
+      )
+      .forEach(song => {
+        const btn = createOnlineSongs(song);
+        btn.dataset.Category = song.Category;
+        btn.style.display = "none";
+        CategorySongs.appendChild(btn);
+      });
   }
 }
 buildCategorySongs();

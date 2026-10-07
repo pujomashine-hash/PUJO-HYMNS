@@ -22,7 +22,8 @@
     "all":"see all",
     "back":"Back",
     "New-hymns":"New hymns",
-    "Offline-hymns":"Offline Hymns"
+    "Offline-hymns":"Offline Hymns",
+    "update-message":"The new version of PUJO Hymns is available click the button below to install it safely"
   },
   "sw": {
     "nav_home": "🏠 Nyumbani",
@@ -47,6 +48,7 @@
     "all":"Tembelea",
     "back":"Nyuma",
     "New-hymns":"Nyimbo mpya",
-    "Offline-hymns":"Zilizopakuliwa"
+    "Offline-hymns":"Zilizopakuliwa",
+    "update-message":"Toleo jipya la PUJO Hymns linapatikana tafadhali gusa kitufe hapo chini kulipata"
   }
 }

@@ -225,6 +225,7 @@ body {
   z-index: 800;
   overflow-y: auto;
   padding: 0;
+  margin-bottom: 50px;
 }
 
 #Search-header{
