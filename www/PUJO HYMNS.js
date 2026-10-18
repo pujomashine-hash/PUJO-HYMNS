@@ -150,7 +150,7 @@ if (MediaSession && !controlsInitialized) {
     async () => {
       await audio.play();
 
-      play.textContent = "▶";
+      setPlayIcon("pause")
 
       MediaSession.setPlaybackState({
         playbackState: "playing"
@@ -163,7 +163,7 @@ if (MediaSession && !controlsInitialized) {
     async () => {
       audio.pause();
 
-      play.textContent = "⏯";
+    setPlayIcon("play")
 
       MediaSession.setPlaybackState({
         playbackState: "paused"

@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="Online-songs.css">
   <link rel="manifest" href="manifest.json">
  </head>
+  <script src="lucide.min.js"></script>
+<script>
+  lucide.createIcons();
+</script>
  <body>
    <!-- MENU NA TOP -->
  <button id="menu-btn">☰</button>
@@ -21,16 +25,17 @@
 
   <p class="menu-title">📚 LIBRARY</p>
 
-  <button class="menu-item"
-    id="Downloaded-btn">
-    <span>📥</span>
-    <span data-key="Downloaded-songs">Downloaded</span>
-  </button>
+<button class="menu-item" id="Downloaded-btn">
+  <img class="menu-icon" src="icons/download.svg" alt="">
+  <span data-key="Downloaded-songs">Downloaded</span>
+</button>
+
+
   <p class="menu-title">👥 COMMUNITY</p>
 
   <button class="menu-item"
     id="church-btn">
-    <span>⛪</span>
+    <img class="menu-icon" src="icons/church.svg">
     <span data-key="Church">Church</span>
   </button>
 
@@ -38,19 +43,19 @@
 
   <button class="menu-item"
     id="Languagebtn">
-    <span>🌐</span>
+    <img class="menu-icon" src="icons/language.svg">
     <span data-key="Language">Language</span>
   </button>
 
   <button class="menu-item"
     id="theme">
-    <span>🎨</span>
+    <img class="menu-icon" src="icons/theme.svg">
     <span data-key="Theme">Theme</span>
   </button>
 
   <button class="menu-item"
     id="Settings">
-    <span>⚙️</span>
+    <img class="menu-icon" src="icons/settings.svg">
     <span data-key="Settings">Settings</span>
   </button>
 
@@ -58,25 +63,25 @@
 
   <button class="menu-item"
     id="share-app">
-    <span>🤝</span>
+    <img class="menu-icon" src="icons/share.svg">
     <span data-key="settings-share">Share App</span>
   </button>
 
   <button class="menu-item"
     id="Rate-app">
-    <span>⭐</span>
+    <img class="menu-icon" src="icons/rate.svg">
     <span data-key="Rate">Rate App</span>
   </button>
 
   <button class="menu-item"
     id="Contact">
-    <span>📞</span>
+    <img class="menu-icon" src="icons/contact.svg">
     <span data-key="Contact">Contact Us</span>
   </button>
 
   <button class="menu-item"
     id="about-btn">
-    <span>ℹ️</span>
+    <img class="menu-icon" src="icons/about.svg">
     <span data-key="settings-about">About</span>
   </button>
 
@@ -97,9 +102,10 @@
    </div>
 
    <div id="top">
-          <button id="search-toggle">🔎</button>
+          <button id="search-toggle">
+            <img class="toggle-icon" src="icons/search.svg"></button>
           <button id="notification-toggle">
-            💬⁰
+          <img class="toggle-icon" src="icons/notification.svg"
           </button>
    </div>
    
@@ -255,11 +261,19 @@
      <div class="player">
          <p id="playing"> Nothing here </p>
          <audio id="audio"> </audio>
-         <button class="controlbtn" id="Font-changer">A</button>
-         <button id="back" class="controlbtn"> ⌫</button>
-       <button id="play" class="controlbtn">  ⏯ </button>
+         <button class="controlbtn" id="Font-changer">
+        <img class="toggle-icon" src="icons/font.svg">
+         </button>
+         <button id="back" class="controlbtn">
+          <img class="toggle-icon" src="icons/exit.svg">
+         </button>
+       <button id="play" class="controlbtn"> 
+         <img class="toggle-icon" src="icons/play.svg">
+       </button>
          <button id="fav" class="controlbtn" > ♥️</button>
-         <button id="Download" class="controlbtn">📥</button>
+         <button id="Download" class="controlbtn">
+           <img class="toggle-icon" src="icons/download.svg">
+         </button>
          <div id="progress-container">
           <div id="progress"></div>
         </div>
@@ -311,11 +325,20 @@
   <!-- navigation-bar-->
   <div id="navigation-bar">
     <button class="change"
-    data-target="song-list" data-key="nav_home">🏠 Home </button> 
+    data-target="song-list">
+      <img class="toggle-icon" src="icons/home.svg">
+      <span class="nav-name" data-key="nav_home"> Home </span>
+    </button> 
     <button class="change"
-    data-target="playlist-category" data-key="nav_playlist">🎬 Playlist</button>
+    data-target="playlist-category">
+    <img class="toggle-icon" src="icons/categories.svg">
+     <span class="nav-name" data-key="nav_playlist">Categories </span>
+      </button>
     <button class="change"
-    data-target="favourite" data-key="nav_favourite">♥️ Favourite</button>
+    data-target="favourite">
+      <img class="toggle-icon" src="icons/favourites.svg">
+      <span class="nav-name" data-key="nav_favourite"> Favourites </span>
+    </button>
   </div>
   <script  src="PUJO HYMNS.js"> </script>
       <script src="New-hymns.js"></script>

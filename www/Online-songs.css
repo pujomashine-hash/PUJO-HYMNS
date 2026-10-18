@@ -22,6 +22,18 @@
   font-weight: 700;
 }
 
+.menu-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.toggle-icon{
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
 #screen-top{
     position: fixed;
     top: 0;
@@ -371,6 +383,16 @@
     transform: rotate(360deg);
   }
 }
+
+
+body.light-mode .menu-icon {
+  filter: invert(1);
+}
+
+body.light-mode .toggle-icon{
+  filter: invert(1);
+}
+
 body.light-mode #update-btn{
   color: white;
   background: black;
@@ -400,3 +422,4 @@ body.light-mode .New-screen-header h2{
 body.light-mode #Download-screen-header h2{
   color: white;
 }
+

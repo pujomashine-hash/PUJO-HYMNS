@@ -1,9 +1,9 @@
 {
   "en": {
-    "nav_home": "🏠 Home",
-    "nav_playlist": "📚 Categories",
-    "nav_favourite": "♥️ Favourite",
-    "settings_theme":"Change theme 🌓",
+    "nav_home": "Home",
+    "nav_playlist": "Categories",
+    "nav_favourite": "Favourite",
+    "settings_theme":"Change theme",
     "settings-share": "Share our app",
     "settings-about":"About",
     "New-songs":"New songs ",
@@ -26,10 +26,10 @@
     "update-message":"The new version of PUJO Hymns is available click the button below to install it safely"
   },
   "sw": {
-    "nav_home": "🏠 Nyumbani",
-    "nav_playlist": "📚 Makundi",
-    "nav_favourite": "♥️ Pendwa",
-    "settings_theme": " 🌓 Mandhari",
+    "nav_home": "Nyumbani",
+    "nav_playlist": "Makundi",
+    "nav_favourite": "Pendwa",
+    "settings_theme": "Mandhari",
     "settings-share":"Shiriki programu",
     "settings-about":"Kuhusu",
     "New-songs":"Nyimbo mpya ",

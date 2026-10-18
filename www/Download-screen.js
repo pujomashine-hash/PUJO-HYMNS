@@ -14,8 +14,14 @@ const DownloadedBack=document.querySelector
 
 window.loadDownloadedSongs = loadDownloadedSongs;
 window.updateDownloadBtn=updateDownloadBtn;
-
   
+  function setDownloadIcon(icon) {
+  Downloadbtn.innerHTML = `
+    <img class="toggle-icon"
+         src="icons/${icon}.svg"
+         alt="">
+  `;
+  }
   
 async function updateDownloadBtn() {
   if (!currentSong) return;
@@ -28,10 +34,10 @@ async function updateDownloadBtn() {
       directory: "DATA"
     });
 
-    Downloadbtn.textContent = "✔";
+    setDownloadIcon("complete");
 
   } catch (e) {
-    Downloadbtn.textContent = "📥";
+    setDownloadIcon ("download");
   }
 }
 
@@ -39,7 +45,7 @@ async function updateDownloadBtn() {
 async function downloadfile(url) {
   try {
     const fileName = currentSong.file.split("/").pop();
-    Downloadbtn.textContent = "⏳";
+    setDownloadIcon ("loading");
 
     // Chunked download haisimami hata data ikiwa polepole
     const response = await fetch(url);
@@ -101,10 +107,10 @@ if (!exists) {
 }
     loadDownloadedSongs();
 
-    Downloadbtn.textContent = "✔";
+    setDownloadIcon ("complete");
 
   } catch (error) {
-    Downloadbtn.textContent = "📥";
+    setDownloadIcon = "download";
     openPopup(`<div class="popup-title">
     <span class="popup-logo-btn"></span>
     <p>Notice</p>
@@ -159,7 +165,7 @@ function fromBase64(base64) {
 
 async function downloadOnlineFile() {
   try {
-    Downloadbtn.textContent = "⏳";
+    setDownloadIcon ("loading");
 
     const fileName = currentSong.file.split("/").pop();
 
@@ -216,12 +222,12 @@ await Filesystem.writeFile({
 });
 await saveSongMetadata();
 
-    Downloadbtn.textContent = "✔";
+    setDownloadIcon ("complete");
 await loadDownloadedSongs();
 
   } catch (e) {
     console.log(e);
-    Downloadbtn.textContent = "📥";
+    setDownloadIcon ("download");
   }
 }
   
@@ -390,4 +396,4 @@ OpenDownloadScreen();
   
 })
 
-
+ 

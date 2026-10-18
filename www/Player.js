@@ -5,6 +5,14 @@ const Downloadbtn = document.getElementById("download-btn");
   const play = document.getElementById("play");
   const MediaSession = window.Capacitor?.Plugins?.MediaSession;
   
+function setPlayIcon(icon) {
+  play.innerHTML = `
+    <img class="toggle-icon"
+         src="icons/${icon}.svg"
+         alt="">
+  `;
+}
+  
   // media.js
 window.initMediaControls = function(audio, play) {
   const MediaSession = window.Capacitor?.Plugins?.MediaSession;
@@ -15,7 +23,7 @@ window.initMediaControls = function(audio, play) {
 
   MediaSession.setActionHandler({ action: "play" }, async () => {
     await audio.play();
-    play.textContent = "▶";
+    setPlayIcon("play")
     MediaSession.setPlaybackState({
       playbackState: "playing"
     });
@@ -23,7 +31,7 @@ window.initMediaControls = function(audio, play) {
 
   MediaSession.setActionHandler({ action: "pause" }, async () => {
     audio.pause();
-    play.textContent = "⏯";
+    setPlayIcon("pause")
     MediaSession.setPlaybackState({
       playbackState: "paused"
     });
@@ -75,7 +83,7 @@ play.addEventListener("click", async () => {
       playbackState: "playing"
     });
 
-    play.textContent = "▶";
+    setPlayIcon("pause")
 
   } else {
 
@@ -85,7 +93,7 @@ play.addEventListener("click", async () => {
       playbackState: "paused"
     });
 
-    play.textContent = "⏯";
+    setPlayIcon("play")
 
 }
   })

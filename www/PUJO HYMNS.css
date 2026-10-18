@@ -276,13 +276,12 @@ body {
   display: none;
   padding: 10px;
   padding-top: 90px;
-  padding-bottom: 50px;
+  padding-bottom: 90px;
 }
 
 #song-list {
   max-width: 5000px;
   margin: 0 auto;
-  padding-bottom: 50px;
   scroll-behavior: smooth;
 }
 #jina-container {
@@ -598,14 +597,17 @@ background-image: url("https://ik.imagekit.io/pry8rixl0/Kwaya%20kuu%20KKKT%20mwi
 }
 
 .change {
-  background-color: black;
+  display: flex;
+  background-color: #1f1f1f;
   color: white;
   padding: 8px 12px;
   border-radius: 8px;
+  gap: 4px;
   border: none;
   cursor: pointer;
-  box-shadow: 1px 1px 4px magenta;
   transition: 0.2s;
+  flex-direction: column;
+  align-items: center;
 }
 
 .change:hover {
@@ -634,13 +636,18 @@ background-image: url("https://ik.imagekit.io/pry8rixl0/Kwaya%20kuu%20KKKT%20mwi
 }
 
 #play{
-  background: #222;
-  color: white;
   cursor: pointer;
   width: 65px;
   height: 65px;
   border-radius: 50%;
+  font-size: 40px;
 }
+
+#play .toggle-icon{
+  width: 24px;
+  height: 24px;
+}
+
 #progress-container {
   width: 100%;
   height: 5px;
@@ -846,6 +853,7 @@ body.light-mode .menu-title
 body.light-mode .menu-item:hover{
   background:white
 }
+body.light-mode #screen-top,
 body.light-mode #popup{
   background: white;
 }
@@ -927,9 +935,23 @@ body.light-mode .circle {
   height: 50px;
   border-radius: 5px;
 }
+
+body.light-mode #play,
+body.light-mode .controlbtn{
+  background: #FAF3E0;
+  color:black;
+}
+
 body.light-mode .favmessage {
   color: black;
 }
 body.light-mode #jina {
   color: black;
+}
+body.light-mode .nav-name{
+  color: black;
+}
+body.light-mode .change{
+  background:#FAF3E0;
+  box-shadow: none;
 }
