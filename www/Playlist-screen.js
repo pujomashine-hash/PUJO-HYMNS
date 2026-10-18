@@ -58,7 +58,7 @@ buildCategorySongs();
     Jina.textContent = cat.textContent;
 
     CategoryNames.style.display = "none";
-    CategorySongs.style.display = "block";
+    CategorySongs.style.display = "grid";
 
     document.getElementById("Catjina-Container").style.display = "block";
 

@@ -194,7 +194,7 @@ body {
   position: fixed;
   width: 100%;
   margin-bottom:20px;
-  
+
   z-index: 50;
   background: black;
   border: 2px solid black;
@@ -206,7 +206,7 @@ body {
   cursor: pointer;
   border: none;
   border-radius: 20%;
-  margin-left: 70%;
+  margin-left: auto;
   background: black;
 }
 #notification-toggle {
@@ -215,7 +215,7 @@ body {
   cursor: pointer;
   font-size: 26px;
   background: black;
-  margin-left: 1%;
+  margin-left: 0;
 }
 #search-screen{
   display: none;
@@ -718,6 +718,80 @@ background-image: url("https://ik.imagekit.io/pry8rixl0/Kwaya%20kuu%20KKKT%20mwi
     display: none;
     width: 100%;
 }
+
+/* CATEGORY SONG BUTTONS */
+#Category-songs {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  align-items: start;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Muonekano wa kila button */
+#Category-songs .nyimbo,
+#Category-songs .online-btn {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 8px;
+  box-sizing: border-box;
+  background: #111;
+  color: white;
+  border: 1px solid #292929;
+  border-radius: 12px;
+  position: relative;
+  text-align: left;
+}
+
+/* Picha juu */
+#Category-songs .left-img {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  width: 100%;
+}
+
+#Category-songs .btn-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 9px;
+}
+
+#Category-songs .btn-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Majina ya wimbo na msanii */
+#Category-songs .text-btn {
+  width: 100%;
+  min-width: 0;
+}
+
+#Category-songs .title {
+  font-size: 14px;
+  font-weight: bold;
+  overflow-wrap: anywhere;
+}
+
+#Category-songs .artist {
+  font-size: 12px;
+  color: #aaa;
+  overflow-wrap: anywhere;
+}
+
+
+#Category-songs .three-dots {
+  display: none !important;
+}
+
+
+
   #Pasaka {
     background:white;
     color: black;
@@ -856,6 +930,7 @@ body.light-mode .menu-item:hover{
 body.light-mode #screen-top,
 body.light-mode #popup{
   background: white;
+  color: black;
 }
 
 body.light-mode #menu-header{
@@ -955,3 +1030,16 @@ body.light-mode .change{
   background:#FAF3E0;
   box-shadow: none;
 }
+
+
+body.light-mode #Category-songs .nyimbo,
+body.light-mode #Category-songs .online-btn {
+  background: white;
+  color: black;
+  border-color: #ddd;
+}
+
+body.light-mode #Category-songs .artist {
+  color: #666;
+}
+

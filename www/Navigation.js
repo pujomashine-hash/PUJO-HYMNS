@@ -47,7 +47,7 @@ if (playlistContainer) {
 
 function hideScreenTop(){
     screenTop.style.display = "none";
-    Top.style.display = "block";
+    Top.style.display = "flex";
 }
 
 // NAVIGATION 
@@ -59,7 +59,7 @@ navButtons.forEach(btn => {
     screens.forEach(screen => screen.style.display = "none")
     window.scrollPosition = 0;
     const targetId = btn.getAttribute("data-target");
-    Top.style.display = "block";
+    Top.style.display = "flex";
 
    
     
@@ -73,7 +73,7 @@ navButtons.forEach(btn => {
     if (targetId === "song-list") {
       songList.style.display="block"
       myMusicScreen.style.display="none"
-      Top.style.display="block"
+      Top.style.display="flex"
       menuBtn.style.display="block"
       window.searchToggle.style.visibility="visible"
  window.notificationToggle.style.visibility="visible"
@@ -131,11 +131,11 @@ if (targetId === "playlist-category") {
 })
 })
   
-   back.addEventListener("click", () => {
+   back.addEventListener("click",async () => {
 
     // Simamisha audio
-    audio.pause();
-    play.textContent = "▶";
+     await audio.pause();
+     
 
     // Ficha screens zote
     screens.forEach(screen => {
@@ -190,6 +190,7 @@ if (targetId === "playlist-category") {
 
         Songcontainer.scrollTop = window.categoryScroll || 0;
 
+      setPlayIcon("play")
     } else {
 
         window.scrollTo(0, window.scrollPosition || 0);
