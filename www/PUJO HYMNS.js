@@ -120,15 +120,13 @@ loadDownloadedSongs()
     menuBtn.style.display="none"
 });
 myMusicBack.addEventListener("click",()=>{
-  Top.style.display="block";
+  Top.style.display="flex";
   songList.style.display="block";
     myMusicScreen.style.display="none";
   menuBtn.style.display="block"
 })
     
     
-
-
 
     
     //  SONG CLICK 

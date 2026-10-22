@@ -83,7 +83,7 @@ body {
 /* MENU BUTTON */
 #menu-btn{
     position:fixed;
-    top:15px;
+    top: calc(15px + env(safe-area-inset-top, 0px));
     left:15px;
     width:45px;
     height:45px;
@@ -194,11 +194,12 @@ body {
   position: fixed;
   width: 100%;
   margin-bottom:20px;
-
   z-index: 50;
   background: black;
   border: 2px solid black;
   display: flex;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top,0px)
 }
 #search-toggle {
   font-size: 25px;
@@ -594,6 +595,8 @@ background-image: url("https://ik.imagekit.io/pry8rixl0/Kwaya%20kuu%20KKKT%20mwi
   justify-content: space-around;
   padding: 8px 0;
   z-index: 1000;
+  box-sizing: border-box;
+  padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
 }
 
 .change {
@@ -609,15 +612,13 @@ background-image: url("https://ik.imagekit.io/pry8rixl0/Kwaya%20kuu%20KKKT%20mwi
   flex-direction: column;
   align-items: center;
 }
-
-.change:hover {
-  background-color: #333;
+.change img:hover {
+  background:#333;
+  box-shadow: 2px 1px 3px magenta;
 }
-
-.change.active {
-  background-color: #555;
+.change img.active {
+  background-color: gray;
   color: white;
-  box-shadow: 0 0 8px magenta;
 }
 
 /* CUSTOM AUDIO PLAYER */
@@ -951,6 +952,8 @@ body.light-mode #Home-header2{
   color:black;
 }
 
+body.light-mode #my-music-screen,
+body.light-mode #my-music-screen-list,
 body.light-mode #song-list {
   background: white;
 }

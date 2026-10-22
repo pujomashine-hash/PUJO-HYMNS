@@ -108,6 +108,38 @@
     color:#aaa;
 }
 
+/*Notifications */
+.not-message{
+  display:flex;
+  background: violet;
+  border-radius: 8px;
+  width:70%;
+  box-shadow: 1px 2px 4px 2px magenta;
+  border: 1px solid blue;
+  flex-shrink: 0; /* tumia original width */
+  margin-bottom: 15px;
+  height:auto;
+}
+
+.not-message h3{
+    border-bottom: 1px solid black;
+}
+
+.not-message p{
+  text-align: left;
+  font-family: "Courier New",serif;
+  font-weight: bold;
+}
+
+#info-container {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overflow-wrap: break-word;
+}
 
 #New-songs{
   margin-top: 10px;

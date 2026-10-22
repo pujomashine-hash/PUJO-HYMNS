@@ -1,8 +1,64 @@
 document.addEventListener("DOMContentLoaded", () => {
   const MyChurch = document.getElementById("My-church")
   const NewSongs = document.getElementById("New-songs")
+  window.notificationToggle =
+  document.getElementById("notification-toggle");
+
+const notificationToggle = window.notificationToggle;
+  
   const Network = window.Capacitor?.Plugins?.Network;
   window.checkUpdate= checkUpdate
+
+
+  notificationToggle.addEventListener("click",()=>{
+
+openPopup(`<div class="popup-title">
+    <span class="popup-logo-btn"></span>
+    <p>Notifications</p>
+  </div>`,`<div id="info-container"></div>`)
+    
+async function getNotifications(){
+try {
+  const infoContainer =document.getElementById("info-container")
+const url =
+  "https://raw.githubusercontent.com/pujomashine-hash/PUJO-HYMNS/main/notifications.json"
+const res = await fetch(url)
+ const data = await res.json()
+  
+  data.forEach(info =>{
+  const notMessage =
+     document.createElement("button")
+  notMessage.className="not-message";
+  notMessage.innerHTML="";
+
+   notMessage.head = info.head;
+   notMessage.message= info.message;
+    notMessage.updatedOn= info.updatedOn;
+    notMessage.updatedBy= info.updatedBy;
+
+    notMessage.innerHTML =`
+    <div>
+     <h3> ${notMessage.head} </h3>
+     <p> ${notMessage.message} </p>
+     <p>Updated: ${notMessage.updatedOn} </p>
+     <p>From: ${notMessage.updatedBy} </p>
+    </div>`;
+
+    infoContainer.appendChild(notMessage)
+  })
+
+  }catch (e){
+  openPopup(`<div class="popup-title">
+    <span class="popup-logo-btn"></span>
+    <p>message</p>
+  </div>`,"The problem occur to your connection connect to the internet and try again")
+  }
+  
+}
+getNotifications()
+  
+  })
+  
 
   //initial update check
 function checkUpdate() {
@@ -148,4 +204,6 @@ async function syncData() {
     syncing = false;
   }
 }
+
+  
 });

@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded",()=>{
 const songList = document.getElementById("song-list")
 const searchScreen= document.getElementById("search-screen")
-window.notificationToggle= document.getElementById("notification-toggle") 
 window.searchToggle= document.getElementById("search-toggle") 
 const searchInput = document.getElementById("search");
 const searchResults = document.getElementById("search-results");
@@ -64,7 +63,5 @@ searchResults.addEventListener("click", (e) => {
     songList.style.display="none"
     menuBtn.style.display="none"
   })
-  notificationToggle.addEventListener("click",()=>{
-  openPopup("Notice","<h5>No new notification</h5>")
-  })
+  
 })

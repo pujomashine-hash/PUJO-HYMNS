@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", ()=>{
   const playing = document.getElementById("playing");
-const Downloadbtn = document.getElementById("download-btn");
+const Downloadbtn = document.getElementById("Download");
   const play = document.getElementById("play");
   const MediaSession = window.Capacitor?.Plugins?.MediaSession;
   
@@ -23,7 +23,7 @@ window.initMediaControls = function(audio, play) {
 
   MediaSession.setActionHandler({ action: "play" }, async () => {
     await audio.play();
-    setPlayIcon("play")
+    setPlayIcon("pause")
     MediaSession.setPlaybackState({
       playbackState: "playing"
     });
@@ -31,7 +31,7 @@ window.initMediaControls = function(audio, play) {
 
   MediaSession.setActionHandler({ action: "pause" }, async () => {
     audio.pause();
-    setPlayIcon("pause")
+    setPlayIcon("play")
     MediaSession.setPlaybackState({
       playbackState: "paused"
     });
