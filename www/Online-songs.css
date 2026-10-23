@@ -448,6 +448,7 @@ body.light-mode #My-church-screen{
 body.light-mode .New-screen-header{
   background: hwb(0 90% 6%)
 }
+
 body.light-mode .New-screen-header h2{
   color: black;
 }

@@ -1020,9 +1020,13 @@ body.light-mode .controlbtn{
   color:black;
 }
 
+body.light-mode #no-result,
+body.light-mode #no-result h3,
+body.light-mode #no-result p,
 body.light-mode .favmessage {
   color: black;
 }
+
 body.light-mode #jina {
   color: black;
 }
